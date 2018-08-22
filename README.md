@@ -1,74 +1,63 @@
-# Particle Jekyll Theme
 
-![](./particle.jpg)
+# Sustain
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+[![Build Status](https://secure.travis-ci.org/jekyller/sustain.png?branch=gh-pages)](http://travis-ci.org/jekyller/sustain)
+[![Ruby](https://img.shields.io/badge/ruby-2.4.2-blue.svg?style=flat)](http://travis-ci.org/jekyller/sustain)
+[![Jekyll](https://img.shields.io/badge/jekyll-3.6.2-blue.svg?style=flat)](http://travis-ci.org/jekyller/sustain)
 
-The Theme features:
+Personal blog built with [Bootstrap](http://getbootstrap.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
+hosted in [Github pages](https://pages.github.com/).
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
 
-## Basic Setup
+## View the live demo
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Fork the [Particle Theme](https://github.com/nrandecker/particle/fork)
-3. Clone the repo you just forked.
-4. Edit `_config.yml` to personalize your site.
+[Sustain Live Demo](https://jekyller.github.io/sustain)
 
-## Site and User Settings
 
-You have to fill some informations on `_config.yml` to customize your site.
+## Screenshots
 
-```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
+**Home page**
+![home page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen1.png)
 
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-```
+**Blog page**
+![blog page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen2.png)
 
-**Don't forget to change your url before you deploy your site!**
+**Post page**
+![post page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen3.png)
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+**Projects page**
+![project page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen4.png)
 
-## Running the blog in local
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+## How to use it
 
-- Install [NodeJS](https://nodejs.org/)
-- Run `npm install`
-- Run `gulp`
+Simply clone/fork this repository, and then run `jekyll serve` inside the directory.
+Edit the site attributes in *_config.yml* and edit the various entries in *_includes/* and *_posts/*.
 
-## Questions
 
-Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
+## Issues and contributing
 
-## License
+I have tested this install with Ruby v2.4.2 (Mac OS RVM) and Jekyll v3.6.2. If you run into any problems please log them on the [issue tracker](https://github.com/jekyller/sustain/issues).
 
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
+Feel free pull-request your patches and fixes.
 
-## Credits
+#### Contributors
 
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
+[Sumit Murari](https://github.com/murarisumit), November 2015
+
+
+## Thanks
+
+Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
+
+
+## Copyright & License
+
+Copyright (C) 2015-2017 - Released under the MIT License.
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
