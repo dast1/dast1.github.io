@@ -1,0 +1,583 @@
+/*
+* Base Structure
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+#particles-js {
+  background-color: #23252f;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.site-wrapper {
+  position: relative;
+  display: table;
+  margin: auto;
+
+}
+
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* 
+* container 
+*/
+
+.container {
+  text-align: center;
+}
+
+.container::after {
+  display: block;
+  height: 150px;
+}
+
+.container h1 {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 1.5em;
+  color: #c79b1b;
+  margin-bottom: 12px;
+  padding: 0;
+}
+
+.container p {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 35px;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.container hr {
+  border: solid #c79b1b;
+  border-width: 5px 0 0;
+  margin: 19px auto 12px;
+  height: 0;
+  width: 100px;
+}
+
+.container .site-header .logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 36px 0;
+  padding: 0;
+}
+
+.container .site-header .logo a {
+  display: block;
+  margin: 25px 0 0 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  width: 100px;
+  height: 100px;
+  background: url("../img/logo.png") no-repeat;
+  background-size: contain;
+}
+
+@media only screen and (max-width: 900px) {
+  .container.row {
+    width: 85%;
+  }
+  .container h1 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: 900;
+    line-height: 1.2em;
+  }
+  .container p {
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .container .site-header .logo {
+    margin: 0 0 30px 0;
+  }
+  .container .site-header .logo a {
+    width: 125px;
+    height: 90px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container.row {
+    width: 92%;
+  }
+  .container h1 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+  .container p {
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+  }
+  .container .site-header .logo {
+    margin: 0 0 24px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container.row {
+    width: 96%;
+  }
+  .container h1 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+  .container p {
+    line-height: 25px;
+  }
+  .container::after {
+    height: 80px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container.row {
+    width: 100%;
+  }
+  .container h1 {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+  .container p {
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .container .site-header .logo a {
+    width: 95px;
+    height: 65px;
+  }
+}
+
+/* counter */
+
+#counter {
+  width: 90%;
+  color: #fff;
+  text-align: center;
+  margin: 15px auto 0;
+}
+
+#counter span {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 75px;
+  font-weight: 900;
+  line-height: 1em;
+  display: block;
+  padding: 10px 0 30px;
+  min-width: 25%;
+  float: left;
+}
+
+#counter span em {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 3px;
+  display: block;
+  color: #cccccc;
+}
+
+@media only screen and (max-width: 900px) {
+  #counter {
+    width: 90%;
+  }
+  #counter span {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #counter {
+    width: 100%;
+  }
+  #counter span {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #counter {
+    margin-bottom: 0;
+  }
+  #counter span {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #counter {
+    margin-bottom: 12px;
+  }
+  #counter span {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 37px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+  #counter em {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1.5px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #counter span {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 1em;
+  }
+  #counter em {
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-size: 8px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Button */
+
+.btn {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #23252f;
+  background-color: #c79b1b;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: #c79b1b;
+  border: 2px solid #c79b1b;
+  background: #fff;
+  outline: 0 none;
+}
+
+/* Clearing - (http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+/* footer */
+
+footer {
+  clear: both;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 24px;
+  background: #c79b1b;
+  padding: 18px 30px;
+  color: #23252f;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 999992;
+}
+
+footer a {
+  color: #23252f;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #fff;
+}
+
+/* copyright */
+
+.footer-copyright {
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.footer-copyright li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  line-height: 24px;
+}
+
+.footer-copyright li::before {
+  content: "|";
+  padding-left: 6px;
+  padding-right: 10px;
+  color: #2c2c2c;
+}
+
+.footer-copyright li:first-child:before {
+  display: none;
+}
+
+/* social links */
+
+.footer-social {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 0px 0.75px 0.75px rgba(0, 0, 0, 0.8);
+  float: right;
+}
+
+.footer-social li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0;
+}
+
+.footer-social li a {
+  color: #23252f;
+}
+
+.footer-social li a:hover {
+  color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  footer {
+    padding-top: 24px;
+    text-align: center;
+  }
+  .footer-copyright {
+    float: none;
+  }
+  .footer-social {
+    float: none;
+    margin-bottom: 15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    position: relative;
+    padding-bottom: 30px;
+    margin-top: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .footer-copyright li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 24px;
+  }
+  .footer-copyright li::before {
+    content: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+	footer {
+		position: relative;
+		padding-bottom: 15px;
+		margin-top: 30px;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	  }
+
+  .footer-social {
+    font-size: 17px;
+  }
+  .footer-social li {
+    margin: 0 6px;
+  }
+}
+
+/* modal */
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(199, 155, 27, 0.6);
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.modal-dialog {
+  width: 600px;
+  height: 350px;
+  background-color: #fff;
+  box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 3px;
+  transition: margin 0.2s;
+}
+
+.modal-dialog #close-button {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/close_icon.png");
+  cursor: pointer;
+}
+
+.modal-title {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: 900;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.modal-dialog .modal-body {
+  height: 275px;
+  width: 100%;
+}
+
+.left-half {
+  width: 250px;
+  height: 100%;
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.right-half {
+  width: 200px;
+  height: 100%;
+  float: right;
+  padding: 0;
+  margin: 0;
+}
+
+.left-half .title,
+.right-half .title {
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.left-half .body,
+.right-half .body {
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  font-size: 12px;
+  text-align: justify;
+}
+
+@media only screen and (max-width: 900px) {
+  .modal-dialog {
+    width: 85%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .modal-dialog {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .modal-dialog {
+    width: 95%;
+  }
+  .left-half {
+    width: 35%;
+    height: 45%;
+    padding: 0;
+    margin: 0;
+  }
+  .right-half {
+    width: 45%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .left-half .title,
+  .right-half .title {
+    font-size: 12px;
+  }
+  .left-half .body,
+  .right-half .body {
+    font-size: 10px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .modal-dialog {
+    width: 95%;
+  }
+  .left-half {
+    width: 40%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .right-half {
+    width: 40%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  .left-half .title,
+  .right-half .title {
+    font-size: 12px;
+  }
+  .left-half .body,
+  .right-half .body {
+    font-size: 9px;
+  }
+}

@@ -1,63 +1,70 @@
+# Coming Soon Page
 
-# Sustain
+![Screenshot](art/screenshot.png)
 
-[![Build Status](https://secure.travis-ci.org/jekyller/sustain.png?branch=gh-pages)](http://travis-ci.org/jekyller/sustain)
-[![Ruby](https://img.shields.io/badge/ruby-2.4.2-blue.svg?style=flat)](http://travis-ci.org/jekyller/sustain)
-[![Jekyll](https://img.shields.io/badge/jekyll-3.6.2-blue.svg?style=flat)](http://travis-ci.org/jekyller/sustain)
+A simple coming soon page using HTML, CSS and the [Twitter Bootstrap](https://www.getbootstrap.com) framework. It is based on the [Advent](https://www.styleshout.com/free-templates/advent/) HTML5/CSS3 template made by [Styleshout](https://www.styleshout.com). It also uses the following JavaScript libraries:
+- [The Final Countdown](http://hilios.github.io/jQuery.countdown/)
+- [particles.js](http://vincentgarreau.com/particles.js/)
 
-Personal blog built with [Bootstrap](http://getbootstrap.com/), powered by [Jekyll](http://jekyllrb.com/) and freely
-hosted in [Github pages](https://pages.github.com/).
+It is merely a simple, responsive and modern webpage template that counts down to the launch of a project currently under development.
+
+### Demo
+If you would like to see what the webpage looks like: [Live Demo](https://solomonkamanga.github.io/coming-soon-page/)
+
+### Features
+- Modern & elegant design
+- Responsive Design
+- Animated background
+- Multi-browser support
+- Easy to setup
+- The CSS framework is [Twitter Bootstrap](https://www.getbootstrap.com)
+- Icons are [Font Awesome](https://www.fontawesome.io)
+- All the third-party resources are hosted on a CDN 
+
+### Setup
+**1.** Change the logo
+
+**2.** Add text content:
+- Announcement
+- Modal 
+
+**3.** Change the date in the countdown timer
+
+**4.** Customize the animated background. Refer to documentation: [Usage of particles.js](https://github.com/VincentGarreau/particles.js/#usage)
+
+**5.** Styling the page by changing the values in [CSS file](css/style.css) - **styles.css**
+
+**6.** Customize the social media links in the footer.
+
+### Credits
+- [Styleshout](https://www.styleshout.com)
+- [Vincent Garreau](https://www.vincentgarreau.com)
+- [Edson Hilios](http://edson.hilios.com.br)
+
+### License
+MIT License
+
+Copyright (c) 2017 Solomon Musa Kamanga
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 
-## View the live demo
-
-[Sustain Live Demo](https://jekyller.github.io/sustain)
 
 
-## Screenshots
 
-**Home page**
-![home page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen1.png)
-
-**Blog page**
-![blog page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen2.png)
-
-**Post page**
-![post page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen3.png)
-
-**Projects page**
-![project page](https://raw.githubusercontent.com/jekyller/sustain/gh-pages/assets/images/screen4.png)
-
-
-## How to use it
-
-Simply clone/fork this repository, and then run `jekyll serve` inside the directory.
-Edit the site attributes in *_config.yml* and edit the various entries in *_includes/* and *_posts/*.
-
-
-## Issues and contributing
-
-I have tested this install with Ruby v2.4.2 (Mac OS RVM) and Jekyll v3.6.2. If you run into any problems please log them on the [issue tracker](https://github.com/jekyller/sustain/issues).
-
-Feel free pull-request your patches and fixes.
-
-#### Contributors
-
-[Sumit Murari](https://github.com/murarisumit), November 2015
-
-
-## Thanks
-
-Profile picture from [pexels](https://www.pexels.com/photo/portrait-black-african-ethnicity-person-9494/).
-
-
-## Copyright & License
-
-Copyright (C) 2015-2017 - Released under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
