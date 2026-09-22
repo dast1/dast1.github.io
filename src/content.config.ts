@@ -25,6 +25,8 @@ const writing = defineCollection({
     date: day,
     tags: z.array(z.string().min(1)).default([]),
     draft: z.boolean().default(false),
+    // Homepage writing list. Chronology on /writing/ is unchanged.
+    featured: z.boolean().default(true),
   }),
 });
 

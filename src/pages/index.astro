@@ -6,7 +6,9 @@ import { formatDate } from '../lib/dates';
 import { siteJsonLd } from '../lib/jsonld';
 import { site } from '../site';
 
-const writing = (await publishedWriting()).slice(0, 3);
+const writing = (await publishedWriting())
+  .filter((entry) => entry.data.featured)
+  .slice(0, 3);
 const ideas = await publishedIdeas();
 ---
 
@@ -23,13 +25,23 @@ const ideas = await publishedIdeas();
     <p>
       This site is the notebook. Longer pieces are under <a href="/writing/">writing</a>. Shorter
       claims are under <a href="/ideas/">ideas</a>. <a href="/projects/">Projects</a> stays short, and
-      only for work I am willing to leave up.
+      only for work I am willing to leave up. The longer version of the story is on the
+      <a href="/about/">about</a> page.
     </p>
+  </div>
+
+  <h2 class="section-label" id="questions">Current questions</h2>
+  <div class="prose">
     <p>
-      The questions in front of me are about AI systems and personal computing — agents, local
-      inference, context, routing — and what those do to knowledge work and to the way an
-      organization is designed. The longer version of the story is on the <a href="/about/">about</a> page.
+      <strong>How do we combine probabilistic intelligence with deterministic control?</strong>
     </p>
+    <ul>
+      <li>What work actually needs a generative model?</li>
+      <li>When should repeated agent behavior become software?</li>
+      <li>What should stay local as AI becomes part of personal computing?</li>
+      <li>Can distributed AI infrastructure remain governable?</li>
+      <li>How do AI systems change organizations once they can act rather than simply answer?</li>
+    </ul>
   </div>
 
   <h2 class="section-label" id="writing">Writing</h2>
