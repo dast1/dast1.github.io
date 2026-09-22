@@ -1,0 +1,17 @@
+---
+import { site } from '../site';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell footer-inner">
+    <p>{site.location}</p>
+    <ul class="footer-links">
+      <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
+      <li><a href={site.github} rel="me">GitHub</a></li>
+      <li><a href="/rss.xml">RSS</a></li>
+    </ul>
+    <p>© {year} {site.name}</p>
+  </div>
+</footer>

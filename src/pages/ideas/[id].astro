@@ -1,0 +1,54 @@
+---
+import { render } from 'astro:content';
+import Longform from '../../components/Longform.astro';
+import Pager from '../../components/Pager.astro';
+import { publishedIdeas } from '../../lib/content';
+import { articleJsonLd } from '../../lib/jsonld';
+import { site } from '../../site';
+
+export async function getStaticPaths() {
+  const ideas = await publishedIdeas();
+  return ideas.map((entry) => ({ params: { id: entry.id } }));
+}
+
+const id = Astro.params.id;
+if (!id) {
+  throw new Error('Missing idea id');
+}
+
+const ideas = await publishedIdeas();
+const index = ideas.findIndex((entry) => entry.id === id);
+const entry = ideas[index];
+if (!entry) {
+  throw new Error(`Missing idea: ${id}`);
+}
+
+const earlierEntry = ideas[index + 1];
+const laterEntry = index > 0 ? ideas[index - 1] : undefined;
+const { Content } = await render(entry);
+const url = new URL(`/ideas/${entry.id}/`, site.url).href;
+---
+
+<Longform
+  kicker="Ideas"
+  kickerHref="/ideas/"
+  title={entry.data.title}
+  description={entry.data.description}
+  date={entry.data.date}
+  jsonLd={articleJsonLd({
+    title: entry.data.title,
+    description: entry.data.description,
+    date: entry.data.date,
+    url,
+  })}
+>
+  <Content />
+  <Pager
+    slot="end"
+    label="More ideas"
+    earlier={earlierEntry
+      ? { href: `/ideas/${earlierEntry.id}/`, title: earlierEntry.data.title }
+      : null}
+    later={laterEntry ? { href: `/ideas/${laterEntry.id}/`, title: laterEntry.data.title } : null}
+  />
+</Longform>

@@ -1,0 +1,40 @@
+---
+import Base from '../layouts/Base.astro';
+import { site } from '../site';
+
+const description =
+  'How Dastan Aitzhanov came to work across software, cloud platforms, and investing, and what he is thinking about now.';
+---
+
+<Base title="About" description={description}>
+  <h1 class="page-title">About</h1>
+  <div class="prose">
+    <p>
+      I build software, and I allocate capital. They have never felt like separate kinds of work.
+    </p>
+    <p>
+      The technical thread runs through cloud infrastructure, data platforms, and machine learning.
+      I worked at Amazon Web Services and at Databricks. The problems I liked were practical ones:
+      getting data to a place a model could use, making a system reliable enough that someone would
+      trust it on an ordinary day, and finding which part of a stack was actually doing the work.
+    </p>
+    <p>
+      Alongside that, I have spent about a decade investing personal and family capital. Real estate,
+      hotels, multifamily housing, private businesses, public equities, technology, alternatives.
+      Owning something changes the way a spreadsheet reads. You start to care about operations,
+      incentives, and what is left after the model is right.
+    </p>
+    <p>
+      What I am working through now is the overlap. How AI systems — agents, models that run near
+      the person using them, the machinery of context and routing — change knowledge work, personal
+      computing, and the design of organizations. I write about that here when a thought is ready.
+      Current experiments stay off the projects page until there is something definite to show.
+    </p>
+    <p>I live in Texas.</p>
+    <p>
+      Email is the way to reach me:
+      <a href={`mailto:${site.email}`}>{site.email}</a>.
+      Code I have published lives on <a href={site.github} rel="me">GitHub</a>.
+    </p>
+  </div>
+</Base>

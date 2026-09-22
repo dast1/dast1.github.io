@@ -1,0 +1,37 @@
+---
+interface Neighbor {
+  href: string;
+  title: string;
+}
+
+interface Props {
+  earlier?: Neighbor | null;
+  later?: Neighbor | null;
+  label: string;
+}
+
+const { earlier = null, later = null, label } = Astro.props;
+---
+
+{
+  (earlier || later) && (
+    <nav class="pager" aria-label={label}>
+      {earlier ? (
+        <a class="older" href={earlier.href}>
+          <span class="pager-label">Earlier</span>
+          {earlier.title}
+        </a>
+      ) : (
+        <span />
+      )}
+      {later ? (
+        <a class="newer" href={later.href}>
+          <span class="pager-label">Later</span>
+          {later.title}
+        </a>
+      ) : (
+        <span />
+      )}
+    </nav>
+  )
+}

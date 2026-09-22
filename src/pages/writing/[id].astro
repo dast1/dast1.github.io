@@ -1,0 +1,58 @@
+---
+import { render } from 'astro:content';
+import Longform from '../../components/Longform.astro';
+import Pager from '../../components/Pager.astro';
+import { publishedWriting, tagPath } from '../../lib/content';
+import { articleJsonLd } from '../../lib/jsonld';
+import { readingMinutes } from '../../lib/reading-time';
+import { site } from '../../site';
+
+export async function getStaticPaths() {
+  const posts = await publishedWriting();
+  return posts.map((entry) => ({ params: { id: entry.id } }));
+}
+
+const id = Astro.params.id;
+if (!id) {
+  throw new Error('Missing writing id');
+}
+
+const posts = await publishedWriting();
+const index = posts.findIndex((entry) => entry.id === id);
+const entry = posts[index];
+if (!entry) {
+  throw new Error(`Missing writing entry: ${id}`);
+}
+
+const earlierEntry = posts[index + 1];
+const laterEntry = index > 0 ? posts[index - 1] : undefined;
+const { Content } = await render(entry);
+const url = new URL(`/writing/${entry.id}/`, site.url).href;
+---
+
+<Longform
+  kicker="Writing"
+  kickerHref="/writing/"
+  title={entry.data.title}
+  description={entry.data.description}
+  date={entry.data.date}
+  minutes={readingMinutes(entry.body)}
+  tags={entry.data.tags.map((label) => ({ label, href: tagPath(label) }))}
+  jsonLd={articleJsonLd({
+    title: entry.data.title,
+    description: entry.data.description,
+    date: entry.data.date,
+    url,
+    tags: entry.data.tags,
+  })}
+>
+  <Content />
+  <Pager
+    slot="end"
+    label="More writing"
+    earlier={earlierEntry
+      ? { href: `/writing/${earlierEntry.id}/`, title: earlierEntry.data.title }
+      : null}
+    later={laterEntry ? { href: `/writing/${laterEntry.id}/`, title: laterEntry.data.title } : null}
+  />
+</Longform>

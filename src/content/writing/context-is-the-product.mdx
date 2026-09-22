@@ -1,0 +1,26 @@
+---
+title: Context is the product
+description: The useful limit on an AI system is no longer whether it can write. It is what the system is allowed to know, remember, and ignore.
+date: "2026-09-08"
+tags:
+  - Context
+  - Systems
+---
+
+The models got good enough that the bottleneck moved. The failures I pay attention to now are rarely failures of fluency. They are failures of inputs. The system saw the wrong document, trusted a stale instruction, or remembered something it should have forgotten.
+
+People call the work of fixing that context engineering. The name is a little grand. Most of the job is editorial. Before a model speaks, someone has to decide what it holds: which sources, whose rules, how fresh, how much, and what is out of bounds. The prompt is the last inch of that decision.
+
+This is familiar if you have spent time on data platforms. A model is a demanding reader. It does not want the warehouse. It wants a small, current slice, with the contradictions already settled. "Garbage in, garbage out" used to be a slogan about training sets. It is now a runtime bug, and it shows up in a sentence a person is about to trust.
+
+A few distinctions I try to keep sharp:
+
+**Retrieval is not memory.** A search hit from last year is not a fact the system has committed to. Treat them as the same thing and the system will cite the hit with the confidence of a memory. Memory should be deliberate. It should have an owner and an expiry. Search can be wide. Memory should be narrow.
+
+**Instructions are data, and they conflict.** A personal preference, a company policy, a tool's own description, and the sentence just typed are four authors. They will disagree. If nothing ranks them, the model will, and it will do it differently each time. That ranking is a product decision about whose word holds.
+
+**More context is not more truth.** Every extra paragraph is a chance to distract. I would rather a system say it does not know than watch it improvise from a pile of almost-relevant text. Subtraction is the harder skill, and it is the one that makes an answer usable.
+
+Personal systems make the stakes obvious. When the context is your own files and your own unfinished thinking, the boundary is the product. What is in scope. What expires. What never leaves the machine. A longer prompt does not answer those questions. A smaller, governed one does, together with a system willing to show what it used.[^1]
+
+[^1]: I use "context engineering" as a name for the discipline, not as a product. The part worth the effort is the boundary around the model.

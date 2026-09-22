@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import { formatDate } from '../lib/dates';
+
+interface TagLink {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  kicker: string;
+  kickerHref: string;
+  title: string;
+  description: string;
+  date: string;
+  minutes?: number;
+  tags?: TagLink[];
+  jsonLd?: unknown;
+}
+
+const { kicker, kickerHref, title, description, date, minutes, tags = [], jsonLd } = Astro.props;
+---
+
+<Base title={title} description={description} ogType="article" published={date} jsonLd={jsonLd}>
+  <article class="longform">
+    <header class="longform-header">
+      <p class="kicker"><a href={kickerHref}>{kicker}</a></p>
+      <h1>{title}</h1>
+      <p class="byline">
+        <time datetime={date}>{formatDate(date)}</time>
+        {
+          minutes && (
+            <>
+              <span aria-hidden="true">·</span>
+              <span>{minutes} min read</span>
+            </>
+          )
+        }
+      </p>
+      <slot name="meta" />
+    </header>
+    <div class="prose">
+      <slot />
+    </div>
+    {
+      tags.length > 0 && (
+        <ul class="tags">
+          {tags.map((tag) => (
+            <li>
+              <a href={tag.href}>{tag.label}</a>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    <slot name="end" />
+  </article>
+</Base>

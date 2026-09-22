@@ -1,0 +1,28 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { tagPath, writingTags } from '../../../lib/content';
+
+const tags = await writingTags();
+const description = 'Topics across essays by Dastan Aitzhanov.';
+---
+
+<Base title="Tags" description={description}>
+  <h1 class="page-title">Tags</h1>
+  <div class="prose page-intro">
+    <p>The subjects the essays actually use. A tag appears here once a piece is published with it.</p>
+  </div>
+  <ul class="entries">
+    {
+      tags.map((tag) => (
+        <li>
+          <span class="when">{tag.count === 1 ? '1 essay' : `${tag.count} essays`}</span>
+          <div>
+            <h3>
+              <a href={tagPath(tag.label)}>{tag.label}</a>
+            </h3>
+          </div>
+        </li>
+      ))
+    }
+  </ul>
+</Base>
