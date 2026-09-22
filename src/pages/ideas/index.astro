@@ -1,0 +1,26 @@
+---
+import EntryList from '../../components/EntryList.astro';
+import Base from '../../layouts/Base.astro';
+import { publishedIdeas } from '../../lib/content';
+import { formatDate } from '../../lib/dates';
+
+const ideas = await publishedIdeas();
+const description =
+  'Short notes by Dastan Aitzhanov on agents, routing, and what is worth buying in a business.';
+---
+
+<Base title="Ideas" description={description}>
+  <h1 class="page-title">Ideas</h1>
+  <div class="prose page-intro">
+    <p>Shorter than the essays. A claim, the reason I hold it, and where it might be wrong.</p>
+  </div>
+  <EntryList
+    items={ideas.map((entry) => ({
+      href: `/ideas/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: formatDate(entry.data.date),
+      summary: entry.data.description,
+    }))}
+  />
+</Base>

@@ -1,0 +1,75 @@
+---
+import { site } from '../site';
+
+const path = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/writing/', label: 'Writing' },
+  { href: '/ideas/', label: 'Ideas' },
+  { href: '/projects/', label: 'Projects' },
+  { href: '/about/', label: 'About' },
+];
+
+function isCurrent(href: string): boolean {
+  if (href === '/') return path === '/';
+  return path === href || path.startsWith(href);
+}
+---
+
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="wordmark" href="/">{site.name}</a>
+    <div class="header-tools">
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          {
+            links.map((link) => (
+              <li>
+                <a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+      <button
+        type="button"
+        class="theme-toggle"
+        data-theme-toggle
+        aria-pressed="false"
+        aria-label="Switch color theme">Dark</button
+      >
+      <script is:inline>
+        (function () {
+          var root = document.documentElement;
+          var button = document.querySelector('[data-theme-toggle]');
+          if (!button) return;
+
+          function paint(theme) {
+            var dark = theme === 'dark';
+            button.textContent = dark ? 'Light' : 'Dark';
+            button.setAttribute('aria-pressed', dark ? 'true' : 'false');
+            button.setAttribute(
+              'aria-label',
+              dark ? 'Switch to light colors' : 'Switch to dark colors',
+            );
+          }
+
+          paint(root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+          button.addEventListener('click', function () {
+            var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
+            root.dataset.theme = next;
+            try {
+              localStorage.setItem('theme', next);
+            } catch (error) {
+              /* Preference stays for this view if storage is blocked. */
+            }
+            paint(next);
+          });
+        })();
+      </script>
+    </div>
+  </div>
+</header>

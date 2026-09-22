@@ -1,0 +1,32 @@
+---
+import EntryList from '../../components/EntryList.astro';
+import Base from '../../layouts/Base.astro';
+import { publishedProjects } from '../../lib/content';
+import { yearOf } from '../../lib/dates';
+import { statusLabel } from '../../lib/projects';
+
+const projects = await publishedProjects();
+const description =
+  'A short list of public work by Dastan Aitzhanov. Not a catalog of every repository.';
+---
+
+<Base title="Projects" description={description}>
+  <h1 class="page-title">Projects</h1>
+  <div class="prose page-intro">
+    <p>
+      A short list, on purpose. I do not catalog every repository. These are pieces of public work I
+      still stand behind. Current experiments stay off this page until there is something definite
+      to show.
+    </p>
+  </div>
+  <EntryList
+    items={projects.map((entry) => ({
+      href: `/projects/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: yearOf(entry.data.date),
+      summary: entry.data.description,
+      eyebrow: statusLabel(entry.data.status),
+    }))}
+  />
+</Base>

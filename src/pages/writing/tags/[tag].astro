@@ -1,0 +1,47 @@
+---
+import EntryList from '../../../components/EntryList.astro';
+import Base from '../../../layouts/Base.astro';
+import { publishedWriting, tagPath, tagSlug, writingTags } from '../../../lib/content';
+import { formatDate } from '../../../lib/dates';
+
+export async function getStaticPaths() {
+  const tags = await writingTags();
+  return tags.map((tag) => ({ params: { tag: tag.slug } }));
+}
+
+const slug = Astro.params.tag;
+if (!slug) {
+  throw new Error('Missing tag');
+}
+
+const tags = await writingTags();
+const tag = tags.find((item) => item.slug === slug);
+if (!tag) {
+  throw new Error(`Missing tag: ${slug}`);
+}
+
+const posts = (await publishedWriting()).filter((entry) =>
+  entry.data.tags.some((label) => tagSlug(label) === slug),
+);
+const description = `Essays by Dastan Aitzhanov tagged ${tag.label}.`;
+---
+
+<Base title={tag.label} description={description}>
+  <p class="kicker"><a href="/writing/tags/">Tags</a></p>
+  <h1 class="page-title">{tag.label}</h1>
+  <div class="prose page-intro">
+    <p>
+      {posts.length === 1 ? 'One essay' : `${posts.length} essays`} filed under {tag.label}.
+    </p>
+  </div>
+  <EntryList
+    items={posts.map((entry) => ({
+      href: `/writing/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: formatDate(entry.data.date),
+      summary: entry.data.description,
+      tags: entry.data.tags.map((label) => ({ label, href: tagPath(label) })),
+    }))}
+  />
+</Base>

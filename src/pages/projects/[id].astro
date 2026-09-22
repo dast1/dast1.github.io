@@ -1,0 +1,51 @@
+---
+import { render } from 'astro:content';
+import Longform from '../../components/Longform.astro';
+import { publishedProjects } from '../../lib/content';
+import { articleJsonLd } from '../../lib/jsonld';
+import { statusLabel } from '../../lib/projects';
+import { site } from '../../site';
+
+export async function getStaticPaths() {
+  const projects = await publishedProjects();
+  return projects.map((entry) => ({ params: { id: entry.id } }));
+}
+
+const id = Astro.params.id;
+if (!id) {
+  throw new Error('Missing project id');
+}
+
+const projects = await publishedProjects();
+const entry = projects.find((item) => item.id === id);
+if (!entry) {
+  throw new Error(`Missing project: ${id}`);
+}
+
+const { Content } = await render(entry);
+const url = new URL(`/projects/${entry.id}/`, site.url).href;
+---
+
+<Longform
+  kicker="Projects"
+  kickerHref="/projects/"
+  title={entry.data.title}
+  description={entry.data.description}
+  date={entry.data.date}
+  jsonLd={articleJsonLd({
+    title: entry.data.title,
+    description: entry.data.description,
+    date: entry.data.date,
+    url,
+  })}
+>
+  <p class="resource-links" slot="meta">
+    <span>{statusLabel(entry.data.status)}</span>
+    {
+      entry.data.links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))
+    }
+  </p>
+  <Content />
+</Longform>

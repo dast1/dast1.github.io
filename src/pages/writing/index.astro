@@ -1,0 +1,42 @@
+---
+import EntryList from '../../components/EntryList.astro';
+import Base from '../../layouts/Base.astro';
+import { publishedWriting, tagPath, writingTags } from '../../lib/content';
+import { formatDate } from '../../lib/dates';
+
+const posts = await publishedWriting();
+const tags = await writingTags();
+const description =
+  'Essays by Dastan Aitzhanov on context, personal computing, investing, and how organizations decide.';
+---
+
+<Base title="Writing" description={description}>
+  <h1 class="page-title">Writing</h1>
+  <div class="prose page-intro">
+    <p>
+      Essays. A claim that needed a few pages, with the date it was written and the time it takes to
+      read.
+    </p>
+  </div>
+  <ul class="tag-index">
+    {
+      tags.map((tag) => (
+        <li>
+          <a href={tagPath(tag.label)}>
+            {tag.label} ({tag.count})
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+  <EntryList
+    items={posts.map((entry) => ({
+      href: `/writing/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: formatDate(entry.data.date),
+      summary: entry.data.description,
+      tags: entry.data.tags.map((label) => ({ label, href: tagPath(label) })),
+    }))}
+  />
+</Base>

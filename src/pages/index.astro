@@ -1,0 +1,59 @@
+---
+import EntryList from '../components/EntryList.astro';
+import Base from '../layouts/Base.astro';
+import { publishedIdeas, publishedWriting, tagPath } from '../lib/content';
+import { formatDate } from '../lib/dates';
+import { siteJsonLd } from '../lib/jsonld';
+import { site } from '../site';
+
+const writing = (await publishedWriting()).slice(0, 3);
+const ideas = await publishedIdeas();
+---
+
+<Base title={site.title} description={site.description} jsonLd={siteJsonLd()}>
+  <h1 class="home-title">{site.name}</h1>
+  <p class="deck">Technologist, investor, builder. Based in Texas.</p>
+  <div class="prose home-prose">
+    <p>
+      I work between software and capital. The technical thread has been cloud, data platforms, and
+      machine learning, including time at Amazon Web Services and Databricks. Alongside that, I have
+      spent about a decade investing personal and family capital: real estate, hotels, multifamily,
+      private businesses, public equities, technology, and alternatives.
+    </p>
+    <p>
+      This site is the notebook. Longer pieces are under <a href="/writing/">writing</a>. Shorter
+      claims are under <a href="/ideas/">ideas</a>. <a href="/projects/">Projects</a> stays short, and
+      only for work I am willing to leave up.
+    </p>
+    <p>
+      The questions in front of me are about AI systems and personal computing — agents, local
+      inference, context, routing — and what those do to knowledge work and to the way an
+      organization is designed. The longer version of the story is on the <a href="/about/">about</a> page.
+    </p>
+  </div>
+
+  <h2 class="section-label" id="writing">Writing</h2>
+  <EntryList
+    items={writing.map((entry) => ({
+      href: `/writing/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: formatDate(entry.data.date),
+      summary: entry.data.description,
+      tags: entry.data.tags.map((label) => ({ label, href: tagPath(label) })),
+    }))}
+  />
+  <p class="more"><a href="/writing/">All writing</a></p>
+
+  <h2 class="section-label" id="ideas">Ideas</h2>
+  <EntryList
+    items={ideas.map((entry) => ({
+      href: `/ideas/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: formatDate(entry.data.date),
+      summary: entry.data.description,
+    }))}
+  />
+  <p class="more"><a href="/ideas/">All ideas</a></p>
+</Base>

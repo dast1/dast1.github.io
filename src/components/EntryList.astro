@@ -1,0 +1,48 @@
+---
+interface TagLink {
+  href: string;
+  label: string;
+}
+
+export interface EntryItem {
+  href: string;
+  title: string;
+  datetime: string;
+  dateLabel: string;
+  summary: string;
+  eyebrow?: string;
+  tags?: TagLink[];
+}
+
+interface Props {
+  items: EntryItem[];
+}
+
+const { items } = Astro.props;
+---
+
+<ol class="entries">
+  {
+    items.map((item) => (
+      <li>
+        <time datetime={item.datetime}>{item.dateLabel}</time>
+        <div>
+          <h3>
+            <a href={item.href}>{item.title}</a>
+          </h3>
+          {item.eyebrow && <p class="eyebrow">{item.eyebrow}</p>}
+          <p class="summary">{item.summary}</p>
+          {item.tags && item.tags.length > 0 && (
+            <ul class="tag-index">
+              {item.tags.map((tag) => (
+                <li>
+                  <a href={tag.href}>{tag.label}</a>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ol>

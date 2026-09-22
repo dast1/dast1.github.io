@@ -1,0 +1,59 @@
+import { defineCollection } from 'astro:content';
+import { glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+import { projectStatuses } from './lib/projects';
+
+const day = z.union([z.string(), z.date()]).transform((value) => {
+  if (value instanceof Date) {
+    const year = value.getUTCFullYear();
+    const month = String(value.getUTCMonth() + 1).padStart(2, '0');
+    const date = String(value.getUTCDate()).padStart(2, '0');
+    return `${year}-${month}-${date}`;
+  }
+  const match = /^(\d{4}-\d{2}-\d{2})/.exec(value.trim());
+  if (!match?.[1]) {
+    throw new Error(`Expected a YYYY-MM-DD date, received ${value}`);
+  }
+  return match[1];
+});
+
+const writing = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/writing' }),
+  schema: z.object({
+    title: z.string().min(1),
+    description: z.string().min(20),
+    date: day,
+    tags: z.array(z.string().min(1)).default([]),
+    draft: z.boolean().default(false),
+  }),
+});
+
+const ideas = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/ideas' }),
+  schema: z.object({
+    title: z.string().min(1),
+    description: z.string().min(20),
+    date: day,
+  }),
+});
+
+const projects = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/projects' }),
+  schema: z.object({
+    title: z.string().min(1),
+    description: z.string().min(20),
+    date: day,
+    status: z.enum(projectStatuses),
+    order: z.number().int(),
+    links: z
+      .array(
+        z.object({
+          label: z.string().min(1),
+          href: z.url(),
+        }),
+      )
+      .default([]),
+  }),
+});
+
+export const collections = { writing, ideas, projects };

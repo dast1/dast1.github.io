@@ -1,70 +1,132 @@
-# Coming Soon Page
+# Dastan Aitzhanov
 
-![Screenshot](art/screenshot.png)
+Personal site for Dastan Aitzhanov — technologist, investor, builder. Essays, shorter notes, and a short list of projects. The public site is [dast1.github.io](https://dast1.github.io).
 
-A simple coming soon page using HTML, CSS and the [Twitter Bootstrap](https://www.getbootstrap.com) framework. It is based on the [Advent](https://www.styleshout.com/free-templates/advent/) HTML5/CSS3 template made by [Styleshout](https://www.styleshout.com). It also uses the following JavaScript libraries:
-- [The Final Countdown](http://hilios.github.io/jQuery.countdown/)
-- [particles.js](http://vincentgarreau.com/particles.js/)
+The site is a static [Astro](https://astro.build) app: TypeScript, MDX and Markdown, and a small amount of CSS. There is no application server. GitHub Pages serves the built files.
 
-It is merely a simple, responsive and modern webpage template that counts down to the launch of a project currently under development.
+## Develop
 
-### Demo
-If you would like to see what the webpage looks like: [Live Demo](https://solomonkamanga.github.io/coming-soon-page/)
+Requires Node.js 22.
 
-### Features
-- Modern & elegant design
-- Responsive Design
-- Animated background
-- Multi-browser support
-- Easy to setup
-- The CSS framework is [Twitter Bootstrap](https://www.getbootstrap.com)
-- Icons are [Font Awesome](https://www.fontawesome.io)
-- All the third-party resources are hosted on a CDN 
+```bash
+npm install
+npm run dev
+```
 
-### Setup
-**1.** Change the logo
+The dev server prints a local URL. Pages refresh when content or components change.
 
-**2.** Add text content:
-- Announcement
-- Modal 
+## Build
 
-**3.** Change the date in the countdown timer
+```bash
+npm run build
+npm run preview
+```
 
-**4.** Customize the animated background. Refer to documentation: [Usage of particles.js](https://github.com/VincentGarreau/particles.js/#usage)
+`npm run build` writes the site to `dist/`. `npm run preview` serves that folder.
 
-**5.** Styling the page by changing the values in [CSS file](css/style.css) - **styles.css**
+`npm run verify` typechecks, builds, and checks the output: required pages, metadata, the feed, the sitemap, internal links, and that draft writing stayed unpublished.
 
-**6.** Customize the social media links in the footer.
+```bash
+npm run check   # astro check
+npm run lint    # checks dist/ — run a build first
+npm run verify  # check, build, and lint
+```
 
-### Credits
-- [Styleshout](https://www.styleshout.com)
-- [Vincent Garreau](https://www.vincentgarreau.com)
-- [Edson Hilios](http://edson.hilios.com.br)
+## Deploy
 
-### License
-MIT License
+The live site is a GitHub Pages **user site**. It is served from this repository at the domain root (`https://dast1.github.io`), not from a project subpath.
 
-Copyright (c) 2017 Solomon Musa Kamanga
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) does two things:
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+- On every pull request, and on every push to `master`, it installs dependencies and runs `npm run verify`.
+- On a push to `master`, it uploads `dist/` and deploys that artifact to GitHub Pages.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Pages is still configured, in the repository settings, to publish the files at the root of `master` directly. That was the right setup for the old single-page template. It is the wrong setup for this site, because the HTML people should see is the build output, not the source tree.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Cutover, once you are ready for the live site to change:
 
+1. Merge this branch into `master`.
+2. Open **Settings → Pages → Build and deployment**.
+3. Set **Source** to **GitHub Actions**.
+4. If the deploy workflow has not already succeeded, run the **Site** workflow on `master` with **Run workflow**.
 
+Do the settings change in the same sitting as the merge. Until Source is GitHub Actions, Pages will try to publish the repository root, which no longer contains a finished `index.html`.
 
+The workflow does not deploy from pull requests, so opening a PR leaves the current site alone.
 
+## Custom domain
 
+The public origin lives in [`src/site.ts`](src/site.ts) as `siteUrl`, and Astro reads it from [`astro.config.ts`](astro.config.ts). Canonical URLs, the sitemap, RSS, and Open Graph tags all use that value.
+
+To move the site to your own domain later:
+
+1. Change `siteUrl`.
+2. Add `public/CNAME` containing only the hostname, for example `example.com`.
+3. In the repository Pages settings, set the custom domain and turn on HTTPS.
+4. Point the domain's DNS at GitHub Pages.
+
+No base path change is required. This repository is a user site, so pages stay at `/writing/…`, `/ideas/…`, and `/projects/…`.
+
+## Add writing
+
+Create `src/content/writing/your-slug.mdx` (Markdown `.md` is fine too):
+
+```yaml
+---
+title: Title
+description: One or two sentences used on indexes, in RSS, and in social cards.
+date: "2026-09-22"
+tags:
+  - Context
+draft: false
+---
+```
+
+`date` is a calendar day, quoted. `draft: true` keeps the piece out of the site, the sitemap, and the feed. Tags become pages under `/writing/tags/…`.
+
+Footnotes use standard Markdown (`[^1]`). Fenced code blocks are highlighted. Reading time is calculated from the body.
+
+The URL is `/writing/your-slug/`.
+
+## Add an idea
+
+Create `src/content/ideas/your-slug.md`:
+
+```yaml
+---
+title: Title
+description: The claim in a sentence or two.
+date: "2026-09-22"
+---
+```
+
+The URL is `/ideas/your-slug/`.
+
+## Add a project
+
+Create `src/content/projects/your-slug.md`:
+
+```yaml
+---
+title: Title
+description: What it is, in a sentence or two.
+date: "2018-08-22"
+status: published
+order: 2
+links:
+  - label: Source
+    href: https://github.com/dast1/example
+---
+```
+
+`status` is one of `active`, `published`, `reference`, or `paused`. `order` sets the position on the projects page (lower comes first). The URL is `/projects/your-slug/`.
+
+Keep the list curated. A repository existing on GitHub is not by itself a reason to add it.
+
+## Marks
+
+`public/favicon.svg` is the mark. `npm run marks` regenerates `favicon-32.png`, `apple-touch-icon.png`, and `og.png` from that file and a small SVG card. `sharp` is a dev dependency used only by that script.
+
+## Editorial
+
+Write in the first person. Prefer leaving a fact out to guessing it. Do not publish a personal phone number. Drafts stay drafts until `draft` is removed or set to false.
