@@ -1,19 +1,25 @@
 ---
 title: Context is the product
-description: The useful limit on an AI system is no longer whether it can write. It is what the system is allowed to know, remember, and ignore.
+description: What a model is allowed to see is one boundary. What it is allowed to decide, and what the system is allowed to do, are the other two.
 date: "2026-09-08"
 tags:
   - Context
   - Systems
 ---
 
-The models got good enough that the bottleneck moved. The failures I pay attention to now are rarely failures of fluency. They are failures of inputs. The system saw the wrong document, trusted a stale instruction, or remembered something it should have forgotten.
+The models got good enough that the bottleneck moved. The failures I pay attention to now are rarely failures of fluency. They are failures of a boundary. The system saw the wrong document, trusted a stale instruction, remembered something it should have forgotten, or was asked to invent a decision it should only have been shown.
 
-People call the work of fixing that context engineering. The name is a little grand. Most of the job is editorial. Before a model speaks, someone has to decide what it holds: which sources, whose rules, how fresh, how much, and what is out of bounds. The prompt is the last inch of that decision.
+People call the work of fixing the first of those context engineering. The name is a little grand. Most of the job is editorial. Before a model speaks, someone has to decide what it holds. The prompt is the last inch of that decision. It is not the whole product.
 
-This is familiar if you have spent time on data platforms. A model is a demanding reader. It does not want the warehouse. It wants a small, current slice, with the contradictions already settled. "Garbage in, garbage out" used to be a slogan about training sets. It is now a runtime bug, and it shows up in a sentence a person is about to trust.
+Three boundaries get collapsed into one conversation about the prompt. They are different designs.
 
-A few distinctions I try to keep sharp:
+**What it gets to see.** Context. Which sources, whose rules, how fresh, how much, and what is out of bounds. A model is a demanding reader. It does not want the warehouse. It wants a small, current slice, with the contradictions already settled. "Garbage in, garbage out" used to be a slogan about training sets. It is now a runtime bug, and it shows up in a sentence a person is about to trust.
+
+**What it gets to decide.** Decision architecture. Classify an intent, choose a workflow, pick a model, rank, approve, escalate. Those are narrow choices with a constrained output. Putting them in the same generation that holds the documents makes the model the author of a choice the system should have owned. Seeing the file is not the same job as choosing the action.
+
+**What it is allowed to do.** Deterministic control. Policy, permissions, the workflow that actually runs, the write that actually lands. A careful context window does not grant any of that. It only makes the later decision less blind.
+
+Inside the first boundary, three distinctions are worth keeping sharp.
 
 **Retrieval is not memory.** A search hit from last year is not a fact the system has committed to. Treat them as the same thing and the system will cite the hit with the confidence of a memory. Memory should be deliberate. It should have an owner and an expiry. Search can be wide. Memory should be narrow.
 
@@ -21,6 +27,6 @@ A few distinctions I try to keep sharp:
 
 **More context is not more truth.** Every extra paragraph is a chance to distract. I would rather a system say it does not know than watch it improvise from a pile of almost-relevant text. Subtraction is the harder skill, and it is the one that makes an answer usable.
 
-Personal systems make the stakes obvious. When the context is your own files and your own unfinished thinking, the boundary is the product. What is in scope. What expires. What never leaves the machine. A longer prompt does not answer those questions. A smaller, governed one does, together with a system willing to show what it used.[^1]
+Personal systems make the stakes obvious. When the context is your own files and your own unfinished thinking, the boundary is the product. What is in scope. What expires. What never leaves the machine. A longer prompt answers none of that, and it does not answer what the system may decide or what it may do. Those are separate designs. Each of them should be willing to show its work.[^1]
 
-[^1]: I use "context engineering" as a name for the discipline, not as a product. The part worth the effort is the boundary around the model.
+[^1]: I use "context engineering" as a name for what the model is allowed to see, not as a product. Decision architecture and deterministic control are the neighboring problems. They are not three words for one prompt.

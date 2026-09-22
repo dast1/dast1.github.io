@@ -68,8 +68,14 @@ for (const file of required) {
   if (!(await exists(join(dist, file)))) fail(`missing ${file}`);
 }
 
-if (await exists(join(dist, 'writing/unpublished-note/index.html'))) {
-  fail('draft essay was published');
+const unpublished = [
+  'writing/unpublished-note/index.html',
+  'writing/probabilistic-intelligence-deterministic-control/index.html',
+  'writing/can-distributed-ai-still-be-governed/index.html',
+];
+
+for (const draftPath of unpublished) {
+  if (await exists(join(dist, draftPath))) fail(`draft essay was published: ${draftPath}`);
 }
 
 const forbidden = [
@@ -148,6 +154,12 @@ for (const phrase of ['Databricks', 'Texas', 'Amazon Web Services']) {
 if (!home.includes('Dastan Aitzhanov — Technologist, Investor, Builder')) {
   fail('home title is not the site title');
 }
+if (!home.includes('How do we combine probabilistic intelligence with deterministic control?')) {
+  fail('home is missing the lead question');
+}
+if (home.includes('What owners notice')) {
+  fail('home still leads with What owners notice');
+}
 
 const essay = await readFile(join(dist, 'writing/context-is-the-product/index.html'), 'utf8');
 if (!essay.includes('footnotes') && !essay.includes('data-footnotes')) {
@@ -167,7 +179,13 @@ if (!about.includes('dastan.aitzhanov@gmail.com')) fail('about page is missing t
 const rss = await readFile(join(dist, 'rss.xml'), 'utf8');
 if (!rss.includes('<item>')) fail('rss has no items');
 if (!rss.includes('/writing/context-is-the-product/')) fail('rss missing an essay');
-if (rss.includes('unpublished-note')) fail('rss includes the draft');
+for (const slug of [
+  'unpublished-note',
+  'probabilistic-intelligence-deterministic-control',
+  'can-distributed-ai-still-be-governed',
+]) {
+  if (rss.includes(slug)) fail(`rss includes the draft: ${slug}`);
+}
 
 const robots = await readFile(join(dist, 'robots.txt'), 'utf8');
 if (!robots.includes(`Sitemap: ${siteOrigin}/sitemap-index.xml`)) {
@@ -183,7 +201,13 @@ const sitemapText = (
 for (const path of ['/writing/', '/ideas/', '/projects/', '/about/']) {
   if (!sitemapText.includes(`${siteOrigin}${path}`)) fail(`sitemap missing ${path}`);
 }
-if (sitemapText.includes('unpublished-note')) fail('sitemap includes the draft');
+for (const slug of [
+  'unpublished-note',
+  'probabilistic-intelligence-deterministic-control',
+  'can-distributed-ai-still-be-governed',
+]) {
+  if (sitemapText.includes(slug)) fail(`sitemap includes the draft: ${slug}`);
+}
 if (sitemapText.includes('/404')) fail('sitemap includes the 404');
 
 for (const url of external) {

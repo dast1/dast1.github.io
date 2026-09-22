@@ -1,0 +1,137 @@
+---
+title: Probabilistic Intelligence, Deterministic Control
+description: Generative models are for reasoning that is still open. Repeated decisions belong to a narrower model, and repeated actions belong to ordinary software.
+date: "2026-09-21"
+tags:
+  - Systems
+  - Agents
+draft: true
+---
+
+The claim I want this essay to earn is a small one. A system gets more capable, and easier to govern, when a generative model is reserved for reasoning that is still open, and everything that has started to repeat is moved somewhere narrower. Repeated decisions move to a decision plane. Repeated actions move to ordinary software.
+
+I am writing this as an engineer who has spent years on platforms where the expensive part was not the idea. It was keeping a system the same on an ordinary day. At Amazon Web Services, and at Databricks, the work was getting data somewhere a program could use, and making that program trustworthy enough that someone would bet a workflow on it. Agents are now failing that test in a specific way. They are fluent. They are not stable.
+
+I will keep four kinds of sentence apart. Some of this I have seen in systems I have built against or read closely. Some of it is an architectural principle I am willing to design from. Some of it is a hypothesis I have not measured. A few sentences are predictions. The notes at the end say which claims still need a source.
+
+## The model is doing jobs that are not generation
+
+An agent loop, in the form that has become common, hands one language model a goal, a pile of tool descriptions, and the right to keep talking until something looks done. The same completion is asked to notice what the person wants, choose a tool, decide whether the action is allowed, fill in the arguments, check its own work, and narrate the result. Planning, classification, policy, and execution are one probabilistic text.
+
+That is a reasonable way to explore a task nobody has formalized. It is a poor way to run a task you already understand. The model is re-deriving a procedure on every request, and it is allowed to drift while it does it. Latency, cost, and variance are all being spent on work that stopped being open-ended several iterations ago.
+
+I do not have a census of production agents. What I have is a pattern, repeated often enough that I trust it as an observation and not yet as a statistic: the harness reaches for the largest generative model because that model can approximate every other component. Approximation is doing the work of design.[^1]
+
+## Fluency is not a decision
+
+A language model is trained to continue text. Continuation is the right instrument for an ambiguous question, a draft, a plan that does not exist yet, a case the workflow has never seen. It is the wrong instrument for a question whose legal answers already fit in a list.
+
+Which of these workflows. Whether this request may proceed. Which model is enough. Escalate, or run the path we already have. Those are decisions. The output space is small, and someone already wrote it down. Asking a generator to write the decision, and then parsing the sentence, adds a step whose failure mode is invention. The model emits a tool name you did not offer, a permission you did not define, a confident paragraph where the system needed a label.
+
+The sound of certainty is not evidence. A fluent completion can be wrong in a way a wrong label is not, because the wrong label is at least a member of a set you can score. The paragraph has to be interpreted before you know whether it was a decision at all. That interpretation is a second system, usually untested, sitting between the model and the action.
+
+This is the distinction I care about more than raw model quality. Better generation improves the open-ended work. It does not turn generation into a reliable way to choose among options you have already enumerated. Those are different computational problems. Treating them as one problem is why an agent can look finished in a demo and still be a poor thing to trust with the same action twice.
+
+## The output space was already closed
+
+A great deal of what an agent decides was never an open problem.
+
+Classify the intent. Choose the workflow. Select the model, or how much computation to spend. Choose which context is in scope. Rank candidates. Approve or reject. Answer a permission-shaped question. Decide whether to escalate. Detect that a known workflow already applies. Report a confidence. Each of these has a constrained action set. The set may be large. It is still a set. If your code cannot list the legal outputs, you do not have a decision procedure. You have a hope that the paragraph will be parseable.
+
+I am not claiming a measured share of agent steps that are constrained in this way. That share is a hypothesis, and it will differ by product. I am claiming the architectural test. If you can write the outputs down, you should not ask a general model to invent them.[^2]
+
+## Three kinds of computation
+
+I have started separating the work into three planes. The names are mine. The split is older than the names. A compiler already distinguishes a search from a rule. A business process already distinguishes a judgment from a procedure. Agent stacks collapsed them because one model could imitate all three.
+
+**Generative plane.** Language models, used for novel, ambiguous, exploratory reasoning. The work is open-ended. The output is new text, a new plan, a draft, an answer that was not on a menu. This plane is probabilistic, and it is relatively expensive in latency, money, and variance. It is where a system should go when the answer is not a member of a set you already wrote down. It should not be the default plane for everything the system touches.
+
+**Decision plane.** Narrow decisions over a constrained action set. The list above lives here: intent, workflow, model, complexity, context, rank, approval, a permission-shaped question, escalation, detection of a known workflow, confidence. The output is a label, a score, or a probability. It is not a paragraph.
+
+How you build this plane is a secondary question. I want the abstraction to outlive any one implementation. A conventional classifier. A regressor, when the answer is a magnitude rather than a bucket. A small model trained for that decision and nothing else. Constrained decoding, where a generator may emit only tokens from a fixed set. Decoder-logit classification, where you read the model's next-token distribution over those labels instead of asking it to write a sentence and hoping the sentence names one. A model whose only interface is a typed decision.
+
+One current instance of that last pattern is what TypeSafe describes as a System One model, under the name Jev. As they describe it, the caller supplies state and typed questions, and the model returns a choice, a score, or a yes-or-no probability rather than prose. The name collides with Kahneman's System 1. I am not using it that way, and I am not adopting the product. I have not measured its latency, its calibration, or its accuracy. I am interested in the shape: a component that is allowed to be uncertain, inside an action set the caller fixed. Classifiers have had that shape for a long time. The decision plane is the idea. The implementation should be whichever one is accurate enough, cheap enough, and inspectable enough for that particular decision.[^3]
+
+**Deterministic execution.** Workflows, policy engines, APIs, databases, state machines, permissions, orchestration, validation, tests. If the step is to charge the card, write the row, refuse the tool, or run the refund path we already shipped, a language model should not be in the loop. Ordinary software is the right tool. It was the right tool before any of this, and it remains the right tool wherever the procedure is known and the side effect is real. Do not call a generative model for a step a function can own.
+
+The failure I am trying to design out is using the generative plane where the decision plane, or ordinary software, would do. The inverse failure also exists. A brittle rule that pretends to cover a case that is actually new will fail closed, or worse, fail open. The generative plane is how you handle the residue. It is not how you handle the residue and the routine in the same call.
+
+## A probability can inform a policy. It is not one.
+
+Classification can be probabilistic. The rule that acts on the classification should not be.
+
+If a model says the intent is a refund, with some high confidence — say 0.92, as an illustration and not a result — the policy is still code. This action is in the allowed set. This confidence clears a threshold a person chose. This identity may take the action. This record is written. Change the threshold and you have changed the system on purpose, in a diff. Let the model improvise the policy in prose and the system is different on Tuesday, for no reason you can review.
+
+Low confidence is not a softer yes. It is a branch: ask a stronger model, ask a person, or stop. That branch is also code. A calibrated probability is useful because code can read it. An uncalibrated probability is a number with the manners of a measurement. I would not gate a side effect on it until someone has checked the calibration against the traffic the system actually sees. I have not done that check for any decision model named in this essay.[^4]
+
+```ts
+type Plane = "generate" | "decide" | "execute";
+
+// A sketch of the split, not a system I ship.
+function plane(step: { openEnded: boolean; workflowKnown: boolean }): Plane {
+  if (step.workflowKnown) return "execute";
+  if (step.openEnded) return "generate";
+  return "decide";
+}
+
+// The probability is an input. The permission is the function.
+function permit(actionIsAllowed: boolean, confidence: number, threshold: number): boolean {
+  return actionIsAllowed && confidence >= threshold;
+}
+```
+
+The second function is deliberately dull. Dull is the point. An action that moves money, data, or a person's work should fail in a way a test can name.
+
+## Do not rediscover a workflow you already have
+
+The first time a task shows up, generation is often the honest tool. Nobody has written the procedure. The model explores. A person corrects it. Something works, or it does not, and you learn which.
+
+The tenth time, the exploration is waste. The path is known. Continuing to ask a general model to reinvent it — re-read the tools, re-derive the steps, restate the policy in a new paragraph — spends latency and money to produce variance you did not order. An established workflow should be called, not rediscovered.
+
+There is a vanity in the rediscovery. An agent that figures it out again looks intelligent. A function that runs the procedure looks like software, which is to say it looks like something you could have built without a model. That appearance is a bad reason to keep the model on the critical path. The model was how you found the procedure. It is not a trophy you leave there.
+
+## The migration
+
+The loop I want is boring, and that is the recommendation.
+
+novel reasoning → a repeated pattern → a workflow → a narrow decision → deterministic execution
+
+A new request lands in the generative plane, because you do not yet know what it is. If the same shape keeps appearing, write the shape down. You now have a workflow, even if it is still a document and not yet code. The remaining judgment is no longer what should we do. It is which workflow applies, and how sure are we. That is a decision-plane question. Once that decision is stable, most of the path is software. The workflow runs. The policy checks. The side effect happens in a system that can be tested, retried, and owned.
+
+Each step of that migration should get cheaper, faster, and more predictable than the step before it. That economic claim is a hypothesis about how these systems behave under repetition, not a benchmark I am quoting. The loop itself is the architectural principle. I would rather be wrong about the size of the savings than vague about the direction. Repetition should leave the generative model.[^5]
+
+What should not migrate is the residue that is still new. A workflow that has gone stale is worse than a model that notices. Detecting that the pattern broke is itself a narrow decision. It belongs on the decision plane, with a path back to generation, or to a person, when the confidence is bad. The loop is not a one-way ratchet toward rigidity. It is a way to stop paying exploration prices for work that is no longer exploration.
+
+## Why the split matters once there is more than one request
+
+**Latency.** A constrained decision does not need to stream a paragraph before the system knows which way to go. The expensive model wakes up when the work is actually open-ended. A person waiting on a known workflow should be waiting on the workflow, not on a model recalling the workflow in prose.
+
+**Cost.** Tokens spent re-deriving a known path are tokens you pay on every request, for as long as you refuse to write the path down. The generative plane stays expensive. That is acceptable when it is rare relative to the work. It is a structural cost when it is the work.
+
+**Reliability.** A generator can name a tool you did not offer. A decision over a fixed set cannot, if the set is enforced outside the model. The failure that remains is a wrong label. Wrong labels can be counted. Invented procedures have to be noticed first, which is a worse monitoring problem.
+
+**Governance.** You can version a policy you wrote. You can version a workflow. You can log the label, the confidence, the threshold, and the branch taken, and a person can answer for that record. You cannot audit a policy that was implied by a completion and then discarded with the context window. Governance here is the ability to say what the system was allowed to do, and to show that it did that.
+
+**Concurrency.** Agents that each carry a full generative loop contend for the same expensive inference, and they contend again for whatever tools they decide to call. Agents that mostly execute known workflows contend for ordinary compute, and they call a model for the residue. I think this is the difference between a demonstration that handles one person and a system that can be run for many people at once. The scaling claim is a prediction. The mechanism is not. A long generative trace does not scale like a function call, and a fleet of them will show you that.[^6]
+
+## What I am not saying
+
+I am not saying generative models should be smaller, rarer, or distrusted on principle. I am saying they should be aimed at the work that is still novel. The more capable they get, the more patterns they will surface, and the more of those patterns should leave the model. Capability increases the value of the generative plane. It also increases the amount of repetition you will be tempted to leave inside it.
+
+I am not saying every narrow decision needs a new kind of model. Many need a classifier you already know how to train. Some need no model at all. If the rule fits in a function, write the function. The decision plane is an admission that a judgment remains. It is not a requirement to host that judgment in a special product.
+
+I am not describing a product, a network, or a company. I am describing a separation I want in systems I am willing to trust with a repeated action. The next question is what happens when generation, the decision, and the execution are no longer on the same machine. That is a governance problem before it is a topology problem, and it is a different essay.
+
+## Notes
+
+[^1]: Observation, not a survey. I am describing agent harnesses I have built against and read: one generative model asked to plan, select tools, and judge whether it may act. I do not have a published count of how often production systems do this. Treat the prevalence as practice until someone measures it.
+
+[^2]: Hypothesis. How large the constrained share is depends on the product, and I have not counted it. The architectural test — if the outputs can be enumerated, do not ask a generator to invent them — is the part I would keep even if the share is smaller than I think.
+
+[^3]: The decision-plane abstraction is the claim. Classifiers, regressors, small decision models, constrained decoding, decoder-logit classification, and a typed decision model are a map of patterns, not a comparison I have run. Jev, described by TypeSafe as a System One model, is one public instance of the typed shape: state in, a choice or a score or a yes-or-no probability out, no prose. I have not independently verified that description, and this essay does not use their latency, price, or accuracy figures. Those need a measurement on a stated task before they belong here. Decoder-logit classification — reading a next-token distribution over a fixed label set — needs a citation before publication if the essay ever says anything about its accuracy relative to a trained classifier. It does not say that here.
+
+[^4]: Principle: policy stays deterministic even when classification is probabilistic. The example confidence is illustrative. The calibration warning is the part that needs evidence. I would not state, as a finding, how often agent thresholds are fit on the wrong base rate. The operational rule stands without that finding: do not gate a side effect on a probability you have not checked against the traffic you actually see.
+
+[^5]: The migration loop is the architectural principle. The claim that each step is cheaper, faster, and more predictable is a hypothesis about systems under repetition. I am not citing a cost model.
+
+[^6]: Latency, cost, reliability, and governance follow from the split if the split is real. The concurrency point is a prediction about fleets. I would want traces from a real multi-person system before stating it as a finding.
