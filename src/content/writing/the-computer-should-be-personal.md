@@ -1,7 +1,7 @@
 ---
 title: The computer should be personal again
 description: Local inference matters less as a benchmark and more as a question of where a person's thinking is allowed to live.
-date: "2026-09-14"
+date: "2026-09-21"
 tags:
   - Computing
   - Systems

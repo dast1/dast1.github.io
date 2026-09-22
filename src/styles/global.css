@@ -213,6 +213,31 @@ main {
   margin-top: 1.75rem;
 }
 
+.current-questions {
+  list-style: none;
+  max-width: 48rem;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+}
+
+.current-questions li {
+  display: grid;
+  grid-template-columns: 1.4rem 1fr;
+  gap: 0.65rem;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 1.08rem;
+  line-height: 1.45;
+  color: var(--ink-soft);
+}
+
+.current-questions li::before {
+  content: '—';
+  color: var(--accent);
+}
+
 .prose p,
 .prose ul,
 .prose ol,
@@ -579,6 +604,31 @@ main {
 @media (max-width: 680px) {
   :root {
     --shell: min(72rem, calc(100% - 1.75rem));
+  }
+
+  .header-inner {
+    align-items: flex-start;
+    padding-block: 0.95rem;
+  }
+
+  .header-tools {
+    width: 100%;
+    justify-content: space-between;
+    gap: 0.25rem 0.75rem;
+  }
+
+  .nav ul {
+    gap: 0.1rem 0.8rem;
+  }
+
+  .nav a,
+  .theme-toggle {
+    font-size: 0.95rem;
+    padding-block: 0.55rem;
+  }
+
+  .page {
+    padding-top: 2.25rem;
   }
 
   .entries li {

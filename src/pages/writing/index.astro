@@ -6,17 +6,36 @@ import { formatDate } from '../../lib/dates';
 
 const posts = await publishedWriting();
 const tags = await writingTags();
+
+const elsewhere = [
+  {
+    href: 'https://www.linkedin.com/pulse/your-70b-model-lost-8b-graph-dastan-aitzhanov-f5rkc',
+    title: 'Your 70B Model Lost to an 8B With a Graph',
+    datetime: '2026-03-05',
+    dateLabel: 'March 5, 2026',
+    summary:
+      'A practical evaluation of a graph-assisted 8B model against a standalone 70B model, and what it suggests about structure, cost, latency, and auditability.',
+    eyebrow: 'LinkedIn',
+  },
+  {
+    href: 'https://www.linkedin.com/pulse/what-weekend-down-rabbit-hole-taught-me-local-ai-dastan-aitzhanov-tzqec',
+    title: 'What a Weekend Down the Rabbit Hole Taught Me About Local AI and Intelligent Scaffolding',
+    datetime: '2026-02-23',
+    dateLabel: 'February 23, 2026',
+    summary:
+      'Notes from experimenting with local AI, zero-trust isolation, and why governance belongs in the scaffolding around the model.',
+    eyebrow: 'LinkedIn',
+  },
+];
+
 const description =
-  'Essays by Dastan Aitzhanov on context, personal computing, investing, and how organizations decide.';
+  'Essays and notes by Dastan Aitzhanov on AI systems, personal computing, investing, and organizational design.';
 ---
 
 <Base title="Writing" description={description}>
   <h1 class="page-title">Writing</h1>
   <div class="prose page-intro">
-    <p>
-      Essays. A claim that needed a few pages, with the date it was written and the time it takes to
-      read.
-    </p>
+    <p>Longer pieces on AI systems, computing, organizations, investing, and the connections between them.</p>
   </div>
   <ul class="tag-index">
     {
@@ -39,4 +58,7 @@ const description =
       tags: entry.data.tags.map((label) => ({ label, href: tagPath(label) })),
     }))}
   />
+
+  <h2 class="section-label">Earlier writing elsewhere</h2>
+  <EntryList items={elsewhere} />
 </Base>

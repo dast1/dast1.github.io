@@ -10,10 +10,11 @@ export const site = {
   name: 'Dastan Aitzhanov',
   title: 'Dastan Aitzhanov — Technologist, Investor, Builder',
   description:
-    'Essays and notes from Dastan Aitzhanov, a technologist, investor, and builder in Texas, on AI systems, personal computing, and how organizations decide.',
+    'Essays and notes from Dastan Aitzhanov on AI systems, personal computing, investing, and organizational design.',
   url: siteUrl,
   email: 'dastan.aitzhanov@gmail.com',
   github: 'https://github.com/dast1',
+  linkedin: 'https://www.linkedin.com/in/dastan1',
   location: 'Texas',
   locale: 'en_US',
 } as const;
