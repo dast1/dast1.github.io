@@ -7,30 +7,43 @@ import { siteJsonLd } from '../lib/jsonld';
 import { site } from '../site';
 
 const writing = (await publishedWriting()).slice(0, 3);
-const ideas = await publishedIdeas();
+const ideas = (await publishedIdeas()).slice(0, 3);
+
+const currentQuestions = [
+  'What should stay local as AI becomes a persistent part of personal computing?',
+  'How should agents hand work off to deterministic systems and people?',
+  'Where does better context matter more than a larger model?',
+  'What changes when AI becomes part of an organization\'s operating model, not just another tool?',
+];
 ---
 
 <Base title={site.title} description={site.description} jsonLd={siteJsonLd()}>
   <h1 class="home-title">{site.name}</h1>
-  <p class="deck">Technologist, investor, builder. Based in Texas.</p>
+  <p class="deck">Technologist · Investor · Builder</p>
+
   <div class="prose home-prose">
     <p>
-      I work between software and capital. The technical thread has been cloud, data platforms, and
-      machine learning, including time at Amazon Web Services and Databricks. Alongside that, I have
-      spent about a decade investing personal and family capital: real estate, hotels, multifamily,
-      private businesses, public equities, technology, and alternatives.
+      I have spent most of my career around systems that move information and capital: cloud
+      infrastructure, data platforms, machine learning, and investing. I worked at Amazon Web
+      Services and Databricks, and for roughly a decade I have also invested personal and family
+      capital across real estate, public markets, technology, and private investments.
     </p>
     <p>
-      This site is the notebook. Longer pieces are under <a href="/writing/">writing</a>. Shorter
-      claims are under <a href="/ideas/">ideas</a>. <a href="/projects/">Projects</a> stays short, and
-      only for work I am willing to leave up.
+      These days I am especially interested in what happens as AI moves from a tool we call on
+      occasionally to a persistent layer of computing: agents, local inference, context, routing,
+      and the operating models that emerge when software can do more than answer questions.
     </p>
     <p>
-      The questions in front of me are about AI systems and personal computing — agents, local
-      inference, context, routing — and what those do to knowledge work and to the way an
-      organization is designed. The longer version of the story is on the <a href="/about/">about</a> page.
+      This site is where I keep the parts worth returning to. Longer pieces live under
+      <a href="/writing/">writing</a>, shorter claims under <a href="/ideas/">ideas</a>, and
+      <a href="/projects/">projects</a> is reserved for work I can actually point to.
     </p>
   </div>
+
+  <h2 class="section-label" id="questions">Current questions</h2>
+  <ul class="current-questions" aria-labelledby="questions">
+    {currentQuestions.map((question) => <li>{question}</li>)}
+  </ul>
 
   <h2 class="section-label" id="writing">Writing</h2>
   <EntryList

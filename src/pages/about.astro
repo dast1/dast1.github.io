@@ -3,38 +3,48 @@ import Base from '../layouts/Base.astro';
 import { site } from '../site';
 
 const description =
-  'How Dastan Aitzhanov came to work across software, cloud platforms, and investing, and what he is thinking about now.';
+  'About Dastan Aitzhanov: a career across cloud, data, AI, investing, and the questions connecting them.';
 ---
 
 <Base title="About" description={description}>
   <h1 class="page-title">About</h1>
   <div class="prose">
     <p>
-      I build software, and I allocate capital. They have never felt like separate kinds of work.
+      I have always had two tracks running at the same time: building systems and allocating
+      capital. They increasingly look like the same problem from different sides.
     </p>
     <p>
-      The technical thread runs through cloud infrastructure, data platforms, and machine learning.
-      I worked at Amazon Web Services and at Databricks. The problems I liked were practical ones:
-      getting data to a place a model could use, making a system reliable enough that someone would
-      trust it on an ordinary day, and finding which part of a stack was actually doing the work.
+      On the technical side, my work has moved through cloud infrastructure, data platforms,
+      machine learning, and AI. I worked at Amazon Web Services and Databricks. The problems that
+      held my attention were rarely just about the technology itself. They were about the boundary
+      between architecture and actual use: what information a system needs, where it should run,
+      what can fail, and what a person has to trust before putting it into ordinary work.
     </p>
     <p>
-      Alongside that, I have spent about a decade investing personal and family capital. Real estate,
-      hotels, multifamily housing, private businesses, public equities, technology, alternatives.
-      Owning something changes the way a spreadsheet reads. You start to care about operations,
-      incentives, and what is left after the model is right.
+      In parallel, I have spent about a decade investing personal and family capital. Hotels and
+      multifamily real estate have been a meaningful part of that experience, alongside public
+      equities, technology, private investments, and other alternatives. Investing changes what
+      looks important. A model can be elegant and still miss the operating fact that decides the
+      outcome.
     </p>
     <p>
-      What I am working through now is the overlap. How AI systems — agents, models that run near
-      the person using them, the machinery of context and routing — change knowledge work, personal
-      computing, and the design of organizations. I write about that here when a thought is ready.
-      Current experiments stay off the projects page until there is something definite to show.
+      The overlap is what interests me now. I am thinking about AI systems that are more persistent,
+      more personal, and more capable of acting: how they use context, when work should stay local,
+      how models and tools should be routed, where deterministic systems should take over, and how
+      people remain accountable when software can execute.
+    </p>
+    <p>
+      I am equally interested in what those systems change about businesses themselves: knowledge
+      work, organizational design, operating leverage, capital allocation, and ownership. This site
+      is where I try to turn those questions into writing, small experiments, and ideas that are
+      specific enough to be wrong.
     </p>
     <p>I live in Texas.</p>
     <p>
-      Email is the way to reach me:
+      Email is the simplest way to reach me:
       <a href={`mailto:${site.email}`}>{site.email}</a>.
-      Code I have published lives on <a href={site.github} rel="me">GitHub</a>.
+      You can also find me on <a href={site.linkedin} rel="me">LinkedIn</a> and
+      <a href={site.github} rel="me">GitHub</a>.
     </p>
   </div>
 </Base>
