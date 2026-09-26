@@ -1,6 +1,6 @@
 ---
 title: Good systems expose their assumptions before their confidence
-description: A conclusion becomes more useful when the assumptions supporting it—and the evidence that could break it—are visible.
+description: A conclusion becomes more useful when the assumptions supporting it, and the evidence that could break it, are visible.
 date: "2026-09-25"
 developed: "2026-03"
 tags: [Product, Governance]

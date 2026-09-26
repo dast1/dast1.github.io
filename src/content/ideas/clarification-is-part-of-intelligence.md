@@ -16,4 +16,4 @@ Clarification is sometimes treated as friction. In a good system, it is a contro
 
 There is a failure mode in the other direction. A system can ask so many questions that it pushes the work back onto the user. The goal is not to clarify everything. It is to ask when the answer would materially change what happens next.
 
-To put it simply, intent is not only what the user asked for. It is the kind of help they believe they are asking for. A useful system should be able to tell the difference—or recognize when it cannot.
+To put it simply, intent is not only what the user asked for. It is the kind of help they believe they are asking for. A useful system should be able to tell the difference, or recognize when it cannot.

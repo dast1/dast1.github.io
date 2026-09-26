@@ -10,4 +10,4 @@ The first time through an ambiguous task, a generative model is often the right 
 
 Leaving the repetition inside the model is a choice to keep paying for exploration you already finished. Software is how a repeated action becomes cheaper, faster, and the same tomorrow. The model found the path. Calling the path is a different job.
 
-Where this fails is work that looks repeated and is not. A workflow that has gone stale is worse than a model that notices the break. Both of those — noticing the repetition, and noticing that the pattern no longer holds — are narrower questions than asking the model to do the whole job again.
+Where this fails is work that looks repeated and is not. A workflow that has gone stale is worse than a model that notices the break. Both of those, noticing the repetition and noticing that the pattern no longer holds, are narrower questions than asking the model to do the whole job again.
