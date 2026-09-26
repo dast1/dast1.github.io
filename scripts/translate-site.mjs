@@ -70,7 +70,12 @@ Rules:
 const hasCredential = Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
 // CI sets TRANSLATE_SPEND to "false" on pull-request builds so only master pays.
 const maySpend = process.env.TRANSLATE_SPEND !== 'false';
-const client = hasCredential && maySpend ? new Anthropic() : null;
+// Two retries per request is plenty; a billing or auth failure should surface in seconds, not minutes.
+const client = hasCredential && maySpend ? new Anthropic({ maxRetries: 1 }) : null;
+// Set on the first fatal API error so the rest of the run falls back to English instead of
+// failing the build. A deploy must never depend on the translation service being available.
+let apiFailure = null;
+let consecutiveFailures = 0;
 console.log(`translate: credential ${hasCredential ? 'present' : 'absent'}, spending ${client ? 'enabled' : 'disabled'}`);
 
 const hash = (lang, text) => createHash('sha256').update(`${lang}\n${text}`).digest('hex').slice(0, 16);
@@ -214,12 +219,39 @@ function chunk(items, maxItems = 40, maxChars = 12000) {
 async function ensureTranslated(lang, cache, units, stats) {
   const missing = [...new Set(units.map((u) => u.source).filter((s) => !cache[hash(lang, s)]))];
   if (!missing.length) return;
-  if (!client) {
+  if (!client || apiFailure) {
     stats.untranslated += missing.length;
     return;
   }
   for (const batch of chunk(missing)) {
-    const translated = await requestTranslations(lang, batch);
+    if (apiFailure) {
+      stats.untranslated += batch.length;
+      continue;
+    }
+    let translated;
+    try {
+      translated = await requestTranslations(lang, batch);
+      consecutiveFailures = 0;
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      consecutiveFailures += 1;
+      // Auth, billing, and permission errors will not fix themselves mid-run, and neither will
+      // an API that fails several times in a row: stop calling and keep the build moving.
+      const fatal =
+        error instanceof Anthropic.AuthenticationError ||
+        error instanceof Anthropic.PermissionDeniedError ||
+        /credit balance|billing/i.test(message) ||
+        consecutiveFailures >= 5;
+      if (fatal && !apiFailure) {
+        apiFailure = message;
+        console.warn(`warning: translation API unavailable, the rest of this build stays English: ${message}`);
+      } else if (!fatal) {
+        console.warn(`warning: [${lang}] a batch failed and stays English: ${message}`);
+      }
+      stats.untranslated += batch.length;
+      stats.errors += 1;
+      continue;
+    }
     batch.forEach((source, i) => {
       const out = translated[i];
       if (tagSequence(out) !== tagSequence(source)) {
@@ -322,7 +354,7 @@ async function main() {
     available[lang].add(path);
   }
   for (const lang of LANG_CODES) for (const path of paths) available[lang].add(path);
-  const stats = Object.fromEntries(LANG_CODES.map((code) => [code, { translated: 0, untranslated: 0, mismatched: 0, pages: 0 }]));
+  const stats = Object.fromEntries(LANG_CODES.map((code) => [code, { translated: 0, untranslated: 0, mismatched: 0, errors: 0, pages: 0 }]));
 
   await Promise.all(
     LANG_CODES.map(async (lang) => {
@@ -382,11 +414,18 @@ async function main() {
 
   for (const lang of LANG_CODES) {
     const s = stats[lang];
-    console.log(`${lang}: ${s.pages} pages, ${s.translated} new translations, ${s.untranslated} left in English, ${s.mismatched} markup mismatches`);
+    console.log(`${lang}: ${s.pages} pages, ${s.translated} new translations, ${s.untranslated} left in English, ${s.mismatched} markup mismatches, ${s.errors} failed batches`);
   }
   const untranslated = LANG_CODES.reduce((n, lang) => n + stats[lang].untranslated, 0);
-  if (untranslated && !client) {
-    console.warn(`warning: ${untranslated} fragments left in English because ${hasCredential ? 'spending is disabled on this build' : 'no ANTHROPIC_API_KEY is set'}`);
+  if (untranslated) {
+    const why = apiFailure
+      ? `the translation API failed: ${apiFailure}`
+      : !hasCredential
+        ? 'no ANTHROPIC_API_KEY is set'
+        : !maySpend
+          ? 'spending is disabled on this build'
+          : 'some batches failed';
+    console.warn(`warning: ${untranslated} fragments left in English because ${why}`);
     if (strict) process.exit(1);
   }
 }
