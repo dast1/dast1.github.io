@@ -160,7 +160,7 @@ const home = await readFile(join(dist, 'index.html'), 'utf8');
 for (const phrase of ['Databricks', 'Texas', 'Amazon Web Services']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
-if (!home.includes('Dastan Aitzhanov — AI Systems, Governance, and Ownership')) {
+if (!home.includes('Dastan Aitzhanov | AI Systems, Governance, and Ownership')) {
   fail('home title is not the site title');
 }
 if (!home.includes('how should that authority be granted, bounded, verified, and revoked?')) {

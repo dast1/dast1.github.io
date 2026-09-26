@@ -29,7 +29,7 @@ const {
 } = Astro.props;
 
 const isHome = Astro.url.pathname === '/';
-const documentTitle = isHome ? title : `${title} — ${site.name}`;
+const documentTitle = isHome ? title : `${title} | ${site.name}`;
 const canonical = new URL(canonicalPath ?? Astro.url.pathname, site.url);
 const image = new URL(imagePath, site.url).href;
 const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : '';
