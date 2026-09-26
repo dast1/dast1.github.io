@@ -74,7 +74,9 @@ let consecutiveFailures = 0;
 console.log(`translate: credential ${hasCredential ? 'present' : 'absent'}, spending ${client ? 'enabled' : 'disabled'}`);
 
 const hash = (lang, text) => createHash('sha256').update(`${lang}\n${text}`).digest('hex').slice(0, 16);
-const tagSequence = (s) => (s.match(/<[^>]+>/g) ?? []).join('');
+// Word order changes across languages, so inline links may legitimately swap places.
+// Compare the tags as a sorted multiset: added, removed, or altered tags still fail.
+const tagSequence = (s) => (s.match(/<[^>]+>/g) ?? []).sort().join('');
 const hasLetters = (s) => /\p{L}/u.test(s);
 const isOpaque = (s) => /^\S+@\S+\.\S+$/.test(s) || /^https?:\/\/\S+$/.test(s);
 
