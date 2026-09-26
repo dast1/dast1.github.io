@@ -19,7 +19,12 @@ export async function publishedWriting(): Promise<CollectionEntry<'writing'>[]> 
 
 export async function publishedIdeas(): Promise<CollectionEntry<'ideas'>[]> {
   const entries = await getCollection('ideas');
-  return entries.sort((a, b) => b.data.date.localeCompare(a.data.date));
+  return entries.sort(
+    (a, b) =>
+      b.data.developed.localeCompare(a.data.developed) ||
+      b.data.date.localeCompare(a.data.date) ||
+      a.data.title.localeCompare(b.data.title),
+  );
 }
 
 export async function publishedProjects(): Promise<CollectionEntry<'projects'>[]> {

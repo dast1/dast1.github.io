@@ -2,6 +2,7 @@
 title: An agent needs a job, not a persona
 description: A role and a manner of speaking make a demo. A job has inputs, a definition of done, and a person who owns the outcome.
 date: "2026-09-10"
+developed: "2026-09"
 ---
 
 Give a system a role, a few tools, and a manner of speaking, and you have a demo. Give it a job and you have a chance of fitting it into real work.

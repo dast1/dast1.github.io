@@ -2,6 +2,7 @@
 title: Policy should not be probabilistic
 description: A classifier may return a probability. The rule that permits an action should still be code you can read, version, and test.
 date: "2026-09-21"
+developed: "2026-09"
 ---
 
 A model can be unsure. A policy should not be. If the system may refund, send, delete, or spend, that permission is a rule: this action, this actor, this threshold, this record. The probability is an input to the rule. It is not a substitute for the rule.

@@ -402,6 +402,14 @@ main {
   margin-bottom: 0.5rem;
 }
 
+.page-intro .timeline-note {
+  max-width: 64ch;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .page-title {
   font-size: clamp(2.2rem, 5vw, 3.3rem);
   margin-bottom: 0.85rem;

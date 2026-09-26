@@ -2,6 +2,7 @@
 title: The best agent workflow eventually stops looking agentic
 description: An agent loop is a reasonable way to discover a procedure. It is a poor way to run one you already trust.
 date: "2026-09-21"
+developed: "2026-09"
 ---
 
 An agent that plans, calls tools, and revises on every request is a sign that the procedure is still being found. Once the procedure is found, the loop is overhead. Extra latency, extra variance, extra places for a fluent mistake. The mature form is a workflow with a few explicit decisions and a person on the branches that still matter.

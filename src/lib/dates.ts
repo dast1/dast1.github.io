@@ -24,6 +24,14 @@ export function formatDate(isoDate: string): string {
   return `${month} ${day}, ${year}`;
 }
 
+export function formatMonth(isoMonth: string): string {
+  const match = /^(\d{4})-(\d{2})$/.exec(isoMonth);
+  if (!match) return isoMonth;
+  const year = Number(match[1]);
+  const month = MONTHS[Number(match[2]) - 1];
+  return month ? `${month} ${year}` : isoMonth;
+}
+
 export function yearOf(isoDate: string): string {
   return isoDate.slice(0, 4);
 }

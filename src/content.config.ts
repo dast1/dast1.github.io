@@ -17,6 +17,8 @@ const day = z.union([z.string(), z.date()]).transform((value) => {
   return match[1];
 });
 
+const month = z.string().regex(/^\d{4}-(0[1-9]|1[0-2])$/, 'Expected a YYYY-MM month');
+
 const writing = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/writing' }),
   schema: z.object({
@@ -36,6 +38,7 @@ const ideas = defineCollection({
     title: z.string().min(1),
     description: z.string().min(20),
     date: day,
+    developed: month,
   }),
 });
 

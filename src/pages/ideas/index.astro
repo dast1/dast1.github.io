@@ -2,7 +2,7 @@
 import EntryList from '../../components/EntryList.astro';
 import Base from '../../layouts/Base.astro';
 import { publishedIdeas } from '../../lib/content';
-import { formatDate } from '../../lib/dates';
+import { formatMonth } from '../../lib/dates';
 
 const ideas = await publishedIdeas();
 const description =
@@ -13,13 +13,17 @@ const description =
   <h1 class="page-title">Ideas</h1>
   <div class="prose page-intro">
     <p>Shorter than the essays. A claim, the reason I hold it, and where it might be wrong.</p>
+    <p class="timeline-note">
+      Development months indicate approximately when an idea first appeared in my notes, work, or
+      public writing. They do not necessarily indicate when it was first published on this site.
+    </p>
   </div>
   <EntryList
     items={ideas.map((entry) => ({
       href: `/ideas/${entry.id}/`,
       title: entry.data.title,
-      datetime: entry.data.date,
-      dateLabel: formatDate(entry.data.date),
+      datetime: entry.data.developed,
+      dateLabel: `Developed ${formatMonth(entry.data.developed)}`,
       summary: entry.data.description,
     }))}
   />

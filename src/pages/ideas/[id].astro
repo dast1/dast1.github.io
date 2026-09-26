@@ -4,6 +4,7 @@ import Longform from '../../components/Longform.astro';
 import Pager from '../../components/Pager.astro';
 import { publishedIdeas } from '../../lib/content';
 import { articleJsonLd } from '../../lib/jsonld';
+import { formatMonth } from '../../lib/dates';
 import { site } from '../../site';
 
 export async function getStaticPaths() {
@@ -35,6 +36,7 @@ const url = new URL(`/ideas/${entry.id}/`, site.url).href;
   title={entry.data.title}
   description={entry.data.description}
   date={entry.data.date}
+  dateLabel={`Developed ${formatMonth(entry.data.developed)}`}
   jsonLd={articleJsonLd({
     title: entry.data.title,
     description: entry.data.description,
