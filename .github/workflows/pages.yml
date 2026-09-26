@@ -7,6 +7,8 @@ on:
   pull_request:
   push:
     branches: [master]
+  # "Run workflow" on master from the Actions tab behaves like a push: it translates
+  # whatever is missing, commits the cache, and deploys. Useful after adding API credits.
   workflow_dispatch:
 
 permissions:
@@ -38,10 +40,10 @@ jobs:
           # ANTHROPIC_API_KEY. GitHub masks it as *** in the log when present.
           # Only a push to master may spend on translation; pull requests build from the cache.
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_TRANSLATION }}
-          TRANSLATE_SPEND: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
+          TRANSLATE_SPEND: ${{ (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master' }}
       - name: Commit new translations to the cache
         # Runs even if the build failed: translations already paid for must be kept.
-        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: always() && (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
         run: |
           if git diff --quiet -- translations && [ -z "$(git ls-files --others --exclude-standard translations)" ]; then
             echo "No new translations."
@@ -54,14 +56,14 @@ jobs:
           git pull --rebase origin master
           git push origin HEAD:master
       - name: Upload Pages artifact
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v5
         with:
           path: dist
           include-hidden-files: true
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/master'
     needs: verify
     runs-on: ubuntu-latest
     environment:
