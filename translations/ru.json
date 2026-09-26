@@ -663,6 +663,10 @@
     "en": "The useful result was not that smaller models always win. They do not. It was that architecture can matter more than model size. Across 35 head-to-head tests, Llama 3.1 8B with graph tools outperformed Llama 3.3 70B without them: a 55% higher core evaluation score, input tokens at $0.075 instead of $1.00 per million, and mean latency of 2.9 seconds instead of 8.8. It also produced a verifiable tool-call chain for every answer, which the 70B model alone could not.",
     "t": "Полезный результат был не в том, что меньшие модели всегда выигрывают. Они не выигрывают. Результат в том, что архитектура может иметь большее значение, чем размер модели. В 35 прямых тестах Llama 3.1 8B с инструментами для графов превзошла Llama 3.3 70B без них: оценка на 55% выше, входные токены по $0,075 вместо $1,00 за миллион и средняя задержка 2,9 секунды вместо 8,8. Она также произвела проверяемую цепь вызовов инструментов для каждого ответа, чего одна модель 70B не смогла."
   },
+  "2e224f839fee82f0": {
+    "en": "Dastan Aitzhanov builds AI systems and writes about delegated authority: who grants it, where it ends, and who answers for the result, seen as an owner as well as an engineer.",
+    "t": "Dastan Aitzhanov создает AI системы и пишет о делегированной власти: кто её дает, где она заканчивается и кто отвечает за результат, как собственник и как инженер."
+  },
   "2e2da96e8c5fc622": {
     "en": "Dastan Aitzhanov | AI Systems, Governance, and Ownership",
     "t": "Dastan Aitzhanov | AI Systems, Governance, and Ownership"
@@ -2690,6 +2694,10 @@
   "c2d609b9ffda61d3": {
     "en": "I care about that shift for ordinary reasons.",
     "t": "Я заботлюсь об этом сдвиге по обычным причинам."
+  },
+  "c37a7240a92d2bab": {
+    "en": "Dastan Aitzhanov | AI Systems, Authority, and Ownership",
+    "t": "Dastan Aitzhanov | AI системы, власть и собственность"
   },
   "c385d01b7dcf2f51": {
     "en": "The test I have started using is simple. Can two people look at the system before and after and agree on what is different? If the answer is a diff, the behavior can be reviewed, approved, rolled back, and answered for. If the answer is a transcript, it cannot.",

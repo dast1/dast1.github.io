@@ -2631,6 +2631,10 @@
     "en": "Long context can make a system feel like it remembers. That is not the same as maintaining useful state.",
     "t": "Uzun bağlam bir sistemi hatırlıyor gibi hissettirebilir. Bu, yararlı durumu korumakla aynı şey değildir."
   },
+  "bb2edaefcff94eac": {
+    "en": "Dastan Aitzhanov builds AI systems and writes about delegated authority: who grants it, where it ends, and who answers for the result, seen as an owner as well as an engineer.",
+    "t": "Dastan Aitzhanov AI sistemleri inşa eder ve devredilen otorite hakkında yazar: kimler bunu verir, nerede biter ve sonuç için kim sorumludur, bir mühendis kadar bir sahip olarak da görülür."
+  },
   "bb5e51d240a29a68": {
     "en": "Systems experiment and technical article",
     "t": "Sistem deneyi ve teknik makale"
@@ -3534,6 +3538,10 @@
   "f70bb6c96ba895c2": {
     "en": "The local-AI conversation tends to focus on the largest model a machine can load. That is interesting, but it is not the question most people will experience.",
     "t": "Yerel AI konuşması, bir makinenin yükleyebileceği en büyük modele odaklanmaya eğilimlidir. Bu ilginçtir, ancak çoğu insanın yaşayacağı soru değildir."
+  },
+  "f73794d663e4af3c": {
+    "en": "Dastan Aitzhanov | AI Systems, Authority, and Ownership",
+    "t": "Dastan Aitzhanov | AI Sistemleri, Otorite ve Mülkiyet"
   },
   "f7410455f14817d9": {
     "en": "Routing is the decision in that middle, and it is first-class. Not a fallback for when a local model fails to load. For each request the policy has to say where the work may run, what context may travel with it, how long you are willing to wait, and who is allowed to change the answer. Sensitive context wants to stay. Heavy computation often should leave. A surprising amount of ordinary thinking is neither, and the bias I want is toward the machine the person controls. The route itself should be visible. If you cannot tell where a request ran, and what was allowed to go with it, you cannot tell who is responsible for the answer.",
