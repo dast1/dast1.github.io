@@ -83,7 +83,7 @@ And it is only as good as the enforcement. A boundary that exists on paper is th
 
 [^3]: These properties are argued for individually in the shorter notes: [Policy should not be probabilistic](/ideas/policy-should-not-be-probabilistic/), [You can only govern what you can diff](/ideas/you-can-only-govern-what-you-can-diff/), [An agent should have its own identity](/ideas/an-agent-should-have-its-own-identity/), [The place that performs the action should say no](/ideas/the-place-that-performs-the-action-should-say-no/), [Permissions should expire with the work](/ideas/permissions-should-expire-with-the-work/), [Failure should reduce capability](/ideas/failure-should-reduce-capability/), [An audit log is not a control](/ideas/an-audit-log-is-not-a-control/), and [Provenance should include where it ran](/ideas/provenance-should-include-where-it-ran/).
 
-[^4]: Principle. A model's probability can inform a policy; the policy stays code. The full argument is in the essay on probabilistic intelligence and deterministic control, which is not yet published.
+[^4]: Principle. A model's probability can inform a policy; the policy stays code. The full argument is in [Probabilistic Intelligence, Deterministic Control](/writing/probabilistic-intelligence-deterministic-control/).
 
 [^5]: Provenance here is deployment-side: which model, which policy version, where it executed, on whose behalf. It is a different record from training-data provenance, and both are needed.
 
