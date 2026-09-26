@@ -1,7 +1,7 @@
 ---
 title: Govern the boundary
 description: Model-based rules assume capability is scarce. As capable models become small and cheap, the durable place to attach policy is the layer that decides what an AI system may do.
-date: '2026-09-27'
+date: '2026-09-26'
 tags:
   - Governance
   - Agents
