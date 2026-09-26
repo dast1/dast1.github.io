@@ -30,6 +30,16 @@ const writing = defineCollection({
     draft: z.boolean().default(false),
     // Homepage writing list. Chronology on /writing/ is unchanged.
     featured: z.boolean().default(true),
+    featuredEssay: z.boolean().default(false),
+    series: z.string().min(1).optional(),
+    seriesOrder: z.number().int().positive().optional(),
+    hero: z
+      .object({
+        src: z.string().startsWith('/'),
+        alt: z.string().min(1),
+        caption: z.string().min(1).optional(),
+      })
+      .optional(),
   }),
 });
 

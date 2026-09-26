@@ -11,6 +11,8 @@ interface Props {
   published?: string;
   robots?: string;
   jsonLd?: unknown;
+  imagePath?: string;
+  imageAlt?: string;
 }
 
 const {
@@ -20,12 +22,14 @@ const {
   published,
   robots = 'index,follow',
   jsonLd,
+  imagePath = '/og.png',
+  imageAlt = `${site.name}, technologist, investor, builder`,
 } = Astro.props;
 
 const isHome = Astro.url.pathname === '/';
 const documentTitle = isHome ? title : `${title} — ${site.name}`;
 const canonical = new URL(Astro.url.pathname, site.url);
-const image = new URL('/og.png', site.url).href;
+const image = new URL(imagePath, site.url).href;
 const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : '';
 ---
 
@@ -63,7 +67,7 @@ const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : 
     <meta property="og:type" content={ogType} />
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={image} />
-    <meta property="og:image:alt" content={`${site.name}, technologist, investor, builder`} />
+    <meta property="og:image:alt" content={imageAlt} />
     <meta property="og:locale" content={site.locale} />
     {published && <meta property="article:published_time" content={`${published}T12:00:00.000Z`} />}
     <meta name="twitter:card" content="summary_large_image" />

@@ -27,6 +27,12 @@ typography:
     fontWeight: 400
     lineHeight: 0.78
     letterSpacing: "-0.055em"
+  writing-display:
+    fontFamily: "Newsreader, Iowan Old Style, Palatino, Palatino Linotype, Georgia, serif"
+    fontSize: "clamp(4.25rem, 9vw, 6rem)"
+    fontWeight: 400
+    lineHeight: 0.9
+    letterSpacing: "-0.04em"
   headline:
     fontFamily: "Newsreader, Iowan Old Style, Palatino, Palatino Linotype, Georgia, serif"
     fontSize: "clamp(2.2rem, 5vw, 3.3rem)"
@@ -103,7 +109,7 @@ components:
 
 The site feels like an editor's working notebook made public: warm paper, strong book typography, restrained indexing marks, and generous breathing room. It is thoughtful and alive, but never promotional. Content relationships are revealed through chronology, labels, dividers, and typography rather than dashboards, cards, illustrations, or ornamental chrome.
 
-The design has two complementary modes. Reading surfaces are quiet and narrow, with Newsreader carrying the argument. Index surfaces widen into precise editorial tables: Source Sans 3 handles tools and metadata while Newsreader keeps every title and summary connected to the writing itself. Light and dark themes preserve the same warm, low-saturation character.
+The design has two complementary modes. Reading surfaces are quiet and narrow, with Newsreader carrying the argument. Index surfaces widen into precise editorial tables: Source Sans 3 handles tools and metadata while Newsreader keeps every title and summary connected to the writing itself. Writing adds magazine-like changes of scale—one lead argument, ordered threads, and wide explanatory figures—without leaving the notebook's flat, ruled world. Light and dark themes preserve the same warm, low-saturation character.
 
 **Key Characteristics:**
 
@@ -112,6 +118,7 @@ The design has two complementary modes. Reading surfaces are quiet and narrow, w
 - Hairline rules and alignment create structure; surfaces remain flat.
 - Square, unembellished controls with visible state changes.
 - Chronology and topic threads work together without making the notebook feel like an app dashboard.
+- Long-form pages may widen images and diagrams beyond the prose column while keeping text on the reading measure.
 
 ## Colors
 
@@ -147,7 +154,7 @@ The palette is a warm, low-chroma paper system with an earthen red accent. Every
 
 ### Hierarchy
 
-- **Display:** Regular-weight, tightly tracked, and dramatically compressed. Reserved for the Ideas masthead, where its oversized scale is balanced by the flat paper surface.
+- **Display:** Regular-weight, tightly tracked, and dramatically compressed. Ideas use the most extreme display scale; Writing uses a slightly smaller, more open masthead scale so the lead essay can remain the page's strongest title.
 - **Headline:** Medium-weight serif for page and long-form titles. Fluid sizing preserves hierarchy across viewports.
 - **Title:** Medium-weight serif for indexed idea titles. Compact leading lets multi-line titles remain coherent inside dense rows.
 - **Reading:** Regular serif for long-form prose, summaries, and explanatory introductions. Core reading measure is `38.5rem`; supporting notes may extend to roughly `64ch`.
@@ -170,6 +177,10 @@ The Ideas hero uses two asymmetric columns: a smaller title rail and a larger ex
 The Ideas archive is a field index. Every month is a two-column band with an `11.5rem` chronological rail and a flexible record area divided by a vertical rule. Each record begins with a `2.25rem` zero-padded number rail, then a two-column content grid (`0.82fr / 1.18fr`) pairing title with summary; topic links sit beneath the summary. At `680px` and below, month bands become single-column sections, the vertical rule disappears, the month/count header becomes a compact horizontal row, and the number rail narrows to `1.65rem`.
 
 The general entry list shares the archive's editorial grammar: a maximum width of `48rem`, an `11.5rem` date rail, and a flexible title/summary column. It collapses to one column at `680px`, placing the date directly above the entry.
+
+The Writing index begins with a `0.72fr / 1.28fr` masthead that pairs the section name with a concise editorial promise. Its featured essay reverses the emphasis into a `1.35fr / 0.65fr` composition: a balanced, maximum-`13ch` title and deck beside date, reading time, current thread, and topics. Thread and archive sections then return to ruled index logic. The thread uses a `15rem` section rail and three-column records for part, title, and description; the archive uses the established `11.5rem` metadata rail. At `900px`, masthead, feature, section headers, and thread framing stack; thread records become two columns with descriptions aligned beneath titles. At `680px`, archive rows become single-column and metadata becomes an inline date/read-time pair.
+
+Long-form article headers remain within `40rem`, and prose stays on the core reading measure. Optional hero media and editorial diagrams may widen to `56rem` while remaining bounded by the viewport inset. This width shift is intentional: it gives visual evidence and systems explanations more room without loosening the measure of the argument itself.
 
 Print is a reading mode, not a screenshot of the interface: navigation chrome, theme controls, pagination, and tag controls disappear; the page becomes black ink on white; and external prose links print their destinations.
 
@@ -213,6 +224,30 @@ Clear and empty-state actions are transparent, underline-like buttons with the s
 
 Each entry is a ruled two-column row: a muted date rail and a serif content block. Titles are ink at rest and accent on hover. Summaries use soft ink and the reading font; optional eyebrows and tags stay in the sans-serif metadata voice. Topic links use a single subtle bottom rule.
 
+### Writing Masthead
+
+The Writing masthead is quieter than the Ideas display but still unmistakably editorial: a large regular-weight title sits opposite a serif promise, aligned at the baseline and closed by a binding-line rule. It stacks at `900px`; on narrow screens the title uses the mobile display range without forcing the accompanying statement into oversized type.
+
+### Featured Essay
+
+One essay leads through scale rather than a card treatment. Its title is the dominant element, with balanced wrapping, compact leading, and a restrained `13ch` measure; the description remains readable and secondary. A narrow metadata rail holds date, reading time, optional current-thread context, and topics. The lead is the explicitly featured essay when one exists, otherwise the first published essay. Keep it flat, square, and separated from the rest of the page by a strong ink rule.
+
+### Series / Thread List
+
+The thread section appears only when the lead belongs to a series and has related essays. Its introduction occupies a stable rail; ordered rows expose part number, title, and self-contained description. Series order—not publication date—controls sequence. At intermediate widths, keep the part rail visible and place the description beneath its title rather than collapsing the row into an undifferentiated text block.
+
+### Writing Archive & Topic Navigation
+
+The archive excludes the featured essay and its displayed thread, then lists remaining essays chronologically in ruled rows. Each row pairs date and reading time with title, description, and topics. The section header places topic navigation opposite the archive title: links are quiet text actions, counts use small tabular numerals, and both wrap naturally. Topics support browsing; they are not filled chips or a second filter toolbar.
+
+### Optional Long-form Hero
+
+Use an article hero only when it contributes evidence, atmosphere, or orientation. It is a clean `16:9` image rendered up to `56rem` wide, loaded with high priority, and supplied with meaningful alternative text. Captions are optional, muted, sans-serif, and compact. Do not crop, round, shadow, or decorate the image container.
+
+### Wide Editorial Diagram
+
+An explanatory diagram is a semantic figure that can expand from the prose measure to `56rem`. Frame it with strong top and bottom ink rules; use a two-column heading for the serif proposition and sans-serif explanation, then a ruled process grid. Process steps are an ordered list with small accent labels, serif assertions, and muted supporting copy. A four-step flow uses four columns on wide screens, two at `900px`, and one at `680px`; divider edges must be reassigned at each breakpoint so the grid remains a continuous editorial table. Use accessible heading/caption relationships and preserve source order as the reading order.
+
 ### Ideas Field Index
 
 The field index is the signature component. Month headers form the chronological rail; record numbers reinforce ordering without pretending to be publication dates. Idea titles, summaries, and topics occupy stable columns so readers can scan across relationships. Topic links act as in-place filters: activating one updates the selected thread, focuses its corresponding filter, and returns the explorer to view.
@@ -239,6 +274,8 @@ Keyboard focus generally uses a visible `2px` accent outline with a `3px` offset
 - **Do** implement light and dark colors as complete semantic sets.
 - **Do** retain query state in the URL when adding index filtering behavior.
 - **Do** treat month labels, counts, numbers, and tags as supporting metadata rather than competing headlines.
+- **Do** let featured Writing titles, optional heroes, and explanatory diagrams widen deliberately while keeping prose narrow.
+- **Do** preserve series order and semantic ordered-list structure in thread and process sequences.
 
 ### Don't:
 
@@ -248,3 +285,4 @@ Keyboard focus generally uses a visible `2px` accent outline with a `3px` offset
 - **Don't** hide selected, focus, empty, or zero-result states behind color alone or silent updates.
 - **Don't** animate layout changes when reduced motion is requested.
 - **Don't** replace the chronology-plus-thread structure with a dashboard, masonry grid, or content-marketing feed.
+- **Don't** present the featured essay, thread entries, topic links, or diagrams as rounded cards.
