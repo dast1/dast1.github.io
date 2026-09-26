@@ -36,7 +36,6 @@ function isCurrent(href: string): boolean {
           }
         </ul>
       </nav>
-      <nav class="lang-nav" aria-label="Language" data-lang-nav></nav>
       <button
         type="button"
         class="theme-toggle"
@@ -59,19 +58,6 @@ function isCurrent(href: string): boolean {
 
           paint(root.dataset.theme === 'dark' ? 'dark' : 'light');
 
-          var langNav = document.querySelector('[data-lang-nav]');
-          if (langNav) {
-            langNav.addEventListener('click', function (event) {
-              var link = event.target.closest('a[data-lang]');
-              if (!link) return;
-              try {
-                localStorage.setItem('lang', link.getAttribute('data-lang'));
-              } catch (error) {
-                /* The link still navigates; only the memory is lost. */
-              }
-            });
-          }
-
           button.addEventListener('click', function () {
             var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
             root.dataset.theme = next;
@@ -85,5 +71,45 @@ function isCurrent(href: string): boolean {
         })();
       </script>
     </div>
+    <details class="lang-menu" data-lang-nav>
+      <summary aria-label="Choose language">
+        <svg class="lang-menu-globe" aria-hidden="true" viewBox="0 0 16 16" width="14" height="14">
+          <circle cx="8" cy="8" r="6.4" fill="none" stroke="currentColor" stroke-width="1.2" />
+          <path
+            d="M1.6 8h12.8M8 1.6c2.2 2.1 2.2 10.7 0 12.8M8 1.6c-2.2 2.1-2.2 10.7 0 12.8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.2"
+          />
+        </svg>
+        <span data-lang-current>English</span>
+        <svg class="lang-menu-chevron" aria-hidden="true" viewBox="0 0 16 16" width="12" height="12">
+          <path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </summary>
+      <ul class="lang-menu-list"></ul>
+    </details>
+    <script is:inline>
+      (function () {
+        // Runs after the menu exists: remember a chosen language, close on outside click or Escape.
+        var langMenu = document.querySelector('[data-lang-nav]');
+        if (!langMenu) return;
+        langMenu.addEventListener('click', function (event) {
+          var link = event.target.closest('a[data-lang]');
+          if (!link) return;
+          try {
+            localStorage.setItem('lang', link.getAttribute('data-lang'));
+          } catch (error) {
+            /* The link still navigates; only the memory is lost. */
+          }
+        });
+        document.addEventListener('click', function (event) {
+          if (langMenu.open && !langMenu.contains(event.target)) langMenu.removeAttribute('open');
+        });
+        document.addEventListener('keydown', function (event) {
+          if (event.key === 'Escape' && langMenu.open) langMenu.removeAttribute('open');
+        });
+      })();
+    </script>
   </div>
 </header>
