@@ -1,4 +1,8 @@
 {
+  "00728049a29fdb3c": {
+    "en": "<time datetime=\"2021-12-16\">December 16, 2021</time>",
+    "t": "<time datetime=\"2021-12-16\">16 декабря 2021 г.</time>"
+  },
   "00ac738dacbadb42": {
     "en": "Essays by Dastan Aitzhanov tagged Agents.",
     "t": "Очерки Dastan Aitzhanov с меткой «Агенты»."
@@ -279,6 +283,10 @@
     "en": "Generating more comparisons and recommendations does not create ownership of the decision or the judgment to make it well.",
     "t": "Создание большего количества сравнений и рекомендаций не создает владения решением и проницательности для его хорошего принятия."
   },
+  "1175ba528d32cb7d": {
+    "en": "Writing previously filed under Computing now appears under Local AI.",
+    "t": "Тексты, которые ранее были в разделе «Вычисления», теперь находятся в разделе Local AI."
+  },
   "11a9eb56b1cdba3f": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/consumer-hardware-becomes-infrastructure/\">Consumer hardware becomes infrastructure only when the complexity disappears</a>",
     "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/consumer-hardware-becomes-infrastructure/\">Потребительское оборудование становится инфраструктурой только когда сложность исчезает</a>"
@@ -291,6 +299,10 @@
     "en": "<a href=\"/writing/tags/local-ai/\">Local AI <span>1</span></a>",
     "t": "<a href=\"/writing/tags/local-ai/\">Локальный AI <span>1</span></a>"
   },
+  "12154875b568c564": {
+    "en": "Policy should not be probabilistic | Dastan Aitzhanov",
+    "t": "Политика не должна быть вероятностной | Dastan Aitzhanov"
+  },
   "121750f3a1790d94": {
     "en": "The difference between those two systems is not the model. Both can run the same weights. The difference is the boundary. That is why I think the boundary is the right object for policy.",
     "t": "Разница между этими двумя системами — не модель. Обе могут запускать одни и те же веса. Разница — граница. Вот почему я думаю, что граница — это правильный объект для политики."
@@ -302,6 +314,10 @@
   "1257392711bcfdde": {
     "en": "Organizations will get redesigned around that scarcity, or they will drown in fluent paper. Fewer layers whose job is to carry information upward. Clearer rights about who may commit. Tools that leave the context of a decision inspectable, so a person can actually be responsible for it. An organization that has taken the tools seriously has separated preparation from judgment, and has been honest about which work is which.",
     "t": "Организации будут переработаны вокруг этого дефицита, или они утонут в красиво написанных бумагах. Меньше слоев, чья работа передавать информацию выше. Более ясные права о том, кому позволено принимать решения. Инструменты, которые оставляют контекст решения доступным для проверки, чтобы человек мог за это ответить. Организация, которая серьезно отнеслась к инструментам, отделила подготовку от суждения и честно сказала, какая работа это какая."
+  },
+  "12cb45e15b9a98d3": {
+    "en": "<span>Public technical work</span><span>Co-authored two-part technical work at AWS</span><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-1/\">Part one</a><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-2/\">Part two</a>",
+    "t": "<span>Публичная техническая работа</span><span>Соавтор двухчастной технической работы в AWS</span><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-1/\">Первая часть</a><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-2/\">Вторая часть</a>"
   },
   "138b1c12e71a778c": {
     "en": "A goal is more useful than a persona",
@@ -755,6 +771,10 @@
     "en": "<a href=\"/ideas/?tag=economics\">Economics</a>",
     "t": "<a href=\"/ideas/?tag=economics\">Экономика</a>"
   },
+  "35f478b44b2ff36e": {
+    "en": "<a href=\"/ideas/an-agent-can-own-the-mistake/\">An agent can own the mistake. It cannot own the cost.</a>",
+    "t": "<a href=\"/ideas/an-agent-can-own-the-mistake/\">Агент может нести ответственность за ошибку. Он не может нести ответственность за её стоимость.</a>"
+  },
   "35ff02c383b62d0b": {
     "en": "<a href=\"/ideas/resource-sharing-moves-the-capital-problem/\">Resource sharing moves the capital problem; it does not eliminate it</a>",
     "t": "<a href=\"/ideas/resource-sharing-moves-the-capital-problem/\">Совместное использование ресурсов перемещает проблему капитала, но не решает её</a>"
@@ -907,6 +927,10 @@
     "en": "<time datetime=\"2026-09-25\">First developed June 2026</time>",
     "t": "<time datetime=\"2026-09-25\">Впервые разработано в июне 2026</time>"
   },
+  "412a7df6c4414c65": {
+    "en": "<span>Economics</span><span class=\"idea-filter-count\">8</span>",
+    "t": "<span>Экономика</span><span class=\"idea-filter-count\">8</span>"
+  },
   "4167bdb39fdd4756": {
     "en": "5 essays filed under Systems.",
     "t": "5 эссе в разделе «Системы»."
@@ -962,6 +986,10 @@
   "455accd19ab91945": {
     "en": "What owners notice",
     "t": "Что замечают владельцы."
+  },
+  "456c991499bc64a2": {
+    "en": "<span>Governance</span><span class=\"idea-filter-count\">18</span>",
+    "t": "<span>Управление</span><span class=\"idea-filter-count\">18</span>"
   },
   "467e9916bd0d2c03": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/a-personal-ai-appliance-should-feel-boring/\">A personal AI appliance should feel boring</a>",
@@ -1135,6 +1163,10 @@
     "en": "<span class=\"diagram-step\">Placement</span><strong>A coordinator finds capacity</strong><span>Which machine is capable, reachable, and appropriate?</span>",
     "t": "<span class=\"diagram-step\">Размещение</span><strong>Координатор находит ресурсы</strong><span>Какая машина способна, доступна и подходит?</span>"
   },
+  "52913e2d3902bd1c": {
+    "en": "<time datetime=\"2026-09-26\">First developed September 2026</time>",
+    "t": "<time datetime=\"2026-09-26\">Впервые разработано в сентябре 2026 года</time>"
+  },
   "52bd77d1631949e1": {
     "en": "The computer should be personal again | Dastan Aitzhanov",
     "t": "Компьютер должен снова быть персональным | Dastan Aitzhanov"
@@ -1202,6 +1234,10 @@
   "56f095205358f2c2": {
     "en": "What distribution could make better",
     "t": "Что распределение могло бы улучшить"
+  },
+  "57239ab4fe4ee67b": {
+    "en": "Industrial asset monitoring with IoT and machine learning | Dastan Aitzhanov",
+    "t": "Мониторинг промышленных активов с использованием IoT и машинного обучения | Dastan Aitzhanov"
   },
   "572f3e00f722a8a0": {
     "en": "<a href=\"?tag=local-ai\" data-idea-tag-link=\"local-ai\">Local AI</a>",
@@ -1354,6 +1390,14 @@
   "61d9262e447465af": {
     "en": "September 20, 2026",
     "t": "20 сентября 2026"
+  },
+  "620c5b41bea8862b": {
+    "en": "An agent can own the mistake. It cannot own the cost.",
+    "t": "Агент может взять на себя ответственность за ошибку. Но не может взять на себя ответственность за стоимость."
+  },
+  "622c3325f2abe591": {
+    "en": "Industrial asset monitoring with IoT and machine learning",
+    "t": "Мониторинг промышленных активов с использованием IoT и машинного обучения"
   },
   "62ba978126945255": {
     "en": "Keeping the distinction also makes forgetting possible. The system can retain the commitments that still govern the work without preserving every incidental exchange forever.",
@@ -1623,6 +1667,10 @@
     "en": "I think that assumption is weakening faster than the policy built on it. And I think the layer that will still be there when it goes is the one almost no policy names: the boundary that decides what an AI system is allowed to do.",
     "t": "Я думаю, это предположение ослабевает быстрее, чем политика, построенная на нём. И я думаю, что уровень, который будет там, когда оно исчезнет, — это тот, который почти ни одна политика не называет: граница, которая определяет, что ИИ-системе разрешено делать."
   },
+  "781d6ac6d13aebd3": {
+    "en": "An agent can own the mistake. It cannot own the cost. | Dastan Aitzhanov",
+    "t": "Агент может взять на себя ответственность за ошибку. Но не может взять на себя ответственность за стоимость. | Dastan Aitzhanov"
+  },
   "783c408e263db9c6": {
     "en": "I think it is worth recognizing the transition early. The software business, the operating service, and the asset-owning entity may have different economics, risks, and sources of capital.",
     "t": "Я думаю, стоит рано признать этот переход. Программный бизнес, операционный сервис и организация, владеющая активами, могут иметь разную экономику, риски и источники капитала."
@@ -1791,6 +1839,10 @@
     "en": "The context I would want a personal system to understand is the trajectory. Where am I now? Where am I trying to go? Which habits, commitments, or constraints are helping? Which ones are pulling in the opposite direction?",
     "t": "Контекст, который я хотел бы, чтобы личная система понимала, — это траектория. Где я сейчас? Куда я пытаюсь двигаться? Какие привычки, обязательства или ограничения помогают? Какие тянут в противоположном направлении?"
   },
+  "8579118eacf36817": {
+    "en": "That is not a failure of politeness. An agent can be responsible for an outcome in the sense of having caused it. It cannot be accountable, because accountability means someone carries the cost, and the agent owns nothing.",
+    "t": "Это не провал вежливости. Агент может быть ответственным за результат в смысле его вызвавшим. Но не может нести подотчетность, потому что подотчетность означает, что кто-то несет стоимость, а агент ничем не владеет."
+  },
   "85ce211a4fd7aaac": {
     "en": "The interface may change, but the user&#39;s context, authority, tools, and work should remain coherent behind it.",
     "t": "Интерфейс может меняться, но контекст пользователя, полномочия, инструменты и работа должны оставаться согласованными за ним."
@@ -1859,6 +1911,10 @@
     "en": "Begin with “The computer should be personal again”",
     "t": "Начните с «Компьютер должен быть личным снова»"
   },
+  "8b0ea2a5a4c4c69c": {
+    "en": "Accountability means bearing the downside. An agent that spends money it cannot repay needs a limit set before it acts, not an apology after.",
+    "t": "Подотчетность означает нести убытки. Агент, который тратит деньги, которые не может вернуть, нуждается в установленном лимите до того, как он действует, а не в извинении после."
+  },
   "8b1cc57f897b1985": {
     "en": "Public technical work · Co-authored technical work at AWS",
     "t": "Публичная техническая работа · Совместно написанная техническая работа на AWS"
@@ -1891,9 +1947,17 @@
     "en": "I am not proposing a new regulator or a new statute. The following are places where existing instruments could attach to the boundary instead of, or in addition to, the model.",
     "t": "Я не предлагаю новый регулирующий орган или новый закон. Ниже приведены места, где существующие инструменты могли бы присоединиться к границе вместо модели или в дополнение к ней."
   },
+  "8d72bfbe25715e06": {
+    "en": "The writing taxonomy has been simplified. Essays previously filed under Computing now appear under <a href=\"/writing/tags/local-ai/\">Local AI</a>.",
+    "t": "Таксономия текстов упрощена. Статьи, которые ранее были в разделе «Вычисления», теперь находятся в разделе <a href=\"/writing/tags/local-ai/\">Local AI</a>."
+  },
   "8e118e85e2ef1b76": {
     "en": "The recurring question is no longer only what a model can produce. It is what the surrounding system should permit it to see, decide, and do.",
     "t": "Повторяющийся вопрос больше не только в том, что может произвести модель. Речь идет о том, что окружающая система должна позволить ей видеть, решать и делать."
+  },
+  "8e4d9ca16bb009fe": {
+    "en": "This two-part AWS series connects simulated industrial assets and telemetry with an operating dashboard, a managed anomaly-detection service, model training, scheduled inference and continuing equipment monitoring.",
+    "t": "Эта двухчастная серия AWS объединяет моделируемые промышленные активы и телеметрию с операционной панелью управления, управляемым сервисом обнаружения аномалий, обучением модели, запланированным выводом и непрерывным мониторингом оборудования."
   },
   "8e93c92d4aa25e4d": {
     "en": "Co-authored AWS technical work connecting anomaly detection, human review, dataset improvement, and model retraining for industrial equipment.",
@@ -1935,6 +1999,10 @@
     "en": "2 essays filed under Economics.",
     "t": "2 эссе в разделе «Экономика»."
   },
+  "92d7bcda5a11b604": {
+    "en": "Computing | Dastan Aitzhanov",
+    "t": "Вычисления | Dastan Aitzhanov"
+  },
   "92da2effbee6fb3a": {
     "en": "Where this fails is work that may never collapse. A problem you have not seen, a negotiation, a line of thought that is still open: those can stay agentic. The claim is only about workflows that have already stabilized, and about the reluctance to admit that they have.",
     "t": "Это не работает там, где работа может никогда не схлопнуться. Проблема, которую вы не видели, переговоры, линия мысли, которая ещё открыта: те могут остаться агентными. Утверждение касается только рабочих процессов, которые уже стабилизировались, и нежелания признать, что они стабилизировались."
@@ -1954,6 +2022,10 @@
   "939f1bf70a7caa5f": {
     "en": "Human review for industrial predictive maintenance",
     "t": "Проверка человеком для прогностического обслуживания промышленного оборудования"
+  },
+  "93da2f44ead85563": {
+    "en": "Computing",
+    "t": "Вычисления"
   },
   "940e2b24d02d9b93": {
     "en": "Two placements are not enough for that. Work can stay on the machine the person owns. It can move to something nearby: a computer in the same room, a box they operate, hardware they have a reason to trust more than a default region. Or it can go to a shared cloud because the computation is heavy or the tool does not exist anywhere else. Nearby is a trust and latency category. It is not a product I am building, and it is not a network I am proposing. It is the missing middle in a binary that forces every request to be either intimate or remote.",
@@ -2147,6 +2219,10 @@
     "en": "Later",
     "t": "Позже"
   },
+  "a2791e1222d41ecc": {
+    "en": "The important part was the complete path around the model. Industrial machine learning becomes credible when data collection, asset identity, training, inference and the operator’s view behave as one system.",
+    "t": "Важная часть заключалась в полном цикле работы с моделью. Промышленное машинное обучение становится надежным, когда сбор данных, идентификация активов, обучение, вывод и представление оператора работают как единая система."
+  },
   "a28efd1cd6e584c3": {
     "en": "The deeper form of personalization may be understanding the person’s current state, intended future state, and the gap between them.",
     "t": "Более глубокая форма персонализации — понимание текущего состояния человека, его предполагаемого будущего состояния и разрыва между ними."
@@ -2166,6 +2242,10 @@
   "a414e4a31fc6cde2": {
     "en": "The customer may eventually care how the system works. They should not need the architecture lesson before they can understand why it matters.",
     "t": "Клиент может со временем захотеть узнать, как работает система. Ему не должен потребоваться урок архитектуры, прежде чем он поймёт, почему это важно."
+  },
+  "a4592d0b97067daf": {
+    "en": "Until then, we have capable machines, not a dependable pool of compute.",
+    "t": "До тех пор у нас есть способные машины, но не надёжный пул вычислений."
   },
   "a473513042a428db": {
     "en": "Systems | Dastan Aitzhanov",
@@ -2303,6 +2383,10 @@
     "en": "The most important context is the trajectory",
     "t": "Самый важный контекст — тенденция"
   },
+  "ae489f9be32c9eae": {
+    "en": "Powerful consumer machines can run surprising workloads. That does not automatically make them useful infrastructure.",
+    "t": "Мощные потребительские машины могут запускать удивительные рабочие нагрузки. Это не означает автоматически, что они полезная инфраструктура."
+  },
   "ae4dc4d49b526242": {
     "en": "Why the split matters once there is more than one request",
     "t": "Почему разделение имеет значение, когда запросов больше одного."
@@ -2411,6 +2495,10 @@
     "en": "<a href=\"/ideas/infrastructure-software-can-become-a-financing-business/\">Infrastructure software can quietly become a financing business</a>",
     "t": "<a href=\"/ideas/infrastructure-software-can-become-a-financing-business/\">Программное обеспечение инфраструктуры может незаметно стать финансовым бизнесом</a>"
   },
+  "b44ea98e8126e795": {
+    "en": "Where this fails is a judgment a person has genuinely delegated: is this tone acceptable, is this lead real. Even then I want the delegation written down, and a branch for low confidence that a person still owns. The fuzzy call can be probabilistic. The act that follows it should not be.",
+    "t": "Когда это не работает, это суждение, которое человек действительно делегировал: приемлем ли этот тон, настоящий ли это лид. И даже тогда я хочу, чтобы делегирование было записано, и ветка для низкой уверенности, которой человек всё ещё владеет. Размытый вызов может быть вероятностным. Действие, которое следует за ним, не должно быть."
+  },
   "b48f35fef384464b": {
     "en": "The subjects the essays actually use. A tag appears here once a piece is published with it.",
     "t": "Предметы, которые используют статьи. Тег появляется здесь после публикации статьи с этим тегом."
@@ -2442,6 +2530,10 @@
   "b628720576ad66bf": {
     "en": "<strong>Generative plane.</strong> Language models, used for novel, ambiguous, exploratory reasoning. The work is open-ended. The output is new text, a new plan, a draft, an answer that was not on a menu. This plane is probabilistic, and it is relatively expensive in latency, money, and variance. It is where a system should go when the answer is not a member of a set you already wrote down. It should not be the default plane for everything the system touches.",
     "t": "<strong>Генеративная плоскость.</strong> Языковые модели, используемые для новых, двусмысленных, исследовательских рассуждений. Работа открыта. Выход — новый текст, новый план, черновик, ответ, которого не было в меню. Эта плоскость вероятностна и относительно дорога в задержке, деньгах и дисперсии. Это место, куда система должна идти, когда ответ не является членом набора, который вы уже записали. Это не должна быть плоскость по умолчанию для всего, чего касается система."
+  },
+  "b62d759213fa4344": {
+    "en": "<span>Agents</span><span class=\"idea-filter-count\">19</span>",
+    "t": "<span>Агенты</span><span class=\"idea-filter-count\">19</span>"
   },
   "b63bb478e39c56f1": {
     "en": "<strong>5. A named principal for delegated authority.</strong> Every action an AI system takes should trace to a person or role who granted the authority and can be asked about it. This is the oldest rule in organizations that manage money: analysis can be cheap and plentiful, but the right to commit is scarce and assigned. An agent should not be the last name on the record.<sup><a href=\"#user-content-fn-9\" id=\"user-content-fnref-9\" data-footnote-ref aria-describedby=\"footnote-label\">10</a></sup> The same discipline applies one level up: an organization adopting AI should be able to say, for each initiative, who owns it and what would make them stop it.<sup><a href=\"#user-content-fn-12\" id=\"user-content-fnref-12\" data-footnote-ref aria-describedby=\"footnote-label\">11</a></sup>",
@@ -2559,6 +2651,10 @@
     "en": "<span class=\"related-kind\">Essay</span><a href=\"/writing/context-is-the-product/\">Context is the product</a>",
     "t": "<span class=\"related-kind\">Очерк</span><a href=\"/writing/context-is-the-product/\">Контекст — это продукт</a>"
   },
+  "be3792d125799119": {
+    "en": "Letting a generative model talk its way into an exception means the exception is different every time, and nobody can diff it. Low confidence is a branch you wrote, to a stronger model, a person, or a stop. It is not a softer yes hidden in the prose.",
+    "t": "Позволить генеративной модели договориться до исключения означает, что исключение каждый раз другое, и никто не может его сравнить. Низкая уверенность — это ветка, которую вы написали, к более мощной модели, человеку или остановке. Это не мягкое согласие, скрытое в тексте."
+  },
   "be68f7a3eecda87d": {
     "en": "Distributed compute is usually framed as a problem of finding available machines. The harder question is who is allowed to decide what those machines do.",
     "t": "Распределенные вычисления обычно рассматриваются как проблема поиска доступных машин. Более сложный вопрос в том, кто имеет право решать, что эти машины будут делать."
@@ -2599,9 +2695,17 @@
     "en": "The test I have started using is simple. Can two people look at the system before and after and agree on what is different? If the answer is a diff, the behavior can be reviewed, approved, rolled back, and answered for. If the answer is a transcript, it cannot.",
     "t": "Тест, который я начал использовать, прост. Могут ли два человека посмотреть на систему до и после и согласиться, что произошло? Если ответ — это diff, поведение можно проверить, одобрить, откатить и дать ответ. Если ответ — это транскрипт, то нельзя."
   },
+  "c419aefdbaa7a846": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/an-agent-can-own-the-mistake/\">An agent can own the mistake. It cannot own the cost.</a>",
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/an-agent-can-own-the-mistake/\">Агент может взять ответственность за ошибку. Он не может взять ответственность за её стоимость.</a>"
+  },
   "c4333d216fa0a13d": {
     "en": "Someone still has to decide what matters, what risk is acceptable, and what commitment the organization is willing to make.",
     "t": "Кто-то все еще должен решить, что важно, какой риск приемлем и на какие обязательства готова пойти организация."
+  },
+  "c449db586783346d": {
+    "en": "<span>All</span><span class=\"idea-filter-count\">44</span>",
+    "t": "<span>Все</span><span class=\"idea-filter-count\">44</span>"
   },
   "c4724f6d8395c608": {
     "en": "Back to reference 3",
@@ -2995,6 +3099,10 @@
     "en": "<a href=\"/ideas/declarative-intelligence-may-be-the-missing-layer/\">Declarative intelligence may be the missing layer</a>",
     "t": "<a href=\"/ideas/declarative-intelligence-may-be-the-missing-layer/\">Декларативный интеллект может быть недостающим слоем</a>"
   },
+  "deae4b8d01884012": {
+    "en": "So the accountability has to sit somewhere else, and it has to be decided before the action. A spending limit the agent cannot raise. An estimate shown before the run. Paid work saved even when a later step fails. The person who authorizes the spend should see the ceiling, not the receipt.",
+    "t": "Значит, подотчетность должна быть размещена где-то еще, и это должно быть решено до действия. Лимит расходов, который агент не может увеличить. Смета, показанная до запуска. Выполненная работа сохранена даже если позже один из этапов не удалась. Человек, который авторизирует расход, должен видеть потолок, а не чек."
+  },
   "dee4dcb3321a3c5f": {
     "en": "The machine can be available while the work is still unauthorized.",
     "t": "Машина может быть доступной, пока работа всё ещё не авторизована."
@@ -3026,6 +3134,10 @@
   "e101d76ee7a501e5": {
     "en": "What should remain near the person when AI becomes part of ordinary computing?",
     "t": "Что должно оставаться рядом с человеком, когда ИИ становится частью обычных вычислений?"
+  },
+  "e15ecaf888c5b965": {
+    "en": "<span data-month-visible>9</span> <span data-month-noun>ideas</span>",
+    "t": "<span data-month-visible>9</span> <span data-month-noun>идеи</span>"
   },
   "e1aa1737de89a638": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/analysis-will-be-abundant-before-judgment/\">AI will make analysis abundant before it makes judgment abundant</a>",
@@ -3111,6 +3223,10 @@
     "en": "Proposal. The action-class list is illustrative. The claim is the sorting variable, not the exact tiers. This follows <a href=\"/ideas/autonomy-should-scale-with-reversibility/\">Autonomy should scale with reversibility</a>. <a href=\"#user-content-fnref-7\" data-footnote-backref=\"\" aria-label=\"Back to reference 7\" class=\"data-footnote-backref\">↩</a>",
     "t": "Предложение. Список классов действий иллюстративен. Фактором сортировки является утверждение, а не точные уровни. Это следует принципу <a href=\"/ideas/autonomy-should-scale-with-reversibility/\">Autonomy should scale with reversibility</a>. <a href=\"#user-content-fnref-7\" data-footnote-backref=\"\" aria-label=\"Back to reference 7\" class=\"data-footnote-backref\">↩</a>"
   },
+  "e6bbdf45f656a754": {
+    "en": "The test is not whether the system can complete one impressive run. It is whether another person can rely on it without learning why that particular machine is different.",
+    "t": "Тест — не в том, может ли система завершить один впечатляющий запуск. Тест — в том, может ли другой человек полагаться на неё без необходимости узнавать, чем эта конкретная машина отличается."
+  },
   "e78bb1d492680275": {
     "en": "I would rather have a smaller system that handles ordinary requests immediately and knows when to reach outward than a larger model that technically fits but makes the whole computer feel occupied.",
     "t": "Я бы предпочёл меньшую систему, которая обрабатывает обычные запросы сразу и знает, когда обратиться внешним ресурсам, нежели большую модель, которая технически подходит, но заставляет весь компьютер казаться занятым."
@@ -3187,6 +3303,10 @@
     "en": "When an AI system gives an answer, we increasingly care which model produced it. I think that record is incomplete.",
     "t": "Когда ИИ-система дает ответ, нам все больше важно, какая модель его создала. Я думаю, эта запись неполна."
   },
+  "ed7cd89298bebde8": {
+    "en": "<span data-idea-visible>44</span> <span data-idea-noun>ideas</span>",
+    "t": "<span data-idea-visible>44</span> <span data-idea-noun>идеи</span>"
+  },
   "ed8e9c097e1fda45": {
     "en": "Buy the decision, not the dashboard | Dastan Aitzhanov",
     "t": "Купи решение, не панель | Dastan Aitzhanov"
@@ -3215,6 +3335,10 @@
     "en": "Co-authored two-part AWS architecture for connecting industrial telemetry, asset models, monitoring, machine-learning training, and scheduled inference.",
     "t": "Совместно разработанная архитектура AWS для подключения промышленной телеметрии, моделей активов, мониторинга, обучения машинному обучению и плановому выводу."
   },
+  "ef20c4655aecb486": {
+    "en": "A model can be unsure. A policy should not be. If the system may refund, send, delete, or spend, that permission is a rule: this action, this actor, this threshold, this record. The probability is an input to the rule. It is not a substitute for the rule.",
+    "t": "Модель может быть неуверенной. Политика не должна быть. Если система может возместить, отправить, удалить или потратить, то это разрешение — это правило: это действие, этот субъект, этот порог, эта запись. Вероятность — это входные данные для правила. Это не замена для правила."
+  },
   "ef9b4a5957d51db2": {
     "en": "A marketplace solves only part of the problem",
     "t": "Рыночная площадка решает только часть проблемы"
@@ -3223,6 +3347,10 @@
     "en": "Proposal. The current federal instruments are OMB memoranda M-25-21, on agency use of AI, and M-25-22, on acquisition, both issued April 3, 2025 (<a href=\"https://digitalgovernmenthub.org/examples/omb-m-25-22-driving-efficient-acquisition-of-artificial-intelligence-in-government/\">OMB M-25-22</a>). M-25-22 already sets contract terms on data rights, interoperability, and vendor use of government data. It is the natural place for requirements on enumerated actions, permission logic, enforcement points, and revocation to attach. <a href=\"#user-content-fnref-6\" data-footnote-backref=\"\" aria-label=\"Back to reference 6\" class=\"data-footnote-backref\">↩</a>",
     "t": "Предложение. Текущие федеральные инструменты — это меморандумы OMB M-25-21 об использовании искусственного интеллекта агентствами и M-25-22 о закупках, оба изданы 3 апреля 2025 года (<a href=\"https://digitalgovernmenthub.org/examples/omb-m-25-22-driving-efficient-acquisition-of-artificial-intelligence-in-government/\">OMB M-25-22</a>). M-25-22 уже устанавливает условия контрактов на права данных, взаимодействие систем и использование государственных данных поставщиком. Это естественное место для закрепления требований к перечисленным действиям, логике разрешений, точкам применения и отзыву. <a href=\"#user-content-fnref-6\" data-footnote-backref=\"\" aria-label=\"Back to reference 6\" class=\"data-footnote-backref\">↩</a>"
   },
+  "f05f7b98af4fb914": {
+    "en": "Hardware differs. Memory behaves differently. Drivers, runtimes, sleep states, networks, and failure modes differ. The interesting layer is the one that turns that variation into a predictable service.",
+    "t": "Оборудование различается. Память ведёт себя по-разному. Драйверы, среды выполнения, режимы сна, сети и режимы отказа различаются. Интересный уровень — это тот, который превращает это разнообразие в предсказуемый сервис."
+  },
   "f0865aeee97faab2": {
     "en": "The useful meter should tell us something about the service delivered, not only the text processed along the way.",
     "t": "Полезная единица измерения должна рассказывать нам о качестве предоставляемого сервиса, а не только о тексте, обработанном при этом."
@@ -3230,6 +3358,10 @@
   "f0b2c4a32f9fe1f9": {
     "en": "<span class=\"related-kind\">Work</span><a href=\"/work/local-ai-intelligent-scaffolding/\">Local AI and intelligent scaffolding</a>",
     "t": "<span class=\"related-kind\">Работа</span><a href=\"/work/local-ai-intelligent-scaffolding/\">Локальный ИИ и интеллектуальная поддержка</a>"
+  },
+  "f102e9073a7372f4": {
+    "en": "In September an AI agent set up translation for this site. It chose the model, wrote the pipeline, and ran it. Two runs spent about twenty dollars and produced nothing I could keep, because of rules the agent had written itself. When I asked for the money back, the agent could explain exactly what went wrong and fix it. It could not pay. Neither could the support agent I asked next.",
+    "t": "В сентябре AI агент настроил перевод этого сайта. Он выбрал модель, написал pipeline и запустил его. Два запуска стоили около двадцати долларов и не дали ничего, что я мог бы сохранить, из-за правил, которые написал сам агент. Когда я попросил вернуть деньги, агент смог точно объяснить, что пошло не так, и исправить это. Но не мог заплатить. И support агент, к которому я обратился дальше, тоже."
   },
   "f112347376ec55b6": {
     "en": "<a href=\"/ideas/the-system-should-remember-decisions/\">The system should remember decisions, not every conversation</a>",
@@ -3326,6 +3458,10 @@
   "f693d1dd5a523c9a": {
     "en": "November 2025",
     "t": "Ноябрь 2025"
+  },
+  "f6db8afdb907065b": {
+    "en": "Consumer hardware becomes infrastructure only when the complexity disappears | Dastan Aitzhanov",
+    "t": "Потребительское оборудование становится инфраструктурой только когда сложность исчезает | Dastan Aitzhanov"
   },
   "f72c3ae52fa2721d": {
     "en": "Any single AI initiative may fail. The portfolio has to pay. Each one needs a cost, an expected return, an owner, and a moment when someone decides to scale it or stop it.",

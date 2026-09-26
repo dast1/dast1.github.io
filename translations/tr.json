@@ -19,9 +19,17 @@
     "en": "Permissions should expire with the work | Dastan Aitzhanov",
     "t": "İzinler işle birlikte sona ermeli | Dastan Aitzhanov"
   },
+  "0156aeeb7fbbd368": {
+    "en": "<a href=\"/ideas/an-agent-can-own-the-mistake/\">An agent can own the mistake. It cannot own the cost.</a>",
+    "t": "<a href=\"/ideas/an-agent-can-own-the-mistake/\">Bir ajan hatayı sahiplenebilir. Maliyeti sahiplenemed.</a>"
+  },
   "0183254d3f5d5aae": {
     "en": "I have started thinking about AI-assisted products as moving through four stages: novelty, usefulness, dependability, and refinement.",
     "t": "Yapay zeka destekli ürünleri dört aşamadan geçen şeyler olarak düşünmeye başladım: yenilik, yararlılık, güvenilirlik ve iyileştirme."
+  },
+  "018f891892964c55": {
+    "en": "<span>Public technical work</span><span>Co-authored two-part technical work at AWS</span><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-1/\">Part one</a><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-2/\">Part two</a>",
+    "t": "<span>Kamuya açık teknik çalışma</span><span>AWS'de iki bölümlü teknik çalışmayı ortak yazarlık yaptı</span><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-1/\">Birinci bölüm</a><a href=\"https://aws.amazon.com/blogs/iot/strengthening-operational-insights-for-industrial-assets-with-aws-iot-aiml-solution-part-2/\">İkinci bölüm</a>"
   },
   "02e6cc5760f97076": {
     "en": "The interface can change. The user’s work, authority, and state should remain coherent behind it.",
@@ -91,6 +99,10 @@
     "en": "The practical version does not need to be complicated. Tell me what you believe, what you are assuming, which assumption is doing the most work, and what evidence we should collect next.",
     "t": "Pratik versiyonunun karışık olması gerekmez. Neye inandığını, ne varsaydığını, hangi varsayımın en çok iş yaptığını ve sonra hangi kanıtları toplaması gerektiğini söyle."
   },
+  "0626db1a0efeaf69": {
+    "en": "I do not have a census of production agents. What I have is a pattern, repeated often enough that I trust it as an observation and not yet as a statistic: the harness reaches for the largest generative model because that model can approximate every other component. Approximation is doing the work of design.<sup><a href=\"#user-content-fn-1\" id=\"user-content-fnref-1\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">1</a></sup>",
+    "t": "Üretim ajanlarının sayımı yok. Sahip olduğum şey bir desendir, yeterince sık tekrarlanan bir desen ki bunu bir gözlem olarak güveniyorum, henüz istatistik olarak değil: sistem en büyük generatif modeli seçer çünkü o model diğer her bileşeni yaklaştırabiliyor. Yaklaştırma tasarımın işini yapıyor.<sup><a href=\"#user-content-fn-1\" id=\"user-content-fnref-1\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">1</a></sup>"
+  },
   "062c18983e177051": {
     "en": "Ideas | Dastan Aitzhanov",
     "t": "Fikirler | Dastan Aitzhanov"
@@ -114,6 +126,10 @@
   "08d8b01d919459f7": {
     "en": "I compared four combinations: smaller and larger language models, each with and without a knowledge graph. The evaluation covered multi-hop questions, entity disambiguation, set operations, document scope, grounding, cost, and latency.",
     "t": "Dört kombinasyonu karşılaştırdım: daha küçük ve daha büyük dil modelleri, her biri bilgi grafiği ile ve olmadan. Değerlendirme, çok adımlı soruları, varlık anlamsallaştırmasını, küme işlemlerini, belge kapsamını, tutarlılığı, maliyeti ve gecikmeyi kapsadı."
+  },
+  "0989108ca43ed245": {
+    "en": "<span>Economics</span><span class=\"idea-filter-count\">8</span>",
+    "t": "<span>Ekonomi</span><span class=\"idea-filter-count\">8</span>"
   },
   "09fac106332c3d68": {
     "en": "Expertise is not merely having more information. It is recognizing which information should change the decision, and being willing to own what happens next.",
@@ -247,6 +263,10 @@
     "en": "I do not know the right answer yet. I am fairly sure that one token should not be assumed to mean one unit of economic value.",
     "t": "Henüz doğru cevabı bilmiyorum. Bir tokenın bir ekonomik değer birimi anlamına geldiği varsayılmaması gerektiğinden oldukça eminim."
   },
+  "11c3334896585112": {
+    "en": "<span data-idea-visible>44</span> <span data-idea-noun>ideas</span>",
+    "t": "<span data-idea-visible>44</span> <span data-idea-noun>fikir</span>"
+  },
   "11e68b65625c98a7": {
     "en": "If a model says the intent is a refund, with some high confidence, say 0.92 as an illustration and not a result, the policy is still code. This action is in the allowed set. This confidence clears a threshold a person chose. This identity may take the action. This record is written. Change the threshold and you have changed the system on purpose, in a diff. Let the model improvise the policy in prose and the system is different on Tuesday, for no reason you can review.",
     "t": "Bir model niyetin bir geri ödeme olduğunu, 0.92 gibi yüksek bir güvenle söylüyorsa, bir illustration olarak ve sonuç olarak değil, politika hala koddur. Bu eylem izin verilen sette. Bu güven, bir kişinin seçtiği eşiği temizler. Bu kimlik eylemi alabilir. Bu kayıt yazılır. Eşiği değiştirin ve sistemi amaca kaydırmış olursunuz, bir farkta. Modelin politikayı nesirde uydurmaya izin verin ve sistem Salı günü farklı, inceleyebileceğiniz hiçbir nedenle."
@@ -270,6 +290,10 @@
   "1328e83bf1b8d78c": {
     "en": "Using spare computing capacity sounds capital-light. In one sense it is: the network does not need to purchase every machine. In another sense, the assets still exist, still depreciate, still consume energy, and still need maintenance. Someone owns those risks.",
     "t": "Yedek bilişim kapasitesini kullanmak sermaye yoğun olmayan bir seçenek gibi görünür. Bir yönden öyledir: ağın her makineyi satın alması gerekmez. Başka bir yönden, varlıklar hala var, hala değer kaybeder, hala enerji tüketir ve hala bakıma ihtiyaç duyar. Bunların risklerinin sahibi birileridir."
+  },
+  "133867ed0a7964e6": {
+    "en": "The decision-plane abstraction is the claim. Classifiers, regressors, small decision models, constrained decoding, decoder-logit classification, and a typed decision model are a map of patterns, not a comparison I have run. Laya is an open-source instance of the typed shape: state in; a choice, a score, or a probability out; no prose. It is a 421-million-parameter model from Convai Innovations, published under Apache 2.0, with <a href=\"https://github.com/NandhaKishorM/laya\">source and weights on GitHub</a>. The figures in the text are from my most recent training round on it, measured against quality criteria fixed before the run, and the candidate was not promoted. The closed instance that named the category is what TypeSafe calls a System One model, under the name Jev. I have not measured it, and this essay uses none of their figures. Decoder-logit classification, reading a next-token distribution over a fixed label set, needs a citation before this essay says anything about its accuracy relative to a trained classifier. It does not say that here. <a href=\"#user-content-fnref-3\" data-footnote-backref aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Karar düzlemi soyutlaması taleptir. Sınıflandırıcılar, regresörler, küçük karar modelleri, kısıtlı kod oluşturma, kod çözücü-logit sınıflandırması ve yazılı bir karar modeli bir harita, koşturduğum bir karşılaştırma değil. Laya yazılı şekli açık kaynaklı bir örnek: durum içeri; bir seçim, bir skor veya bir olasılık dışarı; metin yok. Convai Innovations'tan 421 milyon parametreli bir model, Apache 2.0 altında yayınlanmış, <a href=\"https://github.com/NandhaKishorM/laya\">kaynağı ve ağırlıkları GitHub'da</a>. Metindeki rakamlar, en son eğitim turumdan, çalışmadan önce sabitlenmiş kalite kriterlerine karşı ölçülmüş ve aday promosyon almadı. Kategoriye ad veren kapalı örnek, TypeSafe'nin System One modeli olarak adlandırdığı Jev'tir. Ölçümedim ve bu deneme bunların hiç rakamını kullanmıyor. Kod çözücü-logit sınıflandırması, sabit bir etiket kümesinin üstünde bir sonraki belirteç dağılımını okumak, bu deneme eğitimli bir sınıflandırıcıya göreceli doğruluğu hakkında herhangi bir şey söylemeden önce alıntıya ihtiyaç duyar. Burada söylemiyor. <a href=\"#user-content-fnref-3\" data-footnote-backref aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>"
   },
   "1338c91a3cc1c2ad": {
     "en": "<a href=\"/ideas/failure-should-reduce-capability/\">Failure should reduce capability, not destroy the system</a>",
@@ -683,6 +707,10 @@
     "en": "The system needs to know whether we are exploring, validating usefulness, hardening reliability, or refining something already proven. Each mode deserves a different definition of progress.",
     "t": "Sistem, keşif yaptığımızı, faydalılığı doğruladığımızı, güvenilirliği sağlamlaştırdığımızı yoksa zaten kanıtlanmış bir şeyi iyileştirdiğimizi bilmelidir. Her mod farklı bir ilerleme tanımını hak eder."
   },
+  "2f31b7dad2c1424f": {
+    "en": "<span>Agents</span><span class=\"idea-filter-count\">19</span>",
+    "t": "<span>Aracılar</span><span class=\"idea-filter-count\">19</span>"
+  },
   "2f6e806c904498c7": {
     "en": "Back to reference 1",
     "t": "Referans 1'e dön"
@@ -710,6 +738,10 @@
   "3173136732277d87": {
     "en": "<a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>",
     "t": "<a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>"
+  },
+  "3194b52e76b45d99": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/an-agent-can-own-the-mistake/\">An agent can own the mistake. It cannot own the cost.</a>",
+    "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/an-agent-can-own-the-mistake/\">Bir ajan hatayı sahiplenebilir. Maliyeti sahiplenemiyor.</a>"
   },
   "31a51e9d97e9f104": {
     "en": "<strong>Cost.</strong> Tokens spent re-deriving a known path are tokens you pay on every request, for as long as you refuse to write the path down. The generative plane stays expensive. That is acceptable when it is rare relative to the work. It is a structural cost when it is the work.",
@@ -915,6 +947,10 @@
     "en": "There is a failure mode in the other direction. A system can ask so many questions that it pushes the work back onto the user. The goal is not to clarify everything. It is to ask when the answer would materially change what happens next.",
     "t": "Diğer yönde bir başarısızlık modu vardır. Bir sistem o kadar çok soru sorabiliir ki işi kullanıcıya geri itiyor. Amaç her şeyi açıklamak değildir. Cevap sonrasında ne olacağını maddi olarak değiştireceği zaman sorması gerekir."
   },
+  "3cfe70fd079431a1": {
+    "en": "AWS describes Outposts as a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises, with equipment owned and managed by AWS: <a href=\"https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html\">What is AWS Outposts?</a> <a href=\"#user-content-fnref-1\" data-footnote-backref aria-label=\"Back to reference 1\" class=\"data-footnote-backref\">↩</a>",
+    "t": "AWS, Outposts'ı müşteri binalarına AWS altyapısı, hizmetleri, API'leri ve araçlarını genişleten, ekipmanı AWS tarafından sahip olunan ve yönetilen tam yönetimli bir hizmet olarak tanımlar: <a href=\"https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html\">What is AWS Outposts?</a> <a href=\"#user-content-fnref-1\" data-footnote-backref aria-label=\"Back to reference 1\" class=\"data-footnote-backref\">↩</a>"
+  },
   "3e0602ae8ac07c6f": {
     "en": "What owners notice",
     "t": "Sahiplerin fark ettikleri şey"
@@ -983,6 +1019,10 @@
     "en": "Those questions exist in a data center too. The difference is that a centralized operator answers most of them inside one administrative boundary. The operator owns or controls the machines, establishes the service terms, meters the work, and decides which policies apply. Once the machines belong to many independent people or organizations, those decisions no longer come bundled together.",
     "t": "Bu sorular bir veri merkezinde de vardır. Fark şudur ki merkezi bir operatör çoğu soruyu tek bir idari sınır içinde yanıtlar. Operatör makinelere sahiptir veya onları kontrol eder, hizmet şartlarını belirler, işi ölçer ve hangi politikaların uygulanacağına karar verir. Makineler birçok bağımsız kişi veya kuruluşa ait olduğunda, bu kararlar artık bir arada gelmez."
   },
+  "4490d72a80a13cfc": {
+    "en": "The migration loop is the architectural principle. The claim that each step is cheaper, faster, and more predictable is a hypothesis about systems under repetition. I am not citing a cost model. <a href=\"#user-content-fnref-5\" data-footnote-backref aria-label=\"Back to reference 5\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Göç döngüsü mimari ilkedir. Her adımın ucuz, hızlı ve öngörülebilir olduğu iddiası, tekrar altındaki sistemler hakkında bir hipotezdir. Bir maliyet modelini alıntılamıyorum. <a href=\"#user-content-fnref-5\" data-footnote-backref aria-label=\"Back to reference 5\" class=\"data-footnote-backref\">↩</a>"
+  },
   "4512b7668e07e693": {
     "en": "Dastan Aitzhanov writes about AI systems, delegated authority, personal computing, distributed infrastructure, and the incentives around them.",
     "t": "Dastan Aitzhanov, AI sistemleri, devredilen otorite, kişisel bilişim, dağıtılmış altyapı ve bunların etrafındaki teşvikler hakkında yazıyor."
@@ -994,6 +1034,10 @@
   "458a03eb88e7ba4b": {
     "en": "<strong>What it gets to see.</strong> Context. Which sources, whose rules, how fresh, how much, and what is out of bounds. A model is a demanding reader. It does not want the warehouse. It wants a small, current slice, with the contradictions already settled. “Garbage in, garbage out” used to be a slogan about training sets. It is now a runtime bug, and it shows up in a sentence a person is about to trust.",
     "t": "<strong>Görebileceği şey.</strong> Bağlam. Hangi kaynaklar, kimin kuralları, ne kadar taze, ne kadar, ve neler yasak. Model zorlayıcı bir okuyucudur. Depoyu istemez. Küçük, güncel bir dilim ister, çelişkiler zaten çözülmüş. \"Çöp giriş, çöp çıkış\" eğitim setleri hakkında bir slogan olarak kullanılırdı. Şimdi bir çalışma zamanı hatasıdır ve bir kişinin güveneceği bir cümlenin içinde belirir."
+  },
+  "45af79e5c2965064": {
+    "en": "Microsoft describes Azure Arc-enabled servers as machines outside Azure that receive Azure resource identities and are managed similarly to native Azure virtual machines: <a href=\"https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview\">What is Azure Arc-enabled servers?</a> <a href=\"#user-content-fnref-2\" data-footnote-backref aria-label=\"Back to reference 2\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Microsoft, Azure Arc etkinleştirilmiş sunucuları, Azure dışındaki makineler olarak tanımlar ve bu makineler Azure kaynak kimlikleri alır, yerel Azure sanal makineleri gibi yönetilir: <a href=\"https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview\">What is Azure Arc-enabled servers?</a> <a href=\"#user-content-fnref-2\" data-footnote-backref aria-label=\"Back to reference 2\" class=\"data-footnote-backref\">↩</a>"
   },
   "45c6e8fdce43c370": {
     "en": "Choose language",
@@ -1251,6 +1295,10 @@
     "en": "Essays by Dastan Aitzhanov tagged Local AI.",
     "t": "Dastan Aitzhanov tarafından yazılmış, Local AI etiketli denemeler."
   },
+  "5a7f89a817436026": {
+    "en": "Accountability means bearing the downside. An agent that spends money it cannot repay needs a limit set before it acts, not an apology after.",
+    "t": "Sorumluluk, olumsuz tarafları üstlenmek demektir. Ödeyemeyeceği parayı harcayan bir ajanın özür sonrası değil, harekete geçmeden önce bir sınırı belirlenmesi gerekir."
+  },
   "5ae19ed174b51bf6": {
     "en": "Resource sharing moves the capital problem; it does not eliminate it",
     "t": "Kaynakların paylaşımı, sermaye sorununu hareket ettirir; onu ortadan kaldırmaz."
@@ -1323,6 +1371,10 @@
     "en": "Letting a generative model talk its way into an exception means the exception is different every time, and nobody can diff it. Low confidence is a branch you wrote, to a stronger model, a person, or a stop. It is not a softer yes hidden in the prose.",
     "t": "Üretken bir modelin istisnaya kendi söylediğini kabul ettirmek, istisnanın her seferinde farklı olması ve hiç kimsenin onu diff etememesi anlamına gelir. Düşük güven, yazdığınız bir daldır: daha güçlü bir modele, bir kişiye veya bir durdurmaya. Bu, metinde gizli daha yumuşak bir evettir değil."
   },
+  "5f66265efd720d14": {
+    "en": "<span>Governance</span><span class=\"idea-filter-count\">18</span>",
+    "t": "<span>Yönetişim</span><span class=\"idea-filter-count\">18</span>"
+  },
   "5f9684d248c6e257": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/analysis-will-be-abundant-before-judgment/\">AI will make analysis abundant before it makes judgment abundant</a>",
     "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/analysis-will-be-abundant-before-judgment/\">Yapay zeka yargıyı bol kılmadan önce analizi bol kılacak</a>"
@@ -1371,6 +1423,10 @@
     "en": "September 25, 2026",
     "t": "25 Eylül 2026"
   },
+  "640711fc166b5468": {
+    "en": "One of these exists in the open. Laya is a small open-source decision model released in September: the caller supplies state and a typed question, and it returns a choice, a score, or a probability, never a paragraph. I have been training and testing it for exactly this plane. It is the shape I care about: a component that is allowed to be uncertain, inside an action set the caller fixed. Classifiers have had that shape for a long time. The decision plane is the idea. The implementation should be whichever one is accurate enough, cheap enough, and inspectable enough for that particular decision.<sup><a href=\"#user-content-fn-3\" id=\"user-content-fnref-3\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">3</a></sup>",
+    "t": "Bunlardan biri açık kaynaklı olarak var. Laya, Eylül'de yayınlanan küçük bir açık kaynaklı karar modelidir: çağıran taraf durumu ve yazılı bir soru sağlar, o da bir seçim, bir skor veya bir olasılık döndürür, hiçbir zaman paragraf değil. Bunu tam olarak bu düzlem için eğitip test ettim. Önemsediğim şekil bu: belirsiz olmasına izin verilen bir bileşen, çağıranın sabitlenmiş bir eylem kümesinin içinde. Sınıflandırıcılar uzun zamandır bu şekle sahip. Karar düzlemi fikir. Uygulama, o özel karar için yeterince doğru, yeterince ucuz ve yeterince incelenebilir olan hangisiyse o olmalı.<sup><a href=\"#user-content-fn-3\" id=\"user-content-fnref-3\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">3</a></sup>"
+  },
   "64c2065538d4e9e4": {
     "en": "© 2026 Dastan Aitzhanov",
     "t": "© 2026 Dastan Aitzhanov"
@@ -1395,9 +1451,17 @@
     "en": "<span>All</span><span class=\"idea-filter-count\">43</span>",
     "t": "<span>Tümü</span><span class=\"idea-filter-count\">43</span>"
   },
+  "660106559387fc6b": {
+    "en": "Principle: policy stays deterministic even when classification is probabilistic. The example confidence is illustrative. The calibration warning now has one data point behind it: Laya’s training diagnostic, in which the model learned a synthetic task and became overconfident on wrong answers. One model is not a base rate, and I would not state, as a finding, how often agent thresholds are fit on the wrong one. The operational rule stands without that finding: do not gate a side effect on a probability you have not checked against the traffic you actually see. <a href=\"#user-content-fnref-4\" data-footnote-backref aria-label=\"Back to reference 4\" class=\"data-footnote-backref\">↩</a>",
+    "t": "İlke: sınıflandırma olasılıksal olsa bile politika deterministik kalır. Örnek güven açıklayıcı. Kalibrasyonun uyarısı şimdi arkasında bir veri noktası var: Laya'nın eğitim tanısı, modelin sentetik bir görevi öğrendi ve yanlış cevapları aşırı güvenli hale geldi. Bir model bir temel oran değil ve ajan eşikleri sık sık yanlış olanlara nasıl uyarlandığı hakkında bir bulgu olarak söylemem. Operasyonel kural bu bulgu olmadan duruyor: gerçekten gördüğün trafiğe karşı kontrol etmemiş bir olasılık üzerinde yan bir etki uygulamayın. <a href=\"#user-content-fnref-4\" data-footnote-backref aria-label=\"Back to reference 4\" class=\"data-footnote-backref\">↩</a>"
+  },
   "6617f9615f6d6b5c": {
     "en": "<a href=\"/work/industrial-predictive-maintenance-review/\">Human review for industrial predictive maintenance</a>",
     "t": "<a href=\"/work/industrial-predictive-maintenance-review/\">Endüstriyel tahmine dayalı bakım için insan incelemesi</a>"
+  },
+  "67442d29acb9114c": {
+    "en": "Industrial asset monitoring with IoT and machine learning",
+    "t": "IoT ve makine öğrenmesi ile endüstriyel varlık izleme"
   },
   "6769029ef47de9cd": {
     "en": "Treat AI adoption as a portfolio, not a project | Dastan Aitzhanov",
@@ -1418,6 +1482,10 @@
   "681c81da42626a5e": {
     "en": "AI will make analysis abundant before it makes judgment abundant",
     "t": "AI analizi bol kılacak, hükümü bol kılmadan önce"
+  },
+  "69684e5300091045": {
+    "en": "I am not claiming a measured share of agent steps that are constrained in this way. That share is a hypothesis, and it will differ by product. I am claiming the architectural test. If you can write the outputs down, you should not ask a general model to invent them.<sup><a href=\"#user-content-fn-2\" id=\"user-content-fnref-2\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">2</a></sup>",
+    "t": "Ajan adımlarının bu şekilde kısıtlanan ölçülebilir bir payını iddia etmiyorum. O pay bir hipotez ve ürüne göre farklılık gösterecek. Mimari testi iddia ediyorum. Çıktıları yazıya döküyorsan, genel bir modelden onları icat etmesini istememelisin.<sup><a href=\"#user-content-fn-2\" id=\"user-content-fnref-2\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">2</a></sup>"
   },
   "6979f8696305f208": {
     "en": "<span>Current inquiry</span><strong>Distributed governance</strong>",
@@ -1843,6 +1911,10 @@
     "en": "Show the full notebook",
     "t": "Defteri tamamen göster"
   },
+  "86bafbb79cc9517a": {
+    "en": "Industrial asset monitoring with IoT and machine learning | Dastan Aitzhanov",
+    "t": "IoT ve makine öğrenmesi ile endüstriyel varlık izleme | Dastan Aitzhanov"
+  },
   "87114386d4b4f188": {
     "en": "The asset already exists, but somebody still paid for it. It depreciates. It consumes power. It occupies space. It needs connectivity, maintenance, cooling, and eventually replacement. If the machine must remain available at particular times, the owner is also giving up optionality. They cannot use the same capacity twice.",
     "t": "Varlık zaten var, ancak yine de birisi bunun için para ödedi. Değeri düşer. Güç tüketir. Alan kaplar. Bağlantı, bakım, soğutma ve sonunda değiştirilmesi gerekir. Makine belirli saatlerde kullanılabilir durumda kalmalıysa, sahip ayrıca seçeneğinden de vazgeçmektedir. Aynı kapasiteyi iki kez kullanamaz."
@@ -2051,6 +2123,10 @@
     "en": "Begin with “Context is the product”",
     "t": "\"İçerik üründür\" ile başlayın"
   },
+  "96cfaf8d936ad3b5": {
+    "en": "Observation, not a survey. I am describing agent harnesses I have built against and read: one generative model asked to plan, select tools, and judge whether it may act. I do not have a published count of how often production systems do this. Treat the prevalence as practice until someone measures it. <a href=\"#user-content-fnref-1\" data-footnote-backref aria-label=\"Back to reference 1\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Gözlem, anket değil. Karşısında inşa ettiğim ve okuduğum ajan sistemlerini açıklıyorum: planlama, araç seçimi ve harekete geçip geçmeyeceğine karar vermek için sorgulanmış bir generatif model. Üretim sistemlerinin bunu ne sıklıkta yaptığının yayınlanmış sayımı yok. Yaygınlığı biri ölçene kadar pratik olarak davran. <a href=\"#user-content-fnref-1\" data-footnote-backref aria-label=\"Back to reference 1\" class=\"data-footnote-backref\">↩</a>"
+  },
   "96e896faa660250a": {
     "en": "I will keep four kinds of sentence apart. Some of this I have seen in systems I have built against or read closely. Some of it is an architectural principle I am willing to design from. Some of it is a hypothesis I have not measured. A few sentences are predictions. The notes at the end say which claims still need a source.",
     "t": "Dört tür cümleyi ayrı tutacağım. Bunların bir kısmını inşa ettiğim veya yakından okuduğum sistemlerde gördüm. Bunların bir kısmı tasarlamaya istekli olduğum mimari bir ilkedir. Bunların bir kısmı ölçmemiş olduğum bir hipotezdir. Birkaç cümle tahmindir. Sonundaki notlar hangi iddiaların halen kaynağa ihtiyacı olduğunu söyler."
@@ -2070,6 +2146,10 @@
   "97718f17cff4e015": {
     "en": "<a href=\"/ideas/consumer-hardware-becomes-infrastructure/\">Consumer hardware becomes infrastructure only when the complexity disappears</a>",
     "t": "<a href=\"/ideas/consumer-hardware-becomes-infrastructure/\">Tüketici donanımı karmaşıklık kaybolduğunda altyapı haline gelir</a>"
+  },
+  "97dbd8acc7f6db61": {
+    "en": "<span>All</span><span class=\"idea-filter-count\">44</span>",
+    "t": "<span>Tüm</span><span class=\"idea-filter-count\">44</span>"
   },
   "9883a1e9ab8f1fa6": {
     "en": "<time datetime=\"2026-09-26\">First developed July 2026</time>",
@@ -2215,6 +2295,10 @@
     "en": "I have been thinking about distributed compute as if it were mainly a scheduling problem. There is work, there are machines, and the system tries to put one on the other. That description leaves out the person who owns the machine.",
     "t": "Dağıtılmış hesaplamayı esas olarak bir planlama problemi olarak düşünüyordum. İş var, makineler var ve sistem birini diğerinin üzerine koymaya çalışıyor. Bu açıklama makinenin sahibini dışarıda bırakıyor."
   },
+  "a0d507327bf71de5": {
+    "en": "<time datetime=\"2021-12-16\">December 16, 2021</time>",
+    "t": "<time datetime=\"2021-12-16\">16 Aralık 2021</time>"
+  },
   "a10ef05a30080819": {
     "en": "Token efficiency is an architectural concern | Dastan Aitzhanov",
     "t": "Token verimliliği mimarî bir sorun | Dastan Aitzhanov"
@@ -2266,6 +2350,10 @@
   "a33e0ba6ba67ef94": {
     "en": "A job has inputs, a definition of done, a limit on steps, a constrained set of actions, and a person who owns the outcome. Persona is how the system talks. The job is what it is allowed to finish. I keep seeing those swapped. The persona gets the attention because it is the part you can hear. The job is the part that decides whether anyone should let the system touch the work.",
     "t": "Bir işin girdileri, tamamlanma tanımı, adım sınırı, kısıtlı bir eylem kümesi ve sonuçtan sorumlu bir kişi vardır. Persona, sistemin nasıl konuştuğudur. İş, tamamlamasına izin verilen şeydir. Bunları sık sık değiştirilmiş görmekteyim. Persona, duyabileceğin kısım olduğu için ilgi çeker. İş, sistemin işe dokunmasına izin verip vermemeyi belirleyen kısımdır."
+  },
+  "a3c3b8a2a9cca05c": {
+    "en": "The important part was the complete path around the model. Industrial machine learning becomes credible when data collection, asset identity, training, inference and the operator’s view behave as one system.",
+    "t": "Önemli kısım, model etrafındaki tam yoldur. Endüstriyel makine öğrenmesi, veri toplama, varlık kimliği, eğitim, çıkarım ve operatörün görüşü tek bir sistem olarak davrandığında güvenilir hale gelir."
   },
   "a437f62389572d95": {
     "en": "Systems",
@@ -2327,6 +2415,10 @@
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/novelty-belongs-to-models/\">Novelty belongs to models. Repetition belongs to software.</a>",
     "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/novelty-belongs-to-models/\">Yenilik modellere aittir. Tekrarlama yazılıma aittir.</a>"
   },
+  "a80e222cca1f9117": {
+    "en": "Akash describes a decentralized marketplace where providers contribute compute, set prices, and earn revenue by hosting tenant workloads: <a href=\"https://akash.network/docs/providers/getting-started/should-i-run-a-provider/\">Should I Run an Akash Provider?</a> <a href=\"#user-content-fnref-4\" data-footnote-backref aria-label=\"Back to reference 4\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Akash, sağlayıcıların işlem gücü katkısında bulunduğu, fiyat belirledikleri ve kiracı iş yüklerini barındırarak gelir elde ettikleri merkezi olmayan bir pazaryerini tanımlar: <a href=\"https://akash.network/docs/providers/getting-started/should-i-run-a-provider/\">Should I Run an Akash Provider?</a> <a href=\"#user-content-fnref-4\" data-footnote-backref aria-label=\"Back to reference 4\" class=\"data-footnote-backref\">↩</a>"
+  },
   "a88174dc65f5c4a5": {
     "en": "<a href=\"/writing/the-computer-should-be-personal/\">The computer should be personal again</a>",
     "t": "<a href=\"/writing/the-computer-should-be-personal/\">Bilgisayar yeniden kişisel olmalı</a>"
@@ -2379,6 +2471,10 @@
     "en": "The trick is to make complexity follow risk. Most systems do one of two things. They put the same approval step in front of everything, which makes the agent frustrating to use. Or they give the agent broad access and rely on the model to be careful, which works until the action matters.",
     "t": "İşin püf noktası, karmaşıklığı riski takip etmeye yapmaktır. Çoğu sistem iki şeyden birini yapar. Her şeyin önüne aynı onay adımını koyarlar, bu da ajanı kullanması hüsranverici kılar. Ya da ajana geniş erişim verirler ve modele dikkatli olmasını güvenirler, bu da eylem önemsenene kadar işe yarar."
   },
+  "adb7f4aa3487f7e1": {
+    "en": "Google describes its Distributed Cloud portfolio as extending Google Cloud infrastructure and services to data centers and edge locations, with connected and air-gapped operating models: <a href=\"https://docs.cloud.google.com/distributed-cloud/docs\">Google Distributed Cloud</a> <a href=\"#user-content-fnref-3\" data-footnote-backref aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Google, Dağıtılmış Bulut portföyünü Google Cloud altyapısını ve hizmetlerini veri merkezlerine ve kenar konumlarına genişleten, bağlı ve hava boşluğunda çalışan işletim modelleriyle tanımlar: <a href=\"https://docs.cloud.google.com/distributed-cloud/docs\">Google Distributed Cloud</a> <a href=\"#user-content-fnref-3\" data-footnote-backref aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>"
+  },
   "ae0bdc849180fe38": {
     "en": "Once analysis is cheap, an organization is still defined by who may commit. A note on ownership, beside the technical thread.",
     "t": "Analiz ucuzlaştıktan sonra, bir kuruluş yine de kimin taahhüt edebileceği tarafından tanımlanır. Teknik ipliğin yanında sahiplik hakkında bir not."
@@ -2410,6 +2506,10 @@
   "afdc64ac82477c56": {
     "en": "An audit log is not a control | Dastan Aitzhanov",
     "t": "Denetim Günlüğü Bir Kontrol Değildir | Dastan Aitzhanov"
+  },
+  "afebb66abbbef647": {
+    "en": "<a href=\"/work/local-ai-intelligent-scaffolding/\">Local AI and intelligent scaffolding</a>",
+    "t": "<a href=\"/work/local-ai-intelligent-scaffolding/\">Yerel AI ve akıllı iskele</a>"
   },
   "b026af6e4ad9b9b6": {
     "en": "Texas",
@@ -2490,6 +2590,10 @@
   "b6f2ba2ed088012c": {
     "en": "Powerful consumer machines can run surprising workloads. That does not automatically make them useful infrastructure.",
     "t": "Güçlü tüketici makineleri şaşırtıcı iş yükleri çalıştırabilir. Bu, onları otomatik olarak yararlı altyapı yapmaz."
+  },
+  "b7a4ad7233251131": {
+    "en": "<span data-month-visible>9</span> <span data-month-noun>ideas</span>",
+    "t": "<span data-month-visible>9</span> <span data-month-noun>fikir</span>"
   },
   "b8185bda381760dd": {
     "en": "The person or organization providing the machine has a different concern. They carry the electricity, depreciation, connectivity, maintenance, and security exposure. They may also have rules about what kinds of work the machine should never perform.",
@@ -2650,6 +2754,10 @@
   "c1e95283e0bf388d": {
     "en": "Open source the layer people need to trust",
     "t": "Açık kaynak kodunu insanların güvenebileceği katmanı aç"
+  },
+  "c1fac47f2350f31a": {
+    "en": "Hypothesis. How large the constrained share is depends on the product, and I have not counted it. The architectural test is the part I would keep even if the share is smaller than I think: if the outputs can be enumerated, do not ask a generator to invent them. <a href=\"#user-content-fnref-2\" data-footnote-backref aria-label=\"Back to reference 2\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Hipotez. Kısıtlı payın ne kadar büyük olduğu ürüne bağlıdır ve ben saymadım. Mimari test, pay benim düşündüğümden daha küçük olsa bile tutardığım kısımdır: çıktılar sayılabiliyorsa, bir üreticiyi onları icat etmesi için sorgulamayın. <a href=\"#user-content-fnref-2\" data-footnote-backref aria-label=\"Back to reference 2\" class=\"data-footnote-backref\">↩</a>"
   },
   "c202b19dc5593301": {
     "en": "Where this fails is work that may never collapse. A problem you have not seen, a negotiation, a line of thought that is still open: those can stay agentic. The claim is only about workflows that have already stabilized, and about the reluctance to admit that they have.",
@@ -2947,6 +3055,10 @@
     "en": "At that point, the balance sheet becomes part of the product whether the founders intended it or not.",
     "t": "O noktada bilanço, kurucuların bunu amaçlayıp amaçlamadığına bakılmaksızın, ürünün bir parçası haline gelir."
   },
+  "da46c149eff82ce8": {
+    "en": "BOINC is a long-running platform for volunteer computing that coordinates donated resources across independently owned computers: <a href=\"https://boinc.berkeley.edu/boinc_a_platform_for_volunteer_computing.pdf\">BOINC: A Platform for Volunteer Computing</a> <a href=\"#user-content-fnref-5\" data-footnote-backref aria-label=\"Back to reference 5\" class=\"data-footnote-backref\">↩</a>",
+    "t": "BOINC, bağımsız olarak sahip olunan bilgisayarlar arasında bağışlanan kaynakları koordine eden, uzun süredir devam eden gönüllü hesaplama platformudur: <a href=\"https://boinc.berkeley.edu/boinc_a_platform_for_volunteer_computing.pdf\">BOINC: A Platform for Volunteer Computing</a> <a href=\"#user-content-fnref-5\" data-footnote-backref aria-label=\"Back to reference 5\" class=\"data-footnote-backref\">↩</a>"
+  },
   "da6c602195a0f879": {
     "en": "<a href=\"/ideas/the-system-should-remember-decisions/\">The system should remember decisions, not every conversation</a>",
     "t": "<a href=\"/ideas/the-system-should-remember-decisions/\">Sistem her konuşmayı değil, kararları hatırlamalıdır</a>"
@@ -3055,6 +3167,10 @@
     "en": "The same request needs different behavior when a person is exploring, deciding, building, or authorizing action.",
     "t": "Aynı istek, bir kişi keşfediyorken, karar veriyorken, inşa ediyorken veya eylem yetkilendiriyorken farklı davranış gerektirir."
   },
+  "e069d2ffa479345f": {
+    "en": "This two-part AWS series connects simulated industrial assets and telemetry with an operating dashboard, a managed anomaly-detection service, model training, scheduled inference and continuing equipment monitoring.",
+    "t": "Bu iki bölümlü AWS serisi, simüle edilmiş endüstriyel varlıkları ve telemetriyi bir işletim paneli, yönetilen bir anomali algılama hizmeti, model eğitimi, zamanlanmış çıkarım ve devam eden ekipman izlemesi ile bağlar."
+  },
   "e0fdcdd664add748": {
     "en": "The discipline is not about caution. A portfolio is how you afford to take risk: several bets, sized, with a known exit, so that the failures are survivable and the winners get more capital. An organization that cannot say which of its AI efforts it would shut down has not decided anything yet.",
     "t": "Disiplin ihtiyat hakkında değildir. Portföy, riskin nasıl alınabileceğidir: birkaç bahis, boyutlandırılmış, bilinen bir çıkışla, böylece başarısızlıklar kurtarılabilir ve kazananlar daha fazla sermaye alır. AI çabalarından hangisini kapatacağını söyleyemeyen bir kuruluş henüz hiçbir şeye karar vermemiştir."
@@ -3106,6 +3222,10 @@
   "e2aa051042520afd": {
     "en": "<strong>Concurrency.</strong> Agents that each carry a full generative loop contend for the same expensive inference, and they contend again for whatever tools they decide to call. Agents that mostly execute known workflows contend for ordinary compute, and they call a model for the residue. I think this is the difference between a demonstration that handles one person and a system that can be run for many people at once. The scaling claim is a prediction. The mechanism is not. A long generative trace does not scale like a function call, and a fleet of them will show you that.<sup><a href=\"#user-content-fn-6\" id=\"user-content-fnref-6\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">6</a></sup>",
     "t": "<strong>Eşzamanlılık.</strong> Her biri tam bir üretken döngü taşıyan ajanlar aynı pahalı çıkarsama için ve kendilerini aramaya karar verdikleri herhangi bir araç için tekrar çatışırlar. Çoğunlukla bilinen iş akışları yürüten ajanlar sıradan hesaplama için çatışırlar ve kalıntı için bir modeli çağırırlar. Bunu bir kişiyi işleyen bir gösterim ile birçok kişi için aynı anda çalıştırılabilir bir sistem arasındaki fark olarak düşünüyorum. Ölçek iddiası bir tahmin. Mekanizm değil. Uzun bir üretken iz bir işlev çağrısı gibi ölçeklenmez ve bunların bir filo size bunu gösterecektir.<sup><a href=\"#user-content-fn-6\" id=\"user-content-fnref-6\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">6</a></sup>"
+  },
+  "e2fa62343d963b43": {
+    "en": "Low confidence is not a softer yes. It is a branch: ask a stronger model, ask a person, or stop. That branch is also code. A calibrated probability is useful because code can read it. An uncalibrated probability is a number with the manners of a measurement. I would not gate a side effect on it until someone has checked the calibration against the traffic the system actually sees. I have done that check once, for Laya, and it did not pass. That is why Laya gates nothing.<sup><a href=\"#user-content-fn-4\" id=\"user-content-fnref-4\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">4</a></sup>",
+    "t": "Düşük güven daha yumuşak bir evet değil. Bir dallanmadır: daha güçlü bir modele sor, bir insana sor veya dur. O dallanma da koddur. Kalibre edilmiş bir olasılık yararlıdır çünkü kod onu okuyabilir. Kalibre edilmemiş bir olasılık, bir ölçüm tavrı taşıyan bir sayıdır. Sistem gerçekten gördüğü trafiğe karşı kalibrasyonu birisi kontrol etmeden bir yan etki üzerinde bir olasılık uygulamam. Bunu bir kez Laya için yaptım ve başarısız oldu. Laya hiçbir şey uygulamadığı için bu yüzden..<sup><a href=\"#user-content-fn-4\" id=\"user-content-fnref-4\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">4</a></sup>"
   },
   "e314922c1fed441c": {
     "en": "Local AI",
@@ -3255,6 +3375,10 @@
     "en": "This is not an argument for letting developers off the hook. It is an argument for putting the obligation where the decision was made. Someone connected the tool that can spend money. That someone owns the boundary, whether or not they thought of it as one.",
     "t": "Bu, geliştiricileri görev dışına çıkarmak için bir argüman değil. Yükümlülüğü kararın alındığı yere koymak için bir argüman. Birisi parayı harcayabilen araçı bağladı. O birisi sınırın sahibi, onu bir sınır olarak düşünüp düşünmemiş olsun."
   },
+  "eafe8021550ec6c8": {
+    "en": "An agent can own the mistake. It cannot own the cost.",
+    "t": "Bir ajan hatayı sahiplenebilir. Maliyeti sahiplenebilir."
+  },
   "eb08a47600cd1592": {
     "en": "<a href=\"/writing/#ownership-incentives\">Ownership and incentives</a>",
     "t": "<a href=\"/writing/#ownership-incentives\">Sahiplik ve teşvikler</a>"
@@ -3338,6 +3462,10 @@
   "f20b5f616e001fae": {
     "en": "None of these requires a particular architecture. A single vendor’s cloud service can satisfy them. So can a system spread across a person’s own devices and a regional operator. They describe rights and obligations, not a topology.",
     "t": "Bunların hiçbiri belirli bir mimariyi gerektirmez. Tek bir satıcının bulut hizmeti bunları karşılayabilir. Kişinin kendi cihazları ve bölgesel bir operatöre yayılan bir sistem de. Bunlar haklar ve yükümlülükleri tanımlar, bir topoloji değil."
+  },
+  "f2564bb5195db946": {
+    "en": "Latency, cost, reliability, and governance follow from the split if the split is real. The concurrency point is a prediction about fleets. I would want traces from a real multi-person system before stating it as a finding. <a href=\"#user-content-fnref-6\" data-footnote-backref aria-label=\"Back to reference 6\" class=\"data-footnote-backref\">↩</a>",
+    "t": "Gecikme, maliyet, güvenilirlik ve yönetim bölünmeden izlenir eğer bölünme gerçekse. Eş zamanlılık noktası filo hakkında bir tahmin. Bunu bir bulgu olarak söylemeden önce gerçek çok kişili bir sistemden izler isterdim. <a href=\"#user-content-fnref-6\" data-footnote-backref aria-label=\"Back to reference 6\" class=\"data-footnote-backref\">↩</a>"
   },
   "f285fcb24243c235": {
     "en": "<a href=\"/ideas/?tag=local-ai\">Local AI</a>",
