@@ -69,7 +69,10 @@ Rules:
 6. Keep each translation close to the source in length and structure.`;
 
 const hasCredential = Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
-const client = hasCredential ? new Anthropic() : null;
+// CI sets TRANSLATE_SPEND to "false" on pull-request builds so only master pays.
+const maySpend = process.env.TRANSLATE_SPEND !== 'false';
+const client = hasCredential && maySpend ? new Anthropic() : null;
+console.log(`translate: credential ${hasCredential ? 'present' : 'absent'}, spending ${client ? 'enabled' : 'disabled'}`);
 
 const hash = (lang, text) => createHash('sha256').update(`${lang}\n${text}`).digest('hex').slice(0, 16);
 const tagSequence = (s) => (s.match(/<[^>]+>/g) ?? []).join('');
@@ -383,7 +386,7 @@ async function main() {
   }
   const untranslated = LANG_CODES.reduce((n, lang) => n + stats[lang].untranslated, 0);
   if (untranslated && !client) {
-    console.warn(`warning: ${untranslated} fragments left in English because no ANTHROPIC_API_KEY is set`);
+    console.warn(`warning: ${untranslated} fragments left in English because ${hasCredential ? 'spending is disabled on this build' : 'no ANTHROPIC_API_KEY is set'}`);
     if (strict) process.exit(1);
   }
 }
