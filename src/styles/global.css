@@ -1634,6 +1634,54 @@ main {
   border-bottom-color: var(--accent);
 }
 
+/* Google Translate element: styled as a quiet footer control, not a blue box. */
+.footer-translate {
+  min-height: 1.4em;
+}
+
+.goog-te-gadget-simple {
+  background: transparent !important;
+  border: 0 !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+  font-size: inherit !important;
+  line-height: inherit !important;
+  color: var(--ink-soft) !important;
+  border-bottom: 1px solid var(--line) !important;
+  cursor: pointer;
+}
+
+.goog-te-gadget-simple:hover {
+  color: var(--accent) !important;
+  border-bottom-color: var(--accent) !important;
+}
+
+.goog-te-gadget-simple img,
+.goog-te-gadget-simple .goog-te-menu-value span[style] {
+  display: none !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value,
+.goog-te-gadget-simple .goog-te-menu-value span {
+  color: inherit !important;
+}
+
+/* Google injects a banner iframe and pushes the page down; keep the page where it is. */
+.goog-te-banner-frame.skiptranslate,
+#goog-gt-tt {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+@media print {
+  .footer-translate {
+    display: none;
+  }
+}
+
 @media (max-width: 680px) {
   :root {
     --shell: min(72rem, calc(100% - 1.75rem));
