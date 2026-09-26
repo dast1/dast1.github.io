@@ -43,7 +43,6 @@ const BLOCK = [
   'blockquote', 'td', 'th', 'caption', 'summary', 'label', 'button', 'title', 'legend',
 ];
 const BLOCK_SELECTOR = BLOCK.join(',');
-const BLOCK_SET = new Set(BLOCK);
 const SKIP = new Set(['script', 'style', 'pre', 'code', 'kbd', 'samp', 'svg', 'math', 'noscript', 'template']);
 const ATTRS = [
   ['meta[name="description"]', 'content'],
