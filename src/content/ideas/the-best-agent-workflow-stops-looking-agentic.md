@@ -10,4 +10,4 @@ An agent that plans, calls tools, and revises on every request is a sign that th
 
 I do not mean the agent was a mistake. I mean it was scaffolding. Scaffolding that stays up after the building can stand is just in the way.
 
-Where this fails is work that may never collapse. A problem you have not seen, a negotiation, a line of thought that is still open — those can stay agentic. The claim is only about workflows that have already stabilized, and about the reluctance to admit that they have.
+Where this fails is work that may never collapse. A problem you have not seen, a negotiation, a line of thought that is still open: those can stay agentic. The claim is only about workflows that have already stabilized, and about the reluctance to admit that they have.

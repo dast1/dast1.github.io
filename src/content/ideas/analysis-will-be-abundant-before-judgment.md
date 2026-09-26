@@ -12,4 +12,4 @@ Someone still has to decide what matters, what risk is acceptable, and what comm
 
 I suspect the next bottleneck will not be generating another analysis. It will be creating systems in which a decision has a clear owner and the reasoning behind it can be inspected.
 
-Expertise is not merely having more information. It is recognizing which information should change the decision—and being willing to own what happens next.
+Expertise is not merely having more information. It is recognizing which information should change the decision, and being willing to own what happens next.

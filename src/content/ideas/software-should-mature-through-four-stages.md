@@ -1,6 +1,6 @@
 ---
 title: Software should mature through four stages
-description: AI-assisted products move from novelty to usefulness, dependability, and refinement—and each stage needs different work.
+description: AI-assisted products move from novelty to usefulness, dependability, and refinement, and each stage needs different work.
 date: "2026-09-25"
 developed: "2026-03"
 tags: [Product, Systems]

@@ -20,7 +20,7 @@ Privacy becomes an architecture instead of a promise. If a document never leaves
 
 The tool stays close while you are thinking. Something you reach for mid-sentence should feel nearer to a pencil than to a queue. Round trips change how often you ask, and they change what you are willing to ask. Latency is not a benchmark score in this setting. It is whether the machine is still in the conversation.
 
-The system can be particular. A model sitting inside one person's work — their files, their vocabulary, an argument they have not finished — can be narrower than a model that has to be acceptable to everyone. Personal does not mean a chatbot with your name in the prompt. It means the system is allowed to be specific, because the context never had to be generalized for a crowd.
+The system can be particular. A model sitting inside one person's work, with their files, their vocabulary, and an argument they have not finished, can be narrower than a model that has to be acceptable to everyone. Personal does not mean a chatbot with your name in the prompt. It means the system is allowed to be specific, because the context never had to be generalized for a crowd.
 
 Local inference is operational work. Weights, memory, updates, and the quiet breakage when a model changes underneath you are real costs. Shared infrastructure does not vanish. It moves to the jobs that are actually heavy. The interesting problems are the ones that are neither a secret that must stay nor a job that must leave.
 
