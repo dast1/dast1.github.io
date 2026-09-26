@@ -16,7 +16,7 @@ To correct a translation, edit its `t` value. It stays until the English source
 changes, at which point the fragment gets a new hash and is translated again.
 
 `npm run translate` does the same locally and fails if anything is left
-untranslated. It needs `ANTHROPIC_API_KEY` in the environment.
+untranslated. It needs `ANTHROPIC_API_KEY` in the environment. In CI the key comes from the repository secret `ANTHROPIC_TRANSLATION`.
 
 Readers land on the language their browser prefers and stay on whichever
 language they pick in the header. That choice lives in their browser only.
