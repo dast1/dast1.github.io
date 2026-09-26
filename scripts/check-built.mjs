@@ -128,7 +128,7 @@ for (const file of htmlFiles) {
   }
   if (!/<html[^>]*\slang="(en|ru|tr)"/i.test(html)) fail(`${label} missing lang`);
   if (!html.includes('id="content"')) fail(`${label} missing main landmark`);
-  if (!html.includes('Skip to content')) fail(`${label} missing skip link`);
+  if (!/<a class="skip" href="#content">/.test(html)) fail(`${label} missing skip link`);
   const headings = html.match(/<h1[\s>]/g) ?? [];
   if (headings.length !== 1) fail(`${label} has ${headings.length} h1 elements`);
   if (!/<title>[^<]+<\/title>/.test(html)) fail(`${label} missing title`);

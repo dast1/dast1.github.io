@@ -40,7 +40,8 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_TRANSLATION }}
           TRANSLATE_SPEND: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       - name: Commit new translations to the cache
-        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        # Runs even if the build failed: translations already paid for must be kept.
+        if: always() && github.event_name == 'push' && github.ref == 'refs/heads/master'
         run: |
           if git diff --quiet -- translations && [ -z "$(git ls-files --others --exclude-standard translations)" ]; then
             echo "No new translations."
