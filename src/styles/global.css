@@ -450,6 +450,25 @@ main {
   text-wrap: balance;
 }
 
+.home-now {
+  margin: 1.1rem 0 0;
+  max-width: var(--measure);
+  font-family: var(--sans);
+  font-size: 0.98rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+
+.home-now-label {
+  display: inline-block;
+  margin-right: 0.45rem;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
 .home-background,
 .work-masthead > p {
   max-width: 39rem;

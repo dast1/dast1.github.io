@@ -62,7 +62,7 @@ const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : 
       (function () {
         // Send first-time readers to the site in their browser's language, and
         // keep readers on the language they last chose. Nothing leaves the browser.
-        var langs = ['zh', 'es', 'fr', 'ru', 'tr', 'de', 'it', 'pt'];
+        var langs = ['ru', 'tr'];
         var path = location.pathname;
         if (path.indexOf('/projects/') === 0) return;
         var match = path.match(/^\/([a-z]{2})(\/|$)/);

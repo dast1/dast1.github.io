@@ -121,7 +121,7 @@ for (const file of htmlFiles) {
   for (const phrase of forbidden) {
     if (lowered.includes(phrase)) fail(`${label} contains forbidden text: ${phrase}`);
   }
-  if (!/<html[^>]*\slang="(en|zh-Hans|es|fr|ru|tr|de|it|pt-BR)"/i.test(html)) fail(`${label} missing lang`);
+  if (!/<html[^>]*\slang="(en|ru|tr)"/i.test(html)) fail(`${label} missing lang`);
   if (!html.includes('id="content"')) fail(`${label} missing main landmark`);
   if (!html.includes('Skip to content')) fail(`${label} missing skip link`);
   const headings = html.match(/<h1[\s>]/g) ?? [];
@@ -154,7 +154,7 @@ for (const file of htmlFiles) {
 }
 
 const home = await readFile(join(dist, 'index.html'), 'utf8');
-for (const phrase of ['Texas', 'who decides, who carries the risk']) {
+for (const phrase of ['Texas', 'the way an owner does', 'Currently']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
 if (!home.includes('Dastan Aitzhanov | AI Systems, Governance, and Ownership')) {
