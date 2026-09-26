@@ -3,6 +3,7 @@ title: The place that performs the action should be able to say no
 description: Policy becomes real only when the system that sends, deletes, spends, or changes a record can refuse the action.
 date: "2026-09-25"
 developed: "2025-12"
+tags: [Governance, Systems]
 ---
 
 A policy service can approve a request. A model can classify it. A workflow can carry it. But if the tool that performs the side effect cannot refuse the action, the rest of the system is advisory.

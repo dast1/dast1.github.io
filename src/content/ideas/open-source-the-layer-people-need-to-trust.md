@@ -3,6 +3,7 @@ title: Open source the layer people need to trust
 description: The boundary between open and proprietary should follow where independent inspection matters, not a general philosophy about software.
 date: "2026-09-25"
 developed: "2026-06"
+tags: [Governance, Systems]
 ---
 
 The open-versus-proprietary discussion is often treated as a philosophical choice. I think it is more useful to ask which layer needs independent trust and which layer represents the service a company is actually building.

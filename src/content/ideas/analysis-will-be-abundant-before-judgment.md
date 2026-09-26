@@ -3,6 +3,7 @@ title: AI will make analysis abundant before it makes judgment abundant
 description: Generating more comparisons and recommendations does not create ownership of the decision or the judgment to make it well.
 date: "2026-09-25"
 developed: "2026-02"
+tags: [Product, Agents]
 ---
 
 AI can already produce more summaries, comparisons, plans, and recommendations than most organizations know what to do with. That does not mean the organization has more judgment.

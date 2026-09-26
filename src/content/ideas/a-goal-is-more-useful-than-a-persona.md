@@ -3,6 +3,7 @@ title: A goal is more useful than a persona
 description: A persona shapes how an assistant speaks; a goal tells the system what future state it is trying to help create.
 date: "2026-09-25"
 developed: "2026-05"
+tags: [Product, Agents]
 ---
 
 We often begin designing an AI assistant by deciding how it should sound. I think the harder and more useful work is deciding what state it is trying to help the person reach.

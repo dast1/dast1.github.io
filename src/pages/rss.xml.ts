@@ -20,7 +20,7 @@ export const GET: APIRoute = async (context) => {
       description: entry.data.description,
       pubDate: parseDay(entry.data.date),
       link: `/ideas/${entry.id}/`,
-      categories: ['Ideas'],
+      categories: ['Ideas', ...entry.data.tags],
     })),
   ].sort((a, b) => b.pubDate.getTime() - a.pubDate.getTime());
 

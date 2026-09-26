@@ -3,6 +3,7 @@ title: The system should remember decisions, not every conversation
 description: Durable state is the record of what was chosen, why, and what evidence would cause the choice to change.
 date: "2026-09-25"
 developed: "2026-04"
+tags: [Systems, Product]
 ---
 
 Long context can make a system feel like it remembers. That is not the same as maintaining useful state.

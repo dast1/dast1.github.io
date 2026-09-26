@@ -3,6 +3,7 @@ title: Failure should reduce capability, not destroy the system
 description: A resilient AI system should fall back to a smaller, safer set of capabilities when one component becomes unavailable.
 date: "2026-09-25"
 developed: "2025-09"
+tags: [Systems, Local AI]
 ---
 
 Distributed systems fail in pieces. A local machine sleeps. A nearby device becomes unavailable. A remote provider has an outage. The system should not treat every failure as an all-or-nothing event.

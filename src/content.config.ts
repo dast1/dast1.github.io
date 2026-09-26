@@ -2,6 +2,7 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
 import { projectStatuses } from './lib/projects';
+import { ideaTags } from './lib/ideas';
 
 const day = z.union([z.string(), z.date()]).transform((value) => {
   if (value instanceof Date) {
@@ -39,6 +40,7 @@ const ideas = defineCollection({
     description: z.string().min(20),
     date: day,
     developed: month,
+    tags: z.array(z.enum(ideaTags)).min(1).max(3),
   }),
 });
 

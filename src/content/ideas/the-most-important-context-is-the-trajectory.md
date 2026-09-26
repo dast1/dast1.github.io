@@ -3,6 +3,7 @@ title: The most important context is the trajectory
 description: A personal system needs more than facts about the present; it needs to understand the direction the person is trying to move.
 date: "2026-09-25"
 developed: "2026-02"
+tags: [Product, Agents]
 ---
 
 Personal context is usually described as a collection of facts: preferences, documents, history, and relationships. Those matter. But a system that knows only the current state can still optimize for the wrong future.

@@ -3,6 +3,7 @@ title: Clarification is part of intelligence
 description: A system that confidently completes the wrong task is not more intelligent than one that knows when it needs to ask.
 date: "2026-09-25"
 developed: "2026-09"
+tags: [Agents, Product]
 ---
 
 We often judge an AI system by how quickly it produces an answer. I think that creates the wrong incentive. A system that confidently completes the wrong task is not more intelligent than one that stops and asks what the person is actually trying to accomplish.

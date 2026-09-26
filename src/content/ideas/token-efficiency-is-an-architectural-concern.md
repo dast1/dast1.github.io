@@ -3,6 +3,7 @@ title: Token efficiency is an architectural concern
 description: Repeatedly rediscovering context and decisions is not merely expensive; it is evidence that the system has forgotten its own structure.
 date: "2026-09-25"
 developed: "2026-02"
+tags: [Systems, Economics]
 ---
 
 We usually talk about token consumption as a cost issue. It is also a signal that the architecture may be making models repeatedly rediscover context, re-explain decisions, or review material they do not need.

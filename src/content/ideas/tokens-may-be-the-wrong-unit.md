@@ -3,6 +3,7 @@ title: Tokens may be the wrong unit for compute value
 description: Token count is easy to meter, but it does not represent the same work, service quality, or value across systems and tasks.
 date: "2026-09-25"
 developed: "2026-06"
+tags: [Economics, Systems]
 ---
 
 Tokens are easy to count, which makes them attractive as a meter. But they are not necessarily the thing a user values, and they do not represent the same amount of work across models, hardware, or tasks.

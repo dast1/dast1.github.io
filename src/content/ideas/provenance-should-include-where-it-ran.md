@@ -3,6 +3,7 @@ title: An answer's provenance should include where it ran
 description: Model identity is only part of provenance when execution location changes privacy, latency, cost, and trust.
 date: "2026-09-25"
 developed: "2026-02"
+tags: [Governance, Local AI]
 ---
 
 When an AI system gives an answer, we increasingly care which model produced it. I think that record is incomplete.

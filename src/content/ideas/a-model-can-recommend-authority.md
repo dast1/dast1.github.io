@@ -3,6 +3,7 @@ title: A model can recommend authority; it should not grant it
 description: Model judgment can inform a policy, but authority should come from something explicit enough to review and test.
 date: "2026-09-25"
 developed: "2026-01"
+tags: [Governance, Agents]
 ---
 
 There are situations where a model is useful for judging whether a request appears safe, relevant, or consistent with a goal. That judgment can inform a policy. I do not think it should become the policy.
