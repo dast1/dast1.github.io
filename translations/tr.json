@@ -107,6 +107,10 @@
     "en": "Ideas | Dastan Aitzhanov",
     "t": "Fikirler | Dastan Aitzhanov"
   },
+  "06bdc48ad1959d8d": {
+    "en": "<time datetime=\"2026-09-26\">First developed September 2026</time>",
+    "t": "<time datetime=\"2026-09-26\">İlk olarak Eylül 2026'da geliştirildi</time>"
+  },
   "07c9f832053a96c1": {
     "en": "Treat AI adoption as a portfolio, not a project",
     "t": "Yapay zeka benimsenmesini bir proje olarak değil, bir portföy olarak ele alın"
@@ -815,6 +819,10 @@
     "en": "Escalation is often treated as an operational exception. I think it belongs in product design. The system should make the remaining safe options obvious rather than leave the user with a generic failure.",
     "t": "Yükseltme sıklıkla operasyonel bir istisna olarak ele alınır. Bence ürün tasarımına ait. Sistem, kullanıcıyı genel bir başarısızlıkla baş başa bırakmak yerine, kalan güvenli seçenekleri açık hale getirmelidir."
   },
+  "360d707976b40c68": {
+    "en": "An agent can own the mistake. It cannot own the cost. | Dastan Aitzhanov",
+    "t": "Bir ajan hatayı sahiplenebilir. Maliyeti sahiplenemiyor. | Dastan Aitzhanov"
+  },
   "361b77615f774df7": {
     "en": "The writing taxonomy has been simplified. Essays previously filed under Context now appear under <a href=\"/writing/tags/systems/\">Systems</a>.",
     "t": "Yazı taksonomisi basitleştirildi. Daha önce Context altında dosyalanan yazılar artık <a href=\"/writing/tags/systems/\">Systems</a> altında görünüyor."
@@ -858,6 +866,10 @@
   "37ff1c1379c1c190": {
     "en": "A lease can define who controls the device, who maintains it, what level of service is expected, and what happens when the equipment is no longer useful. It can align payment with actual capacity or usage.",
     "t": "Bir kira, cihazı kimin kontrol ettiğini, kimin bakım yaptığını, hangi hizmet düzeyinin beklendiğini ve ekipman artık kullanışlı olmadığında ne olacağını tanımlayabilir. Ödemeyi gerçek kapasite ya da kullanım ile hizalayabilir."
+  },
+  "389b0e8173e5e015": {
+    "en": "In September an AI agent set up translation for this site. It chose the model, wrote the pipeline, and ran it. Two runs spent about twenty dollars and produced nothing I could keep, because of rules the agent had written itself. When I asked for the money back, the agent could explain exactly what went wrong and fix it. It could not pay. Neither could the support agent I asked next.",
+    "t": "Eylül ayında bir yapay zeka ajanı bu site için çeviri kurdu. Modeli seçti, işlem hattını yazdı ve çalıştırdı. İki çalıştırma yaklaşık yirmi dolar harcadı ve ajanın kendisinin yazdığı kurallar nedeniyle tutabileceğim hiçbir şey üretmedi. Parayı geri istediğimde, ajan tam olarak neyin yanlış gittiğini açıklayabildi ve düzeltebildi. Ödeyemedi. Sonra sorduğum destek ajanı da ödeyemedi."
   },
   "38e295aa8572936a": {
     "en": "Capacity is not consent",
@@ -1634,6 +1646,10 @@
   "732e7f2d835aa911": {
     "en": "Tokens are easy to count, which makes them attractive as a meter. But they are not necessarily the thing a user values, and they do not represent the same amount of work across models, hardware, or tasks.",
     "t": "Tokenlar saymak kolay, bu da onları bir ölçü olarak çekici kılar. Ama bunlar kullanıcının değer verdiği şey olmak zorunda değildir ve farklı modeller, donanımlar veya görevler arasında aynı miktarda işi temsil etmezler."
+  },
+  "73508ec164380e7f": {
+    "en": "So the accountability has to sit somewhere else, and it has to be decided before the action. A spending limit the agent cannot raise. An estimate shown before the run. Paid work saved even when a later step fails. The person who authorizes the spend should see the ceiling, not the receipt.",
+    "t": "Öyleyse hesap verebilirliğin başka bir yerde duracak olması gerekir ve eylemden önce karar verilmesi gerekir. Ajanın yükseltemediği harcama limiti. Çalıştırmadan önce gösterilen tahmin. Sonraki bir adım başarısız olsa bile yapılan iş kaydedilir. Harcamayı yetkilendiren kişi makbuzu değil, tavanı görmelidir."
   },
   "7411cbf00a61ccf5": {
     "en": "<time datetime=\"2026-09-25\">September 25, 2026</time><span aria-hidden=\"true\">·</span><span>9 min read</span>",
@@ -2970,6 +2986,10 @@
   "d157e708c2b8c34c": {
     "en": "An answer&#39;s provenance should include where it ran | Dastan Aitzhanov",
     "t": "Bir yanıtın kaynağı, nerede çalıştığını içermeli | Dastan Aitzhanov"
+  },
+  "d1aab100dad76531": {
+    "en": "That is not a failure of politeness. An agent can be responsible for an outcome in the sense of having caused it. It cannot be accountable, because accountability means someone carries the cost, and the agent owns nothing.",
+    "t": "Bu nezaket başarısızlığı değildir. Bir ajan buna neden olmak anlamında sonuç için sorumlu olabilir. Hesap verebilir olamaz, çünkü hesap verebilirlik birinin maliyeti karşılaması anlamına gelir ve ajan hiçbir şeye sahip değildir."
   },
   "d1be07e0f9756d96": {
     "en": "Six properties a boundary should have",
