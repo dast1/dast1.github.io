@@ -2,14 +2,14 @@
 import EntryList from '../components/EntryList.astro';
 import Base from '../layouts/Base.astro';
 import { publishedIdeas, publishedWriting, tagPath } from '../lib/content';
-import { formatDate } from '../lib/dates';
+import { formatDate, formatMonth } from '../lib/dates';
 import { siteJsonLd } from '../lib/jsonld';
 import { site } from '../site';
 
 const writing = (await publishedWriting())
   .filter((entry) => entry.data.featured)
   .slice(0, 3);
-const ideas = await publishedIdeas();
+const ideas = (await publishedIdeas()).slice(0, 6);
 ---
 
 <Base title={site.title} description={site.description} jsonLd={siteJsonLd()}>
@@ -61,8 +61,8 @@ const ideas = await publishedIdeas();
     items={ideas.map((entry) => ({
       href: `/ideas/${entry.id}/`,
       title: entry.data.title,
-      datetime: entry.data.date,
-      dateLabel: formatDate(entry.data.date),
+      datetime: entry.data.developed,
+      dateLabel: `Developed ${formatMonth(entry.data.developed)}`,
       summary: entry.data.description,
     }))}
   />

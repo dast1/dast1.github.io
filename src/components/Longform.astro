@@ -13,12 +13,13 @@ interface Props {
   title: string;
   description: string;
   date: string;
+  dateLabel?: string;
   minutes?: number;
   tags?: TagLink[];
   jsonLd?: unknown;
 }
 
-const { kicker, kickerHref, title, description, date, minutes, tags = [], jsonLd } = Astro.props;
+const { kicker, kickerHref, title, description, date, dateLabel, minutes, tags = [], jsonLd } = Astro.props;
 ---
 
 <Base title={title} description={description} ogType="article" published={date} jsonLd={jsonLd}>
@@ -27,7 +28,7 @@ const { kicker, kickerHref, title, description, date, minutes, tags = [], jsonLd
       <p class="kicker"><a href={kickerHref}>{kicker}</a></p>
       <h1>{title}</h1>
       <p class="byline">
-        <time datetime={date}>{formatDate(date)}</time>
+        <time datetime={date}>{dateLabel ?? formatDate(date)}</time>
         {
           minutes && (
             <>
