@@ -9,7 +9,7 @@ export const site = {
   name: 'Dastan Aitzhanov',
   title: 'Dastan Aitzhanov | AI Systems, Authority, and Ownership',
   description:
-    'Dastan Aitzhanov builds AI systems and writes about delegated authority: who grants it, where it ends, and who answers for the result, seen as an owner as well as an engineer.',
+    'Dastan Aitzhanov builds AI systems and writes about delegated authority, seen as an owner: who grants it, where it ends, and who answers for the result.',
   url: siteUrl,
   email: 'dastan.aitzhanov@gmail.com',
   github: 'https://github.com/dast1',
