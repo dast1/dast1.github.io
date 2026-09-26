@@ -6,7 +6,7 @@ tags:
   - Governance
   - Agents
   - Systems
-draft: true
+draft: false
 ---
 
 Most AI policy written so far attaches to the model. Training compute above a threshold triggers reporting. A general-purpose model above a certain size is presumed to carry systemic risk. Evaluations are run on the model before release. This made sense when capability was scarce and concentrated: a few labs, a few models, one obvious place to look.[^1]
@@ -77,7 +77,7 @@ And it is only as good as the enforcement. A boundary that exists on paper is th
 
 ## Notes
 
-[^1]: Observation about the shape of current policy, not a legal survey. The EU AI Act presumes systemic risk for general-purpose models above a training-compute threshold, and the now-rescinded US Executive Order 14110 set a compute threshold for reporting. Exact figures and current status should be verified against primary sources before publication.
+[^1]: Two examples. Article 51(2) of the EU AI Act presumes that a general-purpose model has systemic risk when the cumulative compute used to train it exceeds 10^25 floating-point operations; the presumption is rebuttable, and providers must notify the Commission within two weeks of reaching the threshold ([Article 51](https://artificialintelligenceact.eu/article/51/)). In the United States, Executive Order 14110 of October 30, 2023 required reporting for models trained above 10^26 operations ([CRS summary](https://www.congress.gov/crs-product/R47843)); it was revoked on January 20, 2025 ([Federal Register](https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions)). The threshold idea survives in state law and in the EU. The observation is about where these instruments attach, not whether they are wise.
 
 [^2]: The evaluation is described in [A smaller model with better structure](/work/graph-rag-smaller-model/). It is one study on grounded enterprise retrieval. I am citing it as an instance of a pattern, not as proof of the pattern.
 
@@ -87,7 +87,7 @@ And it is only as good as the enforcement. A boundary that exists on paper is th
 
 [^5]: Provenance here is deployment-side: which model, which policy version, where it executed, on whose behalf. It is a different record from training-data provenance, and both are needed.
 
-[^6]: Proposal. I have not surveyed current federal acquisition guidance on AI systems. Any published memoranda on agency AI use and procurement should be cited here, with their current status confirmed, before this recommendation is made in print.
+[^6]: Proposal. The current federal instruments are OMB memoranda M-25-21, on agency use of AI, and M-25-22, on acquisition, both issued April 3, 2025 ([OMB M-25-22](https://digitalgovernmenthub.org/examples/omb-m-25-22-driving-efficient-acquisition-of-artificial-intelligence-in-government/)). M-25-22 already sets contract terms on data rights, interoperability, and vendor use of government data. It is the natural place for requirements on enumerated actions, permission logic, enforcement points, and revocation to attach.
 
 [^7]: Proposal. The action-class list is illustrative. The claim is the sorting variable, not the exact tiers. This follows [Autonomy should scale with reversibility](/ideas/autonomy-should-scale-with-reversibility/).
 
