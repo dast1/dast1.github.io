@@ -8,12 +8,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/translate-site.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "lint": "node scripts/check-built.mjs",
-    "verify": "astro check && astro build && node scripts/check-built.mjs",
-    "marks": "node scripts/render-marks.mjs"
+    "verify": "astro check && npm run build && node scripts/check-built.mjs",
+    "marks": "node scripts/render-marks.mjs",
+    "translate": "astro build && node scripts/translate-site.mjs --strict"
   },
   "dependencies": {
     "@astrojs/mdx": "^8.0.1",
@@ -24,7 +25,9 @@
     "astro": "^7.3.3"
   },
   "devDependencies": {
+    "@anthropic-ai/sdk": "^0.128.0",
     "@astrojs/check": "^0.9.10",
+    "node-html-parser": "^9.0.4",
     "sharp": "^0.35.4",
     "typescript": "^5.9.3"
   }

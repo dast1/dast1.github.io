@@ -10,9 +10,12 @@ const links = [
   { href: '/about/', label: 'About' },
 ];
 
+// Translated pages live under /ru/ and belong to the same section.
+const sectionPath = path.replace(/^\/ru\//, '/');
+
 function isCurrent(href: string): boolean {
-  if (href === '/') return path === '/';
-  return path === href || path.startsWith(href);
+  if (href === '/') return sectionPath === '/';
+  return sectionPath === href || sectionPath.startsWith(href);
 }
 ---
 
@@ -33,6 +36,7 @@ function isCurrent(href: string): boolean {
           }
         </ul>
       </nav>
+      <nav class="lang-nav" aria-label="Language" data-lang-nav></nav>
       <button
         type="button"
         class="theme-toggle"
@@ -54,6 +58,19 @@ function isCurrent(href: string): boolean {
           }
 
           paint(root.dataset.theme === 'dark' ? 'dark' : 'light');
+
+          var langNav = document.querySelector('[data-lang-nav]');
+          if (langNav) {
+            langNav.addEventListener('click', function (event) {
+              var link = event.target.closest('a[data-lang]');
+              if (!link) return;
+              try {
+                localStorage.setItem('lang', link.getAttribute('data-lang'));
+              } catch (error) {
+                /* The link still navigates; only the memory is lost. */
+              }
+            });
+          }
 
           button.addEventListener('click', function () {
             var next = root.dataset.theme === 'dark' ? 'light' : 'dark';
