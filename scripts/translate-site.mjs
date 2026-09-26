@@ -21,7 +21,9 @@ const here = dirname(fileURLToPath(import.meta.url));
 const dist = join(here, '..', 'dist');
 const cacheDir = join(here, '..', 'translations');
 const siteOrigin = 'https://dast1.github.io';
-const MODEL = 'claude-opus-5';
+// Cheapest current model; translation of short fragments does not need more. The markup check
+// rejects any output that damages the HTML, and the author reviews both languages.
+const MODEL = 'claude-haiku-4-5';
 const strict = process.argv.includes('--strict');
 
 // The languages the author reads and can review.
