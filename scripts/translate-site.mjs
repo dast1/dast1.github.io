@@ -24,15 +24,10 @@ const siteOrigin = 'https://dast1.github.io';
 const MODEL = 'claude-opus-5';
 const strict = process.argv.includes('--strict');
 
+// The languages the author reads and can review.
 const LANGS = {
-  zh: { name: 'Simplified Chinese', htmlLang: 'zh-Hans', label: '中文', locale: 'zh_CN' },
-  es: { name: 'Spanish', htmlLang: 'es', label: 'Español', locale: 'es_ES' },
-  fr: { name: 'French', htmlLang: 'fr', label: 'Français', locale: 'fr_FR' },
   ru: { name: 'Russian', htmlLang: 'ru', label: 'Русский', locale: 'ru_RU' },
   tr: { name: 'Turkish', htmlLang: 'tr', label: 'Türkçe', locale: 'tr_TR' },
-  de: { name: 'German', htmlLang: 'de', label: 'Deutsch', locale: 'de_DE' },
-  it: { name: 'Italian', htmlLang: 'it', label: 'Italiano', locale: 'it_IT' },
-  pt: { name: 'Portuguese (Brazil)', htmlLang: 'pt-BR', label: 'Português', locale: 'pt_BR' },
 };
 const LANG_CODES = Object.keys(LANGS);
 
