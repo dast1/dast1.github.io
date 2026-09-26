@@ -162,7 +162,7 @@ const home = await readFile(join(dist, 'index.html'), 'utf8');
 for (const phrase of ['Texas', 'the way an owner does', 'Currently']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
-if (!home.includes('Dastan Aitzhanov | AI Systems, Governance, and Ownership')) {
+if (!home.includes('Dastan Aitzhanov | AI Systems, Authority, and Ownership')) {
   fail('home title is not the site title');
 }
 if (!home.includes('how should that authority be granted, bounded, verified, and revoked?')) {

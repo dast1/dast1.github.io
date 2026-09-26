@@ -28,6 +28,7 @@ export function siteJsonLd(): Record<string, unknown> {
         sameAs: [site.github, site.linkedin, site.awsAuthor],
         knowsAbout: [
           'Artificial intelligence',
+          'Delegated authority',
           'AI governance',
           'Autonomous agents',
           'Distributed computing',
