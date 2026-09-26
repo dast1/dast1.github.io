@@ -6,7 +6,7 @@ import { readingMinutes } from '../../lib/reading-time';
 
 const posts = await publishedWriting();
 const tags = await writingTags();
-const lead = posts.find((entry) => entry.data.featuredEssay) ?? posts[0];
+const lead = posts[0];
 const archive = posts.filter((entry) => entry.id !== lead?.id);
 const researchThreads = [
   {

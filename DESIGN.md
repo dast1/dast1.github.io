@@ -234,7 +234,7 @@ The Writing masthead is quieter than the Ideas display but still unmistakably ed
 
 ### Featured Essay
 
-One essay leads through scale rather than a card treatment. Its title is the dominant element, with balanced wrapping, compact leading, and a restrained `13ch` measure; the description remains readable and secondary. A narrow metadata rail holds date, reading time, optional current-thread context, and topics. The lead is the explicitly featured essay when one exists, otherwise the first published essay. Keep it flat, square, and separated from the rest of the page by a strong ink rule.
+One essay leads through scale rather than a card treatment. Its title is the dominant element, with balanced wrapping, compact leading, and a restrained `13ch` measure; the description remains readable and secondary. A narrow metadata rail holds date, reading time, optional current-thread context, and topics. The lead is always the most recent published essay. Keep it flat, square, and separated from the rest of the page by a strong ink rule.
 
 ### Research Thread List
 
