@@ -11,26 +11,7 @@ const year = new Date().getFullYear();
       <li><a href={`mailto:${site.email}`}>{site.email}</a></li>
       <li><a href={site.github} rel="me">GitHub</a></li>
       <li><a href="/rss.xml">RSS</a></li>
-      <li class="footer-translate"><div id="google_translate_element"></div></li>
     </ul>
     <p>© {year} {site.name}</p>
   </div>
 </footer>
-
-<script is:inline>
-  window.googleTranslateElementInit = function () {
-    new google.translate.TranslateElement(
-      {
-        pageLanguage: 'en',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
-        autoDisplay: false,
-      },
-      'google_translate_element'
-    );
-  };
-</script>
-<script
-  is:inline
-  defer
-  src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-></script>
