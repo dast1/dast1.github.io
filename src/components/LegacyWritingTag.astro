@@ -1,0 +1,21 @@
+---
+import Base from '../layouts/Base.astro';
+
+interface Props {
+  previous: string;
+  current: string;
+  href: string;
+}
+
+const { previous, current, href } = Astro.props;
+---
+
+<Base title={previous} description={`Writing previously filed under ${previous} now appears under ${current}.`}>
+  <div class="legacy-tag">
+    <h1>{previous}</h1>
+    <p>
+      The writing taxonomy has been simplified. Essays previously filed under {previous} now appear
+      under <a href={href}>{current}</a>.
+    </p>
+  </div>
+</Base>

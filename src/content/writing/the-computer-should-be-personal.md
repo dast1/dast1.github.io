@@ -3,8 +3,11 @@ title: The computer should be personal again
 description: Local inference matters less as a benchmark and more as a question of where a person's thinking is allowed to live.
 date: "2026-09-14"
 tags:
-  - Computing
+  - Local AI
   - Systems
+series: Distributed compute
+seriesOrder: 1
+featuredEssay: true
 ---
 
 For a while, "personal computer" was a hardware category. The machine was personal because you owned the box. Then a great deal of serious work moved onto computers other people run, which was often the right trade. Shared platforms made large-scale computing available without a private data center. I am glad they exist. A real part of my working life has been spent on them, at Amazon Web Services and at Databricks: getting data somewhere a system could use, and keeping that system trustworthy on an ordinary day.

@@ -1,42 +1,122 @@
 ---
-import EntryList from '../../components/EntryList.astro';
 import Base from '../../layouts/Base.astro';
 import { publishedWriting, tagPath, writingTags } from '../../lib/content';
 import { formatDate } from '../../lib/dates';
+import { readingMinutes } from '../../lib/reading-time';
 
 const posts = await publishedWriting();
 const tags = await writingTags();
+const lead = posts.find((entry) => entry.data.featuredEssay) ?? posts[0];
+const thread = lead?.data.series
+  ? posts
+      .filter((entry) => entry.id !== lead.id && entry.data.series === lead.data.series)
+      .sort((a, b) => (a.data.seriesOrder ?? 999) - (b.data.seriesOrder ?? 999))
+  : [];
+const threadIds = new Set(thread.map((entry) => entry.id));
+const archive = posts.filter((entry) => entry.id !== lead?.id && !threadIds.has(entry.id));
 const description =
-  'Essays by Dastan Aitzhanov on AI systems, personal computing, and how organizations decide.';
+  'Long-form writing by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.';
 ---
 
 <Base title="Writing" description={description}>
-  <h1 class="page-title">Writing</h1>
-  <div class="prose page-intro">
+  <header class="writing-masthead">
+    <h1>Writing</h1>
     <p>
-      Essays. A claim that needed a few pages, with the date it was written and the time it takes to
-      read.
+      Longer arguments about capable systems, the people who remain responsible for them, and the
+      economics underneath both.
     </p>
-  </div>
-  <ul class="tag-index">
-    {
-      tags.map((tag) => (
-        <li>
-          <a href={tagPath(tag.label)}>
-            {tag.label} ({tag.count})
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-  <EntryList
-    items={posts.map((entry) => ({
-      href: `/writing/${entry.id}/`,
-      title: entry.data.title,
-      datetime: entry.data.date,
-      dateLabel: formatDate(entry.data.date),
-      summary: entry.data.description,
-      tags: entry.data.tags.map((label) => ({ label, href: tagPath(label) })),
-    }))}
-  />
+  </header>
+
+  {
+    lead && (
+      <article class="writing-lead">
+        <div class="writing-lead-copy">
+          <h2><a href={`/writing/${lead.id}/`}>{lead.data.title}</a></h2>
+          <p>{lead.data.description}</p>
+        </div>
+        <div class="writing-lead-meta">
+          <p>
+            <time datetime={lead.data.date}>{formatDate(lead.data.date)}</time>
+            <span aria-hidden="true"> · </span>
+            <span>{readingMinutes(lead.body)} min read</span>
+          </p>
+          {lead.data.series && (
+            <p>
+              <span>Current thread</span>
+              <strong>{lead.data.series}</strong>
+            </p>
+          )}
+          <ul aria-label="Topics">
+            {lead.data.tags.map((label) => (
+              <li><a href={tagPath(label)}>{label}</a></li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    )
+  }
+
+  {
+    thread.length > 0 && (
+      <section class="writing-thread" aria-labelledby="thread-title">
+        <header>
+          <h2 id="thread-title">Earlier in this thread</h2>
+          <p>Each essay stands alone. Together they follow one question as it becomes more specific.</p>
+        </header>
+        <ol>
+          {thread.map((entry) => (
+            <li>
+              <span>Part {entry.data.seriesOrder ?? '—'}</span>
+              <h3><a href={`/writing/${entry.id}/`}>{entry.data.title}</a></h3>
+              <p>{entry.data.description}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )
+  }
+
+  <section class="writing-archive" aria-labelledby="archive-title">
+    <header>
+      <div>
+        <h2 id="archive-title">More essays</h2>
+        <p>Arguments that needed more room than an idea.</p>
+      </div>
+      <nav class="writing-topics" aria-label="Writing topics">
+        <span>Browse topics</span>
+        <ul>
+          {
+            tags.map((tag) => (
+              <li>
+                <a href={tagPath(tag.label)}>
+                  {tag.label} <span>{tag.count}</span>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </nav>
+    </header>
+    <ol class="writing-list">
+      {
+        archive.map((entry) => (
+          <li>
+            <div class="writing-list-meta">
+              <time datetime={entry.data.date}>{formatDate(entry.data.date)}</time>
+              <span>{readingMinutes(entry.body)} min</span>
+            </div>
+            <div>
+              <h3><a href={`/writing/${entry.id}/`}>{entry.data.title}</a></h3>
+              <p>{entry.data.description}</p>
+              <ul aria-label="Topics">
+                {entry.data.tags.map((label) => (
+                  <li><a href={tagPath(label)}>{label}</a></li>
+                ))}
+              </ul>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+  </section>
 </Base>

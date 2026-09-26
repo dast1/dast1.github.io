@@ -38,6 +38,7 @@ const url = new URL(`/writing/${entry.id}/`, site.url).href;
   date={entry.data.date}
   minutes={readingMinutes(entry.body)}
   tags={entry.data.tags.map((label) => ({ label, href: tagPath(label) }))}
+  hero={entry.data.hero}
   jsonLd={articleJsonLd({
     title: entry.data.title,
     description: entry.data.description,
@@ -46,6 +47,13 @@ const url = new URL(`/writing/${entry.id}/`, site.url).href;
     tags: entry.data.tags,
   })}
 >
+  {
+    entry.data.series && (
+      <p slot="meta" class="article-series">
+        Part {entry.data.seriesOrder ?? '—'} of <a href="/writing/">{entry.data.series}</a>
+      </p>
+    )
+  }
   <Content />
   <Pager
     slot="end"

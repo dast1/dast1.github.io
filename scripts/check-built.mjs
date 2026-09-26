@@ -72,6 +72,7 @@ const unpublished = [
   'writing/unpublished-note/index.html',
   'writing/probabilistic-intelligence-deterministic-control/index.html',
   'writing/can-distributed-ai-still-be-governed/index.html',
+  'writing/capacity-is-not-consent/index.html',
 ];
 
 for (const draftPath of unpublished) {
@@ -128,7 +129,9 @@ for (const file of htmlFiles) {
   if (!html.includes('property="og:title"')) fail(`${label} missing og:title`);
   if (!html.includes('property="og:image"')) fail(`${label} missing og:image`);
   if (!html.includes('name="twitter:card"')) fail(`${label} missing twitter card`);
-  if (!html.includes(`${siteOrigin}/og.png`)) fail(`${label} og image is not absolute`);
+  if (!html.includes(`property="og:image" content="${siteOrigin}/`)) {
+    fail(`${label} og image is not absolute`);
+  }
   if (label === '404.html') {
     if (!html.includes('noindex')) fail('404 is indexable');
   } else if (!html.includes(`href="${siteOrigin}/`) && !html.includes(`content="${siteOrigin}/`)) {
@@ -183,6 +186,7 @@ for (const slug of [
   'unpublished-note',
   'probabilistic-intelligence-deterministic-control',
   'can-distributed-ai-still-be-governed',
+  'capacity-is-not-consent',
 ]) {
   if (rss.includes(slug)) fail(`rss includes the draft: ${slug}`);
 }
@@ -205,6 +209,7 @@ for (const slug of [
   'unpublished-note',
   'probabilistic-intelligence-deterministic-control',
   'can-distributed-ai-still-be-governed',
+  'capacity-is-not-consent',
 ]) {
   if (sitemapText.includes(slug)) fail(`sitemap includes the draft: ${slug}`);
 }
