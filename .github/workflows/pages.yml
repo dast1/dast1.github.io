@@ -31,16 +31,13 @@ jobs:
           cache: npm
       - name: Install
         run: npm ci
-      - name: List the secret names this workflow can see (values are never printed)
-        env:
-          SECRET_NAMES_JSON: ${{ toJSON(secrets) }}
-        run: node -e 'console.log("secrets visible to this job:", Object.keys(JSON.parse(process.env.SECRET_NAMES_JSON)).join(", ") || "(none)")'
       - name: Typecheck, build, translate, and check the output
         run: npm run verify
         env:
-          # The key is passed as is (GitHub masks it as *** in the log when present).
+          # The repository secret is named ANTHROPIC_TRANSLATION; the SDK reads it as
+          # ANTHROPIC_API_KEY. GitHub masks it as *** in the log when present.
           # Only a push to master may spend on translation; pull requests build from the cache.
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_TRANSLATION }}
           TRANSLATE_SPEND: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' }}
       - name: Commit new translations to the cache
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
