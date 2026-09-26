@@ -4,6 +4,8 @@ description: A record written after an action is evidence; it cannot substitute 
 date: "2026-09-25"
 developed: "2026-01"
 tags: [Governance, Systems]
+related:
+  - /writing/govern-the-boundary/
 ---
 
 I like systems that leave a record. But a record written after an action is evidence, not control.

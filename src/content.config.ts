@@ -51,6 +51,8 @@ const ideas = defineCollection({
     date: day,
     developed: month,
     tags: z.array(z.enum(ideaTags)).min(1).max(3),
+    // Site paths of the essays and work entries this idea grew out of or feeds.
+    related: z.array(z.string().regex(/^\/(writing|work|ideas)\/[a-z0-9-]+\/$/)).default([]),
   }),
 });
 

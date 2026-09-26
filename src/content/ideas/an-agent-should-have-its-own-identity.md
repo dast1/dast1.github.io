@@ -4,6 +4,8 @@ description: An agent that acts under a person's borrowed credentials cannot be 
 date: "2026-09-26"
 developed: "2026-01"
 tags: [Governance, Agents]
+related:
+  - /writing/govern-the-boundary/
 ---
 
 The easiest way to give an agent access is to let it use mine. It inherits my credentials, my sessions, my standing permissions, and it gets to work immediately. That is also the reason the arrangement fails the moment the agent matters.

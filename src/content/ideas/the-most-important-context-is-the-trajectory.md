@@ -4,6 +4,8 @@ description: A personal system needs more than facts about the present; it needs
 date: "2026-09-25"
 developed: "2026-02"
 tags: [Product, Agents]
+related:
+  - /writing/context-is-the-product/
 ---
 
 Personal context is usually described as a collection of facts: preferences, documents, history, and relationships. Those matter. But a system that knows only the current state can still optimize for the wrong future.

@@ -4,6 +4,9 @@ description: Policy becomes real only when the system that sends, deletes, spend
 date: "2026-09-25"
 developed: "2025-12"
 tags: [Governance, Systems]
+related:
+  - /writing/govern-the-boundary/
+  - /writing/capacity-is-not-consent/
 ---
 
 A policy service can approve a request. A model can classify it. A workflow can carry it. But if the tool that performs the side effect cannot refuse the action, the rest of the system is advisory.

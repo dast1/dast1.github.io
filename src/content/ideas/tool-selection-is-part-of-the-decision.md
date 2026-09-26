@@ -4,6 +4,8 @@ description: Choosing a tool also chooses a permission boundary, an execution pa
 date: "2026-09-25"
 developed: "2026-03"
 tags: [Agents, Governance]
+related:
+  - /work/graph-rag-smaller-model/
 ---
 
 An agent does not only need to decide what to say. If it is going to act, it must decide which tool, which permission, and which execution path are appropriate for the request.

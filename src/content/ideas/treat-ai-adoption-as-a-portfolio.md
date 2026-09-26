@@ -4,6 +4,8 @@ description: Any single AI initiative may fail. The portfolio has to pay. Each o
 date: "2026-09-26"
 developed: "2026-07"
 tags: [Economics, Governance, Product]
+related:
+  - /writing/what-owners-notice/
 ---
 
 Most organizations approach AI one project at a time. A pilot is approved, a team is assigned, and a year later there is a demo and a slide. Whether it paid for itself is a question nobody was made to answer.

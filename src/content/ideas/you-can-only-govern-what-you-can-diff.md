@@ -4,6 +4,8 @@ description: A rule that lives in a prompt or a context window changes without a
 date: "2026-09-26"
 developed: "2026-04"
 tags: [Governance, Systems]
+related:
+  - /writing/govern-the-boundary/
 ---
 
 When I ask what a system was allowed to do last Tuesday, I want an answer that does not depend on reconstructing a conversation. I want a version. This is the policy that was in force, this is the one that replaced it, and this is the difference between them.

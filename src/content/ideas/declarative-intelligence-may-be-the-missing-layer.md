@@ -4,6 +4,8 @@ description: Many agent decisions need a constrained label, score, or probabilit
 date: "2026-09-25"
 developed: "2026-03"
 tags: [Agents, Systems]
+related:
+  - /writing/probabilistic-intelligence-deterministic-control/
 ---
 
 We have language models that can reason in open-ended ways, and ordinary software that can execute a known procedure. A lot of agent work sits between them.

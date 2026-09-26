@@ -4,6 +4,9 @@ description: Personal AI becomes successful infrastructure when availability, pr
 date: "2026-09-25"
 developed: "2025-11"
 tags: [Local AI, Product]
+related:
+  - /writing/the-computer-should-be-personal/
+  - /work/local-ai-intelligent-scaffolding/
 ---
 
 The most successful personal-computing infrastructure is usually the infrastructure people stop thinking about. It updates, stays available, uses the right resources, and fails in understandable ways.

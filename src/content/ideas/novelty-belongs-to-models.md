@@ -4,6 +4,9 @@ description: Use a generative model to find a path the first time. Once the path
 date: "2026-09-21"
 developed: "2026-09"
 tags: [Agents, Systems]
+related:
+  - /work/graph-rag-smaller-model/
+  - /writing/probabilistic-intelligence-deterministic-control/
 ---
 
 The first time through an ambiguous task, a generative model is often the right instrument. It can search a space you have not formalized. The second time, you have a trace. The tenth time, you have a workflow, whether or not you have admitted it.

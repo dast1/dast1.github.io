@@ -6,6 +6,8 @@ import { publishedWriting, tagPath } from '../../lib/content';
 import { articleJsonLd } from '../../lib/jsonld';
 import { readingMinutes } from '../../lib/reading-time';
 import { site } from '../../site';
+import { ideasRelatedTo } from '../../lib/related';
+import Related from '../../components/Related.astro';
 
 export async function getStaticPaths() {
   const posts = await publishedWriting();
@@ -28,6 +30,7 @@ const earlierEntry = posts[index + 1];
 const laterEntry = index > 0 ? posts[index - 1] : undefined;
 const { Content } = await render(entry);
 const url = new URL(`/writing/${entry.id}/`, site.url).href;
+const ideas = await ideasRelatedTo(`/writing/${entry.id}/`);
 ---
 
 <Longform
@@ -55,6 +58,7 @@ const url = new URL(`/writing/${entry.id}/`, site.url).href;
     )
   }
   <Content />
+  <Related slot="end" heading="Ideas this essay develops" items={ideas} />
   <Pager
     slot="end"
     label="More writing"

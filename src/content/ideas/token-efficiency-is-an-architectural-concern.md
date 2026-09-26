@@ -4,6 +4,8 @@ description: Repeatedly rediscovering context and decisions is not merely expens
 date: "2026-09-25"
 developed: "2026-02"
 tags: [Systems, Economics]
+related:
+  - /writing/context-is-the-product/
 ---
 
 We usually talk about token consumption as a cost issue. It is also a signal that the architecture may be making models repeatedly rediscover context, re-explain decisions, or review material they do not need.

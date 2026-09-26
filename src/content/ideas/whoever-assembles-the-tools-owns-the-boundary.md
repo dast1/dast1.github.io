@@ -4,6 +4,8 @@ description: A model developer can say what a model was trained to do. Only the 
 date: "2026-09-26"
 developed: "2026-06"
 tags: [Governance, Agents, Systems]
+related:
+  - /writing/govern-the-boundary/
 ---
 
 A lot of responsibility talk in AI is aimed at the lab that trained the model. That is the right target for some questions. It is the wrong target for most of the ones that matter once a system acts.
