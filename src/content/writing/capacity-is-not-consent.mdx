@@ -1,0 +1,137 @@
+---
+title: Capacity is not consent
+description: Distributed compute is usually framed as a problem of finding available machines. The harder question is who is allowed to decide what those machines do.
+date: '2026-09-25'
+tags:
+  - Governance
+  - Economics
+  - Systems
+series: Distributed compute
+seriesOrder: 2
+featuredEssay: true
+draft: false
+---
+
+import GovernanceContractDiagram from '../../components/GovernanceContractDiagram.astro';
+
+I have been thinking about distributed compute as if it were mainly a scheduling problem. There is work, there are machines, and the system tries to put one on the other. That description leaves out the person who owns the machine.
+
+An idle GPU may be available in a technical sense and still unavailable in every way that matters. The owner may not accept the workload, the data, the power draw, the maintenance burden, or the risk. Capacity is not consent.
+
+The way I am thinking about it, governance is not something we add after the network works. It is part of what makes the network possible. Before a workload can move, somebody has to be able to answer a few plain questions. Who asked for this work? Why was this machine selected? What is allowed to arrive with the workload? Who can refuse it? What happens if the machine disappears halfway through?
+
+Those questions exist in a data center too. The difference is that a centralized operator answers most of them inside one administrative boundary. The operator owns or controls the machines, establishes the service terms, meters the work, and decides which policies apply. Once the machines belong to many independent people or organizations, those decisions no longer come bundled together.
+
+<GovernanceContractDiagram />
+
+## Distribution changes the parties, not only the placement
+
+It is tempting to draw distributed compute as a map: some work stays local, some runs nearby, and some goes to a large remote pool. That map is useful, but it describes where the work happens. It does not describe who has authority over it.
+
+At minimum, a distributed job involves three different interests.
+
+The person requesting the work wants an outcome. They care about cost, speed, privacy, and whether the result is good enough.
+
+The system coordinating the work wants to find suitable capacity and keep the job moving. It cares about availability, compatibility, and whether the pieces can be joined into a dependable service.
+
+The person or organization providing the machine has a different concern. They carry the electricity, depreciation, connectivity, maintenance, and security exposure. They may also have rules about what kinds of work the machine should never perform.
+
+Sometimes one company occupies all three positions, which makes the boundaries easy to miss. In a genuinely distributed system they can belong to different parties. A scheduler can find a machine without having the authority to use it. A buyer can pay for capacity without gaining a general right to the machine. An owner can offer some resources without surrendering control of everything attached to them.
+
+That is why I think the unit being coordinated is not merely compute. It is compute under a particular set of permissions, obligations, and failure conditions.
+
+## The cloud is not failing at this
+
+The large cloud providers already move infrastructure beyond their central regions. AWS describes Outposts as AWS-owned and managed infrastructure installed at a customer site. Azure Arc represents machines outside Azure as Azure resources that can be governed with Azure tools. Google Distributed Cloud extends Google Cloud infrastructure and services into data centers and edge locations.[^1][^2][^3]
+
+These are useful systems. They address real requirements around latency, data residency, operational consistency, and disconnected environments. I do not think their central control model is an oversight. It is part of the product.
+
+The provider can stand behind the service because it controls the operating model. It can decide which hardware is supported, how software is updated, what telemetry is required, and how failures are handled. Customers give up some discretion in exchange for consistency and accountability.
+
+What I would not do is confuse moving a cloud control plane closer to the customer with distributing the control plane itself. The first question is geographic: where does the machine sit? The second is institutional: whose rules govern the machine, the workload, and the relationship between them?
+
+The incentives are also different. A cloud provider is reasonably motivated to make more workloads compatible with its services and operating model. An individual machine owner may want exactly the opposite default: nothing runs unless it satisfies a narrow policy the owner chose. Neither position is irrational. They begin from different principals.
+
+This does not mean a large provider could never participate in a more distributed system. It means the missing layer is unlikely to appear merely by extending an existing cloud farther outward. A provider-centered system is designed to make heterogeneous locations behave like one provider. An owner-centered system has to preserve meaningful differences in authority.
+
+## A marketplace solves only part of the problem
+
+There are also open compute marketplaces. Akash, for example, describes a market in which infrastructure operators offer capacity, set prices, bid for deployments, and receive payment through leases.[^4] Volunteer-computing projects have coordinated independently owned machines for scientific work for decades.[^5]
+
+So the interesting claim is not that nobody has tried to coordinate computers they do not own. That would be wrong.
+
+The gap I keep coming back to is narrower. Most capacity markets begin with a provider that has already decided to operate infrastructure for other people. The provider is expected to maintain a server, expose it to a network, and accept workloads under the rules of the marketplace. That is closer to a small data center than to an ordinary person retaining control over a machine that also has another life.
+
+Once participation reaches machines that are personal, intermittent, or only partly available, a lease is not the whole agreement. The owner may want the machine back immediately. A family may be using it. A business may need it for its primary work. A sensitive workload may be acceptable while another is not. The network may be allowed to use a GPU but not the files, peripherals, or identity that happen to live beside it.
+
+Availability is an offer. It is not a permanent surrender.
+
+## The minimum governance contract
+
+I do not think the answer starts with a complicated constitution. It starts with a small number of rights that remain real when the system is busy, when money is involved, and when something fails.
+
+**The owner can define what is in bounds.** A machine should be able to offer a specific kind of capacity for a specific kind of work. “Online” is too broad a permission.
+
+**The owner can say no at the boundary that performs the work.** A policy somewhere else in the network is not enough if the machine itself cannot reject a workload that arrives without valid authority.
+
+**Permission can end.** Participation should have a scope and a duration. Revocation that exists only after the current queue drains is not meaningful revocation.
+
+**The route leaves a useful record.** The requester should be able to understand where the work ran and under which policy. The owner should be able to understand what was accepted without receiving a copy of somebody else’s private data.
+
+**Failure has an owner.** If a machine disconnects, a result is wrong, or a workload violates the agreement, the system needs a known path: retry somewhere appropriate, reduce the capability, ask a person, or stop. “The network handled it” is not accountability.
+
+**The parties can leave.** A system is not meaningfully voluntary if exit is technically possible but economically or operationally punitive in ways nobody explained at entry.
+
+These principles do not specify a network architecture. That is intentional. The same questions apply whether the participating capacity sits in a home, a small business, a university, a regional operator, or a traditional data center. The implementation can vary. The rights should remain recognizable.
+
+## The economics follow the authority
+
+Distributed capacity is often described as spare capacity, which can make it sound free. It is not.
+
+The asset already exists, but somebody still paid for it. It depreciates. It consumes power. It occupies space. It needs connectivity, maintenance, cooling, and eventually replacement. If the machine must remain available at particular times, the owner is also giving up optionality. They cannot use the same capacity twice.
+
+The practical economic question is not whether distribution eliminates capital intensity. It is where the capital intensity moves, who carries which risks, and how the system recognizes the difference.
+
+A simple price for a unit of computation may be enough for standardized infrastructure under professional operation. It becomes less informative as the machines and obligations become more varied. Two machines can perform the same calculation while offering very different availability, privacy boundaries, latency, energy cost, or recovery behavior.
+
+This is where governance and economics meet. A machine that accepts a narrower class of work may be more trustworthy for that class. A machine whose owner promises availability is providing more than a machine whose capacity can disappear without notice. A participant who carries additional operating risk should not be treated as though raw throughput were the entire service.
+
+I do not know the right pricing unit for that system. I am skeptical that tokens, seconds, or accelerator hours alone will describe it. Those units measure activity. They do not necessarily measure the quality of the agreement surrounding the activity.
+
+The incentive design also has to resist the obvious shortcuts. Paying only for completed work may encourage providers to accept jobs they should refuse. Paying only for availability may reward capacity that is technically present but not useful. Penalizing every interruption may make ordinary people unwilling to participate at all.
+
+The end state matters because incentives eventually become behavior. If the system rewards only utilization, it will try to keep every machine busy. If it rewards dependable service under declared constraints, it has a reason to respect those constraints.
+
+## What distribution could make better
+
+There are real benefits available here, but none of them arrives automatically.
+
+Work can stay closer to the person or organization that owns the context. That can reduce latency and unnecessary data movement. It does not guarantee privacy; the software and policy still have to earn that claim.
+
+Capacity can come from more places. That can improve resilience if the failure domains are actually independent. A thousand machines coordinated through one fragile authority are geographically distributed and operationally centralized.
+
+Existing assets can be used more effectively. That can improve economics if the additional utilization exceeds the power, wear, support, and coordination costs. “Already purchased” does not mean “costless to operate.”
+
+The system can preserve local discretion. That may be the most important benefit, and the hardest one to measure. A person can participate without turning their machine into a branch of somebody else’s data center.
+
+To make those benefits real, several gaps still need work: portable policy, workload provenance, reliable measurement, understandable revocation, dispute handling, graceful degradation, and a way to compare service quality across machines that are not identical. Those are not secondary features around the compute market. They are the conditions under which the market can be trusted.
+
+## The test I would use
+
+I am not arguing that every laptop should become a data center, or that centralized infrastructure should be replaced. Centralized systems are often the right place for heavy work, consistent availability, and operations that benefit from one accountable provider.
+
+The question is whether another category can exist alongside them: computation coordinated across machines whose owners remain principals in the system.
+
+The test is simple to state and difficult to satisfy. After the machine becomes discoverable, after a workload is waiting, and after an economic incentive exists to run it, can the owner still say no under a policy the rest of the system is forced to respect?
+
+If the answer is no, the compute may be distributed. The authority is not.
+
+[^1]: AWS describes Outposts as a fully managed service that extends AWS infrastructure, services, APIs, and tools to customer premises, with equipment owned and managed by AWS: [What is AWS Outposts?](https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html)
+
+[^2]: Microsoft describes Azure Arc-enabled servers as machines outside Azure that receive Azure resource identities and are managed similarly to native Azure virtual machines: [What is Azure Arc-enabled servers?](https://learn.microsoft.com/en-us/azure/azure-arc/servers/overview)
+
+[^3]: Google describes its Distributed Cloud portfolio as extending Google Cloud infrastructure and services to data centers and edge locations, with connected and air-gapped operating models: [Google Distributed Cloud](https://docs.cloud.google.com/distributed-cloud/docs)
+
+[^4]: Akash describes a decentralized marketplace where providers contribute compute, set prices, and earn revenue by hosting tenant workloads: [Should I Run an Akash Provider?](https://akash.network/docs/providers/getting-started/should-i-run-a-provider/)
+
+[^5]: BOINC is a long-running platform for volunteer computing that coordinates donated resources across independently owned computers: [BOINC: A Platform for Volunteer Computing](https://boinc.berkeley.edu/boinc_a_platform_for_volunteer_computing.pdf)
