@@ -31,8 +31,10 @@ jobs:
           cache: npm
       - name: Install
         run: npm ci
-      - name: Typecheck, build, and check the output
+      - name: Typecheck, build, translate, and check the output
         run: npm run verify
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
       - name: Upload Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v5

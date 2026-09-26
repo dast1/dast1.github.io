@@ -663,6 +663,30 @@ main {
   margin-top: 2.4rem;
 }
 
+.lang-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.15rem 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-nav a {
+  font-family: var(--sans);
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.lang-nav a:hover {
+  color: var(--accent);
+}
+
+.lang-nav a[aria-current='page'] {
+  color: var(--ink);
+}
+
 .lang-switch {
   margin: -0.6rem 0 1.6rem;
   font-family: var(--sans);
