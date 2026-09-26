@@ -4,6 +4,8 @@ description: Powerful machines become dependable infrastructure only after varia
 date: "2026-09-25"
 developed: "2025-11"
 tags: [Local AI, Systems]
+related:
+  - /writing/capacity-is-not-consent/
 ---
 
 Powerful consumer machines can run surprising workloads. That does not automatically make them useful infrastructure.

@@ -117,6 +117,11 @@ const external = new Set();
 for (const file of htmlFiles) {
   const html = await readFile(file, 'utf8');
   const label = relative(dist, file);
+  if (label.startsWith('projects/')) {
+    // Legacy routes are redirects to /work/.
+    if (!/http-equiv="refresh"[^>]*url=\/work\//i.test(html)) fail(`${label} is not a redirect to /work/`);
+    continue;
+  }
   const lowered = html.toLowerCase();
   for (const phrase of forbidden) {
     if (lowered.includes(phrase)) fail(`${label} contains forbidden text: ${phrase}`);
@@ -194,11 +199,6 @@ if (!workIndex.includes('Co-authored technical work at AWS')) {
   fail('work index is missing public technical attribution');
 }
 
-const legacyProjects = await readFile(join(dist, 'projects/index.html'), 'utf8');
-if (!legacyProjects.includes('noindex,follow')) fail('legacy projects index is indexable');
-if (!legacyProjects.includes('href="https://dast1.github.io/work/"')) {
-  fail('legacy projects index does not canonicalize to work');
-}
 
 const governanceEssay = await readFile(
   join(dist, 'writing/capacity-is-not-consent/index.html'),

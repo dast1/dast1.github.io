@@ -1,19 +1,4 @@
 ---
-import Base from '../../layouts/Base.astro';
-import { publishedProjects } from '../../lib/content';
-
-const projects = await publishedProjects();
-const description = 'The public work archive now lives at /work/.';
+// Legacy route. The public work archive lives at /work/.
+return Astro.redirect('/work/', 301);
 ---
-
-<Base title="Work" description={description} robots="noindex,follow" canonicalPath="/work/">
-  <section class="legacy-tag">
-    <h1>Projects moved to Work</h1>
-    <p>
-      The same public record now has a clearer home under <a href="/work/">Work</a>.
-    </p>
-    <ul class="legacy-work-links">
-      {projects.map((entry) => <li><a href={`/work/${entry.id}/`}>{entry.data.title}</a></li>)}
-    </ul>
-  </section>
-</Base>

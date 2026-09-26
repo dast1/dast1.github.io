@@ -1,6 +1,6 @@
 # Dastan Aitzhanov
 
-Personal site for Dastan Aitzhanov — technologist, investor, builder. Essays, shorter notes, and a short list of projects. The public site is [dast1.github.io](https://dast1.github.io).
+Personal site for Dastan Aitzhanov: AI systems, governance, and ownership. Essays, shorter notes, and a selected record of public work. The public site is [dast1.github.io](https://dast1.github.io).
 
 The site is a static [Astro](https://astro.build) app: TypeScript, MDX and Markdown, and a small amount of CSS. There is no application server. GitHub Pages serves the built files.
 

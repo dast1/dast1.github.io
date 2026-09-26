@@ -4,6 +4,8 @@ description: Spare compute may look capital-light to a network, but the assets, 
 date: "2026-09-25"
 developed: "2026-02"
 tags: [Economics, Local AI]
+related:
+  - /writing/capacity-is-not-consent/
 ---
 
 Using spare computing capacity sounds capital-light. In one sense it is: the network does not need to purchase every machine. In another sense, the assets still exist, still depreciate, still consume energy, and still need maintenance. Someone owns those risks.

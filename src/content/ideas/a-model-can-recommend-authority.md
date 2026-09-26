@@ -4,6 +4,9 @@ description: Model judgment can inform a policy, but authority should come from 
 date: "2026-09-25"
 developed: "2026-01"
 tags: [Governance, Agents]
+related:
+  - /writing/probabilistic-intelligence-deterministic-control/
+  - /writing/govern-the-boundary/
 ---
 
 There are situations where a model is useful for judging whether a request appears safe, relevant, or consistent with a goal. That judgment can inform a policy. I do not think it should become the policy.

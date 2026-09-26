@@ -4,6 +4,9 @@ description: Model identity is only part of provenance when execution location c
 date: "2026-09-25"
 developed: "2026-02"
 tags: [Governance, Local AI]
+related:
+  - /writing/capacity-is-not-consent/
+  - /work/local-ai-intelligent-scaffolding/
 ---
 
 When an AI system gives an answer, we increasingly care which model produced it. I think that record is incomplete.

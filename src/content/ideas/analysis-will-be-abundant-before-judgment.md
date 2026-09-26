@@ -4,6 +4,8 @@ description: Generating more comparisons and recommendations does not create own
 date: "2026-09-25"
 developed: "2026-02"
 tags: [Product, Agents]
+related:
+  - /writing/what-owners-notice/
 ---
 
 AI can already produce more summaries, comparisons, plans, and recommendations than most organizations know what to do with. That does not mean the organization has more judgment.

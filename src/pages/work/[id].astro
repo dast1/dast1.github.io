@@ -4,6 +4,8 @@ import Longform from '../../components/Longform.astro';
 import { publishedProjects } from '../../lib/content';
 import { workJsonLd } from '../../lib/jsonld';
 import { workKindLabel } from '../../lib/projects';
+import { ideasRelatedTo } from '../../lib/related';
+import Related from '../../components/Related.astro';
 import { site } from '../../site';
 
 export async function getStaticPaths() {
@@ -20,6 +22,7 @@ if (!entry) throw new Error(`Missing work: ${id}`);
 
 const { Content } = await render(entry);
 const url = new URL(`/work/${entry.id}/`, site.url).href;
+const ideas = await ideasRelatedTo(`/work/${entry.id}/`);
 ---
 
 <Longform
@@ -45,4 +48,5 @@ const url = new URL(`/work/${entry.id}/`, site.url).href;
     }
   </p>
   <Content />
+  <Related slot="end" heading="Ideas this work tested" items={ideas} />
 </Longform>

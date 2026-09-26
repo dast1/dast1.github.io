@@ -4,6 +4,8 @@ description: Durable state is the record of what was chosen, why, and what evide
 date: "2026-09-25"
 developed: "2026-04"
 tags: [Systems, Product]
+related:
+  - /writing/context-is-the-product/
 ---
 
 Long context can make a system feel like it remembers. That is not the same as maintaining useful state.

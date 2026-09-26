@@ -4,6 +4,9 @@ description: A resilient AI system should fall back to a smaller, safer set of c
 date: "2026-09-25"
 developed: "2025-09"
 tags: [Systems, Local AI]
+related:
+  - /work/local-ai-intelligent-scaffolding/
+  - /writing/capacity-is-not-consent/
 ---
 
 Distributed systems fail in pieces. A local machine sleeps. A nearby device becomes unavailable. A remote provider has an outage. The system should not treat every failure as an all-or-nothing event.

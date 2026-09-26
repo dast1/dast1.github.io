@@ -4,6 +4,9 @@ description: The practical limit of local AI is often useful throughput, routing
 date: "2026-09-25"
 developed: "2026-02"
 tags: [Local AI, Systems]
+related:
+  - /work/local-ai-intelligent-scaffolding/
+  - /writing/the-computer-should-be-personal/
 ---
 
 The local-AI conversation tends to focus on the largest model a machine can load. That is interesting, but it is not the question most people will experience.

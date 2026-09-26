@@ -6,6 +6,8 @@ import { publishedIdeas } from '../../lib/content';
 import { articleJsonLd } from '../../lib/jsonld';
 import { formatMonth } from '../../lib/dates';
 import { ideaTagPath } from '../../lib/ideas';
+import { resolveRelated } from '../../lib/related';
+import Related from '../../components/Related.astro';
 import { site } from '../../site';
 
 export async function getStaticPaths() {
@@ -29,6 +31,7 @@ const earlierEntry = ideas[index + 1];
 const laterEntry = index > 0 ? ideas[index - 1] : undefined;
 const { Content } = await render(entry);
 const url = new URL(`/ideas/${entry.id}/`, site.url).href;
+const related = await resolveRelated(entry.data.related);
 ---
 
 <Longform
@@ -48,6 +51,7 @@ const url = new URL(`/ideas/${entry.id}/`, site.url).href;
   })}
 >
   <Content />
+  <Related slot="end" heading="Where this shows up" items={related} />
   <Pager
     slot="end"
     label="More ideas"
