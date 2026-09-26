@@ -3,6 +3,7 @@ title: Parallel agents need a dependency graph, not a group chat
 description: More agents do not automatically make work faster; parallelism becomes useful only when dependencies are explicit.
 date: "2026-09-25"
 developed: "2026-02"
+tags: [Agents, Systems]
 ---
 
 Putting more agents on a problem does not automatically make the work faster. Sometimes it just creates more updates to reconcile.

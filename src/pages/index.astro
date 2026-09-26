@@ -3,6 +3,7 @@ import EntryList from '../components/EntryList.astro';
 import Base from '../layouts/Base.astro';
 import { publishedIdeas, publishedWriting, tagPath } from '../lib/content';
 import { formatDate, formatMonth } from '../lib/dates';
+import { ideaTagPath } from '../lib/ideas';
 import { siteJsonLd } from '../lib/jsonld';
 import { site } from '../site';
 
@@ -62,8 +63,9 @@ const ideas = (await publishedIdeas()).slice(0, 6);
       href: `/ideas/${entry.id}/`,
       title: entry.data.title,
       datetime: entry.data.developed,
-      dateLabel: `Developed ${formatMonth(entry.data.developed)}`,
+      dateLabel: formatMonth(entry.data.developed),
       summary: entry.data.description,
+      tags: entry.data.tags.map((label) => ({ label, href: ideaTagPath(label) })),
     }))}
   />
   <p class="more"><a href="/ideas/">All ideas</a></p>

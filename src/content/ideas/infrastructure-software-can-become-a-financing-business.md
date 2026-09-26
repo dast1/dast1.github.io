@@ -3,6 +3,7 @@ title: Infrastructure software can quietly become a financing business
 description: When software depends on hardware, replacement, insurance, and lifecycle management, the balance sheet becomes part of the product.
 date: "2026-09-25"
 developed: "2026-07"
+tags: [Economics, Systems]
 ---
 
 A company may begin by selling software and discover that customers need hardware, leasing, replacement, insurance, and lifecycle management before the software can deliver its value.

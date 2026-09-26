@@ -3,6 +3,7 @@ title: Consumer hardware becomes infrastructure only when the complexity disappe
 description: Powerful machines become dependable infrastructure only after variation in hardware, runtimes, networks, and failure modes is absorbed.
 date: "2026-09-25"
 developed: "2025-11"
+tags: [Local AI, Systems]
 ---
 
 Powerful consumer machines can run surprising workloads. That does not automatically make them useful infrastructure.

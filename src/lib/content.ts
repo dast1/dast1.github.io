@@ -1,4 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
+import { ideaTagSlug, ideaTags } from './ideas';
 
 export function tagSlug(tag: string): string {
   return tag
@@ -30,6 +31,28 @@ export async function publishedIdeas(): Promise<CollectionEntry<'ideas'>[]> {
 export async function publishedProjects(): Promise<CollectionEntry<'projects'>[]> {
   const entries = await getCollection('projects');
   return entries.sort((a, b) => a.data.order - b.data.order);
+}
+
+export async function ideasByMonth(): Promise<
+  { month: string; entries: CollectionEntry<'ideas'>[] }[]
+> {
+  const ideas = await publishedIdeas();
+  const groups = new Map<string, CollectionEntry<'ideas'>[]>();
+  for (const idea of ideas) {
+    const entries = groups.get(idea.data.developed) ?? [];
+    entries.push(idea);
+    groups.set(idea.data.developed, entries);
+  }
+  return [...groups].map(([month, entries]) => ({ month, entries }));
+}
+
+export async function ideaTagCounts(): Promise<{ slug: string; label: string; count: number }[]> {
+  const ideas = await publishedIdeas();
+  return ideaTags.map((label) => ({
+    label,
+    slug: ideaTagSlug(label),
+    count: ideas.filter((idea) => idea.data.tags.includes(label)).length,
+  }));
 }
 
 export async function writingTags(): Promise<{ slug: string; label: string; count: number }[]> {

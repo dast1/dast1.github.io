@@ -3,6 +3,7 @@ title: Novelty belongs to models. Repetition belongs to software.
 description: Use a generative model to find a path the first time. Once the path repeats, call it. Do not pay a model to rediscover it.
 date: "2026-09-21"
 developed: "2026-09"
+tags: [Agents, Systems]
 ---
 
 The first time through an ambiguous task, a generative model is often the right instrument. It can search a space you have not formalized. The second time, you have a trace. The tenth time, you have a workflow, whether or not you have admitted it.

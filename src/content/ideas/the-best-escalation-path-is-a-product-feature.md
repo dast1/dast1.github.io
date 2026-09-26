@@ -3,6 +3,7 @@ title: The best escalation path is a product feature
 description: What happens when an AI system is uncertain often matters more than another improvement to its average-case benchmark.
 date: "2026-09-25"
 developed: "2025-09"
+tags: [Governance, Product]
 ---
 
 AI products talk a lot about success paths. I am increasingly interested in what happens when the system is not confident enough, lacks the right tool, or encounters a case the workflow did not anticipate.

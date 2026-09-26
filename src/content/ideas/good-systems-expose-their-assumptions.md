@@ -3,6 +3,7 @@ title: Good systems expose their assumptions before their confidence
 description: A conclusion becomes more useful when the assumptions supporting it—and the evidence that could break it—are visible.
 date: "2026-09-25"
 developed: "2026-03"
+tags: [Product, Governance]
 ---
 
 When I evaluate an idea, I want to know where the holes are. Which assumptions are relatively safe? Which ones need to be validated? What would prove the current model wrong?

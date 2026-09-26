@@ -3,6 +3,7 @@ title: An audit log is not a control
 description: A record written after an action is evidence; it cannot substitute for a rule capable of stopping the action beforehand.
 date: "2026-09-25"
 developed: "2026-01"
+tags: [Governance, Systems]
 ---
 
 I like systems that leave a record. But a record written after an action is evidence, not control.

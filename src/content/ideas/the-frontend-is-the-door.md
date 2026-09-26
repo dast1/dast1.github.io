@@ -3,6 +3,7 @@ title: The frontend is the door, not the system
 description: The interface may change, but the user's context, authority, tools, and work should remain coherent behind it.
 date: "2026-09-25"
 developed: "2025-10"
+tags: [Product, Systems]
 ---
 
 It is easy to confuse an AI product with the chat window through which a person reaches it. I think the interface is the front door.

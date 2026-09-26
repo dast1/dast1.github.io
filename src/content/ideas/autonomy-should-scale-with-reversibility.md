@@ -3,6 +3,7 @@ title: Autonomy should scale with reversibility
 description: The useful question is not whether an AI agent is autonomous, but how much autonomy makes sense for a particular action.
 date: "2026-09-25"
 developed: "2026-09"
+tags: [Agents, Governance]
 ---
 
 I do not think the useful question is whether an AI agent should be autonomous. That is too broad. The question is how much autonomy makes sense for a particular action.

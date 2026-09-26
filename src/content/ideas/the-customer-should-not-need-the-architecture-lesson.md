@@ -3,6 +3,7 @@ title: The customer should not need the architecture lesson
 description: Architecture earns its place when customers can feel the privacy, speed, resilience, control, or lower cost it creates.
 date: "2026-09-25"
 developed: "2025-10"
+tags: [Product]
 ---
 
 Builders can become attached to an elegant architecture and assume the customer will value it for the same reasons. Usually they will not.

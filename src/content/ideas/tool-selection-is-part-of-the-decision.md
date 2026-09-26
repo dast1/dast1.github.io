@@ -3,6 +3,7 @@ title: Tool selection is part of the decision, not an afterthought
 description: Choosing a tool also chooses a permission boundary, an execution path, and a particular risk surface.
 date: "2026-09-25"
 developed: "2026-03"
+tags: [Agents, Governance]
 ---
 
 An agent does not only need to decide what to say. If it is going to act, it must decide which tool, which permission, and which execution path are appropriate for the request.

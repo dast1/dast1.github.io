@@ -1,30 +1,47 @@
 ---
-import EntryList from '../../components/EntryList.astro';
+import IdeaExplorer from '../../components/IdeaExplorer.astro';
 import Base from '../../layouts/Base.astro';
-import { publishedIdeas } from '../../lib/content';
+import { ideaTagCounts, ideasByMonth, publishedIdeas } from '../../lib/content';
 import { formatMonth } from '../../lib/dates';
+import { ideaTagSlug } from '../../lib/ideas';
 
 const ideas = await publishedIdeas();
+const groups = await ideasByMonth();
+const tags = await ideaTagCounts();
 const description =
-  'Short notes by Dastan Aitzhanov on agents, routing, policy, and what is worth committing to.';
+  'A searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.';
 ---
 
 <Base title="Ideas" description={description}>
-  <h1 class="page-title">Ideas</h1>
-  <div class="prose page-intro">
-    <p>Shorter than the essays. A claim, the reason I hold it, and where it might be wrong.</p>
-    <p class="timeline-note">
-      Development months indicate approximately when an idea first appeared in my notes, work, or
-      public writing. They do not necessarily indicate when it was first published on this site.
-    </p>
-  </div>
-  <EntryList
-    items={ideas.map((entry) => ({
-      href: `/ideas/${entry.id}/`,
-      title: entry.data.title,
-      datetime: entry.data.developed,
-      dateLabel: `Developed ${formatMonth(entry.data.developed)}`,
-      summary: entry.data.description,
+  <header class="ideas-hero">
+    <div>
+      <p class="ideas-kicker">Field index</p>
+      <h1>Ideas</h1>
+    </div>
+    <div class="ideas-intro">
+      <p>Shorter than the essays. A claim, the reason I hold it, and where it might be wrong.</p>
+      <p>
+        These months indicate approximately when an idea first appeared in my notes, work, or public
+        writing—not necessarily when it first appeared on this site.
+      </p>
+    </div>
+  </header>
+  <IdeaExplorer
+    total={ideas.length}
+    tags={tags}
+    groups={groups.map((group) => ({
+      month: group.month,
+      label: formatMonth(group.month),
+      items: group.entries.map((entry) => ({
+        href: `/ideas/${entry.id}/`,
+        title: entry.data.title,
+        summary: entry.data.description,
+        tags: entry.data.tags.map((label) => ({
+          label,
+          slug: ideaTagSlug(label),
+          count: tags.find((tag) => tag.label === label)?.count ?? 0,
+        })),
+      })),
     }))}
   />
 </Base>

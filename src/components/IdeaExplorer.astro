@@ -1,0 +1,215 @@
+---
+interface TagCount {
+  slug: string;
+  label: string;
+  count: number;
+}
+
+interface IdeaItem {
+  href: string;
+  title: string;
+  summary: string;
+  tags: TagCount[];
+}
+
+interface MonthGroup {
+  month: string;
+  label: string;
+  items: IdeaItem[];
+}
+
+interface Props {
+  groups: MonthGroup[];
+  tags: TagCount[];
+  total: number;
+}
+
+const { groups, tags, total } = Astro.props;
+---
+
+<div class="idea-explorer" data-idea-explorer>
+  <div class="idea-tools">
+    <form class="idea-search" role="search" data-idea-search>
+      <label for="idea-search-input">Search the notebook</label>
+      <div class="idea-search-field">
+        <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20">
+          <circle cx="11" cy="11" r="6.5"></circle>
+          <path d="m16 16 4 4"></path>
+        </svg>
+        <input
+          id="idea-search-input"
+          name="q"
+          type="search"
+          autocomplete="off"
+          placeholder="Try permissions, local AI, or judgment"
+          data-idea-input
+        />
+      </div>
+    </form>
+
+    <div class="idea-filter-block">
+      <p class="idea-filter-label" id="idea-filter-label">Browse by thread</p>
+      <div class="idea-filters" role="group" aria-labelledby="idea-filter-label">
+        <button type="button" data-idea-filter="all" aria-pressed="true">
+          <span>All</span><span class="idea-filter-count">{total}</span>
+        </button>
+        {
+          tags.map((tag) => (
+            <button type="button" data-idea-filter={tag.slug} aria-pressed="false">
+              <span>{tag.label}</span><span class="idea-filter-count">{tag.count}</span>
+            </button>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="idea-result-bar">
+    <p aria-live="polite" aria-atomic="true">
+      <span data-idea-visible>{total}</span> <span data-idea-noun>{total === 1 ? 'idea' : 'ideas'}</span>
+    </p>
+    <button type="button" class="idea-clear" data-idea-clear hidden>Clear search and filter</button>
+  </div>
+
+  <div class="idea-groups" data-idea-groups>
+    {
+      groups.map((group) => (
+        <section class="idea-month" data-idea-month>
+          <header>
+            <h2>{group.label}</h2>
+            <p>
+              <span data-month-visible>{group.items.length}</span>{' '}
+              <span data-month-noun>{group.items.length === 1 ? 'idea' : 'ideas'}</span>
+            </p>
+          </header>
+          <ol>
+            {group.items.map((idea, index) => (
+              <li
+                data-idea-item
+                data-idea-search-text={`${idea.title} ${idea.summary} ${idea.tags.map((tag) => tag.label).join(' ')}`.toLowerCase()}
+                data-idea-tags={idea.tags.map((tag) => tag.slug).join(' ')}
+              >
+                <span class="idea-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
+                <div class="idea-copy">
+                  <h3><a href={idea.href}>{idea.title}</a></h3>
+                  <p>{idea.summary}</p>
+                  <ul aria-label="Topics">
+                    {idea.tags.map((tag) => (
+                      <li>
+                        <a href={`?tag=${tag.slug}`} data-idea-tag-link={tag.slug}>{tag.label}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))
+    }
+  </div>
+
+  <div class="idea-empty" data-idea-empty hidden>
+    <p>No ideas match that search yet.</p>
+    <button type="button" data-idea-empty-clear>Show the full notebook</button>
+  </div>
+</div>
+
+<script>
+  const explorer = document.querySelector<HTMLElement>('[data-idea-explorer]');
+
+  if (explorer) {
+    const input = explorer.querySelector<HTMLInputElement>('[data-idea-input]');
+    const form = explorer.querySelector<HTMLFormElement>('[data-idea-search]');
+    const items = [...explorer.querySelectorAll<HTMLElement>('[data-idea-item]')];
+    const months = [...explorer.querySelectorAll<HTMLElement>('[data-idea-month]')];
+    const filters = [...explorer.querySelectorAll<HTMLButtonElement>('[data-idea-filter]')];
+    const tagLinks = [...explorer.querySelectorAll<HTMLAnchorElement>('[data-idea-tag-link]')];
+    const visible = explorer.querySelector<HTMLElement>('[data-idea-visible]');
+    const noun = explorer.querySelector<HTMLElement>('[data-idea-noun]');
+    const clear = explorer.querySelector<HTMLButtonElement>('[data-idea-clear]');
+    const empty = explorer.querySelector<HTMLElement>('[data-idea-empty]');
+    const emptyClear = explorer.querySelector<HTMLButtonElement>('[data-idea-empty-clear]');
+    const params = new URLSearchParams(window.location.search);
+    const knownTags = new Set(filters.map((button) => button.dataset.ideaFilter));
+    let activeTag = params.get('tag') ?? 'all';
+
+    if (!knownTags.has(activeTag)) activeTag = 'all';
+    if (input) input.value = params.get('q') ?? '';
+
+    const apply = () => {
+      const query = input?.value.trim().toLowerCase() ?? '';
+      let count = 0;
+
+      for (const item of items) {
+        const matchesQuery = !query || item.dataset.ideaSearchText?.includes(query);
+        const tags = item.dataset.ideaTags?.split(' ') ?? [];
+        const matchesTag = activeTag === 'all' || tags.includes(activeTag);
+        item.hidden = !(matchesQuery && matchesTag);
+        if (!item.hidden) count += 1;
+      }
+
+      for (const month of months) {
+        const monthItems = [...month.querySelectorAll<HTMLElement>('[data-idea-item]')];
+        const monthCount = monthItems.filter((item) => !item.hidden).length;
+        month.hidden = monthCount === 0;
+        const monthVisible = month.querySelector<HTMLElement>('[data-month-visible]');
+        const monthNoun = month.querySelector<HTMLElement>('[data-month-noun]');
+        if (monthVisible) monthVisible.textContent = String(monthCount);
+        if (monthNoun) monthNoun.textContent = monthCount === 1 ? 'idea' : 'ideas';
+      }
+
+      for (const button of filters) {
+        button.setAttribute('aria-pressed', String(button.dataset.ideaFilter === activeTag));
+      }
+
+      if (visible) visible.textContent = String(count);
+      if (noun) noun.textContent = count === 1 ? 'idea' : 'ideas';
+      if (clear) clear.hidden = !query && activeTag === 'all';
+      if (empty) empty.hidden = count !== 0;
+
+      const nextParams = new URLSearchParams();
+      if (query) nextParams.set('q', input?.value.trim() ?? '');
+      if (activeTag !== 'all') nextParams.set('tag', activeTag);
+      const nextQuery = nextParams.toString();
+      history.replaceState(null, '', `${window.location.pathname}${nextQuery ? `?${nextQuery}` : ''}`);
+    };
+
+    const reset = () => {
+      activeTag = 'all';
+      if (input) input.value = '';
+      apply();
+      input?.focus();
+    };
+
+    form?.addEventListener('submit', (event) => event.preventDefault());
+    input?.addEventListener('input', apply);
+    input?.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') reset();
+    });
+
+    for (const button of filters) {
+      button.addEventListener('click', () => {
+        const nextTag = button.dataset.ideaFilter ?? 'all';
+        activeTag = nextTag === activeTag && nextTag !== 'all' ? 'all' : nextTag;
+        apply();
+      });
+    }
+
+    for (const link of tagLinks) {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        activeTag = link.dataset.ideaTagLink ?? 'all';
+        apply();
+        const activeFilter = filters.find((button) => button.dataset.ideaFilter === activeTag);
+        activeFilter?.focus({ preventScroll: true });
+        const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        explorer.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+      });
+    }
+
+    clear?.addEventListener('click', reset);
+    emptyClear?.addEventListener('click', reset);
+    apply();
+  }
+</script>

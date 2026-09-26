@@ -3,6 +3,7 @@ title: Declarative intelligence may be the missing layer
 description: Many agent decisions need a constrained label, score, or probability—not another open-ended paragraph.
 date: "2026-09-25"
 developed: "2026-03"
+tags: [Agents, Systems]
 ---
 
 We have language models that can reason in open-ended ways, and ordinary software that can execute a known procedure. A lot of agent work sits between them.

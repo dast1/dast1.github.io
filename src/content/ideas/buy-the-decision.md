@@ -3,6 +3,7 @@ title: Buy the decision, not the dashboard
 description: The software worth trusting in a business shortens the path from a fact to a commitment someone will sign.
 date: "2026-09-18"
 developed: "2026-09"
+tags: [Product, Economics]
 ---
 
 The software I trust least in a business is the software that adds another view of the same uncertainty. More charts. More commentary. The same unanswered question underneath.

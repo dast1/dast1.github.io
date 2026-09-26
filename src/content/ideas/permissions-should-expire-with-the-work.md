@@ -3,6 +3,7 @@ title: Permissions should expire with the work
 description: Agent authority should be narrow, short-lived, and tied to a particular identity, action, resource, and time window.
 date: "2026-09-25"
 developed: "2025-12"
+tags: [Governance, Agents]
 ---
 
 Broad access is convenient for a demo and dangerous for a system that keeps running. I think permissions should be tied to a specific piece of work: this identity, this action, these resources, this time window.

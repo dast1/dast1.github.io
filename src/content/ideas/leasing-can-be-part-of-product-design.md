@@ -3,6 +3,7 @@ title: Leasing can be part of product design
 description: For infrastructure products, a lease can define control, maintenance, service expectations, and what happens when equipment ages.
 date: "2026-09-25"
 developed: "2026-08"
+tags: [Economics, Product]
 ---
 
 Leasing is usually discussed as a financing option after the product has been designed. For infrastructure products, it can shape the product itself.

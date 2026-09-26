@@ -3,6 +3,7 @@ title: A model should know which mode the user is in
 description: The same request needs different behavior when a person is exploring, deciding, building, or authorizing action.
 date: "2026-09-25"
 developed: "2026-04"
+tags: [Agents, Product]
 ---
 
 The same sentence can mean very different things depending on what the person is trying to do. They may be curious. They may be brainstorming, comparing options, ready to build, or asking the system to execute something consequential.
