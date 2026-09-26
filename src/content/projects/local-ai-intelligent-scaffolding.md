@@ -4,7 +4,7 @@ description: A hands-on experiment in running a smaller local model inside expli
 date: '2026-02-23'
 status: published
 kind: independent
-role: Independent systems experiment and technical article
+role: Systems experiment and technical article
 featured: true
 order: 2
 links:

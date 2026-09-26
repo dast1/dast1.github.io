@@ -1,10 +1,10 @@
 ---
 title: A smaller model with better structure
-description: An independent evaluation of whether a knowledge graph could let an 8B model outperform a much larger model on grounded enterprise retrieval.
+description: An 8B model with knowledge-graph tools outperformed a 70B model without them on grounded enterprise retrieval, and showed its chain of evidence.
 date: '2026-03-05'
 status: published
 kind: independent
-role: Independent evaluation and technical article
+role: Evaluation and technical article
 featured: true
 order: 1
 links:

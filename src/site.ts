@@ -8,7 +8,7 @@ export const siteUrl = 'https://dast1.github.io';
 
 export const site = {
   name: 'Dastan Aitzhanov',
-  title: 'Dastan Aitzhanov — AI Systems, Governance, and Ownership',
+  title: 'Dastan Aitzhanov | AI Systems, Authority, and Ownership',
   description:
     'Dastan Aitzhanov writes about AI systems, delegated authority, personal computing, distributed infrastructure, and the incentives around them.',
   url: siteUrl,
