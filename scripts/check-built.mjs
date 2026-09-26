@@ -75,7 +75,6 @@ for (const file of required) {
 
 const unpublished = [
   'writing/unpublished-note/index.html',
-  'writing/probabilistic-intelligence-deterministic-control/index.html',
   'writing/can-distributed-ai-still-be-governed/index.html',
 ];
 
@@ -223,7 +222,6 @@ if (!rss.includes('<item>')) fail('rss has no items');
 if (!rss.includes('/writing/context-is-the-product/')) fail('rss missing an essay');
 for (const slug of [
   'unpublished-note',
-  'probabilistic-intelligence-deterministic-control',
   'can-distributed-ai-still-be-governed',
 ]) {
   if (rss.includes(slug)) fail(`rss includes the draft: ${slug}`);
@@ -245,7 +243,6 @@ for (const path of ['/writing/', '/ideas/', '/work/', '/about/']) {
 }
 for (const slug of [
   'unpublished-note',
-  'probabilistic-intelligence-deterministic-control',
   'can-distributed-ai-still-be-governed',
 ]) {
   if (sitemapText.includes(slug)) fail(`sitemap includes the draft: ${slug}`);
