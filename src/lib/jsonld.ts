@@ -20,6 +20,7 @@ export function siteJsonLd(): Record<string, unknown> {
         url: site.url,
         email: `mailto:${site.email}`,
         description: site.description,
+        jobTitle: 'Founder',
         address: {
           '@type': 'PostalAddress',
           addressRegion: site.location,
@@ -30,6 +31,8 @@ export function siteJsonLd(): Record<string, unknown> {
           'Artificial intelligence',
           'Delegated authority',
           'AI governance',
+          'AI policy',
+          'Compute governance',
           'Autonomous agents',
           'Distributed computing',
           'Personal computing',

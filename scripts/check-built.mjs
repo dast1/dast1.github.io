@@ -56,6 +56,7 @@ const required = [
   'work/industrial-asset-monitoring/index.html',
   'rss.xml',
   'robots.txt',
+  'llms.txt',
   'sitemap-index.xml',
   'og.png',
   'favicon.svg',
@@ -99,7 +100,7 @@ const forbidden = [
 
 const files = await walk(dist);
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
-const siteOrigin = 'https://dast1.github.io';
+const siteOrigin = 'https://dastan.aitzhanov.com';
 
 function resolveInternal(href) {
   const clean = href.split('#')[0]?.split('?')[0] ?? '';

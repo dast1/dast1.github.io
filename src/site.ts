@@ -1,10 +1,9 @@
 /**
  * Public origin for this site.
- * GitHub Pages user site: https://dast1.github.io
- * Custom domain later: change this URL, add public/CNAME with the hostname,
- * and set the domain in the repository Pages settings.
+ * Custom domain served by GitHub Pages (public/CNAME). The dast1.github.io
+ * address redirects here once the domain is set in the Pages settings.
  */
-export const siteUrl = 'https://dast1.github.io';
+export const siteUrl = 'https://dastan.aitzhanov.com';
 
 export const site = {
   name: 'Dastan Aitzhanov',

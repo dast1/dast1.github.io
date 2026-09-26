@@ -34,7 +34,7 @@ npm run verify  # check, build, and lint
 
 ## Deploy
 
-The live site is a GitHub Pages **user site**. It is served from this repository at the domain root (`https://dast1.github.io`), not from a project subpath.
+The live site is a GitHub Pages **user site**. It is served from this repository at the root of the custom domain `https://dastan.aitzhanov.com`, not from a project subpath. `https://dast1.github.io` redirects there.
 
 [`.github/workflows/pages.yml`](.github/workflows/pages.yml) does two things:
 
@@ -58,12 +58,14 @@ The workflow does not deploy from pull requests, so opening a PR leaves the curr
 
 The public origin lives in [`src/site.ts`](src/site.ts) as `siteUrl`, and Astro reads it from [`astro.config.ts`](astro.config.ts). Canonical URLs, the sitemap, RSS, and Open Graph tags all use that value.
 
-To move the site to your own domain later:
+The domain is `dastan.aitzhanov.com`. It is set in four places, and they have to agree:
 
-1. Change `siteUrl`.
-2. Add `public/CNAME` containing only the hostname, for example `example.com`.
-3. In the repository Pages settings, set the custom domain and turn on HTTPS.
-4. Point the domain's DNS at GitHub Pages.
+1. `siteUrl` in `src/site.ts`, plus `siteOrigin` in `scripts/check-built.mjs` and `scripts/translate-site.mjs`.
+2. `public/CNAME`, containing only the hostname.
+3. DNS: a `CNAME` record for `dastan` in the `aitzhanov.com` hosted zone (Route 53), pointing to `dast1.github.io`.
+4. **Settings → Pages → Custom domain**, with **Enforce HTTPS** on. Verify `aitzhanov.com` under the account's **Settings → Pages → Verified domains** so no other repository can claim the name.
+
+Set up DNS and the Pages setting before merging a change to the domain. Otherwise canonical URLs and the sitemap point at a host that does not answer yet.
 
 No base path change is required. This repository is a user site, so pages stay at `/writing/…`, `/ideas/…`, and `/projects/…`.
 

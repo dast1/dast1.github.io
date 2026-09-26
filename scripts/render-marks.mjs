@@ -18,7 +18,7 @@ const og = `<?xml version="1.0" encoding="UTF-8"?>
   <text x="88" y="310" fill="#1c1916" font-family="Liberation Serif, serif" font-size="74">AI systems,</text>
   <text x="88" y="400" fill="#1c1916" font-family="Liberation Serif, serif" font-size="68">governance, ownership.</text>
   <rect x="88" y="448" width="96" height="3" fill="#7a3324"/>
-  <text x="88" y="520" fill="#5c564c" font-family="Liberation Sans, sans-serif" font-size="28">dast1.github.io</text>
+  <text x="88" y="520" fill="#5c564c" font-family="Liberation Sans, sans-serif" font-size="28">dastan.aitzhanov.com</text>
 </svg>`;
 
 await sharp(Buffer.from(og)).png().toFile(join(publicDir, 'og.png'));

@@ -20,7 +20,7 @@ import { parse } from 'node-html-parser';
 const here = dirname(fileURLToPath(import.meta.url));
 const dist = join(here, '..', 'dist');
 const cacheDir = join(here, '..', 'translations');
-const siteOrigin = 'https://dast1.github.io';
+const siteOrigin = 'https://dastan.aitzhanov.com';
 // Cheapest current model; translation of short fragments does not need more. The markup check
 // rejects any output that damages the HTML, and the author reviews both languages.
 const MODEL = 'claude-haiku-4-5';
