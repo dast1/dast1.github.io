@@ -15,8 +15,8 @@ const og = `<?xml version="1.0" encoding="UTF-8"?>
   <rect width="1200" height="630" fill="#f3efe7"/>
   <rect width="10" height="630" fill="#7a3324"/>
   <text x="88" y="210" fill="#7a3324" font-family="Liberation Sans, sans-serif" font-size="26" letter-spacing="4">DASTAN AITZHANOV</text>
-  <text x="88" y="310" fill="#1c1916" font-family="Liberation Serif, serif" font-size="74">Technologist,</text>
-  <text x="88" y="400" fill="#1c1916" font-family="Liberation Serif, serif" font-size="74">investor, builder.</text>
+  <text x="88" y="310" fill="#1c1916" font-family="Liberation Serif, serif" font-size="74">AI systems,</text>
+  <text x="88" y="400" fill="#1c1916" font-family="Liberation Serif, serif" font-size="68">governance, ownership.</text>
   <rect x="88" y="448" width="96" height="3" fill="#7a3324"/>
   <text x="88" y="520" fill="#5c564c" font-family="Liberation Sans, sans-serif" font-size="28">dast1.github.io</text>
 </svg>`;

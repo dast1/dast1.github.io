@@ -50,6 +50,12 @@ const required = [
   'ideas/buy-the-decision/index.html',
   'projects/index.html',
   'projects/detecting-healthcare-fraud/index.html',
+  'work/index.html',
+  'work/graph-rag-smaller-model/index.html',
+  'work/local-ai-intelligent-scaffolding/index.html',
+  'work/industrial-predictive-maintenance-review/index.html',
+  'work/industrial-asset-monitoring/index.html',
+  'work/detecting-healthcare-fraud/index.html',
   'rss.xml',
   'robots.txt',
   'sitemap-index.xml',
@@ -154,14 +160,14 @@ const home = await readFile(join(dist, 'index.html'), 'utf8');
 for (const phrase of ['Databricks', 'Texas', 'Amazon Web Services']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
-if (!home.includes('Dastan Aitzhanov — Technologist, Investor, Builder')) {
+if (!home.includes('Dastan Aitzhanov — AI Systems, Governance, and Ownership')) {
   fail('home title is not the site title');
 }
-if (!home.includes('How do we combine probabilistic intelligence with deterministic control?')) {
+if (!home.includes('how should that authority be granted, bounded, verified, and revoked?')) {
   fail('home is missing the lead question');
 }
-if (home.includes('What owners notice')) {
-  fail('home still leads with What owners notice');
+for (const phrase of ['Selected work', 'Research threads', 'Delegated authority']) {
+  if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
 
 const essay = await readFile(join(dist, 'writing/context-is-the-product/index.html'), 'utf8');
@@ -173,6 +179,28 @@ if (!essay.includes('min read')) fail('context essay is missing reading time');
 const writingIndex = await readFile(join(dist, 'writing/index.html'), 'utf8');
 if (!writingIndex.includes('Capacity is not consent')) {
   fail('writing index is missing the approved governance essay');
+}
+for (const id of [
+  'delegated-authority',
+  'personal-ai',
+  'distributed-governance',
+  'ownership-incentives',
+]) {
+  if (!writingIndex.includes(`id="${id}"`)) fail(`writing index is missing thread ${id}`);
+}
+
+const workIndex = await readFile(join(dist, 'work/index.html'), 'utf8');
+for (const phrase of ['Independent investigations', 'Public technical work', 'Earlier research']) {
+  if (!workIndex.includes(phrase)) fail(`work index is missing ${phrase}`);
+}
+if (!workIndex.includes('Co-authored technical work at AWS')) {
+  fail('work index is missing public technical attribution');
+}
+
+const legacyProjects = await readFile(join(dist, 'projects/index.html'), 'utf8');
+if (!legacyProjects.includes('noindex,follow')) fail('legacy projects index is indexable');
+if (!legacyProjects.includes('href="https://dast1.github.io/work/"')) {
+  fail('legacy projects index does not canonicalize to work');
 }
 
 const governanceEssay = await readFile(
@@ -214,7 +242,7 @@ const sitemapFiles = files.filter((file) => file.endsWith('.xml') && file.includ
 const sitemapText = (
   await Promise.all(sitemapFiles.map(async (file) => readFile(file, 'utf8')))
 ).join('\n');
-for (const path of ['/writing/', '/ideas/', '/projects/', '/about/']) {
+for (const path of ['/writing/', '/ideas/', '/work/', '/about/']) {
   if (!sitemapText.includes(`${siteOrigin}${path}`)) fail(`sitemap missing ${path}`);
 }
 for (const slug of [
@@ -224,6 +252,7 @@ for (const slug of [
 ]) {
   if (sitemapText.includes(slug)) fail(`sitemap includes the draft: ${slug}`);
 }
+if (sitemapText.includes('/projects/')) fail('sitemap includes legacy projects routes');
 if (sitemapText.includes('/404')) fail('sitemap includes the 404');
 
 for (const url of external) {

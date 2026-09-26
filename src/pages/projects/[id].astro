@@ -1,10 +1,6 @@
 ---
-import { render } from 'astro:content';
-import Longform from '../../components/Longform.astro';
+import Base from '../../layouts/Base.astro';
 import { publishedProjects } from '../../lib/content';
-import { articleJsonLd } from '../../lib/jsonld';
-import { statusLabel } from '../../lib/projects';
-import { site } from '../../site';
 
 export async function getStaticPaths() {
   const projects = await publishedProjects();
@@ -22,30 +18,18 @@ if (!entry) {
   throw new Error(`Missing project: ${id}`);
 }
 
-const { Content } = await render(entry);
-const url = new URL(`/projects/${entry.id}/`, site.url).href;
 ---
 
-<Longform
-  kicker="Projects"
-  kickerHref="/projects/"
+<Base
   title={entry.data.title}
   description={entry.data.description}
-  date={entry.data.date}
-  jsonLd={articleJsonLd({
-    title: entry.data.title,
-    description: entry.data.description,
-    date: entry.data.date,
-    url,
-  })}
+  robots="noindex,follow"
+  canonicalPath={`/work/${entry.id}/`}
 >
-  <p class="resource-links" slot="meta">
-    <span>{statusLabel(entry.data.status)}</span>
-    {
-      entry.data.links.map((link) => (
-        <a href={link.href}>{link.label}</a>
-      ))
-    }
-  </p>
-  <Content />
-</Longform>
+  <section class="legacy-tag">
+    <h1>{entry.data.title}</h1>
+    <p>
+      This entry moved to <a href={`/work/${entry.id}/`}>the Work archive</a>.
+    </p>
+  </section>
+</Base>

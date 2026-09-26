@@ -6,7 +6,7 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/writing/', label: 'Writing' },
   { href: '/ideas/', label: 'Ideas' },
-  { href: '/projects/', label: 'Projects' },
+  { href: '/work/', label: 'Work' },
   { href: '/about/', label: 'About' },
 ];
 
@@ -38,7 +38,7 @@ function isCurrent(href: string): boolean {
         class="theme-toggle"
         data-theme-toggle
         aria-pressed="false"
-        aria-label="Switch color theme">Dark</button
+        aria-label="Dark mode">Dark</button
       >
       <script is:inline>
         (function () {
@@ -50,10 +50,7 @@ function isCurrent(href: string): boolean {
             var dark = theme === 'dark';
             button.textContent = dark ? 'Light' : 'Dark';
             button.setAttribute('aria-pressed', dark ? 'true' : 'false');
-            button.setAttribute(
-              'aria-label',
-              dark ? 'Switch to light colors' : 'Switch to dark colors',
-            );
+            button.setAttribute('aria-label', 'Dark mode');
           }
 
           paint(root.dataset.theme === 'dark' ? 'dark' : 'light');

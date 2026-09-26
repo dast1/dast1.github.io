@@ -3,38 +3,56 @@ import Base from '../layouts/Base.astro';
 import { site } from '../site';
 
 const description =
-  'How Dastan Aitzhanov came to work across software, cloud platforms, and investing, and what he is thinking about now.';
+  'Dastan Aitzhanov on building AI systems, allocating capital, and the governance questions that connect both.';
 ---
 
 <Base title="About" description={description}>
   <h1 class="page-title">About</h1>
-  <div class="prose">
+  <div class="prose about-prose">
     <p>
-      I build software, and I allocate capital. They have never felt like separate kinds of work.
+      I build AI systems, and I allocate capital. They have never felt like separate kinds of work.
     </p>
+
+    <h2>Technical work</h2>
     <p>
       The technical thread runs through cloud infrastructure, data platforms, and machine learning.
       I worked at Amazon Web Services and at Databricks. The problems I liked were practical ones:
       getting data to a place a model could use, making a system reliable enough that someone would
       trust it on an ordinary day, and finding which part of a stack was actually doing the work.
     </p>
+
+    <h2>Current inquiry</h2>
     <p>
-      Alongside that, I have spent about a decade investing personal and family capital. Real estate,
-      hotels, multifamily housing, private businesses, public equities, technology, alternatives.
-      Owning something changes the way a spreadsheet reads. You start to care about operations,
-      incentives, and what is left after the model is right.
+      I am now working independently on systems around agentic work, local inference, and distributed
+      execution. The question underneath those experiments is what happens when an AI system moves
+      from producing information to exercising delegated authority: what it may see, what it may
+      decide, what it may do, and how that authority can be withdrawn.
+    </p>
+
+    <h2>Ownership</h2>
+    <p>
+      Alongside building software, I have spent about a decade investing personal and family capital.
+      Ownership changes what you notice. A forecast can be right while the operation is still wrong.
+      Incentives can produce activity without producing value. The person who authorizes a decision
+      still carries the consequence after the analysis is complete.
     </p>
     <p>
-      What I am working through now is the overlap. How AI systems — agents, models that run near
-      the person using them, the machinery of context and routing — change knowledge work, personal
-      computing, and the design of organizations. I write about that here when a thought is ready.
-      Current experiments stay off the projects page until there is something definite to show.
+      That lens shapes how I think about AI. As analysis becomes cheaper and systems become more
+      capable of acting, legitimate authority becomes more important, not less.
+    </p>
+
+    <h2>Direction</h2>
+    <p>
+      I do not expect policy to replace my technical work. I expect governance to become part of the
+      job of building increasingly capable AI systems. I write here to make that investigation public
+      when I have something definite enough to defend.
     </p>
     <p>I live in Texas.</p>
     <p>
       Email is the way to reach me:
       <a href={`mailto:${site.email}`}>{site.email}</a>.
-      Code I have published lives on <a href={site.github} rel="me">GitHub</a>.
+      Code I have published lives on <a href={site.github} rel="me">GitHub</a>, and selected public
+      work is collected on the <a href="/work/">Work page</a>.
     </p>
   </div>
 </Base>
