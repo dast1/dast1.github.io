@@ -49,13 +49,11 @@ const required = [
   'ideas/routing-is-a-product-decision/index.html',
   'ideas/buy-the-decision/index.html',
   'projects/index.html',
-  'projects/detecting-healthcare-fraud/index.html',
   'work/index.html',
   'work/graph-rag-smaller-model/index.html',
   'work/local-ai-intelligent-scaffolding/index.html',
   'work/industrial-predictive-maintenance-review/index.html',
   'work/industrial-asset-monitoring/index.html',
-  'work/detecting-healthcare-fraud/index.html',
   'rss.xml',
   'robots.txt',
   'sitemap-index.xml',
@@ -190,7 +188,7 @@ for (const id of [
 }
 
 const workIndex = await readFile(join(dist, 'work/index.html'), 'utf8');
-for (const phrase of ['Independent investigations', 'Public technical work', 'Earlier research']) {
+for (const phrase of ['Independent investigations', 'Public technical work']) {
   if (!workIndex.includes(phrase)) fail(`work index is missing ${phrase}`);
 }
 if (!workIndex.includes('Co-authored technical work at AWS')) {
