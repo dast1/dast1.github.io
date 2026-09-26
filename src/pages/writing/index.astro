@@ -7,13 +7,33 @@ import { readingMinutes } from '../../lib/reading-time';
 const posts = await publishedWriting();
 const tags = await writingTags();
 const lead = posts.find((entry) => entry.data.featuredEssay) ?? posts[0];
-const thread = lead?.data.series
-  ? posts
-      .filter((entry) => entry.id !== lead.id && entry.data.series === lead.data.series)
-      .sort((a, b) => (a.data.seriesOrder ?? 999) - (b.data.seriesOrder ?? 999))
-  : [];
-const threadIds = new Set(thread.map((entry) => entry.id));
-const archive = posts.filter((entry) => entry.id !== lead?.id && !threadIds.has(entry.id));
+const archive = posts.filter((entry) => entry.id !== lead?.id);
+const researchThreads = [
+  {
+    id: 'delegated-authority',
+    title: 'Delegated authority',
+    question: 'What changes when an AI system moves from producing information to taking action?',
+    entryId: 'context-is-the-product',
+  },
+  {
+    id: 'personal-ai',
+    title: 'Personal AI',
+    question: 'What should remain near the person when AI becomes part of ordinary computing?',
+    entryId: 'the-computer-should-be-personal',
+  },
+  {
+    id: 'distributed-governance',
+    title: 'Distributed governance',
+    question: 'Where does policy attach when computation crosses independently owned machines?',
+    entryId: 'capacity-is-not-consent',
+  },
+  {
+    id: 'ownership-incentives',
+    title: 'Ownership and incentives',
+    question: 'Who decides, who carries the risk, and who remains responsible?',
+    entryId: 'what-owners-notice',
+  },
+].map((thread) => ({ ...thread, entry: posts.find((entry) => entry.id === thread.entryId) }));
 const description =
   'Long-form writing by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.';
 ---
@@ -40,12 +60,10 @@ const description =
             <span aria-hidden="true"> · </span>
             <span>{readingMinutes(lead.body)} min read</span>
           </p>
-          {lead.data.series && (
-            <p>
-              <span>Current thread</span>
-              <strong>{lead.data.series}</strong>
-            </p>
-          )}
+          <p>
+            <span>Current inquiry</span>
+            <strong>Distributed governance</strong>
+          </p>
           <ul aria-label="Topics">
             {lead.data.tags.map((label) => (
               <li><a href={tagPath(label)}>{label}</a></li>
@@ -57,18 +75,25 @@ const description =
   }
 
   {
-    thread.length > 0 && (
-      <section class="writing-thread" aria-labelledby="thread-title">
+    researchThreads.length > 0 && (
+      <section class="writing-threads" aria-labelledby="threads-title">
         <header>
-          <h2 id="thread-title">Earlier in this thread</h2>
-          <p>Each essay stands alone. Together they follow one question as it becomes more specific.</p>
+          <h2 id="threads-title">Research threads</h2>
+          <p>Four questions connect the longer arguments. Each is incomplete by design.</p>
         </header>
         <ol>
-          {thread.map((entry) => (
-            <li>
-              <span>Part {entry.data.seriesOrder ?? '—'}</span>
-              <h3><a href={`/writing/${entry.id}/`}>{entry.data.title}</a></h3>
-              <p>{entry.data.description}</p>
+          {researchThreads.map((thread, index) => (
+            <li id={thread.id}>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <div>
+                <h3>{thread.title}</h3>
+                <p>{thread.question}</p>
+                {thread.entry && (
+                  <a class="writing-thread-link" href={`/writing/${thread.entry.id}/`}>
+                    Begin with “{thread.entry.data.title}”
+                  </a>
+                )}
+              </div>
             </li>
           ))}
         </ol>

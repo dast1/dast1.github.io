@@ -13,6 +13,7 @@ interface Props {
   jsonLd?: unknown;
   imagePath?: string;
   imageAlt?: string;
+  canonicalPath?: string;
 }
 
 const {
@@ -23,12 +24,13 @@ const {
   robots = 'index,follow',
   jsonLd,
   imagePath = '/og.png',
-  imageAlt = `${site.name}, technologist, investor, builder`,
+  imageAlt = `${site.name}, AI systems builder and writer`,
+  canonicalPath,
 } = Astro.props;
 
 const isHome = Astro.url.pathname === '/';
 const documentTitle = isHome ? title : `${title} — ${site.name}`;
-const canonical = new URL(Astro.url.pathname, site.url);
+const canonical = new URL(canonicalPath ?? Astro.url.pathname, site.url);
 const image = new URL(imagePath, site.url).href;
 const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : '';
 ---

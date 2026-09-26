@@ -25,9 +25,13 @@ export function siteJsonLd(): Record<string, unknown> {
           addressRegion: site.location,
           addressCountry: 'US',
         },
-        sameAs: [site.github],
+        sameAs: [site.github, site.linkedin, site.awsAuthor],
         knowsAbout: [
           'Artificial intelligence',
+          'AI governance',
+          'Autonomous agents',
+          'Distributed computing',
+          'Personal computing',
           'Machine learning',
           'Cloud computing',
           'Data platforms',
@@ -58,6 +62,28 @@ export function articleJsonLd(args: {
     },
     mainEntityOfPage: args.url,
     keywords: args.tags?.join(', '),
+    inLanguage: 'en-US',
+  };
+}
+
+export function workJsonLd(args: {
+  title: string;
+  description: string;
+  date: string;
+  url: string;
+}): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    name: args.title,
+    description: args.description,
+    datePublished: `${args.date}T12:00:00.000Z`,
+    creator: {
+      '@type': 'Person',
+      name: site.name,
+      url: site.url,
+    },
+    mainEntityOfPage: args.url,
     inLanguage: 'en-US',
   };
 }

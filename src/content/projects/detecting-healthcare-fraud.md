@@ -3,7 +3,10 @@ title: Detecting healthcare fraud
 description: A 2018 machine-learning study of public Medicare data, asking whether an exclusion list was visible in prescription records.
 date: "2018-08-22"
 status: published
-order: 1
+kind: research
+role: Independent research and public talk
+featured: false
+order: 5
 links:
   - label: Source
     href: https://github.com/dast1/healthcare-fraud

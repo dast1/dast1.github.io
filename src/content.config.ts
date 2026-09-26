@@ -61,6 +61,9 @@ const projects = defineCollection({
     description: z.string().min(20),
     date: day,
     status: z.enum(projectStatuses),
+    kind: z.enum(['independent', 'public', 'research']).default('research'),
+    role: z.string().min(1),
+    featured: z.boolean().default(false),
     order: z.number().int(),
     links: z
       .array(

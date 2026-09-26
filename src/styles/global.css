@@ -419,6 +419,250 @@ main {
   margin-bottom: 0.85rem;
 }
 
+.home-hero,
+.work-masthead {
+  display: grid;
+  grid-template-columns: minmax(13rem, 0.65fr) minmax(24rem, 1.35fr);
+  gap: 2rem 5rem;
+  align-items: end;
+  padding: 1.25rem 0 3.25rem;
+  border-bottom: 1px solid var(--ink);
+}
+
+.home-hero h1,
+.work-masthead h1 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(3.8rem, 8vw, 6rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+}
+
+.home-thesis {
+  max-width: 38rem;
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+
+.home-background,
+.work-masthead > p {
+  max-width: 39rem;
+  margin: 1.15rem 0 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.52;
+}
+
+.work-masthead > p {
+  margin: 0;
+  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
+}
+
+.home-inquiry {
+  display: grid;
+  grid-template-columns: 11.5rem minmax(18rem, 1fr) minmax(16rem, 0.72fr);
+  gap: 1.5rem 2rem;
+  padding: 2.4rem 0 2.65rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-inquiry h2 {
+  margin: 0;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.home-inquiry > p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.4vw, 1.85rem);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.home-inquiry-note {
+  padding-left: 1.5rem;
+  border-left: 1px solid var(--line);
+}
+
+.home-inquiry-note p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.home-threads {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 2rem 3.5rem;
+  margin-top: 3.25rem;
+  padding: 2.5rem 0;
+  border-block: 1px solid var(--ink);
+}
+
+.home-threads header h2,
+.work-group > header h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.75rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+.home-threads header p,
+.work-group > header p {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+.home-threads ol {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.home-threads li {
+  padding: 1.2rem 1.35rem 1.3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.home-threads li:nth-child(even) {
+  padding-right: 0;
+  padding-left: 1.35rem;
+  border-left: 1px solid var(--line);
+}
+
+.home-threads h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+.home-threads h3 a,
+.work-group h3 a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.home-threads h3 a:hover,
+.work-group h3 a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 0.16em;
+}
+
+.home-threads li p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  line-height: 1.45;
+}
+
+.work-groups {
+  border-bottom: 1px solid var(--ink);
+}
+
+.work-group {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  gap: 2rem 3.5rem;
+  padding: 2.65rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.work-group:last-child {
+  border-bottom: 0;
+}
+
+.work-group > ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.work-group > ol > li {
+  display: grid;
+  grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding: 1.3rem 0 1.45rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.work-meta {
+  display: grid;
+  align-content: start;
+  gap: 0.15rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.work-meta span:last-child {
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.work-group h3 {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.work-group li div:last-child > p {
+  max-width: 43rem;
+  margin: 0.4rem 0 0;
+  color: var(--ink-soft);
+  font-family: var(--serif);
+  font-size: 1.04rem;
+  line-height: 1.48;
+}
+
+.work-role {
+  display: block;
+  margin-top: 0.55rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.legacy-work-links {
+  margin: 1.5rem 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.legacy-work-links li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.about-prose h2 {
+  margin-top: 2.4rem;
+}
+
 .ideas-hero {
   display: grid;
   grid-template-columns: minmax(0, 0.8fr) minmax(22rem, 1.2fr);
@@ -785,15 +1029,13 @@ main {
 }
 
 .writing-lead-copy h2 a,
-.writing-list h3 a,
-.writing-thread h3 a {
+.writing-list h3 a {
   color: var(--ink);
   text-decoration: none;
 }
 
 .writing-lead-copy h2 a:hover,
-.writing-list h3 a:hover,
-.writing-thread h3 a:hover {
+.writing-list h3 a:hover {
   color: var(--accent);
   text-decoration: underline;
   text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
@@ -830,7 +1072,7 @@ main {
 
 .writing-lead-meta > p + p span,
 .writing-topics > span,
-.writing-thread > header p {
+.writing-threads > header p {
   color: var(--muted);
 }
 
@@ -871,7 +1113,7 @@ main {
   text-underline-offset: 0.18em;
 }
 
-.writing-thread {
+.writing-threads {
   display: grid;
   grid-template-columns: 15rem minmax(0, 1fr);
   gap: 2rem 3.5rem;
@@ -879,7 +1121,7 @@ main {
   border-bottom: 1px solid var(--ink);
 }
 
-.writing-thread > header h2,
+.writing-threads > header h2,
 .writing-archive > header h2 {
   margin: 0;
   font-family: var(--serif);
@@ -888,36 +1130,36 @@ main {
   letter-spacing: -0.025em;
 }
 
-.writing-thread > header p,
+.writing-threads > header p,
 .writing-archive > header p {
   margin: 0.45rem 0 0;
   font-size: 0.92rem;
   line-height: 1.5;
 }
 
-.writing-thread > ol {
+.writing-threads > ol {
   margin: 0;
   padding: 0;
   list-style: none;
   border-top: 1px solid var(--line);
 }
 
-.writing-thread > ol > li {
+.writing-threads > ol > li {
   display: grid;
-  grid-template-columns: 5rem minmax(12rem, 0.9fr) minmax(16rem, 1.1fr);
+  grid-template-columns: 5rem minmax(0, 1fr);
   gap: 1rem 1.5rem;
   align-items: baseline;
   padding: 1.2rem 0;
   border-bottom: 1px solid var(--line);
 }
 
-.writing-thread > ol > li > span {
+.writing-threads > ol > li > span {
   color: var(--muted);
   font-size: 0.78rem;
   text-transform: uppercase;
 }
 
-.writing-thread h3,
+.writing-threads h3,
 .writing-list h3 {
   margin: 0;
   font-family: var(--serif);
@@ -927,12 +1169,22 @@ main {
   letter-spacing: -0.02em;
 }
 
-.writing-thread li > p {
+.writing-threads li p {
   margin: 0;
   color: var(--ink-soft);
   font-family: var(--serif);
   font-size: 1.02rem;
   line-height: 1.48;
+}
+
+.writing-thread-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  margin-top: 0.45rem;
+  color: var(--accent);
+  font-size: 0.9rem;
+  text-underline-offset: 0.16em;
 }
 
 .writing-archive {
@@ -1145,6 +1397,21 @@ main {
 }
 
 @media (max-width: 900px) {
+  .home-hero,
+  .work-masthead,
+  .home-inquiry,
+  .home-threads,
+  .work-group {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .home-inquiry-note {
+    padding: 1.25rem 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
   .ideas-hero,
   .idea-tools {
     grid-template-columns: 1fr;
@@ -1167,16 +1434,16 @@ main {
     gap: 1.65rem;
   }
 
-  .writing-thread {
+  .writing-threads {
     grid-template-columns: 1fr;
     gap: 1.35rem;
   }
 
-  .writing-thread > ol > li {
+  .writing-threads > ol > li {
     grid-template-columns: 4.5rem minmax(0, 1fr);
   }
 
-  .writing-thread li > p {
+  .writing-threads li > div {
     grid-column: 2;
   }
 
@@ -1390,8 +1657,34 @@ main {
     text-align: left;
   }
 
-  .home-title {
-    max-width: none;
+  .home-hero,
+  .work-masthead {
+    padding-top: 0.5rem;
+  }
+
+  .home-hero h1,
+  .work-masthead h1 {
+    font-size: clamp(3.5rem, 19vw, 5rem);
+  }
+
+  .home-threads ol {
+    grid-template-columns: 1fr;
+  }
+
+  .home-threads li,
+  .home-threads li:nth-child(even) {
+    padding: 1.1rem 0;
+    border-left: 0;
+  }
+
+  .work-group > ol > li,
+  .writing-threads > ol > li {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .writing-threads li > div {
+    grid-column: 1;
   }
 
   .ideas-hero {

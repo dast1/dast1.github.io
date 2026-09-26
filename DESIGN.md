@@ -178,7 +178,11 @@ The Ideas archive is a field index. Every month is a two-column band with an `11
 
 The general entry list shares the archive's editorial grammar: a maximum width of `48rem`, an `11.5rem` date rail, and a flexible title/summary column. It collapses to one column at `680px`, placing the date directly above the entry.
 
-The Writing index begins with a `0.72fr / 1.28fr` masthead that pairs the section name with a concise editorial promise. Its featured essay reverses the emphasis into a `1.35fr / 0.65fr` composition: a balanced, maximum-`13ch` title and deck beside date, reading time, current thread, and topics. Thread and archive sections then return to ruled index logic. The thread uses a `15rem` section rail and three-column records for part, title, and description; the archive uses the established `11.5rem` metadata rail. At `900px`, masthead, feature, section headers, and thread framing stack; thread records become two columns with descriptions aligned beneath titles. At `680px`, archive rows become single-column and metadata becomes an inline date/read-time pair.
+The Home and Work mastheads use a `0.65fr / 1.35fr` editorial split. On Home, the name forms the left rail while a concise thesis and technical background occupy the right. A three-column current-inquiry band follows, separating the label, the governing question, and a quiet account of present work. Selected evidence appears before research themes so the builder claim is substantiated before the reader reaches the essay archive.
+
+The Work archive groups evidence into independent investigations, public technical work, and earlier research. Each section uses a `15rem` explanatory rail and ruled records with year/type metadata, title, summary, and role. Work entries link to a local context page, which in turn links to the original public artifact. Descriptions remain factual and conservative.
+
+The Writing index begins with a `0.72fr / 1.28fr` masthead that pairs the section name with a concise editorial promise. Its featured essay reverses the emphasis into a `1.35fr / 0.65fr` composition: a balanced, maximum-`13ch` title and deck beside date, reading time, current inquiry, and topics. Research threads and the archive then return to ruled index logic. The thread index uses a `15rem` section rail and numbered records that pair a governing question with a starting essay; the archive uses the established `11.5rem` metadata rail. At `900px`, masthead, feature, section headers, and thread framing stack. At `680px`, archive and thread rows become single-column and metadata becomes an inline date/read-time pair.
 
 Long-form article headers remain within `40rem`, and prose stays on the core reading measure. Optional hero media and editorial diagrams may widen to `56rem` while remaining bounded by the viewport inset. This width shift is intentional: it gives visual evidence and systems explanations more room without loosening the measure of the argument itself.
 
@@ -232,9 +236,9 @@ The Writing masthead is quieter than the Ideas display but still unmistakably ed
 
 One essay leads through scale rather than a card treatment. Its title is the dominant element, with balanced wrapping, compact leading, and a restrained `13ch` measure; the description remains readable and secondary. A narrow metadata rail holds date, reading time, optional current-thread context, and topics. The lead is the explicitly featured essay when one exists, otherwise the first published essay. Keep it flat, square, and separated from the rest of the page by a strong ink rule.
 
-### Series / Thread List
+### Research Thread List
 
-The thread section appears only when the lead belongs to a series and has related essays. Its introduction occupies a stable rail; ordered rows expose part number, title, and self-contained description. Series order—not publication date—controls sequence. At intermediate widths, keep the part rail visible and place the description beneath its title rather than collapsing the row into an undifferentiated text block.
+The thread section is a persistent map of four connected inquiries: delegated authority, personal AI, distributed governance, and ownership and incentives. Its introduction occupies a stable rail; ordered rows expose the question and a single recommended starting essay. These are research directions rather than claims of completion. At intermediate widths, keep the number rail visible; on narrow screens the number and content stack cleanly.
 
 ### Writing Archive & Topic Navigation
 

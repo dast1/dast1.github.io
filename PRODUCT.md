@@ -8,19 +8,22 @@ Web — a statically generated Astro site hosted on GitHub Pages.
 ## Users
 
 - Readers interested in Dastan's thinking across AI systems, governance, product judgment, local computing, and economics.
+- Readers evaluating Dastan's technical work, judgment, and ability to connect system design with institutional questions.
 - Dastan, as the ongoing author and curator of an evolving body of work.
 
 ## Product Purpose
 
-A personal intellectual notebook that makes a developing body of thought legible over time through longer writing, shorter ideas, and a small set of curated projects.
+A personal intellectual notebook that makes a developing body of thought legible over time through selected public work, longer writing, and shorter ideas.
 
 ## Positioning
 
-The site connects technical architecture, governance, product judgment, and capital in one evolving notebook. It is not a promotional portfolio, a news feed, or a startup landing page.
+The site presents an experienced technical operator investigating the governance questions that appear when AI systems begin to act. Ownership and capital are a distinctive lens on that inquiry, not a separate résumé. It is not a promotional portfolio, a news feed, a fellowship microsite, or a startup landing page.
 
 ## Operating Context
 
 Readers may arrive from search, social links, or the homepage; browse chronologically or by theme; and move between related ideas. Dastan maintains the site through Git and pull requests. The Ideas collection currently contains dozens of entries and will continue to grow.
+
+The homepage should answer three questions in sequence: what Dastan has done, what he is investigating now, and how the public work and writing substantiate that inquiry. The Work archive uses conservative descriptions and links to public evidence; it does not expose private product architecture or plans.
 
 ## Capabilities and Constraints
 
@@ -29,6 +32,7 @@ Readers may arrive from search, social links, or the homepage; browse chronologi
 - Development chronology is intentionally month-level and approximate; exact publication metadata remains available where technically necessary.
 - Ideas may have multiple tags, but the public taxonomy must remain small, stable, and useful.
 - Public content must preserve privacy and avoid disclosing sensitive personal or professional details.
+- Current independent work may be described by problem area and method, but not by private product names, architecture, customers, financing, or roadmap.
 
 ## Brand Commitments
 
@@ -39,7 +43,7 @@ Readers may arrive from search, social links, or the homepage; browse chronologi
 
 ## Evidence on Hand
 
-The repository contains published ideas, longer writing, and project notes. Prior public articles and posts may inform chronology and themes. Do not fabricate experiences, credentials, dates, or claims.
+The repository contains published ideas, longer writing, and work notes. Prior public articles and posts may inform chronology and themes. Public AWS and LinkedIn articles can serve as evidence when their authorship and descriptions are stated conservatively. Do not fabricate experiences, credentials, dates, or claims.
 
 ## Product Principles
 

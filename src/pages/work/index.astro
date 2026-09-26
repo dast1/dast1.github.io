@@ -1,0 +1,69 @@
+---
+import Base from '../../layouts/Base.astro';
+import { publishedProjects } from '../../lib/content';
+import { yearOf } from '../../lib/dates';
+import { workKindLabel, type WorkKind } from '../../lib/projects';
+
+const work = await publishedProjects();
+const groups: { kind: WorkKind; title: string; description: string }[] = [
+  {
+    kind: 'independent',
+    title: 'Independent investigations',
+    description: 'Questions I tested with working systems, evaluations, and public methods.',
+  },
+  {
+    kind: 'public',
+    title: 'Public technical work',
+    description: 'Selected collaborative work published during my time in industry.',
+  },
+  {
+    kind: 'research',
+    title: 'Earlier research',
+    description: 'Public work that still represents how I approach a technical question.',
+  },
+];
+const description =
+  'Selected public work by Dastan Aitzhanov across AI systems, industrial machine learning, local computing, and applied research.';
+---
+
+<Base title="Work" description={description}>
+  <header class="work-masthead">
+    <h1>Work</h1>
+    <p>
+      A selected record of systems I tested, technical work I co-authored, and research I am willing
+      to leave up. Not a catalogue of every role or repository.
+    </p>
+  </header>
+
+  <div class="work-groups">
+    {
+      groups.map((group) => {
+        const items = work.filter((entry) => entry.data.kind === group.kind);
+        if (items.length === 0) return null;
+        return (
+          <section class="work-group" aria-labelledby={`work-${group.kind}`}>
+            <header>
+              <h2 id={`work-${group.kind}`}>{group.title}</h2>
+              <p>{group.description}</p>
+            </header>
+            <ol>
+              {items.map((entry) => (
+                <li>
+                  <div class="work-meta">
+                    <span>{yearOf(entry.data.date)}</span>
+                    <span>{workKindLabel(entry.data.kind)}</span>
+                  </div>
+                  <div>
+                    <h3><a href={`/work/${entry.id}/`}>{entry.data.title}</a></h3>
+                    <p>{entry.data.description}</p>
+                    <span class="work-role">{entry.data.role}</span>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        );
+      })
+    }
+  </div>
+</Base>

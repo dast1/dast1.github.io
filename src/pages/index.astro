@@ -1,50 +1,104 @@
 ---
 import EntryList from '../components/EntryList.astro';
 import Base from '../layouts/Base.astro';
-import { publishedIdeas, publishedWriting, tagPath } from '../lib/content';
+import { publishedIdeas, publishedProjects, publishedWriting, tagPath } from '../lib/content';
 import { formatDate, formatMonth } from '../lib/dates';
 import { ideaTagPath } from '../lib/ideas';
 import { siteJsonLd } from '../lib/jsonld';
+import { workKindLabel } from '../lib/projects';
 import { site } from '../site';
 
 const writing = (await publishedWriting())
   .filter((entry) => entry.data.featured)
   .slice(0, 3);
-const ideas = (await publishedIdeas()).slice(0, 6);
+const ideas = (await publishedIdeas()).slice(0, 4);
+const work = (await publishedProjects())
+  .filter((entry) => entry.data.featured)
+  .sort((a, b) => b.data.date.localeCompare(a.data.date))
+  .slice(0, 4);
+const researchThreads = [
+  {
+    href: '/writing/#delegated-authority',
+    title: 'Delegated authority',
+    question: 'What changes when an AI system moves from producing information to taking action?',
+  },
+  {
+    href: '/writing/#personal-ai',
+    title: 'Personal AI',
+    question: 'What should remain near the person when AI becomes part of ordinary computing?',
+  },
+  {
+    href: '/writing/#distributed-governance',
+    title: 'Distributed governance',
+    question: 'Where does policy attach when computation crosses independently owned machines?',
+  },
+  {
+    href: '/writing/#ownership-incentives',
+    title: 'Ownership and incentives',
+    question: 'Who decides, who carries the risk, and who remains responsible?',
+  },
+];
 ---
 
 <Base title={site.title} description={site.description} jsonLd={siteJsonLd()}>
-  <h1 class="home-title">{site.name}</h1>
-  <p class="deck">Technologist, investor, builder. Based in Texas.</p>
-  <div class="prose home-prose">
-    <p>
-      I work between software and capital. The technical thread has been cloud, data platforms, and
-      machine learning, including time at Amazon Web Services and Databricks. Alongside that, I have
-      spent about a decade investing personal and family capital: real estate, hotels, multifamily,
-      private businesses, public equities, technology, and alternatives.
-    </p>
-    <p>
-      This site is the notebook. Longer pieces are under <a href="/writing/">writing</a>. Shorter
-      claims are under <a href="/ideas/">ideas</a>. <a href="/projects/">Projects</a> stays short, and
-      only for work I am willing to leave up. The longer version of the story is on the <a href="/about/">about</a> page.
-    </p>
-  </div>
+  <header class="home-hero">
+    <h1>{site.name}</h1>
+    <div>
+      <p class="home-thesis">
+        I build AI systems and write about the governance questions that appear when they begin to act.
+      </p>
+      <p class="home-background">
+        My background spans cloud, data, and machine learning at Amazon Web Services and Databricks.
+        I am now working independently on questions around agent authority, personal AI, and
+        distributed computing.
+      </p>
+    </div>
+  </header>
 
-  <h2 class="section-label" id="questions">Current questions</h2>
-  <div class="prose">
+  <section class="home-inquiry" aria-labelledby="inquiry-title">
+    <h2 id="inquiry-title">Current inquiry</h2>
     <p>
-      <strong>How do we combine probabilistic intelligence with deterministic control?</strong>
+      As AI systems move from answering questions to exercising delegated authority, how should that
+      authority be granted, bounded, verified, and revoked?
     </p>
-    <ul>
-      <li>What work actually needs a generative model?</li>
-      <li>When should repeated agent behavior become software?</li>
-      <li>What should stay local as AI becomes part of personal computing?</li>
-      <li>Can distributed AI infrastructure remain governable?</li>
-      <li>How do AI systems change organizations once they can act rather than simply answer?</li>
-    </ul>
-  </div>
+    <div class="home-inquiry-note">
+      <p>
+        I am building and testing systems around agentic work, local inference, and distributed
+        execution. The recurring question is no longer only what a model can produce. It is what the
+        surrounding system should permit it to see, decide, and do.
+      </p>
+    </div>
+  </section>
 
-  <h2 class="section-label" id="writing">Writing</h2>
+  <h2 class="section-label" id="work">Selected work</h2>
+  <EntryList
+    items={work.map((entry) => ({
+      href: `/work/${entry.id}/`,
+      title: entry.data.title,
+      datetime: entry.data.date,
+      dateLabel: formatDate(entry.data.date),
+      summary: entry.data.description,
+      eyebrow: `${workKindLabel(entry.data.kind)} · ${entry.data.role}`,
+    }))}
+  />
+  <p class="more"><a href="/work/">All selected work</a></p>
+
+  <section class="home-threads" aria-labelledby="threads-title">
+    <header>
+      <h2 id="threads-title">Research threads</h2>
+      <p>Four questions connect the experiments, essays, and shorter notes.</p>
+    </header>
+    <ol>
+      {researchThreads.map((thread) => (
+        <li>
+          <h3><a href={thread.href}>{thread.title}</a></h3>
+          <p>{thread.question}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  <h2 class="section-label" id="writing">Recent writing</h2>
   <EntryList
     items={writing.map((entry) => ({
       href: `/writing/${entry.id}/`,
@@ -57,7 +111,7 @@ const ideas = (await publishedIdeas()).slice(0, 6);
   />
   <p class="more"><a href="/writing/">All writing</a></p>
 
-  <h2 class="section-label" id="ideas">Ideas</h2>
+  <h2 class="section-label" id="ideas">Recent ideas</h2>
   <EntryList
     items={ideas.map((entry) => ({
       href: `/ideas/${entry.id}/`,
