@@ -121,7 +121,7 @@ for (const file of htmlFiles) {
   for (const phrase of forbidden) {
     if (lowered.includes(phrase)) fail(`${label} contains forbidden text: ${phrase}`);
   }
-  if (!/<html[^>]*\slang="en"/i.test(html)) fail(`${label} missing lang="en"`);
+  if (!/<html[^>]*\slang="(en|ru)"/i.test(html)) fail(`${label} missing lang`);
   if (!html.includes('id="content"')) fail(`${label} missing main landmark`);
   if (!html.includes('Skip to content')) fail(`${label} missing skip link`);
   const headings = html.match(/<h1[\s>]/g) ?? [];

@@ -14,6 +14,8 @@ interface Props {
   imagePath?: string;
   imageAlt?: string;
   canonicalPath?: string;
+  lang?: 'en' | 'ru';
+  alternates?: { lang: string; href: string }[];
 }
 
 const {
@@ -26,17 +28,20 @@ const {
   imagePath = '/og.png',
   imageAlt = `${site.name}, AI systems builder and writer`,
   canonicalPath,
+  lang = 'en',
+  alternates = [],
 } = Astro.props;
 
 const isHome = Astro.url.pathname === '/';
 const documentTitle = isHome ? title : `${title} | ${site.name}`;
 const canonical = new URL(canonicalPath ?? Astro.url.pathname, site.url);
 const image = new URL(imagePath, site.url).href;
+const ogLocale = lang === 'ru' ? 'ru_RU' : site.locale;
 const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : '';
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,6 +63,7 @@ const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : 
     <meta name="author" content={site.name} />
     <meta name="robots" content={robots} />
     <link rel="canonical" href={canonical.href} />
+    {alternates.map((alt) => <link rel="alternate" hreflang={alt.lang} href={new URL(alt.href, site.url).href} />)}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -70,7 +76,7 @@ const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : 
     <meta property="og:url" content={canonical.href} />
     <meta property="og:image" content={image} />
     <meta property="og:image:alt" content={imageAlt} />
-    <meta property="og:locale" content={site.locale} />
+    <meta property="og:locale" content={ogLocale} />
     {published && <meta property="article:published_time" content={`${published}T12:00:00.000Z`} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={documentTitle} />
