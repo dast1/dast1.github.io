@@ -58,6 +58,42 @@ const jsonLdMarkup = jsonLd ? JSON.stringify(jsonLd).replace(/</g, '\\u003c') : 
         document.documentElement.dataset.theme = theme;
       })();
     </script>
+    <script is:inline>
+      (function () {
+        // Send first-time readers to the site in their browser's language, and
+        // keep readers on the language they last chose. Nothing leaves the browser.
+        var langs = ['zh', 'es', 'fr', 'ru', 'tr', 'de', 'it', 'pt'];
+        var path = location.pathname;
+        if (path.indexOf('/projects/') === 0) return;
+        var match = path.match(/^\/([a-z]{2})(\/|$)/);
+        var current = match && langs.indexOf(match[1]) >= 0 ? match[1] : 'en';
+        var chosen = null;
+        try {
+          chosen = localStorage.getItem('lang');
+        } catch (error) {
+          chosen = null;
+        }
+        var target = chosen;
+        if (!target) {
+          var prefs = navigator.languages || [navigator.language || ''];
+          for (var i = 0; i < prefs.length && !target; i++) {
+            var code = String(prefs[i]).slice(0, 2).toLowerCase();
+            if (code === 'en') target = 'en';
+            else if (langs.indexOf(code) >= 0) target = code;
+          }
+          if (!target) return;
+          try {
+            localStorage.setItem('lang', target);
+          } catch (error) {
+            /* Remembering is a convenience; the redirect still works without it. */
+          }
+        }
+        if (target === current) return;
+        var rest = current === 'en' ? path : path.slice(current.length + 1) || '/';
+        var next = (target === 'en' ? '' : '/' + target) + rest;
+        if (next !== path) location.replace(next + location.search + location.hash);
+      })();
+    </script>
     <title>{documentTitle}</title>
     <meta name="description" content={description} />
     <meta name="author" content={site.name} />

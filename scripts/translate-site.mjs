@@ -30,6 +30,9 @@ const LANGS = {
   fr: { name: 'French', htmlLang: 'fr', label: 'Français', locale: 'fr_FR' },
   ru: { name: 'Russian', htmlLang: 'ru', label: 'Русский', locale: 'ru_RU' },
   tr: { name: 'Turkish', htmlLang: 'tr', label: 'Türkçe', locale: 'tr_TR' },
+  de: { name: 'German', htmlLang: 'de', label: 'Deutsch', locale: 'de_DE' },
+  it: { name: 'Italian', htmlLang: 'it', label: 'Italiano', locale: 'it_IT' },
+  pt: { name: 'Portuguese (Brazil)', htmlLang: 'pt-BR', label: 'Português', locale: 'pt_BR' },
 };
 const LANG_CODES = Object.keys(LANGS);
 
@@ -289,7 +292,7 @@ function decorate(root, lang, path) {
         const label = code === 'en' ? 'English' : LANGS[code].label;
         const current = code === lang ? ' aria-current="page"' : '';
         const hreflang = code === 'en' ? 'en' : LANGS[code].htmlLang;
-        return `<li><a href="${href}" lang="${hreflang}" hreflang="${hreflang}"${current}>${label}</a></li>`;
+        return `<li><a href="${href}" lang="${hreflang}" hreflang="${hreflang}" data-lang="${code}"${current}>${label}</a></li>`;
       })
       .join('');
     nav.set_content(`<ul>${items}</ul>`);

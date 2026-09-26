@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -34,7 +34,21 @@ jobs:
       - name: Typecheck, build, translate, and check the output
         run: npm run verify
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          # Only a push to master may spend on translation; pull requests build from the cache.
+          ANTHROPIC_API_KEY: ${{ github.event_name == 'push' && github.ref == 'refs/heads/master' && secrets.ANTHROPIC_API_KEY || '' }}
+      - name: Commit new translations to the cache
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+        run: |
+          if git diff --quiet -- translations && [ -z "$(git ls-files --others --exclude-standard translations)" ]; then
+            echo "No new translations."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add translations
+          git commit -m "Add translations for new content"
+          git pull --rebase origin master
+          git push origin HEAD:master
       - name: Upload Pages artifact
         if: github.event_name == 'push' && github.ref == 'refs/heads/master'
         uses: actions/upload-pages-artifact@v5
