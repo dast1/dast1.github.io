@@ -10,9 +10,12 @@ const links = [
   { href: '/about/', label: 'About' },
 ];
 
+// Translated pages live under /ru/ and belong to the same section.
+const sectionPath = path.replace(/^\/ru\//, '/');
+
 function isCurrent(href: string): boolean {
-  if (href === '/') return path === '/';
-  return path === href || path.startsWith(href);
+  if (href === '/') return sectionPath === '/';
+  return sectionPath === href || sectionPath.startsWith(href);
 }
 ---
 
