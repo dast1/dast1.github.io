@@ -61,7 +61,7 @@ The failure I am trying to design out is using the generative plane where the de
 
 Classification can be probabilistic. The rule that acts on the classification should not be.
 
-If a model says the intent is a refund, with some high confidence — say 0.92, as an illustration and not a result — the policy is still code. This action is in the allowed set. This confidence clears a threshold a person chose. This identity may take the action. This record is written. Change the threshold and you have changed the system on purpose, in a diff. Let the model improvise the policy in prose and the system is different on Tuesday, for no reason you can review.
+If a model says the intent is a refund, with some high confidence, say 0.92 as an illustration and not a result, the policy is still code. This action is in the allowed set. This confidence clears a threshold a person chose. This identity may take the action. This record is written. Change the threshold and you have changed the system on purpose, in a diff. Let the model improvise the policy in prose and the system is different on Tuesday, for no reason you can review.
 
 Low confidence is not a softer yes. It is a branch: ask a stronger model, ask a person, or stop. That branch is also code. A calibrated probability is useful because code can read it. An uncalibrated probability is a number with the manners of a measurement. I would not gate a side effect on it until someone has checked the calibration against the traffic the system actually sees. I have not done that check for any decision model named in this essay.[^4]
 
@@ -87,7 +87,7 @@ The second function is deliberately dull. Dull is the point. An action that move
 
 The first time a task shows up, generation is often the honest tool. Nobody has written the procedure. The model explores. A person corrects it. Something works, or it does not, and you learn which.
 
-The tenth time, the exploration is waste. The path is known. Continuing to ask a general model to reinvent it — re-read the tools, re-derive the steps, restate the policy in a new paragraph — spends latency and money to produce variance you did not order. An established workflow should be called, not rediscovered.
+The tenth time, the exploration is waste. The path is known. Continuing to ask a general model to reinvent it, to re-read the tools, re-derive the steps, and restate the policy in a new paragraph, spends latency and money to produce variance you did not order. An established workflow should be called, not rediscovered.
 
 There is a vanity in the rediscovery. An agent that figures it out again looks intelligent. A function that runs the procedure looks like software, which is to say it looks like something you could have built without a model. That appearance is a bad reason to keep the model on the critical path. The model was how you found the procedure. It is not a trophy you leave there.
 
@@ -121,15 +121,15 @@ I am not saying generative models should be smaller, rarer, or distrusted on pri
 
 I am not saying every narrow decision needs a new kind of model. Many need a classifier you already know how to train. Some need no model at all. If the rule fits in a function, write the function. The decision plane is an admission that a judgment remains. It is not a requirement to host that judgment in a special product.
 
-I am not describing a product, a network, or a company. I am describing a separation I want in systems I am willing to trust with a repeated action. The next question is what happens when generation, the decision, and the execution are no longer on the same machine. That is a governance problem before it is a topology problem, and it is a different essay.
+I am not describing a product, a network, or a company. I am describing a separation I want in systems I am willing to trust with a repeated action. The next question is what happens when generation, the decision, and the execution are no longer on the same machine. That is a governance problem before it is a topology problem. I take it up in [Capacity is not consent](/writing/capacity-is-not-consent/) and [Govern the boundary](/writing/govern-the-boundary/).
 
 ## Notes
 
 [^1]: Observation, not a survey. I am describing agent harnesses I have built against and read: one generative model asked to plan, select tools, and judge whether it may act. I do not have a published count of how often production systems do this. Treat the prevalence as practice until someone measures it.
 
-[^2]: Hypothesis. How large the constrained share is depends on the product, and I have not counted it. The architectural test — if the outputs can be enumerated, do not ask a generator to invent them — is the part I would keep even if the share is smaller than I think.
+[^2]: Hypothesis. How large the constrained share is depends on the product, and I have not counted it. The architectural test is the part I would keep even if the share is smaller than I think: if the outputs can be enumerated, do not ask a generator to invent them.
 
-[^3]: The decision-plane abstraction is the claim. Classifiers, regressors, small decision models, constrained decoding, decoder-logit classification, and a typed decision model are a map of patterns, not a comparison I have run. Jev, described by TypeSafe as a System One model, is one public instance of the typed shape: state in, a choice or a score or a yes-or-no probability out, no prose. I have not independently verified that description, and this essay does not use their latency, price, or accuracy figures. Those need a measurement on a stated task before they belong here. Decoder-logit classification — reading a next-token distribution over a fixed label set — needs a citation before publication if the essay ever says anything about its accuracy relative to a trained classifier. It does not say that here.
+[^3]: The decision-plane abstraction is the claim. Classifiers, regressors, small decision models, constrained decoding, decoder-logit classification, and a typed decision model are a map of patterns, not a comparison I have run. Jev, described by TypeSafe as a System One model, is one public instance of the typed shape: state in, a choice or a score or a yes-or-no probability out, no prose. I have not independently verified that description, and this essay does not use their latency, price, or accuracy figures. Those need a measurement on a stated task before they belong here. Decoder-logit classification, reading a next-token distribution over a fixed label set, needs a citation before publication if the essay ever says anything about its accuracy relative to a trained classifier. It does not say that here.
 
 [^4]: Principle: policy stays deterministic even when classification is probabilistic. The example confidence is illustrative. The calibration warning is the part that needs evidence. I would not state, as a finding, how often agent thresholds are fit on the wrong base rate. The operational rule stands without that finding: do not gate a side effect on a probability you have not checked against the traffic you actually see.
 
