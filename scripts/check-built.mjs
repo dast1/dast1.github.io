@@ -157,7 +157,7 @@ for (const file of htmlFiles) {
 }
 
 const home = await readFile(join(dist, 'index.html'), 'utf8');
-for (const phrase of ['Databricks', 'Texas', 'Amazon Web Services']) {
+for (const phrase of ['Texas', 'who decides, who carries the risk']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
 if (!home.includes('Dastan Aitzhanov | AI Systems, Governance, and Ownership')) {

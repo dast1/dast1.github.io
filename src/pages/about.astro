@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import { site } from '../site';
 
 const description =
-  'Dastan Aitzhanov on building AI systems, allocating capital, and the governance questions that connect both.';
+  'Dastan Aitzhanov on building AI systems, owning the outcome, and the governance questions that connect both.';
 ---
 
 <Base title="About" description={description}>
@@ -11,43 +11,79 @@ const description =
   <div class="prose about-prose">
     <p>
       I build AI systems, and I allocate capital. They have never felt like separate kinds of work.
+      Both come down to the same question: who is allowed to decide, and who answers for the result.
     </p>
 
-    <h2>Technical work</h2>
+    <h2>Now</h2>
     <p>
-      The technical thread runs through cloud infrastructure, data platforms, and machine learning.
-      I worked at Amazon Web Services and at Databricks. The problems I liked were practical ones:
-      getting data to a place a model could use, making a system reliable enough that someone would
-      trust it on an ordinary day, and finding which part of a stack was actually doing the work.
+      I am building something new in this space, quietly for now. Alongside it I run experiments on
+      agentic work, local inference, and distributed execution, and I publish the ones that hold up.
+      The question underneath them is what happens when an AI system moves from producing information
+      to exercising delegated authority: what it may see, what it may decide, what it may do, and how
+      that authority can be withdrawn.
     </p>
 
-    <h2>Current inquiry</h2>
+    <h2>What I believe</h2>
+    <ul>
+      <li>
+        <a href="/ideas/policy-should-not-be-probabilistic/">Policy should not be probabilistic.</a>{' '}
+        A model can recommend an action. The rule that permits it should be code someone can read,
+        version, and test.
+      </li>
+      <li>
+        <a href="/ideas/autonomy-should-scale-with-reversibility/">Autonomy should scale with reversibility.</a>{' '}
+        The useful question is not whether an agent is autonomous, but how much autonomy a particular
+        action can bear.
+      </li>
+      <li>
+        <a href="/ideas/an-audit-log-is-not-a-control/">An audit log is not a control.</a>{' '}
+        A record written after an action is evidence. It cannot stop the action.
+      </li>
+      <li>
+        <a href="/ideas/novelty-belongs-to-models/">Novelty belongs to models. Repetition belongs to software.</a>{' '}
+        Use a model to find a path the first time. Once the path repeats, call it.
+      </li>
+      <li>
+        <a href="/writing/the-computer-should-be-personal/">A person's thinking should live near the person.</a>{' '}
+        Private context is the asset. Where it is allowed to travel is the design.
+      </li>
+      <li>
+        <a href="/writing/what-owners-notice/">Analysis is becoming cheap. Commitment is not.</a>{' '}
+        The person who authorizes a decision still carries the consequence after the analysis is done.
+      </li>
+    </ul>
+
+    <h2>Where this comes from</h2>
     <p>
-      I am now working independently on systems around agentic work, local inference, and distributed
-      execution. The question underneath those experiments is what happens when an AI system moves
-      from producing information to exercising delegated authority: what it may see, what it may
-      decide, what it may do, and how that authority can be withdrawn.
+      Before I worked in technology, I ran my family's commercial real estate business in Kazakhstan.
+      My father and brother run it today, and I still serve on its board. That is where I learned what
+      a decision costs after the analysis is finished, and it is why I have since invested in dozens
+      of real estate projects across Texas.
+    </p>
+    <p>
+      For several years I also ran a small quantitative fund, with a team and outside investors. I
+      enjoyed the research and the engineering more than the administration and compliance, so I
+      closed it to outside money; it now manages only my family's capital. I was an early investor in{' '}
+      <a href="https://metavilabs.com/" rel="noopener">MetaVi Labs</a>, a life sciences company, and
+      remain one.
+    </p>
+    <p>
+      I mention this because it explains the writing. When a system acts, someone still owns the
+      outcome. I have been that person, and I have also been on the receiving end of governance. Both
+      make me want it to be something you can read and run, not something you wait on.
     </p>
 
-    <h2>Ownership</h2>
+    <h2>How the writing fits together</h2>
     <p>
-      Alongside building software, I have spent about a decade investing personal and family capital.
-      Ownership changes what you notice. A forecast can be right while the operation is still wrong.
-      Incentives can produce activity without producing value. The person who authorizes a decision
-      still carries the consequence after the analysis is complete.
+      Four threads run through the essays and shorter notes. Delegated authority: what changes when a
+      system moves from producing information to taking action. Personal AI: what should remain near
+      the person. Distributed governance: where policy attaches when computation crosses machines
+      nobody fully controls. Ownership and incentives: who decides, who carries the risk, and who
+      remains responsible. They are one question seen from four sides.
     </p>
     <p>
-      That lens shapes how I think about AI. As analysis becomes cheaper and systems become more
-      capable of acting, legitimate authority becomes more important, not less.
+      I write here when I have something definite enough to defend. I live in Texas.
     </p>
-
-    <h2>Direction</h2>
-    <p>
-      I do not expect policy to replace my technical work. I expect governance to become part of the
-      job of building increasingly capable AI systems. I write here to make that investigation public
-      when I have something definite enough to defend.
-    </p>
-    <p>I live in Texas.</p>
     <p>
       Email is the way to reach me:
       <a href={`mailto:${site.email}`}>{site.email}</a>.
