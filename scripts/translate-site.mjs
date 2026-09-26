@@ -295,7 +295,8 @@ function decorate(root, lang, path) {
         return `<li><a href="${href}" lang="${hreflang}" hreflang="${hreflang}" data-lang="${code}"${current}>${label}</a></li>`;
       })
       .join('');
-    nav.set_content(`<ul>${items}</ul>`);
+    nav.querySelector('ul')?.set_content(items);
+    nav.querySelector('[data-lang-current]')?.set_content(lang === 'en' ? 'English' : LANGS[lang].label);
   }
 }
 
