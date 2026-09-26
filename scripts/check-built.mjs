@@ -34,6 +34,7 @@ const required = [
   'index.html',
   'about/index.html',
   'writing/index.html',
+  'writing/capacity-is-not-consent/index.html',
   'writing/context-is-the-product/index.html',
   'writing/the-computer-should-be-personal/index.html',
   'writing/what-owners-notice/index.html',
@@ -72,7 +73,6 @@ const unpublished = [
   'writing/unpublished-note/index.html',
   'writing/probabilistic-intelligence-deterministic-control/index.html',
   'writing/can-distributed-ai-still-be-governed/index.html',
-  'writing/capacity-is-not-consent/index.html',
 ];
 
 for (const draftPath of unpublished) {
@@ -170,6 +170,19 @@ if (!essay.includes('footnotes') && !essay.includes('data-footnotes')) {
 }
 if (!essay.includes('min read')) fail('context essay is missing reading time');
 
+const writingIndex = await readFile(join(dist, 'writing/index.html'), 'utf8');
+if (!writingIndex.includes('Capacity is not consent')) {
+  fail('writing index is missing the approved governance essay');
+}
+
+const governanceEssay = await readFile(
+  join(dist, 'writing/capacity-is-not-consent/index.html'),
+  'utf8',
+);
+if (!governanceEssay.includes('A workload crosses more than one boundary')) {
+  fail('governance essay is missing its diagram');
+}
+
 const codeEssay = await readFile(
   join(dist, 'writing/the-computer-should-be-personal/index.html'),
   'utf8',
@@ -186,7 +199,6 @@ for (const slug of [
   'unpublished-note',
   'probabilistic-intelligence-deterministic-control',
   'can-distributed-ai-still-be-governed',
-  'capacity-is-not-consent',
 ]) {
   if (rss.includes(slug)) fail(`rss includes the draft: ${slug}`);
 }
@@ -209,7 +221,6 @@ for (const slug of [
   'unpublished-note',
   'probabilistic-intelligence-deterministic-control',
   'can-distributed-ai-still-be-governed',
-  'capacity-is-not-consent',
 ]) {
   if (sitemapText.includes(slug)) fail(`sitemap includes the draft: ${slug}`);
 }
