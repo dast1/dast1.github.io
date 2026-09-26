@@ -250,10 +250,17 @@ for (const slug of [
 if (sitemapText.includes('/projects/')) fail('sitemap includes legacy projects routes');
 if (sitemapText.includes('/404')) fail('sitemap includes the 404');
 
+// 403 and 429 mean the host refused an automated request, not that the link is dead.
+// Report them, but do not block a deploy on another site's bot policy.
+const tolerated = new Set([403, 429]);
 for (const url of external) {
   try {
     const response = await fetch(url, { redirect: 'follow', signal: AbortSignal.timeout(20000) });
-    if (response.status >= 400) fail(`external ${url} returned ${response.status}`);
+    if (tolerated.has(response.status)) {
+      console.warn(`warning: external ${url} returned ${response.status} (not treated as a failure)`);
+    } else if (response.status >= 400) {
+      fail(`external ${url} returned ${response.status}`);
+    }
   } catch (error) {
     const message = error instanceof Error ? error.message : 'request failed';
     fail(`external ${url} failed: ${message}`);
