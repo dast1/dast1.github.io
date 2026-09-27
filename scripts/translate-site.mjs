@@ -28,8 +28,8 @@ const strict = process.argv.includes('--strict');
 
 // The languages the author reads and can review.
 const LANGS = {
-  ru: { name: 'Russian', htmlLang: 'ru', label: 'Русский', locale: 'ru_RU' },
-  tr: { name: 'Turkish', htmlLang: 'tr', label: 'Türkçe', locale: 'tr_TR' },
+  ru: { name: 'Russian', htmlLang: 'ru', label: 'Русский', locale: 'ru_RU', languageLabel: 'Язык' },
+  tr: { name: 'Turkish', htmlLang: 'tr', label: 'Türkçe', locale: 'tr_TR', languageLabel: 'Dil' },
 };
 const LANG_CODES = Object.keys(LANGS);
 
@@ -330,6 +330,10 @@ function decorate(root, lang, path) {
       .join('');
     nav.querySelector('ul')?.set_content(items);
     nav.querySelector('[data-lang-current]')?.set_content(lang === 'en' ? 'English' : LANGS[lang].label);
+    nav.querySelector('summary')?.setAttribute(
+      'aria-label',
+      lang === 'en' ? 'Language: English' : `${LANGS[lang].languageLabel}: ${LANGS[lang].label}`,
+    );
   }
 }
 

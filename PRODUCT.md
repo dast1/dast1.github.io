@@ -23,7 +23,7 @@ The site presents an experienced technical operator investigating the governance
 
 Readers may arrive from search, social links, or the homepage; browse chronologically or by theme; and move between related ideas. Dastan maintains the site through Git and pull requests. The Ideas collection currently contains dozens of entries and will continue to grow.
 
-The homepage should answer three questions in sequence: what Dastan has done, what he is investigating now, and how the public work and writing substantiate that inquiry. The Work archive uses conservative descriptions and links to public evidence; it does not expose private product architecture or plans.
+The homepage should answer four questions in sequence: who Dastan is, what public evidence supports that description, what he is investigating now, and where a reader can follow the developed arguments and shorter notebook entries. The Work archive uses conservative descriptions and links to public evidence; it does not expose private product architecture or plans.
 
 ## Capabilities and Constraints
 

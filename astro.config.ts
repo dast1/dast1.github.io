@@ -9,7 +9,10 @@ export default defineConfig({
   integrations: [
     mdx(),
     sitemap({
-      filter: (page) => !page.includes('/404') && !page.includes('/projects/'),
+      filter: (page) => {
+        const { pathname } = new URL(page);
+        return pathname !== '/404/' && pathname !== '/404.html' && !pathname.startsWith('/projects/');
+      },
     }),
   ],
   markdown: {

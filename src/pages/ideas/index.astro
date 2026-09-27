@@ -9,17 +9,19 @@ const ideas = await publishedIdeas();
 const groups = await ideasByMonth();
 const tags = await ideaTagCounts();
 const description =
-  'A searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.';
+  'An atomic notebook and searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.';
 ---
 
 <Base title="Ideas" description={description}>
   <header class="ideas-hero">
     <div>
-      <p class="ideas-kicker">Field index</p>
       <h1>Ideas</h1>
     </div>
     <div class="ideas-intro">
-      <p>Shorter than the essays. A claim, the reason I hold it, and where it might be wrong.</p>
+      <p>
+        An atomic notebook: one claim at a time, with the reason I hold it and where it might be
+        wrong. The <a href="/writing/">writing</a> develops selected claims into fuller arguments.
+      </p>
       <p>
         These months indicate approximately when an idea first appeared in my notes, work, or public
         writing, not necessarily when it first appeared on this site.
