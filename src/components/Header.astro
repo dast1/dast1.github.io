@@ -1,17 +1,20 @@
 ---
 import { site } from '../site';
+import { sourceLocale, ui } from '../i18n';
 
 const path = Astro.url.pathname;
+const locale = sourceLocale(path);
+const copy = ui[locale];
+const prefix = locale === 'en' ? '' : `/${locale}`;
 const links = [
-  { href: '/', label: 'Home' },
-  { href: '/writing/', label: 'Writing' },
-  { href: '/ideas/', label: 'Ideas' },
-  { href: '/work/', label: 'Work' },
-  { href: '/about/', label: 'About' },
+  { href: '/', label: copy.nav.home },
+  { href: '/writing/', label: copy.nav.writing },
+  { href: '/ideas/', label: copy.nav.ideas },
+  { href: '/work/', label: copy.nav.work },
+  { href: '/about/', label: copy.nav.about },
 ];
 
-// Translated pages live under /ru/ and belong to the same section.
-const sectionPath = path.replace(/^\/ru\//, '/');
+const sectionPath = path.replace(/^\/(ru|tr)\//, '/');
 
 function isCurrent(href: string): boolean {
   if (href === '/') return sectionPath === '/';
@@ -21,14 +24,14 @@ function isCurrent(href: string): boolean {
 
 <header class="site-header">
   <div class="shell header-inner">
-    <a class="wordmark" href="/">{site.name}</a>
+    <a class="wordmark" href={`${prefix}/`}>{site.name}</a>
     <div class="header-tools">
-      <nav class="nav" aria-label="Primary">
+      <nav class="nav" aria-label={copy.primaryNav}>
         <ul>
           {
             links.map((link) => (
               <li>
-                <a href={link.href} aria-current={isCurrent(link.href) ? 'page' : undefined}>
+                <a href={`${prefix}${link.href}`} aria-current={isCurrent(link.href) ? 'page' : undefined}>
                   {link.label}
                 </a>
               </li>
@@ -42,10 +45,10 @@ function isCurrent(href: string): boolean {
           class="theme-toggle"
           data-theme-toggle
           aria-pressed="false"
-          aria-label="Dark theme">Dark</button
+          aria-label={copy.darkTheme}>{copy.dark}</button
         >
         <details class="lang-menu" data-lang-nav>
-          <summary translate="no" aria-label="Language: English">
+          <summary translate="no" aria-label={copy.language}>
             <svg class="lang-menu-globe" aria-hidden="true" viewBox="0 0 16 16" width="14" height="14">
               <circle cx="8" cy="8" r="6.4" fill="none" stroke="currentColor" stroke-width="1.2" />
               <path
@@ -55,7 +58,7 @@ function isCurrent(href: string): boolean {
                 stroke-width="1.2"
               />
             </svg>
-            <span data-lang-current>English</span>
+            <span data-lang-current>{copy.languageName}</span>
             <svg class="lang-menu-chevron" aria-hidden="true" viewBox="0 0 16 16" width="12" height="12">
               <path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
             </svg>

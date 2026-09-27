@@ -1,31 +1,21 @@
-// Post-build translation.
+// Post-build locale renderer.
 //
-// Reads the English pages in dist/, translates the human-visible text, and writes
-// a copy of the site under dist/<lang>/ for each language below. Translations are
-// cached in translations/<lang>.json, keyed by a hash of the English fragment, so
-// only new or changed text is ever sent to the API. Edit a cached entry by hand to
-// correct a translation; it stays until the English source changes.
-//
-// With no API credential, untranslated fragments fall back to English and the
-// script prints a warning. Pass --strict to fail instead (npm run translate).
+// Reads English pages in dist/, applies human-approved text from
+// translations/<lang>.json, and writes localized copies under dist/<lang>/.
+// It never calls a translation service and never writes to the translation files.
+// Missing entries fail the build so English cannot silently leak into a locale.
 
 import { createHash } from 'node:crypto';
 import { existsSync } from 'node:fs';
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import Anthropic from '@anthropic-ai/sdk';
 import { parse } from 'node-html-parser';
 
 const here = dirname(fileURLToPath(import.meta.url));
 const dist = join(here, '..', 'dist');
 const cacheDir = join(here, '..', 'translations');
 const siteOrigin = 'https://dastan.aitzhanov.com';
-// Cheapest current model; translation of short fragments does not need more. The markup check
-// rejects any output that damages the HTML, and the author reviews both languages.
-const MODEL = 'claude-haiku-4-5';
-const strict = process.argv.includes('--strict');
-
 // The languages the author reads and can review.
 const LANGS = {
   ru: { name: 'Russian', htmlLang: 'ru', label: 'Русский', locale: 'ru_RU', languageLabel: 'Язык' },
@@ -54,28 +44,17 @@ const ATTRS = [
   ['[placeholder]', 'placeholder'],
 ];
 
-const SYSTEM = `You translate fragments of a personal website from English into the language named in the request. The author writes in a plain, precise, first-person voice about AI systems, governance, and ownership. Keep that register: short sentences, no marketing tone, nothing added, nothing summarized.
-
-Rules:
-1. Return exactly one translation per input item, in the same order, as JSON: {"translations": [...]}.
-2. Items may contain inline HTML tags and entities. Reproduce every tag and every attribute exactly as given, in the same order. Translate only the human-readable text between and around tags. Never add, remove, reorder, or alter tags, attribute values, URLs, or entities such as &amp;.
-3. Leave untouched: code, file paths, URLs, email addresses, numbers, and product or model names (for example Laya, Jev, Llama, Databricks, Amazon Web Services, GitHub, MetaVi Labs, Astro). Transliterate the author's name, Dastan Aitzhanov, only where that is the convention for the target language; otherwise keep it in Latin script.
-4. Write dates in the target language's usual format.
-5. Prefer commas, colons, and separate sentences over em dashes.
-6. Keep each translation close to the source in length and structure.`;
-
-const hasCredential = Boolean(process.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_AUTH_TOKEN);
-// CI sets TRANSLATE_SPEND to "false" on pull-request builds so only master pays.
-const maySpend = process.env.TRANSLATE_SPEND !== 'false';
-// Two retries per request is plenty; a billing or auth failure should surface in seconds, not minutes.
-const client = hasCredential && maySpend ? new Anthropic({ maxRetries: 1 }) : null;
-// Set on the first fatal API error so the rest of the run falls back to English instead of
-// failing the build. A deploy must never depend on the translation service being available.
-let apiFailure = null;
-let consecutiveFailures = 0;
-console.log(`translate: credential ${hasCredential ? 'present' : 'absent'}, spending ${client ? 'enabled' : 'disabled'}`);
+console.log('locales: rendering approved translations (network and AI disabled)');
 
 const hash = (lang, text) => createHash('sha256').update(`${lang}\n${text}`).digest('hex').slice(0, 16);
+const ALLOWED_UNCHANGED = new Set([
+  '<!DOCTYPE html>',
+  '<a href="/rss.xml">RSS</a>',
+  '<a href="https://github.com/dast1" rel="me">GitHub</a>',
+  '<a href="mailto:dastan.aitzhanov@gmail.com">dastan.aitzhanov@gmail.com</a>',
+  'Dastan Aitzhanov',
+  '© 2026 Dastan Aitzhanov',
+]);
 // Word order changes across languages, so inline links may legitimately swap places.
 // Compare the tags as a sorted multiset: added, removed, or altered tags still fail.
 const tagSequence = (s) => (s.match(/<[^>]+>/g) ?? []).sort().join('');
@@ -96,12 +75,6 @@ async function loadCache(lang) {
   const file = join(cacheDir, `${lang}.json`);
   if (!existsSync(file)) return {};
   return JSON.parse(await readFile(file, 'utf8'));
-}
-
-async function saveCache(lang, cache) {
-  await mkdir(cacheDir, { recursive: true });
-  const sorted = Object.fromEntries(Object.entries(cache).sort(([a], [b]) => a.localeCompare(b)));
-  await writeFile(join(cacheDir, `${lang}.json`), `${JSON.stringify(sorted, null, 2)}\n`);
 }
 
 function isSkipped(node) {
@@ -153,115 +126,18 @@ function collectUnits(root) {
   return units;
 }
 
-async function requestTranslations(lang, items) {
-  const body = {
-    model: MODEL,
-    max_tokens: 32000,
-    system: [{ type: 'text', text: SYSTEM, cache_control: { type: 'ephemeral' } }],
-    messages: [
-      {
-        role: 'user',
-        content: JSON.stringify({ target_language: LANGS[lang].name, items }),
-      },
-    ],
-  };
-  const schema = {
-    type: 'object',
-    properties: { translations: { type: 'array', items: { type: 'string' } } },
-    required: ['translations'],
-    additionalProperties: false,
-  };
-  let message;
-  try {
-    message = await client.messages
-      .stream({ ...body, output_config: { format: { type: 'json_schema', schema } } })
-      .finalMessage();
-  } catch (error) {
-    // If this account or model rejects structured output, fall back to plain JSON.
-    if (!(error instanceof Anthropic.BadRequestError)) throw error;
-    message = await client.messages.stream(body).finalMessage();
-  }
-  if (message.stop_reason === 'refusal') {
-    throw new Error(`translation refused (${message.stop_details?.category ?? 'unknown'})`);
-  }
-  if (message.stop_reason === 'max_tokens') {
-    throw new Error('translation truncated: raise max_tokens or lower the batch size');
-  }
-  const text = message.content.find((block) => block.type === 'text')?.text ?? '';
-  const json = text.replace(/^```(?:json)?\s*/i, '').replace(/\s*```$/, '');
-  const parsed = JSON.parse(json);
-  const out = parsed.translations;
-  if (!Array.isArray(out) || out.length !== items.length) {
-    throw new Error(`expected ${items.length} translations, received ${out?.length ?? 'none'}`);
-  }
-  return out;
-}
-
-function chunk(items, maxItems = 40, maxChars = 12000) {
-  const batches = [];
-  let current = [];
-  let size = 0;
-  for (const item of items) {
-    if (current.length && (current.length >= maxItems || size + item.length > maxChars)) {
-      batches.push(current);
-      current = [];
-      size = 0;
-    }
-    current.push(item);
-    size += item.length;
-  }
-  if (current.length) batches.push(current);
-  return batches;
-}
-
-// Fill the cache for every unit on the page. Returns counts for the report.
-async function ensureTranslated(lang, cache, units, stats) {
-  const missing = [...new Set(units.map((u) => u.source).filter((s) => !cache[hash(lang, s)]))];
-  if (!missing.length) return;
-  if (!client || apiFailure) {
-    stats.untranslated += missing.length;
-    return;
-  }
-  for (const batch of chunk(missing)) {
-    if (apiFailure) {
-      stats.untranslated += batch.length;
+function inspectTranslations(lang, cache, units, stats, path) {
+  for (const source of new Set(units.map((unit) => unit.source))) {
+    const entry = cache[hash(lang, source)];
+    if (!entry) {
+      stats.missing.add(`${path}: ${source.slice(0, 120)}`);
       continue;
     }
-    let translated;
-    try {
-      translated = await requestTranslations(lang, batch);
-      consecutiveFailures = 0;
-    } catch (error) {
-      const message = error instanceof Error ? error.message : String(error);
-      consecutiveFailures += 1;
-      // Auth, billing, and permission errors will not fix themselves mid-run, and neither will
-      // an API that fails several times in a row: stop calling and keep the build moving.
-      const fatal =
-        error instanceof Anthropic.AuthenticationError ||
-        error instanceof Anthropic.PermissionDeniedError ||
-        /credit balance|billing/i.test(message) ||
-        consecutiveFailures >= 5;
-      if (fatal && !apiFailure) {
-        apiFailure = message;
-        console.warn(`warning: translation API unavailable, the rest of this build stays English: ${message}`);
-      } else if (!fatal) {
-        console.warn(`warning: [${lang}] a batch failed and stays English: ${message}`);
-      }
-      stats.untranslated += batch.length;
-      stats.errors += 1;
-      continue;
+    if (entry.en !== source) stats.invalid.add(`${path}: source mismatch for ${source.slice(0, 80)}`);
+    if (!entry.t || (entry.t === source && !ALLOWED_UNCHANGED.has(source))) {
+      stats.invalid.add(`${path}: unapproved translation for ${source.slice(0, 80)}`);
     }
-    batch.forEach((source, i) => {
-      const out = translated[i];
-      if (tagSequence(out) !== tagSequence(source)) {
-        stats.mismatched += 1;
-        console.warn(`warning: [${lang}] markup changed in translation, kept English: ${source.slice(0, 80)}`);
-        return;
-      }
-      cache[hash(lang, source)] = { en: source, t: out };
-      stats.translated += 1;
-    });
-    await saveCache(lang, cache);
+    if (tagSequence(entry.t) !== tagSequence(source)) stats.invalid.add(`${path}: markup mismatch for ${source.slice(0, 80)}`);
   }
 }
 
@@ -272,6 +148,32 @@ function apply(lang, cache, units) {
     if (unit.kind === 'html') unit.node.set_content(entry.t);
     else if (unit.kind === 'text') unit.node.rawText = unit.node.rawText.replace(unit.source, entry.t);
     else unit.node.setAttribute(unit.attr, entry.t);
+  }
+}
+
+function localizeJsonLd(root, lang, path, cache) {
+  const localizedUrl = `${siteOrigin}/${lang}${path}`;
+  const visit = (value, key = '') => {
+    if (Array.isArray(value)) return value.map((item) => visit(item));
+    if (value && typeof value === 'object') {
+      for (const [childKey, childValue] of Object.entries(value)) value[childKey] = visit(childValue, childKey);
+      return value;
+    }
+    if (typeof value !== 'string') return value;
+    if (key === 'inLanguage') return LANGS[lang].htmlLang;
+    if ((key === 'url' || key === '@id' || key === 'mainEntityOfPage') && value === `${siteOrigin}${path}`) {
+      return localizedUrl;
+    }
+    const entry = cache[hash(lang, value)];
+    return entry?.t ?? value;
+  };
+  for (const script of root.querySelectorAll('script[type="application/ld+json"]')) {
+    try {
+      const data = JSON.parse(script.innerHTML);
+      script.set_content(JSON.stringify(visit(data)));
+    } catch {
+      // The build validator reports malformed structured data separately.
+    }
   }
 }
 
@@ -357,7 +259,7 @@ async function main() {
     available[lang].add(path);
   }
   for (const lang of LANG_CODES) for (const path of paths) available[lang].add(path);
-  const stats = Object.fromEntries(LANG_CODES.map((code) => [code, { translated: 0, untranslated: 0, mismatched: 0, errors: 0, pages: 0 }]));
+  const stats = Object.fromEntries(LANG_CODES.map((code) => [code, { missing: new Set(), invalid: new Set(), pages: 0 }]));
 
   await Promise.all(
     LANG_CODES.map(async (lang) => {
@@ -368,15 +270,19 @@ async function main() {
         const path = pagePath(file);
         const root = parse(await readFile(file, 'utf8'), { comment: true });
         const units = collectUnits(root);
-        await ensureTranslated(lang, cache, units, stats[lang]);
+        inspectTranslations(lang, cache, units, stats[lang], path);
         apply(lang, cache, units);
+        // Translating a block replaces its inline descendants. Re-collect attributes
+        // afterward so accessibility labels inside translated links are applied to
+        // the new nodes rather than to the detached English originals.
+        apply(lang, cache, collectUnits(root).filter((unit) => unit.kind === 'attr'));
+        localizeJsonLd(root, lang, path, cache);
         decorate(root, lang, path);
         const target = join(dist, lang, relative(dist, file));
         await mkdir(dirname(target), { recursive: true });
         await writeFile(target, root.toString());
         stats[lang].pages += 1;
       };
-      // A few pages in flight per language keeps a first run to minutes, not an hour.
       const workers = Array.from({ length: 3 }, async () => {
         while (queue.length) await translatePage(queue.shift());
       });
@@ -417,20 +323,12 @@ async function main() {
 
   for (const lang of LANG_CODES) {
     const s = stats[lang];
-    console.log(`${lang}: ${s.pages} pages, ${s.translated} new translations, ${s.untranslated} left in English, ${s.mismatched} markup mismatches, ${s.errors} failed batches`);
+    console.log(`${lang}: ${s.pages} pages, ${s.missing.size} missing, ${s.invalid.size} invalid`);
+    for (const message of [...s.missing, ...s.invalid].slice(0, 20)) console.error(`  - ${message}`);
+    if (s.missing.size + s.invalid.size > 20) console.error(`  - …and ${s.missing.size + s.invalid.size - 20} more`);
   }
-  const untranslated = LANG_CODES.reduce((n, lang) => n + stats[lang].untranslated, 0);
-  if (untranslated) {
-    const why = apiFailure
-      ? `the translation API failed: ${apiFailure}`
-      : !hasCredential
-        ? 'no ANTHROPIC_API_KEY is set'
-        : !maySpend
-          ? 'spending is disabled on this build'
-          : 'some batches failed';
-    console.warn(`warning: ${untranslated} fragments left in English because ${why}`);
-    if (strict) process.exit(1);
-  }
+  const failures = LANG_CODES.reduce((n, lang) => n + stats[lang].missing.size + stats[lang].invalid.size, 0);
+  if (failures) throw new Error(`${failures} locale entries need human review; localized pages were not approved for publication`);
 }
 
 main().catch((error) => {
