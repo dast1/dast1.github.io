@@ -35,15 +35,15 @@ const researchThreads = [
   },
 ].map((thread) => ({ ...thread, entry: posts.find((entry) => entry.id === thread.entryId) }));
 const description =
-  'Long-form writing by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.';
+  'Developed arguments by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.';
 ---
 
 <Base title="Writing" description={description}>
   <header class="writing-masthead">
     <h1>Writing</h1>
     <p>
-      Longer arguments about capable systems, the people who remain responsible for them, and the
-      economics underneath both.
+      Developed arguments about capable systems, the people who remain responsible for them, and the
+      economics underneath both. Each essay follows a claim far enough to test it.
     </p>
   </header>
 
@@ -79,7 +79,7 @@ const description =
       <section class="writing-threads" aria-labelledby="threads-title">
         <header>
           <h2 id="threads-title">Research threads</h2>
-          <p>Four questions connect the longer arguments. Each is incomplete by design.</p>
+          <p>Four open questions organize the arguments without resolving them in advance.</p>
         </header>
         <ol>
           {researchThreads.map((thread, index) => (
@@ -105,7 +105,7 @@ const description =
     <header>
       <div>
         <h2 id="archive-title">More essays</h2>
-        <p>Arguments that needed more room than an idea.</p>
+        <p>Claims developed beyond the scale of a notebook entry.</p>
       </div>
       <nav class="writing-topics" aria-label="Writing topics">
         <span>Browse topics</span>

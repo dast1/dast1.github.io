@@ -4,7 +4,7 @@ import { publishedIdeas, publishedWriting } from '../lib/content';
 import { parseDay } from '../lib/dates';
 import { site } from '../site';
 
-export const GET: APIRoute = async (context) => {
+export const GET: APIRoute = async () => {
   const writing = await publishedWriting();
   const ideas = await publishedIdeas();
   const items = [
@@ -27,7 +27,7 @@ export const GET: APIRoute = async (context) => {
   return rss({
     title: site.name,
     description: site.description,
-    site: context.site ?? site.url,
+    site: site.url,
     trailingSlash: true,
     customData: '<language>en-us</language>',
     items,

@@ -3706,5 +3706,109 @@
   "fff6aecaadd856fa": {
     "en": "Coding agents often collapse these stages. They polish something that has not proven useful, or harden an architecture before the important uncertainty is resolved. That can look productive while moving the work in the wrong direction.",
     "t": "Kodlama ajanları sık sık bu aşamaları çöker. Yararlılığı kanıtlanmamış bir şeyi parlatırlar veya önemli belirsizlik çözülmeden önce bir mimarı sertleştirirler. Bu verimli görünebilir ama işi yanlış yöne hareket ettirebilir."
+  },
+  "6baade1647f0f734": {
+    "en": "My work has moved from data and AI platforms at AWS and Databricks to independent systems experiments. I approach the work as both an engineer and an owner: who authorizes an action, who carries the downside, and whether the system can be stopped.",
+    "t": "Çalışmalarım AWS ve Databricks’teki veri ve yapay zekâ platformlarından bağımsız sistem deneylerine yöneldi. Bu çalışmalara hem mühendis hem de sahip gözüyle yaklaşıyorum: bir eyleme kim yetki veriyor, olumsuz sonuçları kim üstleniyor ve sistem durdurulabiliyor mu?"
+  },
+  "8b6bfe0d9dddf336": {
+    "en": "Selected evidence",
+    "t": "Seçilmiş kanıtlar"
+  },
+  "abaafc6402c6e9c0": {
+    "en": "<a href=\"/work/\">See all work</a>",
+    "t": "<a href=\"/work/\">Tüm çalışmaları gör</a>"
+  },
+  "2cf339b65516eb77": {
+    "en": "Current direction",
+    "t": "Güncel yönelim"
+  },
+  "394e5f04c686a8cb": {
+    "en": "I am testing personal AI systems built around durable private context, explicit authority, and work that can move between a person's own machines and shared compute. I publish the parts that hold up.",
+    "t": "Kalıcı özel bağlam, açıkça tanımlanmış yetki ve kişinin kendi makineleriyle paylaşımlı hesaplama kaynakları arasında taşınabilen işler etrafında kurulan kişisel yapay zekâ sistemlerini test ediyorum. Sağlamlığını kanıtlayan kısımları yayımlıyorum."
+  },
+  "1bd3cf9d81472555": {
+    "en": "Developed arguments",
+    "t": "Derinleştirilmiş argümanlar"
+  },
+  "1cd12ce3fd5fb194": {
+    "en": "<a href=\"/writing/\">Read all writing</a>",
+    "t": "<a href=\"/writing/\">Tüm yazıları oku</a>"
+  },
+  "a174d43b6b1c6b17": {
+    "en": "From the notebook",
+    "t": "Not defterinden"
+  },
+  "570313187b818383": {
+    "en": "<a href=\"/ideas/\">Browse all ideas</a>",
+    "t": "<a href=\"/ideas/\">Tüm fikirlere göz at</a>"
+  },
+  "91bcb5504aefc6c1": {
+    "en": "Dark theme",
+    "t": "Koyu tema"
+  },
+  "0c0a937b36f11306": {
+    "en": "Developed arguments about capable systems, the people who remain responsible for them, and the economics underneath both. Each essay follows a claim far enough to test it.",
+    "t": "Yetenekli sistemler, bunlardan sorumlu olmaya devam eden insanlar ve her ikisinin temelindeki ekonomi üzerine geliştirilmiş argümanlar. Her makale, bir iddiayı sınanabileceği kadar ileri götürür."
+  },
+  "b977e935b547dfc9": {
+    "en": "Four open questions organize the arguments without resolving them in advance.",
+    "t": "Dört açık soru, argümanları önceden çözüme bağlamadan düzenliyor."
+  },
+  "4047992e3706e8c9": {
+    "en": "Claims developed beyond the scale of a notebook entry.",
+    "t": "Bir not defteri kaydının ölçeğinin ötesinde geliştirilen iddialar."
+  },
+  "6d3eb3878b2561ef": {
+    "en": "Developed arguments by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.",
+    "t": "Dastan Aitzhanov’un yönetişime tabi yapay zekâ sistemleri, kişisel bilişim, sahiplik ve bunların çevresindeki ekonomi üzerine geliştirdiği argümanlar."
+  },
+  "64de7ff88aa7af82": {
+    "en": "An atomic notebook: one claim at a time, with the reason I hold it and where it might be wrong. The <a href=\"/writing/\">writing</a> develops selected claims into fuller arguments.",
+    "t": "Atomik bir not defteri: her seferinde tek bir iddia, onu savunma nedenim ve nerede yanılıyor olabileceğiyle birlikte. <a href=\"/writing/\">Yazılar</a>, seçilmiş iddiaları daha kapsamlı argümanlara dönüştürür."
+  },
+  "4cce95a4c7b461ed": {
+    "en": "An atomic notebook and searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.",
+    "t": "Dastan Aitzhanov’un ajanlar, yönetişim, sistemler, yerel yapay zekâ, ürün ve ekonomi üzerine fikirlerinden oluşan atomik bir not defteri ve aranabilir saha dizini."
+  },
+  "e143d23a7c970bbd": {
+    "en": "I build AI systems and write about what happens when they are allowed to act. The question that connects the work is simple: who is allowed to decide, and who answers for the result?",
+    "t": "Yapay zekâ sistemleri geliştiriyor ve eyleme geçmelerine izin verildiğinde ne olduğunu yazıyorum. Çalışmaları birbirine bağlayan soru basit: karar verme yetkisi kime ait ve sonucun hesabını kim veriyor?"
+  },
+  "17977edddbca283c": {
+    "en": "Trajectory",
+    "t": "İzlediğim yol"
+  },
+  "6e123ead94280235": {
+    "en": "At AWS and Databricks, I worked on data and AI platforms: getting data somewhere a system could use it, then making that system dependable enough for an ordinary day. The public work I keep here includes industrial machine-learning architectures, human-review loops, and the operating paths around models.",
+    "t": "AWS ve Databricks’te veri ve yapay zekâ platformları üzerinde çalıştım: veriyi bir sistemin kullanabileceği yere taşımak, ardından o sistemi sıradan bir günde güvenilir biçimde çalışacak hâle getirmek. Burada tuttuğum kamuya açık çalışmalar arasında endüstriyel makine öğrenimi mimarileri, insan inceleme döngüleri ve modellerin çevresindeki işletim süreçleri yer alıyor."
+  },
+  "e492a8a33adc7f73": {
+    "en": "I now work independently on systems that place capable models inside explicit boundaries. The experiments range from local AI and structured retrieval to personal systems built around durable private context, observable actions, and authority that can be withdrawn. I publish the methods and results that hold up.",
+    "t": "Şimdi yetenekli modelleri açıkça tanımlanmış sınırlar içine yerleştiren sistemler üzerinde bağımsız olarak çalışıyorum. Deneyler; yerel yapay zekâ ve yapılandırılmış erişimden, kalıcı özel bağlam, gözlemlenebilir eylemler ve geri alınabilir yetki etrafında kurulan kişisel sistemlere kadar uzanıyor. Sağlamlığını kanıtlayan yöntemleri ve sonuçları yayımlıyorum."
+  },
+  "c032a1aea5f8e8f2": {
+    "en": "That technical direction is shaped by ownership. Before technology, I ran my family's commercial real estate business in Kazakhstan; I still serve on its board and have since invested in real estate projects in Texas. I also ran a quantitative fund that now manages only family capital. Those roles made the cost of a decision concrete: analysis can be delegated, but responsibility for the outcome cannot.",
+    "t": "Bu teknik yönü sahiplik anlayışı şekillendiriyor. Teknoloji alanına geçmeden önce ailemin Kazakistan’daki ticari gayrimenkul işini yönettim; hâlâ yönetim kurulunda görev yapıyorum ve o zamandan beri Teksas’taki gayrimenkul projelerine yatırım yaptım. Ayrıca artık yalnızca aile sermayesini yöneten kantitatif bir fon işlettim. Bu roller, bir kararın maliyetini somutlaştırdı: analiz devredilebilir, ancak sonucun sorumluluğu devredilemez."
+  },
+  "f99c2dff0d7f844c": {
+    "en": "Working principles",
+    "t": "Çalışma ilkeleri"
+  },
+  "090f26e229412039": {
+    "en": "Writing and contact",
+    "t": "Yazılar ve iletişim"
+  },
+  "11b88b550af18162": {
+    "en": "<a href=\"/writing/\">Writing</a> holds developed arguments. <a href=\"/ideas/\">Ideas</a> is the atomic notebook: shorter claims, the reasons I hold them, and where they might be wrong. I write when I have something definite enough to defend. I live in Texas.",
+    "t": "<a href=\"/writing/\">Yazılar</a> geliştirilmiş argümanları içerir. <a href=\"/ideas/\">Fikirler</a> ise atomik not defteridir: daha kısa iddialar, bunları savunma nedenlerim ve nerede yanılıyor olabilecekleri. Savunacak kadar belirgin bir düşüncem olduğunda yazıyorum. Teksas’ta yaşıyorum."
+  },
+  "6c44810b34f422f0": {
+    "en": "Email is the way to reach me: <a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>. Code I have published lives on <a href=\"https://github.com/dast1\" rel=\"me\">GitHub</a>, and selected public work is collected on the <a href=\"/work/\">Work page</a>.",
+    "t": "Bana ulaşmanın yolu e-postadır: <a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>. Yayımladığım kodlar <a href=\"https://github.com/dast1\" rel=\"me\">GitHub</a> üzerinde bulunur; seçilmiş kamuya açık çalışmalar ise <a href=\"/work/\">Çalışmalar sayfasında</a> derlenmiştir."
+  },
+  "b19ef4d770063dd9": {
+    "en": "Dastan Aitzhanov on a path from cloud data and AI platforms to independent systems work, ownership, and governance.",
+    "t": "Dastan Aitzhanov’un bulut veri ve yapay zekâ platformlarından bağımsız sistem çalışmalarına, sahipliğe ve yönetişime uzanan yolu."
   }
 }

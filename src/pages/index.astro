@@ -11,33 +11,11 @@ import { site } from '../site';
 const writing = (await publishedWriting())
   .filter((entry) => entry.data.featured)
   .slice(0, 3);
-const ideas = (await publishedIdeas()).slice(0, 4);
+const ideas = (await publishedIdeas()).slice(0, 3);
 const work = (await publishedProjects())
   .filter((entry) => entry.data.featured)
   .sort((a, b) => b.data.date.localeCompare(a.data.date))
-  .slice(0, 4);
-const researchThreads = [
-  {
-    href: '/writing/#delegated-authority',
-    title: 'Delegated authority',
-    question: 'What changes when an AI system moves from producing information to taking action?',
-  },
-  {
-    href: '/writing/#personal-ai',
-    title: 'Personal AI',
-    question: 'What should remain near the person when AI becomes part of ordinary computing?',
-  },
-  {
-    href: '/writing/#distributed-governance',
-    title: 'Distributed governance',
-    question: 'Where does policy attach when computation crosses independently owned machines?',
-  },
-  {
-    href: '/writing/#ownership-incentives',
-    title: 'Ownership and incentives',
-    question: 'Who decides, who carries the risk, and who remains responsible?',
-  },
-];
+  .slice(0, 3);
 ---
 
 <Base title={site.title} description={site.description} jsonLd={siteJsonLd()}>
@@ -48,33 +26,14 @@ const researchThreads = [
         I build AI systems and write about the governance questions that appear when they begin to act.
       </p>
       <p class="home-background">
-        I think about AI the way an owner does, not only the way an engineer does: who authorized
-        it, who pays, who owns the result, who bears the downside, and whether it can be stopped.
-      </p>
-      <p class="home-now">
-        <span class="home-now-label">Currently</span>
-        Building and testing a personal AI system around durable private context, actions that stay
-        inside explicit authority, and work that can move between a person's own machines and
-        shared compute. I publish the parts that hold up.
+        My work has moved from data and AI platforms at AWS and Databricks to independent systems
+        experiments. I approach the work as both an engineer and an owner: who authorizes an
+        action, who carries the downside, and whether the system can be stopped.
       </p>
     </div>
   </header>
 
-  <section class="home-inquiry" aria-labelledby="inquiry-title">
-    <h2 id="inquiry-title">Current inquiry</h2>
-    <p>
-      As AI systems move from answering questions to exercising delegated authority, how should that
-      authority be granted, bounded, verified, and revoked?
-    </p>
-    <div class="home-inquiry-note">
-      <p>
-        The recurring question is no longer only what a model can produce. It is what the
-        surrounding system should permit it to see, decide, and do.
-      </p>
-    </div>
-  </section>
-
-  <h2 class="section-label" id="work">Selected work</h2>
+  <h2 class="section-label" id="work">Selected evidence</h2>
   <EntryList
     items={work.map((entry) => ({
       href: `/work/${entry.id}/`,
@@ -85,24 +44,24 @@ const researchThreads = [
       eyebrow: `${workKindLabel(entry.data.kind)} · ${entry.data.role}`,
     }))}
   />
-  <p class="more"><a href="/work/">All selected work</a></p>
+  <p class="more"><a href="/work/">See all work</a></p>
 
-  <section class="home-threads" aria-labelledby="threads-title">
-    <header>
-      <h2 id="threads-title">Research threads</h2>
-      <p>Four questions connect the experiments, essays, and shorter notes.</p>
-    </header>
-    <ol>
-      {researchThreads.map((thread) => (
-        <li>
-          <h3><a href={thread.href}>{thread.title}</a></h3>
-          <p>{thread.question}</p>
-        </li>
-      ))}
-    </ol>
+  <section class="home-inquiry" aria-labelledby="inquiry-title">
+    <h2 id="inquiry-title">Current direction</h2>
+    <p>
+      As AI systems move from answering questions to exercising delegated authority, how should that
+      authority be granted, bounded, verified, and revoked?
+    </p>
+    <div class="home-inquiry-note">
+      <p>
+        I am testing personal AI systems built around durable private context, explicit authority,
+        and work that can move between a person's own machines and shared compute. I publish the
+        parts that hold up.
+      </p>
+    </div>
   </section>
 
-  <h2 class="section-label" id="writing">Recent writing</h2>
+  <h2 class="section-label" id="writing">Developed arguments</h2>
   <EntryList
     items={writing.map((entry) => ({
       href: `/writing/${entry.id}/`,
@@ -113,9 +72,9 @@ const researchThreads = [
       tags: entry.data.tags.map((label) => ({ label, href: tagPath(label) })),
     }))}
   />
-  <p class="more"><a href="/writing/">All writing</a></p>
+  <p class="more"><a href="/writing/">Read all writing</a></p>
 
-  <h2 class="section-label" id="ideas">Recent ideas</h2>
+  <h2 class="section-label" id="ideas">From the notebook</h2>
   <EntryList
     items={ideas.map((entry) => ({
       href: `/ideas/${entry.id}/`,
@@ -126,7 +85,7 @@ const researchThreads = [
       tags: entry.data.tags.map((label) => ({ label, href: ideaTagPath(label) })),
     }))}
   />
-  <p class="more"><a href="/ideas/">All ideas</a></p>
+  <p class="more"><a href="/ideas/">Browse all ideas</a></p>
 
   <section class="home-contact" aria-labelledby="contact-title">
     <h2 class="section-label" id="contact-title">Get in touch</h2>

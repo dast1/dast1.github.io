@@ -1,6 +1,7 @@
 import { access, readFile, readdir } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
 
 const root = join(fileURLToPath(new URL('..', import.meta.url)));
 const dist = join(root, 'dist');
@@ -58,6 +59,7 @@ const required = [
   'robots.txt',
   'llms.txt',
   'sitemap-index.xml',
+  'CNAME',
   'og.png',
   'favicon.svg',
   'favicon-32.png',
@@ -101,6 +103,15 @@ const forbidden = [
 const files = await walk(dist);
 const htmlFiles = files.filter((file) => file.endsWith('.html'));
 const siteOrigin = 'https://dastan.aitzhanov.com';
+const legacyOrigin = 'https://dast1.github.io';
+
+const cname = (await readFile(join(dist, 'CNAME'), 'utf8')).trim();
+if (cname !== new URL(siteOrigin).hostname) fail(`CNAME points to ${cname || '(empty)'}`);
+
+const ogMetadata = await sharp(join(dist, 'og.png')).metadata();
+if (ogMetadata.width !== 1200 || ogMetadata.height !== 630) {
+  fail(`og.png is ${ogMetadata.width ?? '?'}x${ogMetadata.height ?? '?'} instead of 1200x630`);
+}
 
 function resolveInternal(href) {
   const clean = href.split('#')[0]?.split('?')[0] ?? '';
@@ -138,8 +149,19 @@ for (const file of htmlFiles) {
   if (!html.includes('property="og:title"')) fail(`${label} missing og:title`);
   if (!html.includes('property="og:image"')) fail(`${label} missing og:image`);
   if (!html.includes('name="twitter:card"')) fail(`${label} missing twitter card`);
-  if (!html.includes(`property="og:image" content="${siteOrigin}/`)) {
-    fail(`${label} og image is not absolute`);
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)"/i)?.[1];
+  const ogUrl = html.match(/<meta property="og:url" content="([^"]+)"/i)?.[1];
+  const ogImage = html.match(/<meta property="og:image" content="([^"]+)"/i)?.[1];
+  const twitterImage = html.match(/<meta name="twitter:image" content="([^"]+)"/i)?.[1];
+  const rssHref = html.match(/<link rel="alternate" type="application\/rss\+xml"[^>]*href="([^"]+)"/i)?.[1];
+  if (!canonical?.startsWith(`${siteOrigin}/`)) fail(`${label} canonical is not on the custom domain`);
+  if (ogUrl !== canonical) fail(`${label} og:url does not match its canonical`);
+  if (!ogImage?.startsWith(`${siteOrigin}/`)) fail(`${label} og:image is not on the custom domain`);
+  if (twitterImage !== ogImage) fail(`${label} twitter:image does not match og:image`);
+  if (rssHref !== `${siteOrigin}/rss.xml`) fail(`${label} RSS discovery URL is not canonical`);
+  if (html.includes(legacyOrigin)) fail(`${label} contains the legacy GitHub Pages origin`);
+  for (const match of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/gi)) {
+    if (!(match[1] ?? '').includes(siteOrigin)) fail(`${label} JSON-LD is not on the custom domain`);
   }
   if (label === '404.html') {
     if (!html.includes('noindex')) fail('404 is indexable');
@@ -160,7 +182,7 @@ for (const file of htmlFiles) {
 }
 
 const home = await readFile(join(dist, 'index.html'), 'utf8');
-for (const phrase of ['Texas', 'the way an owner does', 'Currently']) {
+for (const phrase of ['Texas', 'as both an engineer and an owner', 'Current direction']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
 if (!home.includes('Dastan Aitzhanov | AI Systems, Authority, and Ownership')) {
@@ -169,7 +191,7 @@ if (!home.includes('Dastan Aitzhanov | AI Systems, Authority, and Ownership')) {
 if (!home.includes('how should that authority be granted, bounded, verified, and revoked?')) {
   fail('home is missing the lead question');
 }
-for (const phrase of ['Selected work', 'Research threads', 'Delegated authority']) {
+for (const phrase of ['Selected evidence', 'Developed arguments', 'From the notebook']) {
   if (!home.includes(phrase)) fail(`home is missing ${phrase}`);
 }
 
@@ -218,9 +240,47 @@ if (!codeEssay.includes('astro-code')) fail('code sample is not syntax highlight
 const about = await readFile(join(dist, 'about/index.html'), 'utf8');
 if (!about.includes('dastan.aitzhanov@gmail.com')) fail('about page is missing the email');
 
+const localizedPages = {
+  ru: {
+    'index.html': ['Избранные результаты', 'Текущее направление', 'Развёрнутые аргументы', 'Из записной книжки'],
+    'writing/index.html': ['Четыре открытых вопроса', 'Тезисы, которым стало тесно'],
+    'ideas/index.html': ['Атомарный блокнот'],
+    'about/index.html': ['Путь', 'Рабочие принципы', 'Тексты и контакты'],
+  },
+  tr: {
+    'index.html': ['Seçilmiş kanıtlar', 'Güncel yönelim', 'Derinleştirilmiş argümanlar', 'Not defterinden'],
+    'writing/index.html': ['Dört açık soru', 'Bir not defteri kaydının ölçeğinin ötesinde'],
+    'ideas/index.html': ['Atomik bir not defteri'],
+    'about/index.html': ['İzlediğim yol', 'Çalışma ilkeleri', 'Yazılar ve iletişim'],
+  },
+};
+const staleEnglish = [
+  'Selected evidence',
+  'Current direction',
+  'Developed arguments',
+  'From the notebook',
+  'Trajectory',
+  'Working principles',
+  'Writing and contact',
+  'An atomic notebook:',
+];
+for (const [lang, pages] of Object.entries(localizedPages)) {
+  for (const [path, expected] of Object.entries(pages)) {
+    const html = await readFile(join(dist, lang, path), 'utf8');
+    for (const phrase of expected) {
+      if (!html.includes(phrase)) fail(`${lang}/${path} is missing ${phrase}`);
+    }
+    for (const phrase of staleEnglish) {
+      if (html.includes(phrase)) fail(`${lang}/${path} still contains English copy: ${phrase}`);
+    }
+  }
+}
+
 const rss = await readFile(join(dist, 'rss.xml'), 'utf8');
 if (!rss.includes('<item>')) fail('rss has no items');
 if (!rss.includes('/writing/context-is-the-product/')) fail('rss missing an essay');
+if (!rss.includes(`<link>${siteOrigin}/`)) fail('rss does not use the custom domain');
+if (rss.includes(legacyOrigin)) fail('rss contains the legacy GitHub Pages origin');
 for (const slug of [
   'unpublished-note',
   'can-distributed-ai-still-be-governed',
@@ -232,6 +292,13 @@ const robots = await readFile(join(dist, 'robots.txt'), 'utf8');
 if (!robots.includes(`Sitemap: ${siteOrigin}/sitemap-index.xml`)) {
   fail('robots.txt missing sitemap');
 }
+if (robots.includes(legacyOrigin)) fail('robots.txt contains the legacy GitHub Pages origin');
+
+const llms = await readFile(join(dist, 'llms.txt'), 'utf8');
+for (const path of ['/about/', '/writing/', '/ideas/', '/work/']) {
+  if (!llms.includes(`${siteOrigin}${path}`)) fail(`llms.txt missing canonical ${path} links`);
+}
+if (llms.includes(legacyOrigin)) fail('llms.txt contains the legacy GitHub Pages origin');
 
 const sitemap = await readFile(join(dist, 'sitemap-index.xml'), 'utf8');
 if (!sitemap.includes('sitemap')) fail('sitemap index looks empty');
@@ -250,6 +317,7 @@ for (const slug of [
 }
 if (sitemapText.includes('/projects/')) fail('sitemap includes legacy projects routes');
 if (sitemapText.includes('/404')) fail('sitemap includes the 404');
+if (sitemapText.includes(legacyOrigin)) fail('sitemap contains the legacy GitHub Pages origin');
 
 // 403 and 429 mean the host refused an automated request, not that the link is dead.
 // Report them, but do not block a deploy on another site's bot policy.
