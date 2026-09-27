@@ -91,6 +91,10 @@
     "en": "<a href=\"/\" aria-current=\"page\">Home</a>",
     "t": "<a href=\"/\" aria-current=\"page\">Главная</a>"
   },
+  "053665be29d05c2e": {
+    "en": "Current direction",
+    "t": "Текущее направление"
+  },
   "0549241bf2db3996": {
     "en": "<span data-month-visible>5</span> <span data-month-noun>ideas</span>",
     "t": "<span data-month-visible>5</span> <span data-month-noun>идей</span>"
@@ -139,6 +143,10 @@
     "en": "<strong>Enumerated actions.</strong> The system can produce a finite list of the side effects it is able to cause. If the list cannot be written down, the system is not ready to be trusted with a repeated action.",
     "t": "<strong>Перечисленные действия.</strong> Система может создать конечный список побочных эффектов, которые она способна вызвать. Если список не может быть записан, система не готова к доверению с повторяющимся действием."
   },
+  "08963f9c9b4593f0": {
+    "en": "Language: English",
+    "t": "Язык: английский"
+  },
   "08c0efb5fc9349a3": {
     "en": "A rule that triggers on training compute does not see any of this. It sees the model. It does not see the deployment, the tools attached to it, the identity it acts under, or the effects it can produce. Those are the things that determine whether a person is harmed.",
     "t": "Правило, которое срабатывает на обучающих вычислениях, не видит ничего из этого. Оно видит модель. Оно не видит развёртывание, подключённые инструменты, личность, под которой она действует, или эффекты, которые она может произвести. Это то, что определяет, будет ли человек причинён вред."
@@ -162,6 +170,10 @@
   "09c71b8af8257105": {
     "en": "Longer arguments about capable systems, the people who remain responsible for them, and the economics underneath both.",
     "t": "Развёрнутые размышления о способных системах, людях, которые остаются за них ответственны, и экономике, лежащей в основе обоих."
+  },
+  "09ebeb0d37eb19e7": {
+    "en": "Developed arguments by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.",
+    "t": "Развёрнутые аргументы Дастана Айтжанова об управляемых системах ИИ, персональных вычислениях, собственности и лежащей в их основе экономике."
   },
   "0a1ebc7b9bb6b4c1": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/whoever-assembles-the-tools-owns-the-boundary/\">Whoever assembles the tools owns the boundary</a>",
@@ -259,6 +271,10 @@
     "en": "Leasing can be part of product design",
     "t": "Лизинг может быть частью дизайна продукта"
   },
+  "0eb04e8aed15e757": {
+    "en": "An atomic notebook and searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.",
+    "t": "Атомарный блокнот и поисковый указатель идей Дастана Айтжанова об агентах, управлении, системах, локальном ИИ, продуктах и экономике."
+  },
   "0ec9d254094a9c9d": {
     "en": "Failure should reduce capability, not destroy the system",
     "t": "Отказ должен снижать возможности, а не уничтожать систему"
@@ -278,6 +294,10 @@
   "106d505ddefa35e3": {
     "en": "Capacity is not consent | Dastan Aitzhanov",
     "t": "Возможность — это не согласие | Dastan Aitzhanov"
+  },
+  "107e3adc739976dd": {
+    "en": "Selected evidence",
+    "t": "Избранные результаты"
   },
   "113c1ac1e53a4445": {
     "en": "Generating more comparisons and recommendations does not create ownership of the decision or the judgment to make it well.",
@@ -326,6 +346,10 @@
   "139bd97f719182fa": {
     "en": "A selected record of systems I tested and technical work I co-authored. Not a catalogue of every role or repository.",
     "t": "Избранная подборка систем, которые я тестировал, и технических работ, которые я соавторствовал. Не каталог всех ролей или репозиториев."
+  },
+  "13d02318c838a727": {
+    "en": "Dark theme",
+    "t": "Тёмная тема"
   },
   "13d967c901c34a86": {
     "en": "Safety should come from clear gates around consequential changes, not from making every small change wait for everything else.",
@@ -631,6 +655,10 @@
     "en": "<a href=\"/work/industrial-predictive-maintenance-review/\">Human review for industrial predictive maintenance</a>",
     "t": "<a href=\"/work/industrial-predictive-maintenance-review/\">Человеческая проверка для прогностического обслуживания промышленного оборудования</a>"
   },
+  "2ab37d836370474b": {
+    "en": "From the notebook",
+    "t": "Из записной книжки"
+  },
   "2b16fae0affc382a": {
     "en": "Architecture earns its place when customers can feel the privacy, speed, resilience, control, or lower cost it creates.",
     "t": "Архитектура оправдывает своё существование, когда клиенты ощущают приватность, скорость, устойчивость, контроль или низкие затраты, которые она создаёт."
@@ -655,6 +683,10 @@
     "en": "<a href=\"/ideas/a-goal-is-more-useful-than-a-persona/\">A goal is more useful than a persona</a>",
     "t": "<a href=\"/ideas/a-goal-is-more-useful-than-a-persona/\">Цель полезнее, чем персона</a>"
   },
+  "2d30bacc85686e59": {
+    "en": "<a href=\"/ideas/\">Browse all ideas</a>",
+    "t": "<a href=\"/ideas/\">Просмотреть все идеи</a>"
+  },
   "2d68edee481e4ffa": {
     "en": "<strong>What it gets to decide.</strong> Decision architecture. Classify an intent, choose a workflow, pick a model, rank, approve, escalate. Those are narrow choices with a constrained output. Putting them in the same generation that holds the documents makes the model the author of a choice the system should have owned. Seeing the file is not the same job as choosing the action.",
     "t": "<strong>Что она может решать.</strong> Архитектура решений. Классифицировать намерение, выбрать рабочий процесс, выбрать модель, ранжировать, одобрить, эскалировать. Это узкие выборы с ограниченным выходом. Поместить их в то же поколение, которое содержит документы, значит сделать модель автором выбора, который система должна была принять на себя. Видеть файл — не то же самое, что выбирать действие."
@@ -674,6 +706,10 @@
   "2e4880e6d69d9217": {
     "en": "Do not rediscover a workflow you already have",
     "t": "Не переоткрывайте рабочий процесс, который у вас уже есть"
+  },
+  "2eb736e51ffd7fe4": {
+    "en": "<a href=\"/writing/\">Read all writing</a>",
+    "t": "<a href=\"/writing/\">Все эссе</a>"
   },
   "2ee5019eb7772047": {
     "en": "So the interesting claim is not that nobody has tried to coordinate computers they do not own. That would be wrong.",
@@ -755,6 +791,10 @@
     "en": "A role and a manner of speaking make a demo. A job has inputs, a definition of done, and a person who owns the outcome.",
     "t": "Роль и манера речи создают демонстрацию. Работа имеет входные данные, определение завершённости и человека, несущего ответственность за результат."
   },
+  "344480ce5669f8cf": {
+    "en": "My work has moved from data and AI platforms at AWS and Databricks to independent systems experiments. I approach the work as both an engineer and an owner: who authorizes an action, who carries the downside, and whether the system can be stopped.",
+    "t": "Моя работа прошла путь от платформ данных и ИИ в AWS и Databricks до независимых экспериментов с системами. Я подхожу к ней одновременно как инженер и как владелец: кто санкционирует действие, кто несёт возможные потери и можно ли остановить систему."
+  },
   "3479ee52f881c371": {
     "en": "<time datetime=\"2026-09-26\">September 26, 2026</time><span aria-hidden=\"true\"> · </span><span>9 min read</span>",
     "t": "<time datetime=\"2026-09-26\">26 сентября 2026</time><span aria-hidden=\"true\"> · </span><span>9 мин чтения</span>"
@@ -806,6 +846,10 @@
   "36dcf7d98ac06b40": {
     "en": "<a href=\"/writing/\">All writing</a>",
     "t": "<a href=\"/writing/\">Все записи</a>"
+  },
+  "3715cb9c85a737f5": {
+    "en": "Claims developed beyond the scale of a notebook entry.",
+    "t": "Тезисы, которым стало тесно в формате одной заметки."
   },
   "3764e0fe05c0c704": {
     "en": "<a href=\"/ideas/autonomy-should-scale-with-reversibility/\">Autonomy should scale with reversibility</a>",
@@ -1443,6 +1487,10 @@
     "en": "<svg class=\"lang-menu-globe\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"14\" height=\"14\"><circle cx=\"8\" cy=\"8\" r=\"6.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"></circle><path d=\"M1.6 8h12.8M8 1.6c2.2 2.1 2.2 10.7 0 12.8M8 1.6c-2.2 2.1-2.2 10.7 0 12.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"></path></svg><span data-lang-current>English</span><svg class=\"lang-menu-chevron\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"12\" height=\"12\"><path d=\"M4 6l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"></path></svg>",
     "t": "<svg class=\"lang-menu-globe\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"14\" height=\"14\"><circle cx=\"8\" cy=\"8\" r=\"6.4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"></circle><path d=\"M1.6 8h12.8M8 1.6c2.2 2.1 2.2 10.7 0 12.8M8 1.6c-2.2 2.1-2.2 10.7 0 12.8\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.2\"></path></svg><span data-lang-current>Русский</span><svg class=\"lang-menu-chevron\" aria-hidden=\"true\" viewBox=\"0 0 16 16\" width=\"12\" height=\"12\"><path d=\"M4 6l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\"></path></svg>"
   },
+  "6742966d1872c2cd": {
+    "en": "<a href=\"/work/\">See all work</a>",
+    "t": "<a href=\"/work/\">Все работы</a>"
+  },
   "6764cca21685778e": {
     "en": "<a href=\"/writing/probabilistic-intelligence-deterministic-control/\">Probabilistic Intelligence, Deterministic Control</a>",
     "t": "<a href=\"/writing/probabilistic-intelligence-deterministic-control/\">Вероятностный интеллект, детерминированное управление</a>"
@@ -1822,6 +1870,10 @@
   "831e86d70fb0645b": {
     "en": "The interface may change, but the user's context, authority, tools, and work should remain coherent behind it.",
     "t": "Интерфейс может измениться, но контекст пользователя, его полномочия, инструменты и работа должны оставаться согласованными позади него."
+  },
+  "838a3542e2861ac4": {
+    "en": "Developed arguments",
+    "t": "Развёрнутые аргументы"
   },
   "84313a93dd8bba1b": {
     "en": "<time datetime=\"2026-09-25\">First developed August 2026</time>",
@@ -2319,6 +2371,10 @@
     "en": "Routing is a product decision",
     "t": "Маршрутизация — это решение о продукте"
   },
+  "a9e4c2a277524f89": {
+    "en": "An atomic notebook: one claim at a time, with the reason I hold it and where it might be wrong. The <a href=\"/writing/\">writing</a> develops selected claims into fuller arguments.",
+    "t": "Атомарный блокнот: по одному тезису за раз, с основаниями для него и указанием на то, где он может оказаться неверным. Раздел <a href=\"/writing/\">Writing</a> развивает отдельные тезисы в более полные аргументы."
+  },
   "aa2830435a31812c": {
     "en": "<a href=\"/ideas/token-efficiency-is-an-architectural-concern/\">Token efficiency is an architectural concern</a>",
     "t": "<a href=\"/ideas/token-efficiency-is-an-architectural-concern/\">Эффективность токенов — это архитектурная задача</a>"
@@ -2626,6 +2682,10 @@
   "ba5d18cde8d036f7": {
     "en": "The local-AI conversation tends to focus on the largest model a machine can load. That is interesting, but it is not the question most people will experience.",
     "t": "Обсуждение локального AI обычно сосредоточено на самой крупной модели, которую машина может загрузить. Это интересно, но это не вопрос, с которым столкнётся большинство людей."
+  },
+  "bc7b7eb8e10296ad": {
+    "en": "I am testing personal AI systems built around durable private context, explicit authority, and work that can move between a person's own machines and shared compute. I publish the parts that hold up.",
+    "t": "Я испытываю персональные системы ИИ, построенные вокруг устойчивого приватного контекста, явно заданных полномочий и работы, которую можно переносить между собственными машинами человека и общими вычислительными ресурсами. Я публикую то, что выдерживает проверку."
   },
   "bcd32e1093d69e11": {
     "en": "These months indicate approximately when an idea first appeared in my notes, work, or public writing, not necessarily when it first appeared on this site.",
@@ -3047,6 +3107,10 @@
     "en": "<time datetime=\"2026-09-08\">September 8, 2026</time><span aria-hidden=\"true\">·</span><span>2 min read</span>",
     "t": "<time datetime=\"2026-09-08\">8 сентября 2026</time><span aria-hidden=\"true\">·</span><span>2 мин чтения</span>"
   },
+  "daf8b80207df6772": {
+    "en": "Developed arguments about capable systems, the people who remain responsible for them, and the economics underneath both. Each essay follows a claim far enough to test it.",
+    "t": "Развёрнутые аргументы о системах с широкими возможностями, о людях, которые по-прежнему за них отвечают, и об экономике, лежащей в основе и тех и других. Каждое эссе развивает тезис настолько, чтобы его можно было проверить."
+  },
   "daf8f321c26911c2": {
     "en": "If the action is low-risk, reversible, and contained, I want the system to move quickly. Reading a file, organizing information, trying a local change, or preparing a draft should not require the same process as sending a message, spending money, exposing private information, or changing something another person depends on.",
     "t": "Если действие низкорисковое, обратимое и изолированное, я хочу, чтобы система действовала быстро. Чтение файла, организация информации, попытка локального изменения или подготовка черновика не должны требовать того же процесса, что отправка сообщения, трата денег, раскрытие приватной информации или изменение чего-то, на что опирается другой человек."
@@ -3427,6 +3491,10 @@
     "en": "A model developer can say what a model was trained to do. Only the party that connected the tools and set the permissions can say what the system is allowed to do.",
     "t": "Разработчик модели может сказать, для чего была обучена модель. Только сторона, которая подключила инструменты и установила разрешения, может сказать, что система имеет право делать."
   },
+  "f48f086da352abeb": {
+    "en": "Four open questions organize the arguments without resolving them in advance.",
+    "t": "Четыре открытых вопроса задают структуру аргументов, не предрешая ответов."
+  },
   "f4adbe8b82f43dfc": {
     "en": "Back to reference 7",
     "t": "Возврат к примечанию 7"
@@ -3618,69 +3686,5 @@
   "ffd134a7bfd3ca66": {
     "en": "<strong>The parties can leave.</strong> A system is not meaningfully voluntary if exit is technically possible but economically or operationally punitive in ways nobody explained at entry.",
     "t": "<strong>Стороны могут уйти.</strong> Система не является действительно добровольной, если выход технически возможен, но экономически или операционно карателен способами, которые никто не объяснил при входе."
-  },
-  "344480ce5669f8cf": {
-    "en": "My work has moved from data and AI platforms at AWS and Databricks to independent systems experiments. I approach the work as both an engineer and an owner: who authorizes an action, who carries the downside, and whether the system can be stopped.",
-    "t": "Моя работа прошла путь от платформ данных и ИИ в AWS и Databricks до независимых экспериментов с системами. Я подхожу к ней одновременно как инженер и как владелец: кто санкционирует действие, кто несёт возможные потери и можно ли остановить систему."
-  },
-  "107e3adc739976dd": {
-    "en": "Selected evidence",
-    "t": "Избранные результаты"
-  },
-  "6742966d1872c2cd": {
-    "en": "<a href=\"/work/\">See all work</a>",
-    "t": "<a href=\"/work/\">Все работы</a>"
-  },
-  "053665be29d05c2e": {
-    "en": "Current direction",
-    "t": "Текущее направление"
-  },
-  "bc7b7eb8e10296ad": {
-    "en": "I am testing personal AI systems built around durable private context, explicit authority, and work that can move between a person's own machines and shared compute. I publish the parts that hold up.",
-    "t": "Я испытываю персональные системы ИИ, построенные вокруг устойчивого приватного контекста, явно заданных полномочий и работы, которую можно переносить между собственными машинами человека и общими вычислительными ресурсами. Я публикую то, что выдерживает проверку."
-  },
-  "838a3542e2861ac4": {
-    "en": "Developed arguments",
-    "t": "Развёрнутые аргументы"
-  },
-  "2eb736e51ffd7fe4": {
-    "en": "<a href=\"/writing/\">Read all writing</a>",
-    "t": "<a href=\"/writing/\">Все эссе</a>"
-  },
-  "2ab37d836370474b": {
-    "en": "From the notebook",
-    "t": "Из записной книжки"
-  },
-  "2d30bacc85686e59": {
-    "en": "<a href=\"/ideas/\">Browse all ideas</a>",
-    "t": "<a href=\"/ideas/\">Просмотреть все идеи</a>"
-  },
-  "13d02318c838a727": {
-    "en": "Dark theme",
-    "t": "Тёмная тема"
-  },
-  "daf8b80207df6772": {
-    "en": "Developed arguments about capable systems, the people who remain responsible for them, and the economics underneath both. Each essay follows a claim far enough to test it.",
-    "t": "Развёрнутые аргументы о системах с широкими возможностями, о людях, которые по-прежнему за них отвечают, и об экономике, лежащей в основе и тех и других. Каждое эссе развивает тезис настолько, чтобы его можно было проверить."
-  },
-  "f48f086da352abeb": {
-    "en": "Four open questions organize the arguments without resolving them in advance.",
-    "t": "Четыре открытых вопроса задают структуру аргументов, не предрешая ответов."
-  },
-  "3715cb9c85a737f5": {
-    "en": "Claims developed beyond the scale of a notebook entry.",
-    "t": "Тезисы, которым стало тесно в формате одной заметки."
-  },
-  "09ebeb0d37eb19e7": {
-    "en": "Developed arguments by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.",
-    "t": "Развёрнутые аргументы Дастана Айтжанова об управляемых системах ИИ, персональных вычислениях, собственности и лежащей в их основе экономике."
-  },
-  "a9e4c2a277524f89": {
-    "en": "An atomic notebook: one claim at a time, with the reason I hold it and where it might be wrong. The <a href=\"/writing/\">writing</a> develops selected claims into fuller arguments.",
-    "t": "Атомарный блокнот: по одному тезису за раз, с основаниями для него и указанием на то, где он может оказаться неверным. Раздел <a href=\"/writing/\">Writing</a> развивает отдельные тезисы в более полные аргументы."
-  },
-  "0eb04e8aed15e757": {
-    "en": "An atomic notebook and searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.",
-    "t": "Атомарный блокнот и поисковый указатель идей Дастана Айтжанова об агентах, управлении, системах, локальном ИИ, продуктах и экономике."
   }
 }

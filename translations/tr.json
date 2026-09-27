@@ -99,6 +99,10 @@
     "en": "The practical version does not need to be complicated. Tell me what you believe, what you are assuming, which assumption is doing the most work, and what evidence we should collect next.",
     "t": "Pratik versiyonunun karışık olması gerekmez. Neye inandığını, ne varsaydığını, hangi varsayımın en çok iş yaptığını ve sonra hangi kanıtları toplaması gerektiğini söyle."
   },
+  "06062f74df71016e": {
+    "en": "Language: English",
+    "t": "Dil: İngilizce"
+  },
   "0626db1a0efeaf69": {
     "en": "I do not have a census of production agents. What I have is a pattern, repeated often enough that I trust it as an observation and not yet as a statistic: the harness reaches for the largest generative model because that model can approximate every other component. Approximation is doing the work of design.<sup><a href=\"#user-content-fn-1\" id=\"user-content-fnref-1\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">1</a></sup>",
     "t": "Üretim ajanlarının sayımı yok. Sahip olduğum şey bir desendir, yeterince sık tekrarlanan bir desen ki bunu bir gözlem olarak güveniyorum, henüz istatistik olarak değil: sistem en büyük generatif modeli seçer çünkü o model diğer her bileşeni yaklaştırabiliyor. Yaklaştırma tasarımın işini yapıyor.<sup><a href=\"#user-content-fn-1\" id=\"user-content-fnref-1\" data-footnote-ref=\"true\" aria-describedby=\"footnote-label\">1</a></sup>"
@@ -130,6 +134,10 @@
   "08d8b01d919459f7": {
     "en": "I compared four combinations: smaller and larger language models, each with and without a knowledge graph. The evaluation covered multi-hop questions, entity disambiguation, set operations, document scope, grounding, cost, and latency.",
     "t": "Dört kombinasyonu karşılaştırdım: daha küçük ve daha büyük dil modelleri, her biri bilgi grafiği ile ve olmadan. Değerlendirme, çok adımlı soruları, varlık anlamsallaştırmasını, küme işlemlerini, belge kapsamını, tutarlılığı, maliyeti ve gecikmeyi kapsadı."
+  },
+  "090f26e229412039": {
+    "en": "Writing and contact",
+    "t": "Yazılar ve iletişim"
   },
   "0989108ca43ed245": {
     "en": "<span>Economics</span><span class=\"idea-filter-count\">8</span>",
@@ -170,6 +178,10 @@
   "0bb68dbd35024836": {
     "en": "The purpose of the first answer is not always to close the decision. Sometimes it is to make the next piece of evidence obvious.",
     "t": "İlk cevabın amacı her zaman kararı kapatmak değildir. Bazen bir sonraki kanıtı belirgin hale getirmektir."
+  },
+  "0c0a937b36f11306": {
+    "en": "Developed arguments about capable systems, the people who remain responsible for them, and the economics underneath both. Each essay follows a claim far enough to test it.",
+    "t": "Yetenekli sistemler, bunlardan sorumlu olmaya devam eden insanlar ve her ikisinin temelindeki ekonomi üzerine geliştirilmiş argümanlar. Her makale, bir iddiayı sınanabileceği kadar ileri götürür."
   },
   "0c369df20671e187": {
     "en": "AI will make analysis abundant before it makes judgment abundant | Dastan Aitzhanov",
@@ -267,6 +279,10 @@
     "en": "I do not know the right answer yet. I am fairly sure that one token should not be assumed to mean one unit of economic value.",
     "t": "Henüz doğru cevabı bilmiyorum. Bir tokenın bir ekonomik değer birimi anlamına geldiği varsayılmaması gerektiğinden oldukça eminim."
   },
+  "11b88b550af18162": {
+    "en": "<a href=\"/writing/\">Writing</a> holds developed arguments. <a href=\"/ideas/\">Ideas</a> is the atomic notebook: shorter claims, the reasons I hold them, and where they might be wrong. I write when I have something definite enough to defend. I live in Texas.",
+    "t": "<a href=\"/writing/\">Yazılar</a> geliştirilmiş argümanları içerir. <a href=\"/ideas/\">Fikirler</a> ise atomik not defteridir: daha kısa iddialar, bunları savunma nedenlerim ve nerede yanılıyor olabilecekleri. Savunacak kadar belirgin bir düşüncem olduğunda yazıyorum. Teksas’ta yaşıyorum."
+  },
   "11c3334896585112": {
     "en": "<span data-idea-visible>44</span> <span data-idea-noun>ideas</span>",
     "t": "<span data-idea-visible>44</span> <span data-idea-noun>fikir</span>"
@@ -359,6 +375,10 @@
     "en": "March 5, 2026",
     "t": "5 Mart 2026"
   },
+  "17977edddbca283c": {
+    "en": "Trajectory",
+    "t": "İzlediğim yol"
+  },
   "17c5834d18be5de3": {
     "en": "Software should mature through four stages | Dastan Aitzhanov",
     "t": "Yazılım dört aşamadan geçerek olgunlaşmalıdır | Dastan Aitzhanov"
@@ -415,6 +435,10 @@
     "en": "The boundary between open and proprietary should follow where independent inspection matters, not a general philosophy about software.",
     "t": "Açık ve özlemeci arasındaki sınır, yazılım hakkında genel bir felsefeden değil, bağımsız incelemenin önemli olduğu yerde olmalıdır."
   },
+  "1bd3cf9d81472555": {
+    "en": "Developed arguments",
+    "t": "Derinleştirilmiş argümanlar"
+  },
   "1c00c2c1615f1f3a": {
     "en": "Do not rediscover a workflow you already have",
     "t": "Zaten sahip olduğunuz bir iş akışını yeniden keşfetme"
@@ -430,6 +454,10 @@
   "1c997ed34a47e75f": {
     "en": "<a href=\"/ideas/you-can-only-govern-what-you-can-diff/\">You can only govern what you can diff</a>",
     "t": "<a href=\"/ideas/you-can-only-govern-what-you-can-diff/\">Sadece ayrıştırabileceğin şeyi yönetebilirsin</a>"
+  },
+  "1cd12ce3fd5fb194": {
+    "en": "<a href=\"/writing/\">Read all writing</a>",
+    "t": "<a href=\"/writing/\">Tüm yazıları oku</a>"
   },
   "1ce3d602c9c46db9": {
     "en": "Reducing tokens should not mean making the system less careful. It should mean giving each step the smallest useful context, preserving decisions in a form that can be reused, and using deterministic checks where another language-model pass adds little.",
@@ -679,6 +707,10 @@
     "en": "<a href=\"/ideas/novelty-belongs-to-models/\">Novelty belongs to models. Repetition belongs to software.</a>",
     "t": "<a href=\"/ideas/novelty-belongs-to-models/\">Yenilik modellere aittir. Tekrar yazılıma aittir.</a>"
   },
+  "2cf339b65516eb77": {
+    "en": "Current direction",
+    "t": "Güncel yönelim"
+  },
   "2d5498705a26de8c": {
     "en": "That is a reasonable way to explore a task nobody has formalized. It is a poor way to run a task you already understand. The model is re-deriving a procedure on every request, and it is allowed to drift while it does it. Latency, cost, and variance are all being spent on work that stopped being open-ended several iterations ago.",
     "t": "Bu, kimsenin resmiyet kazandırmadığı bir görevi keşfetmenin makul bir yoludur. Zaten anladığınız bir görev yürütmenin kötü bir yoludur. Model her istekte bir prosedürü yeniden türetir ve bunu yaparken sürüklenmesine izin verilir. Gecikme, maliyet ve varyans, birkaç yineleme önce açık uçlu olmaktan çıkan işe harcanır."
@@ -895,6 +927,10 @@
     "en": "Open source the layer people need to trust | Dastan Aitzhanov",
     "t": "Açık kaynak kodunu insanların güvenebileceği katmanı aç | Dastan Aitzhanov"
   },
+  "394e5f04c686a8cb": {
+    "en": "I am testing personal AI systems built around durable private context, explicit authority, and work that can move between a person's own machines and shared compute. I publish the parts that hold up.",
+    "t": "Kalıcı özel bağlam, açıkça tanımlanmış yetki ve kişinin kendi makineleriyle paylaşımlı hesaplama kaynakları arasında taşınabilen işler etrafında kurulan kişisel yapay zekâ sistemlerini test ediyorum. Sağlamlığını kanıtlayan kısımları yayımlıyorum."
+  },
   "3982aed1f0f291e4": {
     "en": "The interface may change, but the user's context, authority, tools, and work should remain coherent behind it.",
     "t": "Arayüz değişebilir, ancak kullanıcının bağlamı, yetkisi, araçları ve çalışması arkasında tutarlı kalmalıdır."
@@ -974,6 +1010,10 @@
   "3fa3739bb42e3bae": {
     "en": "A probability can inform a policy. It is not one.",
     "t": "Bir olasılık bir politikayı bilgilendirebilir. Değil."
+  },
+  "4047992e3706e8c9": {
+    "en": "Claims developed beyond the scale of a notebook entry.",
+    "t": "Bir not defteri kaydının ölçeğinin ötesinde geliştirilen iddialar."
   },
   "4072045cc6e6fff4": {
     "en": "These principles do not specify a network architecture. That is intentional. The same questions apply whether the participating capacity sits in a home, a small business, a university, a regional operator, or a traditional data center. The implementation can vary. The rights should remain recognizable.",
@@ -1143,6 +1183,10 @@
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/the-best-agent-workflow-stops-looking-agentic/\">The best agent workflow eventually stops looking agentic</a>",
     "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/the-best-agent-workflow-stops-looking-agentic/\">En iyi ajan iş akışı sonunda agentic görünmeyi bırakır</a>"
   },
+  "4cce95a4c7b461ed": {
+    "en": "An atomic notebook and searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.",
+    "t": "Dastan Aitzhanov’un ajanlar, yönetişim, sistemler, yerel yapay zekâ, ürün ve ekonomi üzerine fikirlerinden oluşan atomik bir not defteri ve aranabilir saha dizini."
+  },
   "4cddbaee58a55415": {
     "en": "<a href=\"/ideas/software-should-mature-through-four-stages/\">Software should mature through four stages</a>",
     "t": "<a href=\"/ideas/software-should-mature-through-four-stages/\">Yazılım dört aşamada olgunlaşmalıdır</a>"
@@ -1274,6 +1318,10 @@
   "56f976d368afec68": {
     "en": "<time datetime=\"2026-09-25\">First developed July 2026</time>",
     "t": "<time datetime=\"2026-09-25\">İlk olarak Temmuz 2026'da geliştirildi</time>"
+  },
+  "570313187b818383": {
+    "en": "<a href=\"/ideas/\">Browse all ideas</a>",
+    "t": "<a href=\"/ideas/\">Tüm fikirlere göz at</a>"
   },
   "5718458ee73bd366": {
     "en": "Primary",
@@ -1447,6 +1495,10 @@
     "en": "© 2026 Dastan Aitzhanov",
     "t": "© 2026 Dastan Aitzhanov"
   },
+  "64de7ff88aa7af82": {
+    "en": "An atomic notebook: one claim at a time, with the reason I hold it and where it might be wrong. The <a href=\"/writing/\">writing</a> develops selected claims into fuller arguments.",
+    "t": "Atomik bir not defteri: her seferinde tek bir iddia, onu savunma nedenim ve nerede yanılıyor olabileceğiyle birlikte. <a href=\"/writing/\">Yazılar</a>, seçilmiş iddiaları daha kapsamlı argümanlara dönüştürür."
+  },
   "65099189d20c8f1f": {
     "en": "Efficiency is not only paying less for the same prompt. It is designing a system that knows what each step actually needs to know.",
     "t": "Verimlilik sadece aynı istemi için daha az ödeme yapmak değildir. Hangi aşamanın gerçekte neyi bilmesi gerektiğini bilen bir sistem tasarlamaktır."
@@ -1551,6 +1603,10 @@
     "en": "AI can already produce more summaries, comparisons, plans, and recommendations than most organizations know what to do with. That does not mean the organization has more judgment.",
     "t": "AI zaten çoğu kuruluşun ne yapacağını bilmediği kadar özet, karşılaştırma, plan ve tavsiye üretebilir. Bu, kuruluşun daha fazla hükme sahip olduğu anlamına gelmez."
   },
+  "6baade1647f0f734": {
+    "en": "My work has moved from data and AI platforms at AWS and Databricks to independent systems experiments. I approach the work as both an engineer and an owner: who authorizes an action, who carries the downside, and whether the system can be stopped.",
+    "t": "Çalışmalarım AWS ve Databricks’teki veri ve yapay zekâ platformlarından bağımsız sistem deneylerine yöneldi. Bu çalışmalara hem mühendis hem de sahip gözüyle yaklaşıyorum: bir eyleme kim yetki veriyor, olumsuz sonuçları kim üstleniyor ve sistem durdurulabiliyor mu?"
+  },
   "6bf2a879ad3062ab": {
     "en": "If the action is low-risk, reversible, and contained, I want the system to move quickly. Reading a file, organizing information, trying a local change, or preparing a draft should not require the same process as sending a message, spending money, exposing private information, or changing something another person depends on.",
     "t": "Eylem düşük riskli, geri alınabilir ve sınırlı ise, sistemin hızlı hareket etmesini istiyorum. Bir dosya okumak, bilgileri düzenlemek, yerel bir değişiklik denemek veya bir taslak hazırlamak, bir mesaj göndermek, para harcamak, özel bilgileri açığa çıkarmak veya başka birinin bağlı olduğu bir şeyi değiştirmekle aynı süreci gerektirmemelidir."
@@ -1563,13 +1619,25 @@
     "en": "Autonomy should scale with reversibility | Dastan Aitzhanov",
     "t": "Özerklik, geri alınabilirlikle orantılı olmalıdır | Dastan Aitzhanov"
   },
+  "6c44810b34f422f0": {
+    "en": "Email is the way to reach me: <a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>. Code I have published lives on <a href=\"https://github.com/dast1\" rel=\"me\">GitHub</a>, and selected public work is collected on the <a href=\"/work/\">Work page</a>.",
+    "t": "Bana ulaşmanın yolu e-postadır: <a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>. Yayımladığım kodlar <a href=\"https://github.com/dast1\" rel=\"me\">GitHub</a> üzerinde bulunur; seçilmiş kamuya açık çalışmalar ise <a href=\"/work/\">Çalışmalar sayfasında</a> derlenmiştir."
+  },
   "6ce18a27b8edb26f": {
     "en": "Autonomy should scale with reversibility",
     "t": "Özerklik tersinirlikle ölçeklenmelidir."
   },
+  "6d3eb3878b2561ef": {
+    "en": "Developed arguments by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.",
+    "t": "Dastan Aitzhanov’un yönetişime tabi yapay zekâ sistemleri, kişisel bilişim, sahiplik ve bunların çevresindeki ekonomi üzerine geliştirdiği argümanlar."
+  },
   "6daeaed4b896a78c": {
     "en": "Independent investigation",
     "t": "Bağımsız araştırma"
+  },
+  "6e123ead94280235": {
+    "en": "At AWS and Databricks, I worked on data and AI platforms: getting data somewhere a system could use it, then making that system dependable enough for an ordinary day. The public work I keep here includes industrial machine-learning architectures, human-review loops, and the operating paths around models.",
+    "t": "AWS ve Databricks’te veri ve yapay zekâ platformları üzerinde çalıştım: veriyi bir sistemin kullanabileceği yere taşımak, ardından o sistemi sıradan bir günde güvenilir biçimde çalışacak hâle getirmek. Burada tuttuğum kamuya açık çalışmalar arasında endüstriyel makine öğrenimi mimarileri, insan inceleme döngüleri ve modellerin çevresindeki işletim süreçleri yer alıyor."
   },
   "6e3b63f73bbdd752": {
     "en": "That can still be valuable. It just needs to be described as a different capital structure rather than the absence of one.",
@@ -1971,6 +2039,10 @@
     "en": "Work",
     "t": "İş"
   },
+  "8b6bfe0d9dddf336": {
+    "en": "Selected evidence",
+    "t": "Seçilmiş kanıtlar"
+  },
   "8b7803979719e3d6": {
     "en": "Before I worked in technology, I ran my family's commercial real estate business in Kazakhstan. My father and brother run it today, and I still serve on its board. That is where I learned what a decision costs after the analysis is finished, and it is why I have since invested in dozens of real estate projects across Texas.",
     "t": "Teknoloji alanında çalışmadan önce, Kazakistan'daki ailemi ticari gayrimenkul işletmesini yönettim. Babam ve kardeşim bugün onu yönetiyor ve ben hala yönetim kurulunda görev yapıyorum. Analiz bittikten sonra bir kararın ne kadar pahalıya mal olduğunu buradan öğrendim ve bu nedenle o zamandan beri Teksas'ın tamamında onlarca gayrimenkul projesine yatırım yaptım."
@@ -2062,6 +2134,10 @@
   "91aad6107742afc1": {
     "en": "When I evaluate an idea, I want to know where the holes are. Which assumptions are relatively safe? Which ones need to be validated? What would prove the current model wrong?",
     "t": "Bir fikri değerlendirdiğimde, eksikliklerin nerede olduğunu bilmek istiyorum. Hangi varsayımlar nispeten güvenli? Hangilerinin doğrulanması gerekiyor? Mevcut modeli yanlış çıkaracak ne olabilir?"
+  },
+  "91bcb5504aefc6c1": {
+    "en": "Dark theme",
+    "t": "Koyu tema"
   },
   "92602cfd000531e8": {
     "en": "The person who authorizes the spend still carries the consequence after the analysis is done. That is true of buildings and funds. It is true of models.",
@@ -2323,6 +2399,10 @@
     "en": "Token efficiency is an architectural concern | Dastan Aitzhanov",
     "t": "Token verimliliği mimarî bir sorun | Dastan Aitzhanov"
   },
+  "a174d43b6b1c6b17": {
+    "en": "From the notebook",
+    "t": "Not defterinden"
+  },
   "a1c692502f7d8aa2": {
     "en": "<a href=\"/writing/tags/systems/\">Systems <span>5</span></a>",
     "t": "<a href=\"/writing/tags/systems/\">Sistemler <span>5</span></a>"
@@ -2455,6 +2535,10 @@
     "en": "Failure should make the system smaller before it makes the system disappear.",
     "t": "Arıza sistemi yok etmeden önce daha küçük hale getirmelidir."
   },
+  "abaafc6402c6e9c0": {
+    "en": "<a href=\"/work/\">See all work</a>",
+    "t": "<a href=\"/work/\">Tüm çalışmaları gör</a>"
+  },
   "ac021343d2a1d450": {
     "en": "Durable state is the record of what was chosen, why, and what evidence would cause the choice to change.",
     "t": "Kalıcı durum, neyin seçildiğinin, neden seçildiğinin ve hangi kanıtın seçimi değiştirebileceğinin kaydıdır."
@@ -2555,6 +2639,10 @@
     "en": "<a href=\"/writing/tags/\">Tags</a>",
     "t": "<a href=\"/writing/tags/\">Etiketler</a>"
   },
+  "b19ef4d770063dd9": {
+    "en": "Dastan Aitzhanov on a path from cloud data and AI platforms to independent systems work, ownership, and governance.",
+    "t": "Dastan Aitzhanov’un bulut veri ve yapay zekâ platformlarından bağımsız sistem çalışmalarına, sahipliğe ve yönetişime uzanan yolu."
+  },
   "b1b5052cdadd81e3": {
     "en": "Begin with “Capacity is not consent”",
     "t": "\"Kapasite izin değildir\" ile başlayın"
@@ -2638,6 +2726,10 @@
   "b8f9027a09413cbd": {
     "en": "Open-ended intelligence is valuable. It becomes more governable when the surrounding decisions have declared shapes.",
     "t": "Açık uçlu zeka değerlidir. Çevre kararlarının bildirilen şekilleri olduğunda daha yönetilebilir hale gelir."
+  },
+  "b977e935b547dfc9": {
+    "en": "Four open questions organize the arguments without resolving them in advance.",
+    "t": "Dört açık soru, argümanları önceden çözüme bağlamadan düzenliyor."
   },
   "b988ac5fff3d0f14": {
     "en": "Capacity can come from more places. That can improve resilience if the failure domains are actually independent. A thousand machines coordinated through one fragile authority are geographically distributed and operationally centralized.",
@@ -2730,6 +2822,10 @@
   "bf7b94ab0db4b0ea": {
     "en": "A resilient AI system should fall back to a smaller, safer set of capabilities when one component becomes unavailable.",
     "t": "Dirençli bir yapay zeka sistemi bir bileşen kullanılamaz hale geldiğinde daha küçük, daha güvenli bir yetenek setine geri dönmelidir."
+  },
+  "c032a1aea5f8e8f2": {
+    "en": "That technical direction is shaped by ownership. Before technology, I ran my family's commercial real estate business in Kazakhstan; I still serve on its board and have since invested in real estate projects in Texas. I also ran a quantitative fund that now manages only family capital. Those roles made the cost of a decision concrete: analysis can be delegated, but responsibility for the outcome cannot.",
+    "t": "Bu teknik yönü sahiplik anlayışı şekillendiriyor. Teknoloji alanına geçmeden önce ailemin Kazakistan’daki ticari gayrimenkul işini yönettim; hâlâ yönetim kurulunda görev yapıyorum ve o zamandan beri Teksas’taki gayrimenkul projelerine yatırım yaptım. Ayrıca artık yalnızca aile sermayesini yöneten kantitatif bir fon işlettim. Bu roller, bir kararın maliyetini somutlaştırdı: analiz devredilebilir, ancak sonucun sorumluluğu devredilemez."
   },
   "c08831b8d91c8cbe": {
     "en": "Which of these workflows. Whether this request may proceed. Which model is enough. Escalate, or run the path we already have. Those are decisions. The output space is small, and someone already wrote it down. Asking a generator to write the decision, and then parsing the sentence, adds a step whose failure mode is invention. The model emits a tool name you did not offer, a permission you did not define, a confident paragraph where the system needed a label.",
@@ -3211,6 +3307,10 @@
     "en": "<a href=\"/writing/\" aria-current=\"page\">Writing</a>",
     "t": "<a href=\"/writing/\" aria-current=\"page\">Yazılar</a>"
   },
+  "e143d23a7c970bbd": {
+    "en": "I build AI systems and write about what happens when they are allowed to act. The question that connects the work is simple: who is allowed to decide, and who answers for the result?",
+    "t": "Yapay zekâ sistemleri geliştiriyor ve eyleme geçmelerine izin verildiğinde ne olduğunu yazıyorum. Çalışmaları birbirine bağlayan soru basit: karar verme yetkisi kime ait ve sonucun hesabını kim veriyor?"
+  },
   "e152c6825803e795": {
     "en": "Back to reference 5",
     "t": "Referans 5e dön"
@@ -3278,6 +3378,10 @@
   "e45380639290c439": {
     "en": "The open-versus-proprietary discussion is often treated as a philosophical choice. I think it is more useful to ask which layer needs independent trust and which layer represents the service a company is actually building.",
     "t": "Açık kaynak ve kapalı kaynak tartışması sık sık felsefi bir seçim olarak ele alınır. Bence hangi katmanın bağımsız güvene ihtiyaç duyduğunu ve hangi katmanın bir şirketin gerçekten inşa ettiği hizmeti temsil ettiğini sormak daha yararlıdır."
+  },
+  "e492a8a33adc7f73": {
+    "en": "I now work independently on systems that place capable models inside explicit boundaries. The experiments range from local AI and structured retrieval to personal systems built around durable private context, observable actions, and authority that can be withdrawn. I publish the methods and results that hold up.",
+    "t": "Şimdi yetenekli modelleri açıkça tanımlanmış sınırlar içine yerleştiren sistemler üzerinde bağımsız olarak çalışıyorum. Deneyler; yerel yapay zekâ ve yapılandırılmış erişimden, kalıcı özel bağlam, gözlemlenebilir eylemler ve geri alınabilir yetki etrafında kurulan kişisel sistemlere kadar uzanıyor. Sağlamlığını kanıtlayan yöntemleri ve sonuçları yayımlıyorum."
   },
   "e4991f6aefb41197": {
     "en": "Back to reference 12",
@@ -3615,6 +3719,10 @@
     "en": "Browse by thread",
     "t": "Konuya göre gözat"
   },
+  "f99c2dff0d7f844c": {
+    "en": "Working principles",
+    "t": "Çalışma ilkeleri"
+  },
   "f9c63a1c7636d1b2": {
     "en": "Hardware differs. Memory behaves differently. Drivers, runtimes, sleep states, networks, and failure modes differ. The interesting layer is the one that turns that variation into a predictable service.",
     "t": "Donanım farklıdır. Bellek farklı davranır. Sürücüler, çalışma zamanları, uyku durumları, ağlar ve arıza modları farklıdır. İlginç katman, bu varyasyonu öngörülebilir bir hizmete dönüştüren katmandır."
@@ -3706,109 +3814,5 @@
   "fff6aecaadd856fa": {
     "en": "Coding agents often collapse these stages. They polish something that has not proven useful, or harden an architecture before the important uncertainty is resolved. That can look productive while moving the work in the wrong direction.",
     "t": "Kodlama ajanları sık sık bu aşamaları çöker. Yararlılığı kanıtlanmamış bir şeyi parlatırlar veya önemli belirsizlik çözülmeden önce bir mimarı sertleştirirler. Bu verimli görünebilir ama işi yanlış yöne hareket ettirebilir."
-  },
-  "6baade1647f0f734": {
-    "en": "My work has moved from data and AI platforms at AWS and Databricks to independent systems experiments. I approach the work as both an engineer and an owner: who authorizes an action, who carries the downside, and whether the system can be stopped.",
-    "t": "Çalışmalarım AWS ve Databricks’teki veri ve yapay zekâ platformlarından bağımsız sistem deneylerine yöneldi. Bu çalışmalara hem mühendis hem de sahip gözüyle yaklaşıyorum: bir eyleme kim yetki veriyor, olumsuz sonuçları kim üstleniyor ve sistem durdurulabiliyor mu?"
-  },
-  "8b6bfe0d9dddf336": {
-    "en": "Selected evidence",
-    "t": "Seçilmiş kanıtlar"
-  },
-  "abaafc6402c6e9c0": {
-    "en": "<a href=\"/work/\">See all work</a>",
-    "t": "<a href=\"/work/\">Tüm çalışmaları gör</a>"
-  },
-  "2cf339b65516eb77": {
-    "en": "Current direction",
-    "t": "Güncel yönelim"
-  },
-  "394e5f04c686a8cb": {
-    "en": "I am testing personal AI systems built around durable private context, explicit authority, and work that can move between a person's own machines and shared compute. I publish the parts that hold up.",
-    "t": "Kalıcı özel bağlam, açıkça tanımlanmış yetki ve kişinin kendi makineleriyle paylaşımlı hesaplama kaynakları arasında taşınabilen işler etrafında kurulan kişisel yapay zekâ sistemlerini test ediyorum. Sağlamlığını kanıtlayan kısımları yayımlıyorum."
-  },
-  "1bd3cf9d81472555": {
-    "en": "Developed arguments",
-    "t": "Derinleştirilmiş argümanlar"
-  },
-  "1cd12ce3fd5fb194": {
-    "en": "<a href=\"/writing/\">Read all writing</a>",
-    "t": "<a href=\"/writing/\">Tüm yazıları oku</a>"
-  },
-  "a174d43b6b1c6b17": {
-    "en": "From the notebook",
-    "t": "Not defterinden"
-  },
-  "570313187b818383": {
-    "en": "<a href=\"/ideas/\">Browse all ideas</a>",
-    "t": "<a href=\"/ideas/\">Tüm fikirlere göz at</a>"
-  },
-  "91bcb5504aefc6c1": {
-    "en": "Dark theme",
-    "t": "Koyu tema"
-  },
-  "0c0a937b36f11306": {
-    "en": "Developed arguments about capable systems, the people who remain responsible for them, and the economics underneath both. Each essay follows a claim far enough to test it.",
-    "t": "Yetenekli sistemler, bunlardan sorumlu olmaya devam eden insanlar ve her ikisinin temelindeki ekonomi üzerine geliştirilmiş argümanlar. Her makale, bir iddiayı sınanabileceği kadar ileri götürür."
-  },
-  "b977e935b547dfc9": {
-    "en": "Four open questions organize the arguments without resolving them in advance.",
-    "t": "Dört açık soru, argümanları önceden çözüme bağlamadan düzenliyor."
-  },
-  "4047992e3706e8c9": {
-    "en": "Claims developed beyond the scale of a notebook entry.",
-    "t": "Bir not defteri kaydının ölçeğinin ötesinde geliştirilen iddialar."
-  },
-  "6d3eb3878b2561ef": {
-    "en": "Developed arguments by Dastan Aitzhanov on governed AI systems, personal computing, ownership, and the economics around them.",
-    "t": "Dastan Aitzhanov’un yönetişime tabi yapay zekâ sistemleri, kişisel bilişim, sahiplik ve bunların çevresindeki ekonomi üzerine geliştirdiği argümanlar."
-  },
-  "64de7ff88aa7af82": {
-    "en": "An atomic notebook: one claim at a time, with the reason I hold it and where it might be wrong. The <a href=\"/writing/\">writing</a> develops selected claims into fuller arguments.",
-    "t": "Atomik bir not defteri: her seferinde tek bir iddia, onu savunma nedenim ve nerede yanılıyor olabileceğiyle birlikte. <a href=\"/writing/\">Yazılar</a>, seçilmiş iddiaları daha kapsamlı argümanlara dönüştürür."
-  },
-  "4cce95a4c7b461ed": {
-    "en": "An atomic notebook and searchable field index of Dastan Aitzhanov’s ideas on agents, governance, systems, local AI, product, and economics.",
-    "t": "Dastan Aitzhanov’un ajanlar, yönetişim, sistemler, yerel yapay zekâ, ürün ve ekonomi üzerine fikirlerinden oluşan atomik bir not defteri ve aranabilir saha dizini."
-  },
-  "e143d23a7c970bbd": {
-    "en": "I build AI systems and write about what happens when they are allowed to act. The question that connects the work is simple: who is allowed to decide, and who answers for the result?",
-    "t": "Yapay zekâ sistemleri geliştiriyor ve eyleme geçmelerine izin verildiğinde ne olduğunu yazıyorum. Çalışmaları birbirine bağlayan soru basit: karar verme yetkisi kime ait ve sonucun hesabını kim veriyor?"
-  },
-  "17977edddbca283c": {
-    "en": "Trajectory",
-    "t": "İzlediğim yol"
-  },
-  "6e123ead94280235": {
-    "en": "At AWS and Databricks, I worked on data and AI platforms: getting data somewhere a system could use it, then making that system dependable enough for an ordinary day. The public work I keep here includes industrial machine-learning architectures, human-review loops, and the operating paths around models.",
-    "t": "AWS ve Databricks’te veri ve yapay zekâ platformları üzerinde çalıştım: veriyi bir sistemin kullanabileceği yere taşımak, ardından o sistemi sıradan bir günde güvenilir biçimde çalışacak hâle getirmek. Burada tuttuğum kamuya açık çalışmalar arasında endüstriyel makine öğrenimi mimarileri, insan inceleme döngüleri ve modellerin çevresindeki işletim süreçleri yer alıyor."
-  },
-  "e492a8a33adc7f73": {
-    "en": "I now work independently on systems that place capable models inside explicit boundaries. The experiments range from local AI and structured retrieval to personal systems built around durable private context, observable actions, and authority that can be withdrawn. I publish the methods and results that hold up.",
-    "t": "Şimdi yetenekli modelleri açıkça tanımlanmış sınırlar içine yerleştiren sistemler üzerinde bağımsız olarak çalışıyorum. Deneyler; yerel yapay zekâ ve yapılandırılmış erişimden, kalıcı özel bağlam, gözlemlenebilir eylemler ve geri alınabilir yetki etrafında kurulan kişisel sistemlere kadar uzanıyor. Sağlamlığını kanıtlayan yöntemleri ve sonuçları yayımlıyorum."
-  },
-  "c032a1aea5f8e8f2": {
-    "en": "That technical direction is shaped by ownership. Before technology, I ran my family's commercial real estate business in Kazakhstan; I still serve on its board and have since invested in real estate projects in Texas. I also ran a quantitative fund that now manages only family capital. Those roles made the cost of a decision concrete: analysis can be delegated, but responsibility for the outcome cannot.",
-    "t": "Bu teknik yönü sahiplik anlayışı şekillendiriyor. Teknoloji alanına geçmeden önce ailemin Kazakistan’daki ticari gayrimenkul işini yönettim; hâlâ yönetim kurulunda görev yapıyorum ve o zamandan beri Teksas’taki gayrimenkul projelerine yatırım yaptım. Ayrıca artık yalnızca aile sermayesini yöneten kantitatif bir fon işlettim. Bu roller, bir kararın maliyetini somutlaştırdı: analiz devredilebilir, ancak sonucun sorumluluğu devredilemez."
-  },
-  "f99c2dff0d7f844c": {
-    "en": "Working principles",
-    "t": "Çalışma ilkeleri"
-  },
-  "090f26e229412039": {
-    "en": "Writing and contact",
-    "t": "Yazılar ve iletişim"
-  },
-  "11b88b550af18162": {
-    "en": "<a href=\"/writing/\">Writing</a> holds developed arguments. <a href=\"/ideas/\">Ideas</a> is the atomic notebook: shorter claims, the reasons I hold them, and where they might be wrong. I write when I have something definite enough to defend. I live in Texas.",
-    "t": "<a href=\"/writing/\">Yazılar</a> geliştirilmiş argümanları içerir. <a href=\"/ideas/\">Fikirler</a> ise atomik not defteridir: daha kısa iddialar, bunları savunma nedenlerim ve nerede yanılıyor olabilecekleri. Savunacak kadar belirgin bir düşüncem olduğunda yazıyorum. Teksas’ta yaşıyorum."
-  },
-  "6c44810b34f422f0": {
-    "en": "Email is the way to reach me: <a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>. Code I have published lives on <a href=\"https://github.com/dast1\" rel=\"me\">GitHub</a>, and selected public work is collected on the <a href=\"/work/\">Work page</a>.",
-    "t": "Bana ulaşmanın yolu e-postadır: <a href=\"mailto:dastan.aitzhanov@gmail.com\">dastan.aitzhanov@gmail.com</a>. Yayımladığım kodlar <a href=\"https://github.com/dast1\" rel=\"me\">GitHub</a> üzerinde bulunur; seçilmiş kamuya açık çalışmalar ise <a href=\"/work/\">Çalışmalar sayfasında</a> derlenmiştir."
-  },
-  "b19ef4d770063dd9": {
-    "en": "Dastan Aitzhanov on a path from cloud data and AI platforms to independent systems work, ownership, and governance.",
-    "t": "Dastan Aitzhanov’un bulut veri ve yapay zekâ platformlarından bağımsız sistem çalışmalarına, sahipliğe ve yönetişime uzanan yolu."
   }
 }
