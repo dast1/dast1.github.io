@@ -60,7 +60,7 @@ The public origin lives in [`src/site.ts`](src/site.ts) as `siteUrl`, and Astro 
 
 The domain is `dastan.aitzhanov.com`. It is set in four places, and they have to agree:
 
-1. `siteUrl` in `src/site.ts`, plus `siteOrigin` in `scripts/check-built.mjs` and `scripts/translate-site.mjs`.
+1. `siteUrl` in `src/site.ts`, plus `siteOrigin` in `scripts/check-built.mjs` and `scripts/render-locales.mjs`.
 2. `public/CNAME`, containing only the hostname.
 3. DNS: a `CNAME` record for `dastan` in the `aitzhanov.com` hosted zone (Route 53), pointing to `dast1.github.io`.
 4. **Settings → Pages → Custom domain**, with **Enforce HTTPS** on. Verify `aitzhanov.com` under the account's **Settings → Pages → Verified domains** so no other repository can claim the name.

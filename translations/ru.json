@@ -61,7 +61,7 @@
   },
   "044eceb8e332e4cf": {
     "en": "Open source the layer people need to trust | Dastan Aitzhanov",
-    "t": "Open source the layer people need to trust | Dastan Aitzhanov"
+    "t": "Открывать стоит тот слой, которому люди должны доверять | Дастан Айтжанов"
   },
   "04896405cadf64e6": {
     "en": "Writing | Dastan Aitzhanov",
@@ -81,7 +81,7 @@
   },
   "05002e47f2ca04a5": {
     "en": "Open source the layer people need to trust",
-    "t": "Open source the layer people need to trust"
+    "t": "Открывать стоит тот слой, которому люди должны доверять"
   },
   "0521dce5e8357763": {
     "en": "A personal AI appliance should feel boring | Dastan Aitzhanov",
@@ -113,7 +113,7 @@
   },
   "069a173a2714d014": {
     "en": "<strong>6. Owner consent as a governance primitive for distributed compute.</strong> Compute governance today assumes a small number of large providers who can be identified and obligated. That assumption holds for frontier training. It is already weaker for inference, and it will weaken further as capable models run on machines that people and small organizations own. When that happens, the enforcement point is not the data center. It is the machine, under a policy its owner chose. Standards for portable policy, workload attestation, and revocation that the network must respect are the compute-governance work that distributed AI will need. It is better to write them before the network exists than after.<sup><a href=\"#user-content-fn-10\" id=\"user-content-fnref-10\" data-footnote-ref aria-describedby=\"footnote-label\">12</a></sup>",
-    "t": "<strong>6. Согласие владельца как примитив управления для распределённых вычислений.</strong> Управление вычислениями сегодня предполагает небольшое число крупных поставщиков, которых можно идентифицировать и обязать. Это предположение верно для обучения пограничной модели. Оно уже слабее для вывода, и оно будет ослабевать дальше, когда способные модели запускаются на машинах, которые люди и небольшие организации владеют. Когда это произойдёт, точка принудительного исполнения — не центр данных. Это машина, под политикой, которую выбрал её владелец. Стандарты для портативной политики, аттестации рабочей нагрузки и отзыва, который сеть должна уважать, — это работа управления вычислениями, которая потребуется распределённому ИИ. Лучше писать их до того, как сеть существует, чем после.<sup><a href=\"#user-content-fn-10\" id=\"user-content-fnref-10\" data-footnote-ref aria-describedby=\"footnote-label\">12</a></sup>"
+    "t": "<strong>6. Согласие владельца как базовый принцип управления распределёнными вычислениями.</strong> Сегодня регулирование вычислений исходит из того, что крупных поставщиков немного: их можно установить и обязать выполнять требования. Для обучения передовых моделей это допущение пока работает. Для инференса оно уже слабее и будет ослабевать по мере того, как мощные модели начнут работать на устройствах частных лиц и небольших организаций. Тогда последней точкой контроля станет не дата-центр, а сама машина и политика, выбранная её владельцем. Распределённому ИИ понадобятся переносимые политики, проверяемое происхождение заданий и отзыв разрешений, который сеть обязана соблюдать. Эти правила лучше сформулировать до появления такой сети, а не после.<sup><a href=\"#user-content-fn-10\" id=\"user-content-fnref-10\" data-footnote-ref aria-describedby=\"footnote-label\">12</a></sup>"
   },
   "072f8e04ff491609": {
     "en": "<a href=\"/ideas/a-personal-ai-appliance-should-feel-boring/\">A personal AI appliance should feel boring</a>",
@@ -133,7 +133,7 @@
   },
   "0828973b77de6c8b": {
     "en": "Delegated authority",
-    "t": "Делегированный авторитет"
+    "t": "Делегированные полномочия"
   },
   "082bf3751cb7cd82": {
     "en": "<time datetime=\"2026-09-26\">First developed June 2026</time>",
@@ -361,7 +361,7 @@
   },
   "14834edf992c0db9": {
     "en": "Local AI and intelligent scaffolding",
-    "t": "Локальный ИИ и интеллектуальная поддержка"
+    "t": "Локальный ИИ и вспомогательная инфраструктура"
   },
   "14cc741e1b6f0403": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/local-ai-is-a-scheduling-problem/\">Local AI is a scheduling problem before it is a model problem</a>",
@@ -605,7 +605,7 @@
   },
   "28ba020330800a85": {
     "en": "<a href=\"/writing/the-computer-should-be-personal/\">The computer should be personal again</a>",
-    "t": "<a href=\"/writing/the-computer-should-be-personal/\">Компьютер должен быть личным снова</a>"
+    "t": "<a href=\"/writing/the-computer-should-be-personal/\">Компьютер снова должен стать личным</a>"
   },
   "28e410ba4c9d9e64": {
     "en": "<strong>Decision plane.</strong> Narrow decisions over a constrained action set. The list above lives here: intent, workflow, model, complexity, context, rank, approval, a permission-shaped question, escalation, detection of a known workflow, confidence. The output is a label, a score, or a probability. It is not a paragraph.",
@@ -613,7 +613,7 @@
   },
   "2900810f26c9d0b5": {
     "en": "<a href=\"/about/\">About</a>",
-    "t": "<a href=\"/about/\">О мне</a>"
+    "t": "<a href=\"/about/\">Обо мне</a>"
   },
   "2903c2f96ec834c6": {
     "en": "<a href=\"/ideas/the-customer-should-not-need-the-architecture-lesson/\">The customer should not need the architecture lesson</a>",
@@ -697,11 +697,11 @@
   },
   "2e224f839fee82f0": {
     "en": "Dastan Aitzhanov builds AI systems and writes about delegated authority: who grants it, where it ends, and who answers for the result, seen as an owner as well as an engineer.",
-    "t": "Dastan Aitzhanov создает AI системы и пишет о делегированной власти: кто её дает, где она заканчивается и кто отвечает за результат, как собственник и как инженер."
+    "t": "Дастан Айтжанов разрабатывает ИИ-системы и пишет о делегированных полномочиях: кто их предоставляет, где они заканчиваются и кто отвечает за результат. Он смотрит на эти вопросы и как инженер, и как владелец."
   },
   "2e2da96e8c5fc622": {
     "en": "Dastan Aitzhanov | AI Systems, Governance, and Ownership",
-    "t": "Dastan Aitzhanov | AI Systems, Governance, and Ownership"
+    "t": "Дастан Айтжанов | ИИ-системы, управление и роль владельца"
   },
   "2e4880e6d69d9217": {
     "en": "Do not rediscover a workflow you already have",
@@ -761,11 +761,11 @@
   },
   "32141ca886107e7b": {
     "en": "Back to reference 6",
-    "t": "Back to reference 6"
+    "t": "Вернуться к примечанию 6"
   },
   "3280eb0b3d041a0f": {
     "en": "<span class=\"related-kind\">Essay</span><a href=\"/writing/capacity-is-not-consent/\">Capacity is not consent</a>",
-    "t": "<span class=\"related-kind\">Статья</span><a href=\"/writing/capacity-is-not-consent/\">Способность — это не согласие</a>"
+    "t": "<span class=\"related-kind\">Статья</span><a href=\"/writing/capacity-is-not-consent/\">Доступная мощность — ещё не согласие</a>"
   },
   "32a603c6f281dbf1": {
     "en": "September 14, 2026",
@@ -969,7 +969,7 @@
   },
   "40934e442f7ff02f": {
     "en": "An audit log is not a control",
-    "t": "An audit log is not a control"
+    "t": "Журнал аудита — ещё не средство контроля"
   },
   "40b8e08164ec5f76": {
     "en": "<time datetime=\"2026-09-25\">First developed June 2026</time>",
@@ -1101,7 +1101,7 @@
   },
   "4994dfd83d7808b6": {
     "en": "Back to reference 5",
-    "t": "Back to reference 5"
+    "t": "Вернуться к примечанию 5"
   },
   "49988179cddb2126": {
     "en": "A policy service can approve a request. A model can classify it. A workflow can carry it. But if the tool that performs the side effect cannot refuse the action, the rest of the system is advisory.",
@@ -1109,7 +1109,7 @@
   },
   "499f4d1cd969ad0b": {
     "en": "Local AI",
-    "t": "Local AI"
+    "t": "Локальный ИИ"
   },
   "4ac47ba3d11cae61": {
     "en": "We usually talk about token consumption as a cost issue. It is also a signal that the architecture may be making models repeatedly rediscover context, re-explain decisions, or review material they do not need.",
@@ -1157,7 +1157,7 @@
   },
   "4f811ec8e5c11723": {
     "en": "Local AI | Dastan Aitzhanov",
-    "t": "Local AI | Dastan Aitzhanov"
+    "t": "Локальный ИИ | Дастан Айтжанов"
   },
   "4f8df19e9e6ac6d6": {
     "en": "Govern the boundary",
@@ -1165,7 +1165,7 @@
   },
   "4f9284558a6a8e45": {
     "en": "Back to reference 4",
-    "t": "Back to reference 4"
+    "t": "Вернуться к примечанию 4"
   },
   "4f92ae8d8015450a": {
     "en": "I spent a weekend testing a practical question: how much useful agentic work can stay local when the model is surrounded by better structure?",
@@ -1237,7 +1237,7 @@
   },
   "53780af7a4ee34d1": {
     "en": "Proposal. The minimum governance contract for owner-controlled compute is set out in <a href=\"/writing/capacity-is-not-consent/\">Capacity is not consent</a>. The claim that inference will move to owner-controlled machines at scale is a prediction, not a measurement. <a href=\"#user-content-fnref-10\" data-footnote-backref=\"\" aria-label=\"Back to reference 12\" class=\"data-footnote-backref\">↩</a>",
-    "t": "Предложение. Минимальный контракт управления для вычислений, контролируемых владельцем, изложен в статье <a href=\"/writing/capacity-is-not-consent/\">Capacity is not consent</a>. Утверждение, что вывод будет перемещаться на машины, контролируемые владельцем, в масштабе, это предсказание, а не измерение. <a href=\"#user-content-fnref-10\" data-footnote-backref=\"\" aria-label=\"Back to reference 12\" class=\"data-footnote-backref\">↩</a>"
+    "t": "Предложение. Минимальный контракт управления вычислениями под контролем владельца изложен в статье <a href=\"/writing/capacity-is-not-consent/\">«Доступная мощность — ещё не согласие»</a>. Предположение о том, что инференс массово переместится на устройства под контролем владельцев, остаётся прогнозом, а не результатом измерений. <a href=\"#user-content-fnref-10\" data-footnote-backref=\"\" aria-label=\"Back to reference 12\" class=\"data-footnote-backref\">↩</a>"
   },
   "5396ea3c02363071": {
     "en": "Resource sharing moves the capital problem; it does not eliminate it | Dastan Aitzhanov",
@@ -1373,7 +1373,7 @@
   },
   "5c562fef18de47f3": {
     "en": "Principle, from <a href=\"/ideas/an-audit-log-is-not-a-control/\">An audit log is not a control</a>. <a href=\"#user-content-fnref-8\" data-footnote-backref=\"\" aria-label=\"Back to reference 8\" class=\"data-footnote-backref\">↩</a>",
-    "t": "Принцип из статьи <a href=\"/ideas/an-audit-log-is-not-a-control/\">An audit log is not a control</a>. <a href=\"#user-content-fnref-8\" data-footnote-backref=\"\" aria-label=\"Back to reference 8\" class=\"data-footnote-backref\">↩</a>"
+    "t": "Принцип из заметки <a href=\"/ideas/an-audit-log-is-not-a-control/\">«Журнал аудита — ещё не средство контроля»</a>. <a href=\"#user-content-fnref-8\" data-footnote-backref=\"\" aria-label=\"Back to reference 8\" class=\"data-footnote-backref\">↩</a>"
   },
   "5cd1f7928fabeb4b": {
     "en": "Which model handles a request is often framed as an optimization: cost, latency, a score on a benchmark. Those numbers matter. They are the smaller half of the decision.",
@@ -1393,7 +1393,7 @@
   },
   "5e0ac3f967938706": {
     "en": "Governing the boundary does not tell you whether a frontier model should be trained or released. It is a deployment-side framework, and it complements, rather than replaces, work on training compute, model evaluations, and the misuse of the most capable systems.",
-    "t": "Управление границей не подсказывает вам, следует ли обучать или выпускать пограничную модель. Это развёрнутый фреймворк, и он дополняет, а не заменяет, работу по обучающим вычислениям, оценкам моделей и злоупотреблению наиболее способными системами."
+    "t": "Управление границей не отвечает на вопрос, следует ли обучать или выпускать передовую модель. Это подход к контролю на этапе эксплуатации. Он дополняет, а не заменяет работу над вычислительными рисками обучения, оценкой моделей и предотвращением злоупотреблений наиболее мощными системами."
   },
   "5e0f5433fdbc36dd": {
     "en": "An answer&#39;s provenance should include where it ran | Dastan Aitzhanov",
@@ -1429,11 +1429,11 @@
   },
   "60e5e20d20b536da": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/an-audit-log-is-not-a-control/\">An audit log is not a control</a>",
-    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/an-audit-log-is-not-a-control/\">An audit log is not a control</a>"
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/an-audit-log-is-not-a-control/\">Журнал аудита — ещё не средство контроля</a>"
   },
   "61b99df4e77d9b17": {
     "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/an-agent-should-have-its-own-identity/\">An agent should have its own identity</a>",
-    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/an-agent-should-have-its-own-identity/\">An agent should have its own identity</a>"
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/an-agent-should-have-its-own-identity/\">У агента должна быть собственная идентичность</a>"
   },
   "61d9262e447465af": {
     "en": "September 20, 2026",
@@ -1521,11 +1521,11 @@
   },
   "68b9c77e87c4e729": {
     "en": "Capacity is not consent",
-    "t": "Capacity is not consent"
+    "t": "Доступная мощность — ещё не согласие"
   },
   "6929e6deb2f78309": {
     "en": "<a href=\"/writing/govern-the-boundary/\">Govern the boundary</a>",
-    "t": "<a href=\"/writing/govern-the-boundary/\">Управление границей</a>"
+    "t": "<a href=\"/writing/govern-the-boundary/\">Управлять границей</a>"
   },
   "693914f957064ee8": {
     "en": "Google describes its Distributed Cloud portfolio as extending Google Cloud infrastructure and services to data centers and edge locations, with connected and air-gapped operating models: <a href=\"https://docs.cloud.google.com/distributed-cloud/docs\">Google Distributed Cloud</a> <a href=\"#user-content-fnref-3\" data-footnote-backref aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>",
@@ -1533,7 +1533,7 @@
   },
   "6a12e822603acb74": {
     "en": "Local AI and intelligent scaffolding | Dastan Aitzhanov",
-    "t": "Локальный ИИ и интеллектуальная поддержка | Dastan Aitzhanov"
+    "t": "Локальный ИИ и вспомогательная инфраструктура | Дастан Айтжанов"
   },
   "6a51d1c421020f37": {
     "en": "Two examples. Article 51(2) of the EU AI Act presumes that a general-purpose model has systemic risk when the cumulative compute used to train it exceeds 10^25 floating-point operations; the presumption is rebuttable, and providers must notify the Commission within two weeks of reaching the threshold (<a href=\"https://artificialintelligenceact.eu/article/51/\">Article 51</a>). In the United States, Executive Order 14110 of October 30, 2023 required reporting for models trained above 10^26 operations (<a href=\"https://www.federalregister.gov/documents/2023/11/01/2023-24283/safe-secure-and-trustworthy-development-and-use-of-artificial-intelligence\">Federal Register</a>); it was revoked on January 20, 2025 (<a href=\"https://www.federalregister.gov/documents/2025/01/28/2025-01901/initial-rescissions-of-harmful-executive-orders-and-actions\">Federal Register</a>). The threshold idea survives in state law and in the EU. The observation is about where these instruments attach, not whether they are wise. <a href=\"#user-content-fnref-1\" data-footnote-backref=\"\" aria-label=\"Back to reference 1\" class=\"data-footnote-backref\">↩</a>",
@@ -1541,11 +1541,11 @@
   },
   "6a59b45e970bd7d2": {
     "en": "Primary",
-    "t": "Основная"
+    "t": "Основная навигация"
   },
   "6a5ce927d39f48f7": {
     "en": "The computer should be personal again",
-    "t": "Компьютер должен быть личным снова"
+    "t": "Компьютер снова должен стать личным"
   },
   "6aebf4f50d0a0feb": {
     "en": "Clarification is part of intelligence | Dastan Aitzhanov",
@@ -1577,7 +1577,7 @@
   },
   "6cdce2ecb7de4649": {
     "en": "Work",
-    "t": "Работа"
+    "t": "Работы"
   },
   "6d102c83ebdea671": {
     "en": "<a href=\"/ideas/?tag=governance\">Governance</a>",
@@ -1965,7 +1965,7 @@
   },
   "8acc5899d147ca49": {
     "en": "Begin with “The computer should be personal again”",
-    "t": "Начните с «Компьютер должен быть личным снова»"
+    "t": "Начните со статьи «Компьютер снова должен стать личным»"
   },
   "8b0ea2a5a4c4c69c": {
     "en": "Accountability means bearing the downside. An agent that spends money it cannot repay needs a limit set before it acts, not an apology after.",
@@ -1993,7 +1993,7 @@
   },
   "8cfc556918a4bada": {
     "en": "These properties are argued for individually in the shorter notes: <a href=\"/ideas/policy-should-not-be-probabilistic/\">Policy should not be probabilistic</a>, <a href=\"/ideas/you-can-only-govern-what-you-can-diff/\">You can only govern what you can diff</a>, <a href=\"/ideas/an-agent-should-have-its-own-identity/\">An agent should have its own identity</a>, <a href=\"/ideas/the-place-that-performs-the-action-should-say-no/\">The place that performs the action should say no</a>, <a href=\"/ideas/permissions-should-expire-with-the-work/\">Permissions should expire with the work</a>, <a href=\"/ideas/failure-should-reduce-capability/\">Failure should reduce capability</a>, <a href=\"/ideas/an-audit-log-is-not-a-control/\">An audit log is not a control</a>, and <a href=\"/ideas/provenance-should-include-where-it-ran/\">Provenance should include where it ran</a>. <a href=\"#user-content-fnref-3\" data-footnote-backref=\"\" aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>",
-    "t": "Эти свойства обсуждаются отдельно в более кратких заметках: <a href=\"/ideas/policy-should-not-be-probabilistic/\">Policy should not be probabilistic</a>, <a href=\"/ideas/you-can-only-govern-what-you-can-diff/\">You can only govern what you can diff</a>, <a href=\"/ideas/an-agent-should-have-its-own-identity/\">An agent should have its own identity</a>, <a href=\"/ideas/the-place-that-performs-the-action-should-say-no/\">The place that performs the action should say no</a>, <a href=\"/ideas/permissions-should-expire-with-the-work/\">Permissions should expire with the work</a>, <a href=\"/ideas/failure-should-reduce-capability/\">Failure should reduce capability</a>, <a href=\"/ideas/an-audit-log-is-not-a-control/\">An audit log is not a control</a> и <a href=\"/ideas/provenance-should-include-where-it-ran/\">Provenance should include where it ran</a>. <a href=\"#user-content-fnref-3\" data-footnote-backref=\"\" aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>"
+    "t": "Каждое из этих свойств подробнее разобрано в коротких заметках: <a href=\"/ideas/policy-should-not-be-probabilistic/\">«Политика не должна быть вероятностной»</a>, <a href=\"/ideas/you-can-only-govern-what-you-can-diff/\">«Управлять можно только тем, что можно сравнить»</a>, <a href=\"/ideas/an-agent-should-have-its-own-identity/\">«У агента должна быть собственная идентичность»</a>, <a href=\"/ideas/the-place-that-performs-the-action-should-say-no/\">«Место выполнения действия должно уметь отказать»</a>, <a href=\"/ideas/permissions-should-expire-with-the-work/\">«Разрешения должны истекать вместе с задачей»</a>, <a href=\"/ideas/failure-should-reduce-capability/\">«Сбой должен ограничивать возможности системы»</a>, <a href=\"/ideas/an-audit-log-is-not-a-control/\">«Журнал аудита — ещё не средство контроля»</a> и <a href=\"/ideas/provenance-should-include-where-it-ran/\">«В происхождение ответа входит и место его выполнения»</a>. <a href=\"#user-content-fnref-3\" data-footnote-backref=\"\" aria-label=\"Back to reference 3\" class=\"data-footnote-backref\">↩</a>"
   },
   "8d312414cd4f490b": {
     "en": "The practical version does not need to be complicated. Tell me what you believe, what you are assuming, which assumption is doing the most work, and what evidence we should collect next.",
@@ -2089,7 +2089,7 @@
   },
   "9413e20743bc1417": {
     "en": "<a href=\"/work/local-ai-intelligent-scaffolding/\">Local AI and intelligent scaffolding</a>",
-    "t": "<a href=\"/work/local-ai-intelligent-scaffolding/\">Локальный ИИ и интеллектуальные леса</a>"
+    "t": "<a href=\"/work/local-ai-intelligent-scaffolding/\">Локальный ИИ и вспомогательная инфраструктура</a>"
   },
   "94ab3b21ce3850bf": {
     "en": "The asset already exists, but somebody still paid for it. It depreciates. It consumes power. It occupies space. It needs connectivity, maintenance, cooling, and eventually replacement. If the machine must remain available at particular times, the owner is also giving up optionality. They cannot use the same capacity twice.",
@@ -2129,7 +2129,7 @@
   },
   "975f518055fcafdb": {
     "en": "AI systems are usually optimized to give a coherent answer. I would often prefer an answer that exposes the assumptions holding it together. Confidence without an assumption map is difficult to use because I cannot tell whether the conclusion survives when one input changes.",
-    "t": "AI системы обычно оптимизируют связный ответ. Я часто предпочту ответ, который раскрывает предположения, скрепляющие его. Уверенность без карты предположений трудна в использовании, потому что я не могу определить, выживет ли вывод, если изменится один вход."
+    "t": "ИИ-системы обычно оптимизируют под связность ответа. Мне чаще полезен ответ, который явно показывает лежащие в его основе допущения. Уверенность без карты допущений мало что даёт: невозможно понять, сохранится ли вывод при изменении одного из исходных условий."
   },
   "978859876a604cc8": {
     "en": "<a href=\"/ideas/the-most-important-context-is-the-trajectory/\">The most important context is the trajectory</a>",
@@ -2361,7 +2361,7 @@
   },
   "a92c5f6d66cec441": {
     "en": "An agent should have its own identity",
-    "t": "An agent should have its own identity"
+    "t": "У агента должна быть собственная идентичность"
   },
   "a94976a1cb8dab2e": {
     "en": "Laya is also the reason the next section is not theoretical. In my latest training round, its primary accuracy went from 58 to 64 percent and transfer accuracy from 71 to 74 percent. The improvement was measurable and not statistically conclusive. Its calibration was not good enough to route on: no confidence threshold cleared the predefined quality bar with enough accepted examples behind it, so under the frozen fallback policy its automatic coverage was zero. A separate diagnostic showed it could learn the mechanics of a synthetic task and become confidently wrong while doing so. The candidate was not promoted. It runs in shadow, its predictions are recorded beside the eventual outcomes, and nothing it says can authorize a tool, an egress, or a consequential action. That is not the decision plane failing. It is the decision plane working: a component that may be uncertain, held inside rules it cannot talk its way past.",
@@ -2577,7 +2577,7 @@
   },
   "b59c2aef6b32f537": {
     "en": "Begin with “Capacity is not consent”",
-    "t": "Начните с «Способность — это не согласие»"
+    "t": "Начните со статьи «Доступная мощность — ещё не согласие»"
   },
   "b5b29c18002923ed": {
     "en": "To put it simply, intent is not only what the user asked for. It is the kind of help they believe they are asking for. A useful system should be able to tell the difference, or recognize when it cannot.",
@@ -2657,7 +2657,7 @@
   },
   "b91b772d160a48fa": {
     "en": "<a href=\"/writing/capacity-is-not-consent/\">Capacity is not consent</a>",
-    "t": "<a href=\"/writing/capacity-is-not-consent/\">Способность — это не согласие</a>"
+    "t": "<a href=\"/writing/capacity-is-not-consent/\">Доступная мощность — ещё не согласие</a>"
   },
   "b93dcc320b73124c": {
     "en": "<a href=\"/ideas/consumer-hardware-becomes-infrastructure/\">Consumer hardware becomes infrastructure only when the complexity disappears</a>",
@@ -2761,7 +2761,7 @@
   },
   "c37a7240a92d2bab": {
     "en": "Dastan Aitzhanov | AI Systems, Authority, and Ownership",
-    "t": "Dastan Aitzhanov | AI системы, власть и собственность"
+    "t": "Дастан Айтжанов | ИИ-системы, полномочия и роль владельца"
   },
   "c385d01b7dcf2f51": {
     "en": "The test I have started using is simple. Can two people look at the system before and after and agree on what is different? If the answer is a diff, the behavior can be reviewed, approved, rolled back, and answered for. If the answer is a transcript, it cannot.",
@@ -2781,7 +2781,7 @@
   },
   "c4724f6d8395c608": {
     "en": "Back to reference 3",
-    "t": "Back to reference 3"
+    "t": "Вернуться к примечанию 3"
   },
   "c4df2acc890743aa": {
     "en": "<a href=\"/ideas/an-agent-needs-a-job/\">An agent needs a job, not a persona</a>",
@@ -2805,7 +2805,7 @@
   },
   "c5d18b426c0a0ea7": {
     "en": "I am not describing a product, a network, or a company. I am describing a separation I want in systems I am willing to trust with a repeated action. The next question is what happens when generation, the decision, and the execution are no longer on the same machine. That is a governance problem before it is a topology problem. I take it up in <a href=\"/writing/capacity-is-not-consent/\">Capacity is not consent</a> and <a href=\"/writing/govern-the-boundary/\">Govern the boundary</a>.",
-    "t": "Я не описываю продукт, сеть или компанию. Я описываю разделение, которое я хочу в системах, которым я готов доверить повторяющееся действие. Следующий вопрос — что происходит, когда генерация, решение и выполнение больше не находятся на одной машине. Это проблема управления, прежде чем это проблема топологии. Я рассматриваю это в <a href=\"/writing/capacity-is-not-consent/\">Capacity is not consent</a> и <a href=\"/writing/govern-the-boundary/\">Govern the boundary</a>."
+    "t": "Я не описываю продукт, сеть или компанию. Речь о разделении, которое необходимо в системах, которым я готов доверить повторяющиеся действия. Следующий вопрос возникает, когда генерация, принятие решения и исполнение оказываются на разных машинах. Сначала это проблема управления, и лишь затем — топологии. Я продолжаю этот разбор в статьях <a href=\"/writing/capacity-is-not-consent/\">«Доступная мощность — ещё не согласие»</a> и <a href=\"/writing/govern-the-boundary/\">«Управлять границей»</a>."
   },
   "c5e589dd62b8276e": {
     "en": "Infrastructure software can quietly become a financing business",
@@ -2997,7 +2997,7 @@
   },
   "d41265ce39a7e654": {
     "en": "<a href=\"/work/\" aria-current=\"page\">Work</a>",
-    "t": "<a href=\"/work/\" aria-current=\"page\">Работа</a>"
+    "t": "<a href=\"/work/\" aria-current=\"page\">Работы</a>"
   },
   "d41c43b9be160894": {
     "en": "<a href=\"/writing/#delegated-authority\">Delegated authority</a>",
@@ -3069,7 +3069,7 @@
   },
   "d8f129a13b267d49": {
     "en": "<a href=\"/work/\">Work</a>",
-    "t": "<a href=\"/work/\">Работа</a>"
+    "t": "<a href=\"/work/\">Работы</a>"
   },
   "d97609ba7d6f641e": {
     "en": "Ownership and incentives",
@@ -3433,7 +3433,7 @@
   },
   "f0b2c4a32f9fe1f9": {
     "en": "<span class=\"related-kind\">Work</span><a href=\"/work/local-ai-intelligent-scaffolding/\">Local AI and intelligent scaffolding</a>",
-    "t": "<span class=\"related-kind\">Работа</span><a href=\"/work/local-ai-intelligent-scaffolding/\">Локальный ИИ и интеллектуальная поддержка</a>"
+    "t": "<span class=\"related-kind\">Работа</span><a href=\"/work/local-ai-intelligent-scaffolding/\">Локальный ИИ и вспомогательная инфраструктура</a>"
   },
   "f102e9073a7372f4": {
     "en": "In September an AI agent set up translation for this site. It chose the model, wrote the pipeline, and ran it. Two runs spent about twenty dollars and produced nothing I could keep, because of rules the agent had written itself. When I asked for the money back, the agent could explain exactly what went wrong and fix it. It could not pay. Neither could the support agent I asked next.",
@@ -3485,7 +3485,7 @@
   },
   "f4159c51f1f95729": {
     "en": "<strong>2. Risk tiers keyed to action, not size.</strong> Where a framework sorts AI systems into tiers, the sorting variable should include the class of action the system can take: informational only; reversible and contained; affects records other people depend on; moves money or exposes private data; produces physical or irreversible effects. A small model wired to a payment API sits in a higher tier than a large model that can only draft. Compute thresholds can remain a useful proxy for frontier training risk. They should not be mistaken for a measure of deployment risk.<sup><a href=\"#user-content-fn-7\" id=\"user-content-fnref-7\" data-footnote-ref aria-describedby=\"footnote-label\">7</a></sup>",
-    "t": "<strong>2. Уровни риска, ключевые к действиям, а не к размеру.</strong> Где структура сортирует ИИ-системы по уровням, переменная сортировки должна включать класс действия, которое может предпринять система: только информационное; обратимое и содержащееся; влияет на записи, от которых зависят другие люди; перемещает деньги или раскрывает приватные данные; производит физические или необратимые эффекты. Малая модель, подключённая к API платежей, находится в более высоком уровне, чем большая модель, которая может только черновики. Пороги вычислений могут оставаться полезной косвенной мерой для риска обучения пограничной модели. Их не следует путать с мерой риска развёртывания.<sup><a href=\"#user-content-fn-7\" id=\"user-content-fnref-7\" data-footnote-ref aria-describedby=\"footnote-label\">7</a></sup>"
+    "t": "<strong>2. Уровень риска определяется действием, а не размером модели.</strong> Если система классифицирует ИИ по уровням риска, она должна учитывать, какие действия модель способна инициировать: только информационные; обратимые и локализованные; затрагивающие записи, от которых зависят другие люди; перемещающие деньги или раскрывающие конфиденциальные данные; создающие физические или необратимые последствия. Небольшая модель с доступом к платёжному API относится к более высокому уровню риска, чем крупная модель, способная лишь готовить черновики. Объём вычислений может оставаться полезным косвенным показателем риска при обучении передовых моделей. Но это не показатель риска при эксплуатации.<sup><a href=\"#user-content-fn-7\" id=\"user-content-fnref-7\" data-footnote-ref aria-describedby=\"footnote-label\">7</a></sup>"
   },
   "f4776cc95dea56a3": {
     "en": "A model developer can say what a model was trained to do. Only the party that connected the tools and set the permissions can say what the system is allowed to do.",
@@ -3589,7 +3589,7 @@
   },
   "fa4234be2c8d4073": {
     "en": "Dastan Aitzhanov, AI systems builder and writer",
-    "t": "Dastan Aitzhanov, разработчик и автор в области AI-систем"
+    "t": "Дастан Айтжанов, разработчик ИИ-систем и автор"
   },
   "fac2a5090afb82ea": {
     "en": "Capacity can come from more places. That can improve resilience if the failure domains are actually independent. A thousand machines coordinated through one fragile authority are geographically distributed and operationally centralized.",
@@ -3633,7 +3633,7 @@
   },
   "fd11b9f5a6b70cd2": {
     "en": "Back to reference 2",
-    "t": "Back to reference 2"
+    "t": "Вернуться к примечанию 2"
   },
   "fd1e04cf45812526": {
     "en": "Essays by Dastan Aitzhanov tagged Systems.",

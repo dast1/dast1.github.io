@@ -1061,7 +1061,7 @@
   },
   "43b5bcc16471e750": {
     "en": "<a href=\"/ideas/?tag=economics\">Economics</a>",
-    "t": "<a href=\"/ideas/?tag=economics\">Economics</a>"
+    "t": "<a href=\"/ideas/?tag=economics\">Ekonomi</a>"
   },
   "441167985e16ce7b": {
     "en": "Which model handles a request is often framed as an optimization: cost, latency, a score on a benchmark. Those numbers matter. They are the smaller half of the decision.",
@@ -1761,7 +1761,7 @@
   },
   "7596ebd1c39b97f3": {
     "en": "Computing",
-    "t": "Computing"
+    "t": "Hesaplama"
   },
   "75bd234422543cc4": {
     "en": "I find it more useful to treat AI adoption the way an investor treats capital. Any single position can lose. The portfolio has to return. That changes what you ask of each initiative up front: what it costs, what it is expected to earn, how likely that is, when the return arrives, who owns the outcome, and what would make you stop.",
@@ -2653,7 +2653,7 @@
   },
   "b28e0145e0d9bd97": {
     "en": "Computing | Dastan Aitzhanov",
-    "t": "Computing | Dastan Aitzhanov"
+    "t": "Hesaplama | Dastan Aitzhanov"
   },
   "b2c23266994aeec1": {
     "en": "Safety should come from clear gates around consequential changes, not from making every small change wait for everything else.",
@@ -3417,7 +3417,7 @@
   },
   "e6adb66a31a5ef6e": {
     "en": "Context | Dastan Aitzhanov",
-    "t": "Context | Dastan Aitzhanov"
+    "t": "Bağlam | Dastan Aitzhanov"
   },
   "e734c8f3fa1928da": {
     "en": "The difference between those two systems is not the model. Both can run the same weights. The difference is the boundary. That is why I think the boundary is the right object for policy.",
