@@ -6,6 +6,7 @@ developed: "2026-04"
 tags: [Systems, Product]
 related:
   - /writing/context-is-the-product/
+  - /work/context-to-action/
 ---
 
 Long context can make a system feel like it remembers. That is not the same as maintaining useful state.

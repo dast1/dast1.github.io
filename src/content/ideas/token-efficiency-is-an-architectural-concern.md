@@ -6,6 +6,7 @@ developed: "2026-02"
 tags: [Systems, Economics]
 related:
   - /writing/context-is-the-product/
+  - /work/context-to-action/
 ---
 
 We usually talk about token consumption as a cost issue. It is also a signal that the architecture may be making models repeatedly rediscover context, re-explain decisions, or review material they do not need.
