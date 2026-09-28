@@ -3814,5 +3814,189 @@
   "fff6aecaadd856fa": {
     "en": "Coding agents often collapse these stages. They polish something that has not proven useful, or harden an architecture before the important uncertainty is resolved. That can look productive while moving the work in the wrong direction.",
     "t": "Kodlama ajanları sık sık bu aşamaları çöker. Yararlılığı kanıtlanmamış bir şeyi parlatırlar veya önemli belirsizlik çözülmeden önce bir mimarı sertleştirirler. Bu verimli görünebilir ama işi yanlış yöne hareket ettirebilir."
+  },
+  "2d2d89a3a1f9f43d": {
+    "en": "A memory benchmark should locate the failure, not only score the answer | Dastan Aitzhanov",
+    "t": "Bir bellek değerlendirmesi yalnızca yanıtı puanlamamalı, hatanın yerini de bulmalı | Dastan Aitzhanov"
+  },
+  "01d8a92ef3267179": {
+    "en": "A memory benchmark should locate the failure, not only score the answer",
+    "t": "Bir bellek değerlendirmesi yalnızca yanıtı puanlamamalı, hatanın yerini de bulmalı"
+  },
+  "ba7277d68f94c678": {
+    "en": "<time datetime=\"2026-09-28\">First developed September 2026</time>",
+    "t": "<time datetime=\"2026-09-28\">İlk kez Eylül 2026’da geliştirildi</time>"
+  },
+  "3fcd80c06c14194f": {
+    "en": "A wrong action can begin in several places. The evidence may never have been written, retrieval may miss it, the source may fall outside the permitted scope, or the reader may interpret a complete context incorrectly.",
+    "t": "Yanlış bir eylem birkaç farklı aşamada başlayabilir. Kanıt hiç kaydedilmemiş olabilir, getirme işlemi onu kaçırabilir, kaynak izin verilen kapsamın dışında kalabilir ya da okuyucu eksiksiz bağlamı yanlış yorumlayabilir."
+  },
+  "c4f2917560ae4444": {
+    "en": "Those failures need different repairs. Better retrieval does not fix an authorization mistake. A stronger reader does not recover a source that never reached the context.",
+    "t": "Bu hatalar farklı düzeltmeler gerektirir. Daha iyi getirme, yetkilendirme hatasını düzeltmez. Daha güçlü bir okuyucu, bağlama hiç ulaşmayan kaynağı geri getiremez."
+  },
+  "031a96948cfac0e0": {
+    "en": "A benchmark becomes more useful when it identifies the first broken stage and keeps evidence failure separate from action failure.",
+    "t": "Bir değerlendirme, bozulan ilk aşamayı belirlediğinde ve kanıt hatasını eylem hatasından ayırdığında daha yararlı olur."
+  },
+  "98542c74ae3afbd2": {
+    "en": "<span class=\"related-kind\">Work</span><a href=\"/work/context-to-action/\">Context to action</a>",
+    "t": "<span class=\"related-kind\">Çalışma</span><a href=\"/work/context-to-action/\">Bağlamdan eyleme</a>"
+  },
+  "c5c50435aba82306": {
+    "en": "Memory should be judged by the action it changes",
+    "t": "Bellek, değiştirdiği eylemle değerlendirilmelidir"
+  },
+  "d73f5e90bc789cd0": {
+    "en": "One accuracy number cannot distinguish missing evidence from source, time, authorization, interpretation, or action failure.",
+    "t": "Tek bir doğruluk puanı; eksik kanıtı kaynak, zaman, yetkilendirme, yorumlama ya da eylem hatasından ayıramaz."
+  },
+  "74573c8d36424490": {
+    "en": "The right evidence is necessary, not sufficient",
+    "t": "Doğru kanıt gereklidir, ancak yeterli değildir"
+  },
+  "aa01304e44b558c1": {
+    "en": "<span>All</span><span class=\"idea-filter-count\">47</span>",
+    "t": "<span>Tümü</span><span class=\"idea-filter-count\">47</span>"
+  },
+  "85a983fb1f88a587": {
+    "en": "<span>Governance</span><span class=\"idea-filter-count\">19</span>",
+    "t": "<span>Yönetişim</span><span class=\"idea-filter-count\">19</span>"
+  },
+  "8a3edf2b1297472a": {
+    "en": "<span>Systems</span><span class=\"idea-filter-count\">22</span>",
+    "t": "<span>Sistemler</span><span class=\"idea-filter-count\">22</span>"
+  },
+  "d5bda5559f99035b": {
+    "en": "<span>Product</span><span class=\"idea-filter-count\">22</span>",
+    "t": "<span>Ürün</span><span class=\"idea-filter-count\">22</span>"
+  },
+  "88c3b908f3f5f17e": {
+    "en": "<span data-idea-visible>47</span> <span data-idea-noun>ideas</span>",
+    "t": "<span data-idea-visible>47</span> <span data-idea-noun>fikir</span>"
+  },
+  "54737e88d3f54fbb": {
+    "en": "<span data-month-visible>12</span> <span data-month-noun>ideas</span>",
+    "t": "<span data-month-visible>12</span> <span data-month-noun>fikir</span>"
+  },
+  "4655573ac9af620c": {
+    "en": "<a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">A memory benchmark should locate the failure, not only score the answer</a>",
+    "t": "<a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">Bir bellek değerlendirmesi yalnızca yanıtı puanlamamalı, hatanın yerini de bulmalı</a>"
+  },
+  "84a7674a738b1df0": {
+    "en": "<a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Memory should be judged by the action it changes</a>",
+    "t": "<a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Bellek, değiştirdiği eylemle değerlendirilmelidir</a>"
+  },
+  "d8782606be743d03": {
+    "en": "Retrieval is an intermediate result; useful memory reaches the decision, survives the constraints, and changes what the system does.",
+    "t": "Getirme bir ara sonuçtur; yararlı bellek karara ulaşır, kısıtları aşar ve sistemin ne yaptığını değiştirir."
+  },
+  "dc0e9e6bb3c62014": {
+    "en": "<a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">The right evidence is necessary, not sufficient</a>",
+    "t": "<a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">Doğru kanıt gereklidir, ancak yeterli değildir</a>"
+  },
+  "c39f91d6e0ecd0b5": {
+    "en": "Even an oracle can supply every required source while the system still chooses the wrong action.",
+    "t": "Bir oracle gerekli tüm kaynakları sağlasa bile sistem yine de yanlış eylemi seçebilir."
+  },
+  "5e16a137c55235c0": {
+    "en": "Memory should be judged by the action it changes | Dastan Aitzhanov",
+    "t": "Bellek, değiştirdiği eylemle değerlendirilmelidir | Dastan Aitzhanov"
+  },
+  "f792ec658ab2345b": {
+    "en": "Memory benchmarks often stop at retrieval. Did the system find the relevant passage? That matters, but it is not the outcome.",
+    "t": "Bellek değerlendirmeleri çoğu zaman getirme aşamasında durur. Sistem ilgili bölümü buldu mu? Bu önemlidir, ama sonuç değildir."
+  },
+  "ec962c3b7d0af3e9": {
+    "en": "The evidence still has to resolve to the right source, fit the applicable scope and time, reach the decision, and change what the system does. A retrieved fact that never affects the action is not useful memory. It is available context.",
+    "t": "Kanıtın yine de doğru kaynağa bağlanması, geçerli kapsam ve zamana uyması, karara ulaşması ve sistemin yaptığını değiştirmesi gerekir. Eylemi hiç etkilemeyen, getirilmiş bir olgu yararlı bellek değildir. Yalnızca erişilebilir bağlamdır."
+  },
+  "ce18c2caa0d3d9d7": {
+    "en": "The test I want is downstream: compare the action without context to the action with it. Then inspect the path between them.",
+    "t": "İstediğim test aşağı akıştadır: bağlamsız eylemi bağlamlı eylemle karşılaştırmak, sonra aralarındaki yolu incelemek."
+  },
+  "f7b14001c0fa7b04": {
+    "en": "The right evidence is necessary, not sufficient | Dastan Aitzhanov",
+    "t": "Doğru kanıt gereklidir, ancak yeterli değildir | Dastan Aitzhanov"
+  },
+  "35eb8c3b7627a051": {
+    "en": "It is tempting to treat retrieval as the bottleneck. Give the model the right evidence and the rest should follow.",
+    "t": "Getirmeyi darboğaz saymak caziptir. Modele doğru kanıtı verin, gerisi kendiliğinden gelsin."
+  },
+  "375583d97eb82d14": {
+    "en": "It does not always. The reader can misread a current policy, ignore a revocation, choose an unauthorized tool, or return an invalid action. An oracle that supplies every required source can still fail downstream.",
+    "t": "Her zaman böyle olmaz. Okuyucu güncel bir politikayı yanlış okuyabilir, bir iptali görmezden gelebilir, yetkisiz bir araç seçebilir ya da geçersiz bir eylem döndürebilir. Gerekli her kaynağı sağlayan bir oracle bile sonraki aşamada başarısız olabilir."
+  },
+  "418bba16adfbe400": {
+    "en": "Better retrieval is necessary when the evidence is missing. It cannot repair every mistake made after the evidence arrives.",
+    "t": "Kanıt eksik olduğunda daha iyi getirme gerekir. Ancak kanıt geldikten sonra yapılan her hatayı düzeltemez."
+  },
+  "061222b680a3d32b": {
+    "en": "<a href=\"/work/context-to-action/\">Context to action</a>",
+    "t": "<a href=\"/work/context-to-action/\">Bağlamdan eyleme</a>"
+  },
+  "adc5b572927c52fd": {
+    "en": "Independent investigation · Synthetic evaluation and open-source repository",
+    "t": "Bağımsız inceleme · Sentetik değerlendirme ve açık kaynak deposu"
+  },
+  "adf3208f0f55a1f1": {
+    "en": "A reproducible synthetic experiment for testing whether retrieved evidence changes an agent&#39;s action, with stage-aware scoring and explicit controls.",
+    "t": "Getirilen kanıtın bir ajanın eylemini değiştirip değiştirmediğini sınayan, aşama duyarlı puanlama ve açık kontrol koşulları içeren tekrarlanabilir sentetik bir deney."
+  },
+  "13944a8e7281e206": {
+    "en": "September 28, 2026",
+    "t": "28 Eylül 2026"
+  },
+  "07155cdd84956c03": {
+    "en": "Context to action | Dastan Aitzhanov",
+    "t": "Bağlamdan eyleme | Dastan Aitzhanov"
+  },
+  "4e655949c193f763": {
+    "en": "Context to action",
+    "t": "Bağlamdan eyleme"
+  },
+  "00591a5e5f87fcae": {
+    "en": "<time datetime=\"2026-09-28\">September 28, 2026</time>",
+    "t": "<time datetime=\"2026-09-28\">28 Eylül 2026</time>"
+  },
+  "e9a2cc791799bd30": {
+    "en": "<span>Independent investigation</span><span>Synthetic evaluation and open-source repository</span><a href=\"https://github.com/dast1/context-to-action\">GitHub repository</a>",
+    "t": "<span>Bağımsız inceleme</span><span>Sentetik değerlendirme ve açık kaynak deposu</span><a href=\"https://github.com/dast1/context-to-action\">GitHub deposu</a>"
+  },
+  "66d4b1317ef18e31": {
+    "en": "This experiment starts from a narrow question: did memory change what the system did?",
+    "t": "Bu deney dar bir soruyla başlar: bellek sistemin yaptığı şeyi değiştirdi mi?"
+  },
+  "a725464cc2a95a6a": {
+    "en": "It follows evidence through retrieval, source resolution, context assembly, interpretation, authorization and a deterministic action simulator. The repository includes separate inputs and gold answers, CPU-only controls, a generic OpenAI-compatible reader, immutable hashes, tests and reference results.",
+    "t": "Kanıtı getirme, kaynak çözümleme, bağlam oluşturma, yorumlama, yetkilendirme ve deterministik bir eylem simülatörü boyunca izler. Depoda ayrı girdiler ve referans yanıtlar, yalnızca CPU ile çalışan kontroller, genel bir OpenAI uyumlu okuyucu, değişmez özetler, testler ve referans sonuçlar bulunur."
+  },
+  "b802c2919082d4c6": {
+    "en": "The cases are synthetic and templated. Development and validation use different projects and action rotations, but share eight mechanism families. There is no independent held-out v2 set. The result is a reproducible method for examining a context-to-action pipeline, not a product release or a final memory benchmark.",
+    "t": "Vakalar sentetik ve şablonludur. Geliştirme ve doğrulama farklı projeler ve eylem döngüleri kullanır, ancak aynı sekiz mekanizma ailesini paylaşır. Bağımsız bir saklı v2 kümesi yoktur. Sonuç, bağlamdan eyleme hattını incelemek için tekrarlanabilir bir yöntemdir; bir ürün sürümü ya da nihai bellek değerlendirmesi değildir."
+  },
+  "580d842e68b638ae": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">A memory benchmark should locate the failure, not only score the answer</a>",
+    "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">Bir bellek değerlendirmesi yalnızca yanıtı puanlamamalı, hatanın yerini de bulmalı</a>"
+  },
+  "9e6d50465a2bdfed": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Memory should be judged by the action it changes</a>",
+    "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Bellek, değiştirdiği eylemle değerlendirilmelidir</a>"
+  },
+  "64f4355c55c55b20": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">The right evidence is necessary, not sufficient</a>",
+    "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">Doğru kanıt gereklidir, ancak yeterli değildir</a>"
+  },
+  "cf8b3c843e0af9d6": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/open-source-the-layer-people-need-to-trust/\">Open source the layer people need to trust</a>",
+    "t": "<span class=\"related-kind\">Fikir</span><a href=\"/ideas/open-source-the-layer-people-need-to-trust/\">İnsanların güvenmesi gereken katmanı açık kaynak yapın</a>"
+  },
+  "b34a8e82e93bee0c": {
+    "en": "A reproducible synthetic experiment for testing whether retrieved evidence changes an agent's action, with stage-aware scoring and explicit controls.",
+    "t": "Getirilen kanıtın bir ajanın eylemini değiştirip değiştirmediğini sınayan, aşama duyarlı puanlama ve açık kontrol koşulları içeren tekrarlanabilir sentetik bir deney."
+  },
+  "e40c1a0fdaa44e20": {
+    "en": "Synthetic evaluation and open-source repository",
+    "t": "Sentetik değerlendirme ve açık kaynak deposu"
   }
 }

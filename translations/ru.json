@@ -3686,5 +3686,189 @@
   "ffd134a7bfd3ca66": {
     "en": "<strong>The parties can leave.</strong> A system is not meaningfully voluntary if exit is technically possible but economically or operationally punitive in ways nobody explained at entry.",
     "t": "<strong>Стороны могут уйти.</strong> Система не является действительно добровольной, если выход технически возможен, но экономически или операционно карателен способами, которые никто не объяснил при входе."
+  },
+  "640afc2a6ad4d2a5": {
+    "en": "A memory benchmark should locate the failure, not only score the answer | Dastan Aitzhanov",
+    "t": "Бенчмарк памяти должен находить место сбоя, а не только оценивать ответ | Dastan Aitzhanov"
+  },
+  "2b3596151a6a0b7c": {
+    "en": "A memory benchmark should locate the failure, not only score the answer",
+    "t": "Бенчмарк памяти должен находить место сбоя, а не только оценивать ответ"
+  },
+  "598c7520b25d0f08": {
+    "en": "<time datetime=\"2026-09-28\">First developed September 2026</time>",
+    "t": "<time datetime=\"2026-09-28\">Впервые сформулировано в сентябре 2026 года</time>"
+  },
+  "f7c32a9a1204ecb7": {
+    "en": "A wrong action can begin in several places. The evidence may never have been written, retrieval may miss it, the source may fall outside the permitted scope, or the reader may interpret a complete context incorrectly.",
+    "t": "Неверное действие может возникнуть на нескольких этапах. Данные могли вообще не быть записаны, поиск мог их пропустить, источник мог оказаться вне разрешённой области, а модель могла неверно истолковать полный контекст."
+  },
+  "0560ccbb664bd30e": {
+    "en": "Those failures need different repairs. Better retrieval does not fix an authorization mistake. A stronger reader does not recover a source that never reached the context.",
+    "t": "Эти сбои требуют разных исправлений. Более точный поиск не исправит ошибку авторизации. Более сильная модель не восстановит источник, который так и не попал в контекст."
+  },
+  "a361dc7665efe68f": {
+    "en": "A benchmark becomes more useful when it identifies the first broken stage and keeps evidence failure separate from action failure.",
+    "t": "Бенчмарк становится полезнее, когда находит первый сломанный этап и отделяет сбой в данных от сбоя в действии."
+  },
+  "461a749a5134adfc": {
+    "en": "<span class=\"related-kind\">Work</span><a href=\"/work/context-to-action/\">Context to action</a>",
+    "t": "<span class=\"related-kind\">Работа</span><a href=\"/work/context-to-action/\">От контекста к действию</a>"
+  },
+  "8a94e6c035e2dafd": {
+    "en": "Memory should be judged by the action it changes",
+    "t": "Память следует оценивать по тому, какое действие она меняет"
+  },
+  "4a3bf5385995fb08": {
+    "en": "One accuracy number cannot distinguish missing evidence from source, time, authorization, interpretation, or action failure.",
+    "t": "Одна метрика точности не отличит отсутствие данных от ошибки источника, времени, авторизации, интерпретации или действия."
+  },
+  "30f5c27645f5c793": {
+    "en": "The right evidence is necessary, not sufficient",
+    "t": "Верные данные необходимы, но их недостаточно"
+  },
+  "709442e9b3449a4e": {
+    "en": "<span>All</span><span class=\"idea-filter-count\">47</span>",
+    "t": "<span>Все</span><span class=\"idea-filter-count\">47</span>"
+  },
+  "8bd3e14b32cf4976": {
+    "en": "<span>Governance</span><span class=\"idea-filter-count\">19</span>",
+    "t": "<span>Управление</span><span class=\"idea-filter-count\">19</span>"
+  },
+  "c08b1b78a2af02b2": {
+    "en": "<span>Systems</span><span class=\"idea-filter-count\">22</span>",
+    "t": "<span>Системы</span><span class=\"idea-filter-count\">22</span>"
+  },
+  "81550d31d292b653": {
+    "en": "<span>Product</span><span class=\"idea-filter-count\">22</span>",
+    "t": "<span>Продукт</span><span class=\"idea-filter-count\">22</span>"
+  },
+  "cb396b478774a7fb": {
+    "en": "<span data-idea-visible>47</span> <span data-idea-noun>ideas</span>",
+    "t": "<span data-idea-visible>47</span> <span data-idea-noun>идей</span>"
+  },
+  "335ed0c682d67c91": {
+    "en": "<span data-month-visible>12</span> <span data-month-noun>ideas</span>",
+    "t": "<span data-month-visible>12</span> <span data-month-noun>идей</span>"
+  },
+  "5810a3a011ccacb9": {
+    "en": "<a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">A memory benchmark should locate the failure, not only score the answer</a>",
+    "t": "<a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">Бенчмарк памяти должен находить место сбоя, а не только оценивать ответ</a>"
+  },
+  "97550a770d9ee5e3": {
+    "en": "<a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Memory should be judged by the action it changes</a>",
+    "t": "<a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Память следует оценивать по тому, какое действие она меняет</a>"
+  },
+  "f926bf3c961cbd97": {
+    "en": "Retrieval is an intermediate result; useful memory reaches the decision, survives the constraints, and changes what the system does.",
+    "t": "Поиск — промежуточный результат; полезная память доходит до решения, выдерживает ограничения и меняет действие системы."
+  },
+  "b61b062e45b390b5": {
+    "en": "<a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">The right evidence is necessary, not sufficient</a>",
+    "t": "<a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">Верные данные необходимы, но их недостаточно</a>"
+  },
+  "4a0938fe2c8d8fe3": {
+    "en": "Even an oracle can supply every required source while the system still chooses the wrong action.",
+    "t": "Даже оракул может предоставить все необходимые источники, а система всё равно выберет неверное действие."
+  },
+  "a14d91a0f072904d": {
+    "en": "Memory should be judged by the action it changes | Dastan Aitzhanov",
+    "t": "Память следует оценивать по тому, какое действие она меняет | Dastan Aitzhanov"
+  },
+  "d4214afc3a3bbbbb": {
+    "en": "Memory benchmarks often stop at retrieval. Did the system find the relevant passage? That matters, but it is not the outcome.",
+    "t": "Бенчмарки памяти часто останавливаются на поиске. Нашла ли система нужный фрагмент? Это важно, но это ещё не результат."
+  },
+  "2ad19a77035c4b36": {
+    "en": "The evidence still has to resolve to the right source, fit the applicable scope and time, reach the decision, and change what the system does. A retrieved fact that never affects the action is not useful memory. It is available context.",
+    "t": "Данные ещё должны разрешиться в правильный источник, соответствовать области и времени, дойти до решения и изменить действие системы. Найденный факт, который никак не повлиял на действие, — не полезная память. Это лишь доступный контекст."
+  },
+  "48ddd134ec431568": {
+    "en": "The test I want is downstream: compare the action without context to the action with it. Then inspect the path between them.",
+    "t": "Мне нужен тест на выходе: сравнить действие без контекста с действием при его наличии. Затем проверить весь путь между ними."
+  },
+  "1757e23ec948de99": {
+    "en": "The right evidence is necessary, not sufficient | Dastan Aitzhanov",
+    "t": "Верные данные необходимы, но их недостаточно | Dastan Aitzhanov"
+  },
+  "63bb4c325acb0c33": {
+    "en": "It is tempting to treat retrieval as the bottleneck. Give the model the right evidence and the rest should follow.",
+    "t": "Легко принять поиск за главное узкое место. Дайте модели верные данные — и остальное будто бы сложится само."
+  },
+  "cce8025f6f4f3c67": {
+    "en": "It does not always. The reader can misread a current policy, ignore a revocation, choose an unauthorized tool, or return an invalid action. An oracle that supplies every required source can still fail downstream.",
+    "t": "Так бывает не всегда. Модель может неверно прочитать действующую политику, проигнорировать отзыв разрешения, выбрать неразрешённый инструмент или вернуть недопустимое действие. Даже оракул со всеми нужными источниками может дать сбой дальше по цепочке."
+  },
+  "9de6389fef8288c6": {
+    "en": "Better retrieval is necessary when the evidence is missing. It cannot repair every mistake made after the evidence arrives.",
+    "t": "Когда данных не хватает, нужен более точный поиск. Но он не исправит каждую ошибку, совершённую после получения данных."
+  },
+  "69a09076a84419d0": {
+    "en": "<a href=\"/work/context-to-action/\">Context to action</a>",
+    "t": "<a href=\"/work/context-to-action/\">От контекста к действию</a>"
+  },
+  "d4c157989657f925": {
+    "en": "Independent investigation · Synthetic evaluation and open-source repository",
+    "t": "Независимое исследование · Синтетическая оценка и репозиторий с открытым кодом"
+  },
+  "fa732329d135646e": {
+    "en": "A reproducible synthetic experiment for testing whether retrieved evidence changes an agent&#39;s action, with stage-aware scoring and explicit controls.",
+    "t": "Воспроизводимый синтетический эксперимент о том, меняют ли найденные данные действие агента, с оценкой по этапам и явными контрольными условиями."
+  },
+  "c22f0a4348e89a34": {
+    "en": "September 28, 2026",
+    "t": "28 сентября 2026 года"
+  },
+  "f42a392ab037ae0f": {
+    "en": "Context to action | Dastan Aitzhanov",
+    "t": "От контекста к действию | Dastan Aitzhanov"
+  },
+  "dce1b995e8899576": {
+    "en": "Context to action",
+    "t": "От контекста к действию"
+  },
+  "ccf075c93ad27430": {
+    "en": "<time datetime=\"2026-09-28\">September 28, 2026</time>",
+    "t": "<time datetime=\"2026-09-28\">28 сентября 2026 года</time>"
+  },
+  "a0f3f8e9d2bfa2a7": {
+    "en": "<span>Independent investigation</span><span>Synthetic evaluation and open-source repository</span><a href=\"https://github.com/dast1/context-to-action\">GitHub repository</a>",
+    "t": "<span>Независимое исследование</span><span>Синтетическая оценка и репозиторий с открытым кодом</span><a href=\"https://github.com/dast1/context-to-action\">Репозиторий на GitHub</a>"
+  },
+  "3c2a0c5f1fce355d": {
+    "en": "This experiment starts from a narrow question: did memory change what the system did?",
+    "t": "Этот эксперимент начинается с узкого вопроса: изменила ли память действие системы?"
+  },
+  "7ce222130225400f": {
+    "en": "It follows evidence through retrieval, source resolution, context assembly, interpretation, authorization and a deterministic action simulator. The repository includes separate inputs and gold answers, CPU-only controls, a generic OpenAI-compatible reader, immutable hashes, tests and reference results.",
+    "t": "Он прослеживает путь данных через поиск, разрешение источников, сборку контекста, интерпретацию, авторизацию и детерминированный симулятор действий. В репозитории раздельно хранятся входные данные и эталонные ответы, есть контрольные режимы для CPU, универсальный OpenAI-совместимый интерфейс, неизменяемые хеши, тесты и эталонные результаты."
+  },
+  "0cfe07dbd762e573": {
+    "en": "The cases are synthetic and templated. Development and validation use different projects and action rotations, but share eight mechanism families. There is no independent held-out v2 set. The result is a reproducible method for examining a context-to-action pipeline, not a product release or a final memory benchmark.",
+    "t": "Сценарии синтетические и шаблонные. Наборы разработки и валидации используют разные проекты и ротации действий, но общие восемь семейств механизмов. Независимого отложенного набора v2 нет. Это воспроизводимый метод исследования цепочки от контекста к действию, а не выпуск продукта и не окончательный бенчмарк памяти."
+  },
+  "5bd362bae266f837": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">A memory benchmark should locate the failure, not only score the answer</a>",
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/a-memory-benchmark-should-locate-the-failure/\">Бенчмарк памяти должен находить место сбоя, а не только оценивать ответ</a>"
+  },
+  "3ee0425f6a2d0f2b": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Memory should be judged by the action it changes</a>",
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/memory-should-be-judged-by-the-action-it-changes/\">Память следует оценивать по тому, какое действие она меняет</a>"
+  },
+  "196674878ce2c4e5": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">The right evidence is necessary, not sufficient</a>",
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/the-right-evidence-is-necessary-not-sufficient/\">Верные данные необходимы, но их недостаточно</a>"
+  },
+  "a08958b5038584b2": {
+    "en": "<span class=\"related-kind\">Idea</span><a href=\"/ideas/open-source-the-layer-people-need-to-trust/\">Open source the layer people need to trust</a>",
+    "t": "<span class=\"related-kind\">Идея</span><a href=\"/ideas/open-source-the-layer-people-need-to-trust/\">Открывайте код слоя, которому люди должны доверять</a>"
+  },
+  "a17025e554611a52": {
+    "en": "A reproducible synthetic experiment for testing whether retrieved evidence changes an agent's action, with stage-aware scoring and explicit controls.",
+    "t": "Воспроизводимый синтетический эксперимент о том, меняют ли найденные данные действие агента, с оценкой по этапам и явными контрольными условиями."
+  },
+  "7df99ef7b456346a": {
+    "en": "Synthetic evaluation and open-source repository",
+    "t": "Синтетическая оценка и репозиторий с открытым кодом"
   }
 }
